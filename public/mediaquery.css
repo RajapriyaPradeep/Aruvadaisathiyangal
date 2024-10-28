@@ -1,0 +1,90 @@
+/* Mobile starts */
+@media (max-width: 480px) {
+    .quote-box {
+      width: 95% !important;
+    }
+    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top{
+        width: 200px; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        visibility: hidden !important;
+    }
+    .medievalsharp-regular{
+        font-size: 12px !important;
+    }
+    .quote-text,.author {
+        font-size: 10px !important;
+    }
+    .biblestudent_note{
+        font-size: 10px !important;
+    }
+    .lang{
+        right: -30%;
+    }
+    /* Basic dropdown styles for desktop */
+}
+/* Mobile ends */
+/* Tab starts */
+@media (max-width: 768px) {
+    .quote-box {
+      width: 95% !important;
+    }
+    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top{
+        width: 200px; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        visibility: hidden !important;
+    }
+    .medievalsharp-regular{
+        font-size: 12px !important;
+    }
+    .quote-text,.author {
+        font-size: 10px !important;
+    }
+    .biblestudent_note{
+        font-size: 10px !important;
+    }
+    .lang{
+        right: -30%;
+    }
+    /* Basic dropdown styles for desktop */
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically */
+      }
+    
+      .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: block; /* Show dropdown menu in mobile view */
+      }
+    
+      .submenu-container .submenu {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width on mobile */
+        display: none; /* Hidden initially */
+        padding-left: 20px;
+      }
+    
+      /* Show submenu on click */
+      .submenu-container.active .submenu {
+        display: block;
+      }
+}
+/* Tab ends */
+/* Desktop starts */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quote-box {
+      width: 90% !important;
+    }
+    .home-bottom-right-image,.question-book-right-top,.bottom-left-qimage{
+        width: 250px; /* Adjust for tablet-sized screens */
+        height: auto;
+    }
+    .lang{
+        right: -8%;
+    }
+}
+/* Desktop ends */
+

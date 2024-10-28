@@ -1,0 +1,719 @@
+*{
+    /* color: #392b17 !important; */
+} 
+i{
+  color: #7a2a2a;
+}
+ /* Body */
+ body{
+ /* background-image: url('./Assets/harvestwheats.png'); */
+ /* background-image: url('./Assets/design-space-paper-textured-background.jpg'); */
+ /* background-image: url('./Assets/background_img.png'); */
+ /* background-image: url('./Assets/paper-texture.jpg'); */
+ /* background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center; */
+ /* height: 100vh; */
+ margin: 0;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./Assets/harvestwheats.png') no-repeat center center/cover;
+  opacity: 0.5; /* Adjust opacity here */
+  z-index: -1; /* Place behind the content */
+}
+ .nav-link{
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding-right: 10px;
+ }
+ .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+  color:#7a2a2a !important;
+ }
+ .navbar-light .navbar-nav .nav-link{
+  color:#7a2a2a !important;
+ }
+/* Dropdown Menu Styles */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown on hover */
+}
+
+/* Dropdown Item Styles */
+.dropdown-menu {
+    background: #e5d8c4; /* Brown background for dropdown */
+    border: none; /* Remove border */
+}
+
+.dropdown-item {
+    color: #7A2A2A; /* Beige text color */
+    font-size:x-small !important;
+    font-weight: 600 !important;
+    border:0px;
+    border-bottom: 1px solid #7a2a2a2e;
+    padding: .4rem 1.5rem;
+
+}
+
+.dropdown-item:hover {
+    background-color:#7A2A2A !important;
+     /*  #c48336; Darker brown on hover */
+    
+    color: #ebd3b0;; /* White text on hover */
+    font-weight: bold !important;
+}
+.nav-item{
+    padding-left: 25px;
+    font-family: cardo;
+}
+ .nav-link:hover {
+    color: #007bff; /* Change to your desired color */
+    /*background-color:#e4d5c0; /* Light background on hover */
+    /*transition: background-color 0.3s; /* Smooth transition */
+    font-weight: bold;
+}
+/* Submenu Styles */
+.submenu {
+    position: absolute; /* Position the submenu */
+    left: 100%; /* Position to the right of the parent */
+    top: 0; /* Align with the parent */
+    display: none; /* Hide by default */
+    z-index: 1000; /* Ensure it's on top */
+    background-color: #e5d8c4;
+}
+
+/* Show submenu on hover */
+.dropdown-item:hover .submenu {
+    display: block;
+}
+ /* Body */
+
+ /* Absolute positioning for the images in the content area */
+ .content-area {
+    position: relative;
+    min-height: 400px;
+}
+.bottom-left-image {
+    /* position: absolute; */
+    position: fixed;
+    bottom: 6%;
+    right: 1%;
+    z-index: 1000;
+    height: 300px;
+    /* width: 500px;
+    height: 500px; */
+}
+.bottom-left-qimage {
+    /* position: absolute; */
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    z-index: 1000;
+    height: 250px;
+    /* width: 500px;
+    height: 500px; */
+}
+.bottom-left-image-audio {
+    /* position: absolute; */
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    z-index: 1000;
+    height: 300px;
+    /* width: 500px;
+    height: 500px; */
+}
+.bottom-left-image-reprint {
+    /* position: absolute; */
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 1000;
+    height: 400px;
+    /* width: 500px;
+    height: 500px; */
+}
+.bottom-right-image {
+    /* position: absolute; */
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 400px; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.2;
+    /* width: 500px;
+    height: 500px; */
+}
+.top-right-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    /* max-width: 80px;
+    max-height: 80px; */
+}
+
+/* Adjust image sizes for smaller screens */
+@media (max-width: 768px) {
+  .quote-box {
+    width: 95% !important;
+  }
+    .bottom-left-logo, .top-right-image {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .quote-text {
+      font-size: 16px !important;
+    }
+    
+    .author {
+      font-size: 13px !important;
+    }
+}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .quote-box {
+    width: 95% !important;
+  }
+  .question-book-right-top,.bottom-left-image,.bottom-left-qimage,.bottom-left-image-audio,.bottom-left-image-reprint,.top-right-image {
+        width: 200px; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        visibility: hidden;
+    }
+    .bottom-right-image{
+      /* visibility: hidden; */
+      width: 250px; /* Adjust for tablet-sized screens */
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .quote-box {
+    width: 90% !important;
+  }
+  .question-book-right-top,.bottom-left-qimage,.bottom-left-image,.bottom-left-image-audio,.bottom-left-image-reprint,.top-right-image {
+        width: 250px; /* Adjust for tablet-sized screens */
+        height: auto;
+    }
+    .bottom-right-image{
+      /* visibility: hidden; */
+      width: 250px; /* Adjust for tablet-sized screens */
+        height: auto;
+    }
+}
+
+.shadow-style{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 3px, rgba(0, 0, 0, 0.24) 13px 11px 12px;
+}
+.medievalsharp-regular {
+    /* font-family: "MedievalSharp", cursive; */
+    font-family: cardo;
+    /* font-weight: bold; */
+    font-style: normal;
+   
+    font-size: xx-large;
+    background-color: #7a2a2a;
+    /* #ffffff6b; */
+    padding: 15px;
+  }
+
+  .search-bar {
+    position: relative; /* Position relative to contain the icon */
+}
+
+.search-bar input {
+    padding-left: 10px; /* Add padding to avoid overlapping with the icon */
+    background-color: #e7dbca;
+}
+.search-bar .fa-search {
+    position: absolute; /* Position icon absolutely within the search bar */
+    right: 10px; /* Distance from the left */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for the exact center */
+    color: #7f2a2a;
+}
+
+.txt-animate {
+    opacity: 0; /* Start with the paragraph invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeIn 3s forwards; /* Animation to apply */
+    font-size: 24px; /* Font size for the paragraph */
+    color: #e5d8c4 !important; /* Text color */
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End with the paragraph visible */
+        transform: translateY(0); /* Move to its original position */
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(1); /* Grow to original size */
+    }
+}
+
+.biblestudent_note{
+    font-style: italic;
+    font-family: none;
+    color:#530909 !important;
+}
+.audio-preview {
+    width: 150px;
+  }
+
+  #grid {
+    width: 98%;
+    margin: auto;
+    font-family: 'Cardo';
+    /* width: 100%;
+    margin: 7% auto; */
+    max-height: 550px; 
+    overflow-y: auto;
+    overflow-x: auto;  /* Enable horizontal scrolling on small screens */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
+  /* Optional: style the scrollbars */
+  #grid::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  #grid::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+  }
+
+  #grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+/* Custom classes for row styling */
+td.gridjs-td {
+  border: 1px solid #7a2a2a1f !important;
+  box-sizing: content-box;
+  /* padding: 12px 24px; */
+  padding: 3px 7px !important;
+  background: #e5d8c4 !important;
+  text-align: left;
+  font-size: small;
+  font-weight: 500;
+}
+th.gridjs-th {
+  background-color: #7A2A2A !important;
+  padding: 1% !important;
+  border:1px solid #7a2a2a !important;
+}
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .quote-box {
+      width: 95% !important;
+    }
+    .quote-text {
+      font-size: 16px;
+    }
+    
+    .author {
+      font-size: 13px;
+    }
+
+    .gridjs-table {
+      font-size: 12px;
+    }
+    .gridjs-table th, .gridjs-table td {
+      padding: 8px;
+    }
+
+    /* Hide unnecessary columns for smaller screens */
+    .gridjs-table th:nth-child(4),
+    .gridjs-table td:nth-child(4),
+    .gridjs-table th:nth-child(6),
+    .gridjs-table td:nth-child(6) {
+      display: none;
+    }
+
+    /* Adjust the table to take up full width */
+    .gridjs-table {
+      width: 100%;
+    }
+
+    .gridjs-table tbody tr {
+      display: block;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .gridjs-table tbody td {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .gridjs-table tbody td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .quote-box {
+      width: 95% !important;
+    }
+    .question-book-right-top,.bottom-left-qimage,.bottom-left-image,.bottom-left-image-audio,.bottom-left-image-reprint,.top-right-image {
+      width: 200px; /* Adjust width for smaller screens */
+      height: auto; /* Maintain aspect ratio */
+      visibility: hidden;
+  }
+    .gridjs-table th, .gridjs-table td {
+      padding: 6px;
+    }
+
+    .quote-text {
+      font-size: 16px !important;
+    }
+    
+    .author {
+      font-size: 13px !important;
+    }
+  }
+  /* Optional: Custom styling for cells with a specific background color */
+  .highlight-cell {
+    background-color: #ffcccb;  /* Light red color */
+  }
+
+  .highlight-cell-good {
+    background-color: #90ee90;  /* Light green color */
+  }
+
+  .highlight-cell-high {
+    background-color: #ff9800;  /* Orange color for high values */
+  }
+  /* Custom CSS for Grid.js header styling */
+.gridjs-th {
+    background-color: #4CAF50;  /* Green background for headers */
+    color: white;                /* White text color */
+    text-align: center;          /* Centered text */
+  }
+   /* Sticky header styles */
+   .gridjs-thead {
+    position: sticky;
+    top: 0; /* Position it at the top */
+    background-color: #fff; /* Background color for header */
+    z-index: 10; /* Ensure header is above other elements */
+}
+
+.gridjs-footer {
+  position: sticky; /* Keep it fixed */
+  bottom: 0; /* Stick to the bottom */
+  z-index: 2; /* Stay above other elements */
+  background-color:#7A2A2A !important /* Ensure visibility */
+}
+
+/* Scrollable content area */
+.gridjs-body {
+  height: calc(100% - 50px - 30px); /* Adjust this value based on header and footer height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+th.gridjs-th .gridjs-th-content{
+  color: #e5d8c4 !important;
+}
+button.gridjs-sort{
+  color: #e5d8c4 !important;
+}
+.gridjs-pagination .gridjs-summary{
+  color: #e5d8c4 !important;
+}
+
+.navbar-nav .dropdown-menu{
+  box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index:2000;
+}
+
+
+.quote-box {
+  width: 90%;
+  position: relative;
+  z-index: 1001;
+  font-family: 'Georgia', serif;
+  font-size: 1.5em;
+  color: #555;
+  background-color: #e5d8c4;
+   /* #ffffff6b; */
+  /* border-left: 10px solid #ccc; */
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: #721c24 0px 2px 5px -1px, #7a2a2a 0px 1px 3px -1px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+}
+
+.quote-text {
+  font-family: serif;
+  quotes: "“" "”" "‘" "’";
+  font-size: 20px;
+  color: #7a2a2a !important;
+}
+
+.quote-text::before {
+  content: open-quote;
+}
+
+.quote-text::after {
+  content: close-quote;
+}
+
+.author {
+  text-align: right;
+  font-style: italic;
+  margin-top: 10px;
+  color: #7a2a2a !important;
+    font-size: 18px;
+}
+.cardo-regular {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardo-bold {
+  font-family: "Cardo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardo-regular-italic {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.table.gridjs-table{
+  width: auto;
+}
+/* WhatsApp share button */
+#whatsapp-share-button {
+  text-decoration: none;
+  /* font-size: 20px; */
+  color: #7a2a2a; /* WhatsApp green */
+  font-family: Arial, sans-serif;
+  /* font-weight: bold; */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  /* border: 2px solid #25D366; */
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  transition: 0.3s;
+}
+/* 
+#whatsapp-share-button:hover {
+  background-color: #25D366;
+  color: white;
+} */
+
+/* WhatsApp icon */
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.bring_front{
+  /* position: relative;
+    z-index: 1001; */
+}
+.bring_front_menu{
+  /* position: absolute;
+    z-index: 1002; */
+}
+
+
+
+/* #google_translate_element {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+} */
+
+
+:root {
+  --switches-bg-color: goldenrod;
+  --switches-label-color: white ;
+  --switch-bg-color: white;
+  --switch-text-color: goldenrod ;
+}
+
+/* body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
+/* resize font-size on html and body level. html is required for widths based on rem */
+
+.lang{
+  position: fixed;
+  bottom: 2%;
+  right: -8%;
+  z-index: 1500;
+}
+
+.switches-container {
+  width: 16rem;
+  position: relative;
+  display: flex;
+  padding: 0;
+  position: relative;
+  background: #daa52000;
+  line-height: 3rem;
+  border-radius: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+  font-size: x-small;
+  width: 20%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: #7a2a2a;
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+  - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  padding: 0.15rem;
+  z-index: 3;
+  transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+  /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.switch {
+  border-radius: 3rem;
+  background: #7a2a2a;
+  height: 100%;
+}
+
+/* switch box labels
+  - default setup
+  - toggle afterwards based on radio:checked status 
+*/
+.switch div {
+  font-size: x-small;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  color: #e5d8c4;
+  transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+  opacity: 1;
+}
+
+.search-border{
+  border: 1px solid #7a2a2a;
+  border-radius: 5px;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu.open {
+  display: block;
+}
+
+.badge-harvest{
+  cursor: pointer;
+    color: #ded5c6;
+    background-color: #7a2a2a;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 1%;
+    font-family: 'cardo';
+}
+
+.search-box{
+  border: 1px solid #721c24 !important;
+}
+
+.search-box::placeholder {
+  color: #721c24; /* Replace with your desired color */
+  opacity: 1;  /* Optional, to keep the color consistent across browsers */
+}
+
+.search-box::selection {
+  border:1px solid green; /* Custom highlight background color */
+}
+
+.question-book-right-top{
+  position: fixed;
+  top: 20%;
+  left: -3%;
+  z-index: 1000;
+  height: 250px;
+}

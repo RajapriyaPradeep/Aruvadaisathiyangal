@@ -1,0 +1,103 @@
+/* faq section starts here */
+.faq-item {
+    z-index: 1001;
+font-family: 'Cardo';
+color: #7a2a2a;
+background-color: #e5d8c4;
+margin: 5px;
+margin-bottom: 1%;
+font-size: small;
+position: relative;
+border-radius: 15px;
+box-shadow: #721c24 0px 2px 5px -1px, #7a2a2a -15px 1px 0px 0px;
+}
+
+.faq-item summary {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: 100;
+  background-color: #ded5c6;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+.faq-item summary:hover {
+  background-color: #f1ece2;
+}
+
+.faq-item p {
+  padding: 15px;
+  margin: 0;
+  background-color: #fff;
+}
+/* faq section ends here */
+/* Style the scrollbars */
+.faq-section {
+overflow-y: auto;  /* Enable vertical scroll */
+scrollbar-width: thin;  /* For Firefox: Thin scrollbar */
+scrollbar-color: #985050 #f9f9f9; /* For Firefox: Scrollbar color */
+width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 65vh;
+}
+
+/* For Chrome, Safari, and Edge */
+.faq-section::-webkit-scrollbar {
+width: 10px; /* Scrollbar width */
+}
+
+.faq-section::-webkit-scrollbar-track {
+background: #f9f9f9; /* Track background */
+}
+
+.faq-section::-webkit-scrollbar-thumb {
+background-color: #888; /* Scrollbar color */
+border-radius: 10px; /* Round the scroll thumb */
+border: 2px solid #f9f9f9; /* Space around the thumb */
+}
+
+.faq-section::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Scrollbar thumb on hover */
+}
+
+/* Optional: To make the scroll visible when hovering over the section */
+.faq-section {
+position: relative;
+transition: all 0.3s ease;
+}
+
+.faq-section:hover::-webkit-scrollbar {
+opacity: 1;
+}
+/* badge starts here */
+.badge-harvest{
+    cursor: pointer;
+      color: #ded5c6;
+      background-color: #7a2a2a;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      align-content: center;
+      margin-bottom: 1%;
+      font-family: 'cardo';
+  }
+/* badge ends here */
+/* bible book top left starts here */
+.question-book-right-top{
+    position: fixed;
+    top: 20%;
+    left: -3%;
+    z-index: 1000;
+    height: 250px;
+  }
+/* bible book top left ends here */
+/* scroll bottom right starts here */
+.bottom-left-qimage {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    z-index: 1000;
+    height: 250px;
+}
+/* scroll bottom right ends here */
