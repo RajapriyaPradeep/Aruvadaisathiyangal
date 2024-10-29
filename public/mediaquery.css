@@ -20,6 +20,10 @@
     .lang{
         right: -30%;
     }
+    .biblestudentslogo{
+        height: 45px;
+  width: 45px;
+    }
     /* Basic dropdown styles for desktop */
 }
 /* Mobile ends */
@@ -44,6 +48,10 @@
     }
     .lang{
         right: -30%;
+    }
+    .biblestudentslogo{
+        height: 45px;
+  width: 45px;
     }
     /* Basic dropdown styles for desktop */
     .navbar-nav {

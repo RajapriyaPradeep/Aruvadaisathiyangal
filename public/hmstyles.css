@@ -39,10 +39,13 @@ body::before {
     opacity: 0.3; /* Adjust opacity here */
     z-index: -1; /* Place behind the content */
   }
+
 /* Body ends */
 /* Navigation starts */
 .biblestudentslogo{
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  height: 65px;
+  width: 65px;
 }
 .nav-link{
     font-weight: 500;
