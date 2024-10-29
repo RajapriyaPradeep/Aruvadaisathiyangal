@@ -157,6 +157,6 @@ volsubmenuContainer.appendChild(vsubmenu);
 function searchaudio(){
     if(document.getElementById("searchkeyword").value != ""){
     let search_keyword = document.get
-    window.location.href = 'file:///E:/NC/Task/video-listing-app/audiodiscources.html?srch=' + document.getElementById("searchkeyword").value;
+    window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?srch=' + document.getElementById("searchkeyword").value;
     }
 }
