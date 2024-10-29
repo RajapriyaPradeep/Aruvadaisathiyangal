@@ -54,31 +54,7 @@
   width: 45px;
     }
     /* Basic dropdown styles for desktop */
-    .navbar-nav {
-        flex-direction: column; /* Stack items vertically */
-      }
     
-      .dropdown-menu {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: block; /* Show dropdown menu in mobile view */
-      }
-    
-      .submenu-container .submenu {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width on mobile */
-        display: none; /* Hidden initially */
-        padding-left: 20px;
-      }
-    
-      /* Show submenu on click */
-      .submenu-container.active .submenu {
-        display: block;
-      }
 }
 /* Tab ends */
 /* Desktop starts */
