@@ -54,7 +54,10 @@
   width: 45px;
     }
     /* Basic dropdown styles for desktop */
-    
+    .floating-icon{
+        top: 8% !important;
+    left: 85% !important;
+    }
 }
 /* Tab ends */
 /* Desktop starts */

@@ -453,3 +453,25 @@ body::before {
   opacity: 1;
   }
 /* scripture about us content ends here */
+/* New Icon starts here */
+.floating-icon {
+  position: fixed;
+  top: 2%;
+  left: 23%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.floating-icon img {
+  /* width: 60%;            
+  height: 60%; */
+}
+
+.floating-icon:hover {
+  cursor: pointer;
+}
+
+/* New Icon ends here */
