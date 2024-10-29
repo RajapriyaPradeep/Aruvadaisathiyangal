@@ -109,3 +109,9 @@ fetch(apiUrl)
   function shareAudio(url) {
     alert(`Sharing audio: ${url}`);
   }
+  function searchaudio(){
+    if(document.getElementById("searchkeyword").value != ""){
+    let search_keyword = document.get
+    window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?srch=' + document.getElementById("searchkeyword").value;
+    }
+}
