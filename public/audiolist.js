@@ -32,6 +32,16 @@ else
      // Function to render audio items
      function renderAudioItems(filteredData) {
        widgetContainer.innerHTML = ""; // Clear existing items
+
+       // Check if there are no records to display
+  if (filteredData.length === 0) {
+    const noRecordsMessage = document.createElement("div");
+    noRecordsMessage.className = "noRecordsMessage";
+    noRecordsMessage.textContent = "No records available";
+    widgetContainer.appendChild(noRecordsMessage);
+    return; // Exit the function if no records to display
+  }
+
        filteredData.forEach(item => {
          const audioItem = document.createElement("div");
          audioItem.className = "audioItem";
