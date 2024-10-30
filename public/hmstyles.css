@@ -388,7 +388,7 @@ body::before {
     justify-content: space-around;
 }
 .quote-container {
-  padding: 1%;
+  padding: 5%;
     background-color: antiquewhite;
     border-radius: 20px;
     color: #7a2a2a;
