@@ -1,5 +1,11 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .nav-item{
+        font-size: small !important;
+       }
+       .dropdown-item{
+        font-size: xx-small !important;
+    }
     .quote-box {
       width: 95% !important;
     }
@@ -29,6 +35,12 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .nav-item{
+     font-size: small !important;
+    }
+    .dropdown-item{
+        font-size: xx-small !important;
+    }
     .quote-box {
       width: 95% !important;
     }
@@ -62,6 +74,9 @@
 /* Tab ends */
 /* Desktop starts */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .dropdown-item{
+        font-size: x-small !important;
+    }
     .quote-box {
       width: 90% !important;
     }
