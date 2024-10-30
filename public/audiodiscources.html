@@ -44,9 +44,15 @@
             </a>
             <img src="./Assets/projtitle.png" class="projtitle" alt="Logo" onclick="navplaylist('home')">
             <!-- Toggler/collapsible button for mobile view -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
+                   <!-- Toggler/collapsible button for mobile view -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Hide default icon and insert custom icon -->
+    <span class="sr-only">Toggle navigation</span> <!-- Screen reader text -->
+    <i class="fas fa-ellipsis-v"></i> <!-- Custom icon -->
+</button>
             <!-- Navbar items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
