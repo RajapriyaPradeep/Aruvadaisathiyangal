@@ -49,12 +49,14 @@ else
 
          if(item.pdflink)
 {
-         const shareIcon = document.createElement("i");
-         shareIcon.className = "fas fa-share-alt icon";
-         shareIcon.title = "Share";
-         shareIcon.addEventListener("click", () => {
-             alert(`Sharing ${item.topic}`);
-         });
+  const shareIcon = document.createElement("i");
+  shareIcon.className = "fas fa-file-pdf icon";
+  shareIcon.title = "Pdf";
+  shareIcon.addEventListener("click", () => {
+    window.open(item.pdflink, "_blank");  
+    // alert(`Sharing ${item.topic}`);
+      
+  });
        } 
          // Download icon
          const downloadIcon = document.createElement("i");
