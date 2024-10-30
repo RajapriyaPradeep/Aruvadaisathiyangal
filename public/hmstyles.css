@@ -528,3 +528,12 @@ body::before {
   width: 100%;
   border-radius: 5px;
 }
+.navbar-toggler-icon {
+  display: none;
+}
+.navbar-light .navbar-toggler{
+  border:0px solid red;
+}
+.navbar-toggler{
+  font-size: 1rem !important;
+}
