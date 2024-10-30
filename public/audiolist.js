@@ -46,10 +46,10 @@ else
          titleDiv.textContent = item.topic;
  
          // Share icon
-
+         let shareIcon;
          if(item.pdflink)
 {
-  const shareIcon = document.createElement("i");
+  shareIcon = document.createElement("i");
   shareIcon.className = "fas fa-file-pdf icon";
   shareIcon.title = "Pdf";
   shareIcon.addEventListener("click", () => {
