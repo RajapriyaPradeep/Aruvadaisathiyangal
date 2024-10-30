@@ -1,5 +1,8 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .floating-icon img{
+        height: 45px !important;
+    }
     .nav-item{
         font-size: small !important;
        }
@@ -35,6 +38,9 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .floating-icon img{
+        height: 45px !important;
+    }
     .nav-item{
      font-size: small !important;
     }
@@ -74,6 +80,9 @@
 /* Tab ends */
 /* Desktop starts */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .floating-icon img{
+        height: 65px !important;
+    }
     .dropdown-item{
         font-size: x-small !important;
     }
