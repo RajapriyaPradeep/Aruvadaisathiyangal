@@ -97,7 +97,7 @@ body::before {
 
 .dropdown-item:hover {
     background-color:#7A2A2A !important;
-    margin: 5%;
+    /* margin: 5%; */
     /* width: 90%; */
     color: #ebd3b0;; /* White text on hover */
     font-weight: bold !important;
