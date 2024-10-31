@@ -537,3 +537,7 @@ body::before {
 .navbar-toggler{
   font-size: 1rem !important;
 }
+.scripturetitle{
+  text-align: center;
+  color: #7A2A2A;
+}

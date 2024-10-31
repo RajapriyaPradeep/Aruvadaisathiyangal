@@ -1,5 +1,8 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .quote-container{
+        font-size: 10px !important;
+    }
     .floating-icon img{
         height: 45px !important;
     }
@@ -19,6 +22,9 @@
         right: 0%;
         visibility: visible !important;
     }
+    .author {
+        text-align: start !important;
+      }
     .medievalsharp-regular{
         font-size: 12px !important;
     }
@@ -40,6 +46,12 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .quote-container{
+        font-size: 10px !important;
+    }
+    .author {
+        text-align: start !important;
+      }
     .floating-icon img{
         height: 45px !important;
     }
