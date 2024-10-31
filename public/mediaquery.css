@@ -13,9 +13,11 @@
       width: 95% !important;
     }
     .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top,.reprint-bottom-right-image{
-        width: 200px; /* Adjust width for smaller screens */
+        width: 100px; /* Adjust width for smaller screens */
         height: auto; /* Maintain aspect ratio */
-        visibility: hidden !important;
+        bottom: 0%;
+        right: 0%;
+        visibility: visible !important;
     }
     .medievalsharp-regular{
         font-size: 12px !important;
@@ -51,9 +53,9 @@
       width: 95% !important;
     }
     .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top,.reprint-bottom-right-image{
-        width: 200px; /* Adjust width for smaller screens */
+        width: 100px; /* Adjust width for smaller screens */
         height: auto; /* Maintain aspect ratio */
-        visibility: hidden !important;
+        visibility: visible !important;
     }
     .medievalsharp-regular{
         font-size: 12px !important;
