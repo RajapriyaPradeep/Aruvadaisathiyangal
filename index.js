@@ -57,6 +57,14 @@ app.get('/api/videos', (req, res) => {
     );
     res.json(filteredVideos);
 });
+// Endpoint to search videos by recent discources
+app.get('/api/recent', (req, res) => {
+    const videos = readData();
+    const filteredVideos = videos.filter(video =>
+        video.year.includes(new Date().getFullYear())
+    );
+    res.json(filteredVideos);
+});
 
 // Endpoint to search videos by keyword
 app.get('/api/searchkeywordaudios', (req, res) => {
