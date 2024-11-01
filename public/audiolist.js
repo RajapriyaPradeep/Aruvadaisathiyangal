@@ -1,4 +1,5 @@
 
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const searchdata = urlParams.get('module');
@@ -10,9 +11,12 @@ let apiUrl = "";
 
 if(searchdata == "" || searchdata == null || searchdata == undefined)
    apiUrl = `https://aruvadaisathiyangal.vercel.app/api/searchkeywordaudios?search=${encodeURIComponent(searchkeyword)}`;
+else{
+  if(searchdata == "recent")
+   apiUrl = `https://aruvadaisathiyangal.vercel.app/api/recent`;
 else
    apiUrl = `https://aruvadaisathiyangal.vercel.app/api/videos?search=${encodeURIComponent(searchdata)}`;
-
+}
    fetch(apiUrl)
    .then(response => {
      if (!response.ok) {
