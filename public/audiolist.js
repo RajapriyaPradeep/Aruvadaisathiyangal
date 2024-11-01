@@ -151,15 +151,8 @@ else
                formatter: (cell) => `${cell} MB`
              },
              {
-               name: 'Date',  // Change header title for 'Timestamp' column
-               sort: true,
-               formatter: (cell) => {
-                 const date = new Date(cell);
-                 const day = String(date.getDate()).padStart(2, '0');
-                 const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is zero-indexed
-                 const year = date.getFullYear();
-                 return `${day}.${month}.${year}`;
-               }
+               name: 'Year',  // Change header title for 'Timestamp' column
+               sort: true
              }
            ],
        data: data.map(item => [
@@ -168,7 +161,7 @@ else
          item.audioUrl,
          item.pdflink,
          item.sizeMb,
-         item.timestamp
+         item.year
        ]),
        sort: true,
        pagination: true
