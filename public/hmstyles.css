@@ -246,6 +246,7 @@ body::before {
     background-color: #e5d8c4;
     padding: 20px;
     margin: 20px;
+    margin-bottom: 0.5px;
     position: relative;
     border-radius: 15px;
     box-shadow: #721c2436 0px 2px 5px -1px, #721c2494 0px 1px 3px -1px;
