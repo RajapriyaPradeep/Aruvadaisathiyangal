@@ -152,7 +152,8 @@ else
              },
              {
                name: 'Year',  // Change header title for 'Timestamp' column
-               sort: true
+               sort: true,
+               formatter: (cell) => {cell}
              }
            ],
        data: data.map(item => [
