@@ -61,7 +61,7 @@ app.get('/api/videos', (req, res) => {
 app.get('/api/recent', (req, res) => {
     const videos = readData();
     const filteredVideos = videos.filter(video =>
-        video.year.includes(new Date().getFullYear())
+        video.year == (new Date().getFullYear())
     );
     res.json(filteredVideos);
 });
