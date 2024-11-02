@@ -173,7 +173,8 @@ body::before {
   color: #74603f;
   text-align: center;
   height: 1.5em;
-  opacity: .5;
+  opacity: 1;
+  /* opacity: .5; */
   &:before {
     content: '';
     background: linear-gradient(to right, transparent, #818078, transparent);
