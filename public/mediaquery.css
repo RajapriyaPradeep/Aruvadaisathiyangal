@@ -15,7 +15,14 @@
     .quote-box {
       width: 95% !important;
     }
-    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top,.reprint-bottom-right-image{
+    .reprint-bottom-right-image{
+        width: 200px; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        bottom: 0%;
+        right: 0%;
+        visibility: visible !important;
+    }
+    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top{
         width: 100px; /* Adjust width for smaller screens */
         height: auto; /* Maintain aspect ratio */
         bottom: 0%;
@@ -64,7 +71,14 @@
     .quote-box {
       width: 90% !important;
     }
-    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top,.reprint-bottom-right-image{
+    .reprint-bottom-right-image{
+        width: 200px; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        bottom: 0%;
+        right: 0%;
+        visibility: visible !important;
+    }
+    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top{
         width: 100px; /* Adjust width for smaller screens */
         height: auto; /* Maintain aspect ratio */
         visibility: visible !important;
