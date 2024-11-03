@@ -274,6 +274,8 @@ function navplaylist(modulename){
         window.location.href = 'https://aruvadaisathiyangal.in/index.html';
     else if(modulename == "scripture")
         window.location.href = 'https://aruvadaisathiyangal.in/reprint.html';
+    else if(modulename == "about")
+        window.location.href = 'https://aruvadaisathiyangal.in/about.html';
     else
         window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?module=' + modulename;
         // window.location.href = 'file:///E:/NC/Task/video-listing-app/audiolist.html?module=' + modulename;

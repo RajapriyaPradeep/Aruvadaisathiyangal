@@ -545,3 +545,16 @@ body::before {
   text-align: center;
   color: #7A2A2A;
 }
+
+.hover-text-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hover-text-button:hover {
+  background-color: #0056b3;
+}

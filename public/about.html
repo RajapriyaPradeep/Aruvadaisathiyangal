@@ -6,30 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aruvadaisathiyangal</title>
     <link rel="icon" type="image/png" href="./Assets/Alogo.jpg">
-
+    
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="hmstyles.css">
     <link rel="stylesheet" href="mediaquery.css">
-    <!-- <link rel="stylesheet" href="ribbon.css"> -->
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bring_front" >
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="#">
-                <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
+                <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" onclick="navplaylist('home')">
                 <!-- <img src="./Assets/updated_logo.png" alt="Logo" width="75" height="75" onclick="navplaylist('home')"> -->
             </a>
             <img src="./Assets/projtitle.png" class="projtitle" alt="Logo" onclick="navplaylist('home')">
@@ -37,12 +45,11 @@
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button> -->
-                        <!-- Toggler/collapsible button for mobile view -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <!-- Hide default icon and insert custom icon -->
-    <span class="sr-only">Toggle navigation</span> <!-- Screen reader text -->
-    <i class="fas fa-ellipsis-v"></i> <!-- Custom icon -->
-</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Hide default icon and insert custom icon -->
+                <span class="sr-only">Toggle navigation</span> <!-- Screen reader text -->
+                <i class="fas fa-ellipsis-v"></i> <!-- Custom icon -->
+            </button>
             <!-- Navbar items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -98,57 +105,43 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="more">MORE</a>
                         <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#" data-lang="scripture"  onclick="navplaylist('scripture')">To Us the Scriptures Clearly Teach</a>
-                            <a class="dropdown-item" href="#" data-lang="about"  onclick="navplaylist('about')">Who we are</a>
                             <a class="dropdown-item" href="#" data-lang="handouts">Handouts</a>
                         </div>
-                    </li>   
+                    </li> 
                     <li class="nav-item search-bar">
                         <form class="form-inline search-border">
                             <i class="fas fa-search" onclick="searchaudio()" ></i> <!-- Font Awesome Search Icon -->
                             <input class="form-control search-box" id="searchkeyword" type="search" placeholder="Search" aria-label="Search">
                         </form>
-                    </li>                 
+                    </li>                     
                 </ul>
             </div>
         </div>
     </nav>
+
     <!-- Main Content Area -->
-    <div class="container content-area"> 
-        <h1 data-lang="truthverse" id="Bibleverse" class="medievalsharp-regular my-4 text-center txt-animate shadow-style bring_front">Sanctify them through thy truth: thy word is truth.- John 17:17</h1>
-        <hr class="hr-text" data-content="Welcome to a Place of Light">
-        <p class="text-center glory-God" style="margin: 0;">This site is sponsored by Bro. Prabhakaran.</p>
-        <p class="text-center glory-God">​It is dedicated to the praise and honor of the King of Kings and Lord of Lords, Jesus Christ.</p>
-        <p data-lang="reasonforsite" id="biblestudenttxt" class="text-center biblestudent_note bring_front">We were moved to create this site as stewards of the resources we've been entrusted with, especially given the growing number of requests for them. Over the years, the Lord has allowed us to collect various studies and materials that have been a blessing to His people, and many have expressed a need for easier access. This site is meant to be a simple archive of those resources, and we will update it as more are made available, trusting in the Lord’s provision.</p>
-        <div class="quote-box bring_front">
-            <p class="quote-text" id="brorussellquotes" data-lang="brorussellmsg">
-                The true Gospel is not merely a message of good tidings respecting salvation to a few, but a message of great joy which shall be unto all people — the declaration that a Savior and Deliverer has been provided, and that in God's due time He shall be made known to all and His blessing shall be extended to all the families of the earth.
-            </p>
-            <p class="author" id="brorussellname" data-lang="brorussellname">— Charles Taze Russell</p>
-        </div>
-    <!-- Bottom Right Image -->
-        <img src="./Assets/harvest.png" alt="Bottom Left Image" class="home-bottom-right-image">
-        <div class="floating-icon">
-              <img src="./Assets/newicon.png" onclick="navplaylist('recent')" alt="Back to Top">
-          </div>
-    <!-- Language Toogle -->
-        <!-- <div class="lang">
-        <div class="switches-container">
-            <input type="radio" id="switchEnglish" onclick="setLanguage('en')" name="switchPlan" value="English" checked="checked" />
-            <input type="radio" id="switchTamil" onclick="setLanguage('ta')" name="switchPlan" value="Tamil" />
-            <label for="switchEnglish">English</label>
-            <label for="switchTamil">தமிழ்</label>
-            <div class="switch-wrapper">
-              <div class="switch">
-                <div>English</div>
-                <div>தமிழ்</div>
-              </div>
+    <div class="container content-area scripture-content">
+        <!-- <img src="./Assets/church.png" class="scripture-img"> -->
+        <div class="row">
+            <!-- First Column: Image and Hover Button -->
+            <div class="col-md-6">
+                <img src="./Assets/dalle_scrolls.png" alt="Bible Image" class="img-fluid mb-3">
+                <button class="btn btn-primary hover-text-button" onmouseover="this.innerHTML='To Us the Scriptures Clearly Teach'" onmouseout="this.innerHTML='Hover over me'">Hover over me</button>
             </div>
-          </div>
-          </div> -->
+            
+            <!-- Second Column: "Who We Are" Text -->
+            <div class="col-md-6">
+                <h5 class="section-title">Who We Are</h5>
+                <p>We are Christian Bible Students, an independent group not affiliated with any established denominations. Unlike traditional denominations, we don’t follow many conventional practices. Instead, we are dedicated to diligently searching the Scriptures to uncover the Divine Word of Truth. We warmly welcome all who share our love for Truth and believe in Jesus Christ as our Redeemer to join us in studying God’s Word.</p>
+            </div>
+        </div>
+        <!-- <img src="./Assets/Biblekey.png" alt="Bottom Left Image" class="reprint-bottom-right-image"> -->
     </div>
 
     <!-- Custom JS -->
-    <script src="simple_script.js"></script>    
+    <!-- <script src="reprint.js"></script> -->
+    <script src="simple_script.js"></script>
+
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
