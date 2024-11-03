@@ -134,7 +134,7 @@ else
                id:'share',
                sort:false,
                formatter: (cell, row) => {
-                 return gridjs.html(`<a href="${row.cells[2].data}" target="_blank"><i class="fas fa-share-alt" ></i></a>`);
+                 return gridjs.html(`<a href="${row.cells[2].data}" target="_blank"><i class="fas fa-download icon" ></i></a>`);
                }                
              },
              {
