@@ -108,6 +108,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="more">MORE</a>
                         <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#" data-lang="scripture"  onclick="navplaylist('scripture')">To Us the Scriptures Clearly Teach</a>
+                            <a class="dropdown-item" href="#" data-lang="about"  onclick="navplaylist('about')">Who we are</a>
                             <a class="dropdown-item" href="#" data-lang="handouts">Handouts</a>
                         </div>
                     </li>  
@@ -135,6 +136,8 @@ function navplaylist(modulename){
         window.location.href = 'https://aruvadaisathiyangal.in/index.html';
     else if(modulename == "scripture")
         window.location.href = 'https://aruvadaisathiyangal.in/reprint.html';
+    else if(modulename == "about")
+        window.location.href = 'https://aruvadaisathiyangal.in/about.html';
     else
         window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?module=' + modulename;
         // window.location.href = 'file:///E:/NC/Task/video-listing-app/audiolist.html?module=' + modulename;
