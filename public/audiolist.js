@@ -145,7 +145,7 @@ else
                formatter: (cell, row) => {
                  console.log("cell data is " + cell);
                  if(cell  != '')                  
-                 return gridjs.html(`<a href="${cell}" target="_blank"><i class="fas fa-file-pdf"></i></a>`);
+                 return gridjs.html(`<a href="${cell}" target="_blank"><i style="color:#e5d8c4" class="fas fa-file-pdf"></i></a>`);
                else
                  return gridjs.html(``);
                }                
