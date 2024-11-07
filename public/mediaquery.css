@@ -1,5 +1,8 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .audioscreenbody{
+        background-color: #d5cdc6;
+    }
     .quote-container{
         font-size: 10px !important;
     }
@@ -53,6 +56,9 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .audioscreenbody{
+        background-color: #d5cdc6;
+    }
     .quote-container{
         font-size: 10px !important;
     }
