@@ -118,11 +118,12 @@ else
              {
                name: 'TITLE',  // Change header title for 'Topic' column
                sort: true,
-               
+               resizable: true
              },
              {
                name: 'Audio', // Change header title for 'Audio Preview' column
                sort: false,
+               resizable: true,
                formatter: (cell) => gridjs.html(`
                  <audio controls style="    height: 30px;border:1px solid #7a2a2a;border-radius:25px;">
                    <source src="${cell}" type="audio/mp3">

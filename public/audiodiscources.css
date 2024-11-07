@@ -63,3 +63,7 @@ td.gridjs-td {
     background: #f1f1f1;
     border-radius: 4px;
   }
+/* Display a resize cursor on column edges */
+.gridjs-th, .gridjs-td {
+  cursor: col-resize;
+}
