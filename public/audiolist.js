@@ -139,7 +139,7 @@ else
                }                
              },
              {
-               name:'<i class="fas fa-file-pdf"></i>',
+               name:gridjs.html('<i class="fas fa-file-pdf"></i>'),
                id:'pdf',
                sort:false,
                formatter: (cell, row) => {
