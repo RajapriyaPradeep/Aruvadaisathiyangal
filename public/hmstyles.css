@@ -566,7 +566,7 @@ body::before {
   background-color: #7a2a2a; /* Footer background color */
   color: #e5d8c4; /* Text color */
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   font-family: 'Cardo', serif;
   font-size: 14px;
   position: relative;
