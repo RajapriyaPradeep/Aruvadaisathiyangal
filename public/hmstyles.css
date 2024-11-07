@@ -55,7 +55,7 @@ body::before {
  }
  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
   color:#7a2a2a !important;
-  font-size: medium;
+  /* font-size: medium; */
  }
  .navbar-light .navbar-nav .nav-link{
   color:#7a2a2a !important;
@@ -593,4 +593,10 @@ body::before {
 .footer-links a:hover {
   color: #ebd3b0; /* Hover color */
   font-weight: bold;
+}
+.dropdown-divider{
+  height: 0;
+    margin: 0rem 0;
+    overflow: hidden;
+    border-top: 2px solid #721c24b0;
 }
