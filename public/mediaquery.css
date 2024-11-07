@@ -1,5 +1,8 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .projtitle{
+        width: 170px;
+    }
     .audioscreenbody{
         background-color: #d5cdc6;
     }
@@ -56,6 +59,9 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .projtitle{
+        width: 170px;
+    }
     .audioscreenbody{
         background-color: #d5cdc6;
     }
