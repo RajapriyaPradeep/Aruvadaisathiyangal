@@ -133,6 +133,7 @@ else
              {
               name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-download icon"></i>'),
                id:'share',
+               resizable: true,
                sort:false,
                formatter: (cell, row) => {
                  return gridjs.html(`<a href="${row.cells[2].data}" target="_blank"><i class="fas fa-download icon" ></i></a>`);
@@ -141,6 +142,7 @@ else
              {
                name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-file-pdf"></i>'),
                id:'pdf',
+               resizable: true,
                sort:false,
                formatter: (cell, row) => {
                  console.log("cell data is " + cell);
