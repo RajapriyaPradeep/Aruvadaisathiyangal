@@ -28,7 +28,7 @@ else
    .then(data => {
      const width = window.innerWidth;
 
-     if (width <= 480) {
+     if (width <= 480 && (localStorage.getItem("viewmode")=="mobile")) {
        document.getElementById("grid").style.display = "none";
        document.getElementById("titleAudioWidget").style.display = "block";
        //for mobile version

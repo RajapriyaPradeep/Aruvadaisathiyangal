@@ -1,3 +1,17 @@
+const width = window.innerWidth;
+if (width <= 480) {
+
+}
+else{
+    document.getElementById("footersec").style.display = "none";
+}
+
+function viewmode(mode){
+    if(mode == "mobile")
+        localStorage.setItem("viewmode","mobile");
+    else
+    localStorage.setItem("viewmode","desktop");
+}
 // const translations = {
 //     en: {
 //         audiodiscourse:"AUDIO DISCOURSES",
