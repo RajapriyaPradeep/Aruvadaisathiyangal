@@ -407,7 +407,15 @@ body::before {
   scrollbar-color: #985050 #f9f9f9; /* For Firefox: Scrollbar color */
     font-size: 14px;
 }
-
+.quote-scripture{
+    padding: 2%;
+    border-right: 1.5px solid #7a2a2a;
+    height: 60vh;
+    font-size: smaller;
+    overflow-anchor: none;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
 .quote-container p {
   margin: 1em 0;
   font-size: 1.1em;
