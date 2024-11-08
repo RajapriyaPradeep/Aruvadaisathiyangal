@@ -1,5 +1,8 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .wwr-block{
+        border-right: 0px solid #7a2a2a;
+        }
     .projtitle{
         width: 170px;
     }
@@ -59,6 +62,9 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .wwr-block{
+        border-right: 0px solid #7a2a2a;
+        }
     .projtitle{
         width: 170px;
     }
