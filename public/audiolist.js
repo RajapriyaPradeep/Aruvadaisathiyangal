@@ -123,18 +123,18 @@ else
             const title = cell;
             const audioUrl = row.cells[1].data; // Audio download link
             // const pdfLink = row.cells[3].data;   // PDF link
-            const pdfLink = row.cells[3] ? row.cells[3].data : '';
+            const pdfLink = row._cells[0].data.pdflink;
     
-            // Set up the HTML for the title with a tooltip
-            return gridjs.html(`
-              <span class="tooltip-target" data-tooltip="${title}">${title}</span>
-              <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
-                <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
-              </a>
-              ${pdfLink ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
-                <i class="fas fa-file-pdf icon" style="color:#e5d8c4;" title="Download PDF"></i>
-              </a>` : ''}
-            `);
+            // Set up the HTML for title with conditional PDF link
+        return gridjs.html(`
+          <span class="tooltip-target" data-tooltip="${title}">${title}</span>
+          <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
+            <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
+          </a>
+          ${pdfLink ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
+            <i class="fas fa-file-pdf icon" style="color:#e5d8c4;" title="Download PDF"></i>
+          </a>` : ''}
+        `);
           }
         },
         {
