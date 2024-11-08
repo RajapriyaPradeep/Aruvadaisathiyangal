@@ -160,9 +160,7 @@ else
       sort: true,
       pagination: true
     }).render(document.getElementById("grid"));
-
-    
-// Custom tooltip functionality
+    // Custom tooltip functionality
 document.addEventListener("mouseover", function(event) {
   if (event.target && event.target.classList.contains("tooltip-target")) {
     let tooltipText = event.target.getAttribute("data-tooltip");
@@ -175,8 +173,11 @@ document.addEventListener("mouseover", function(event) {
     tooltip.style.left = `${rect.left + window.scrollX}px`;
     tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 5}px`;
 
+    // Listen for mouse leave to remove tooltip
     event.target.addEventListener("mouseleave", function() {
-      document.body.removeChild(tooltip);
+      if (tooltip.parentNode) { // Check if tooltip is still a child of body
+        document.body.removeChild(tooltip);
+      }
     });
   }
 });
@@ -194,11 +195,15 @@ document.addEventListener("click", function(event) {
     tooltip.style.left = `${rect.left + window.scrollX}px`;
     tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 5}px`;
 
+    // Remove tooltip after 2 seconds
     setTimeout(() => {
-      document.body.removeChild(tooltip);
+      if (tooltip.parentNode) { // Check if tooltip is still a child of body
+        document.body.removeChild(tooltip);
+      }
     }, 2000); // Tooltip will disappear after 2 seconds (or you can set your own duration)
   }
 });
+
    }
    })
    .catch(error => {
