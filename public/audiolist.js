@@ -54,55 +54,115 @@ else
          const titleContainer = document.createElement("div");
          titleContainer.className = "titleContainermobile";
  
-         // Title text
-         const titleDiv = document.createElement("div");
-         titleDiv.className = "audioTitle";
-         titleDiv.textContent = item.topic;
+        //  // Title text
+        //  const titleDiv = document.createElement("div");
+        //  titleDiv.className = "audioTitle";
+        //  titleDiv.textContent = item.topic;
+
+         // Title text with custom tooltip
+    const titleDiv = document.createElement("div");
+    titleDiv.className = "audioTitle";
+    titleDiv.textContent = item.topic;
+    
+    // Tooltip element
+    let tooltip;
+    // Function to show the tooltip
+    const showTooltip = () => {
+      if (!tooltip) {
+          tooltip = document.createElement("div");
+          tooltip.classList.add("custom-tooltip");
+          tooltip.innerText = item.topic;
+          document.body.appendChild(tooltip);
+      }
+
+      // Get position of titleDiv relative to viewport
+      const rect = titleDiv.getBoundingClientRect();
+      let tooltipLeft = rect.left + window.scrollX;
+      let tooltipTop = rect.top + window.scrollY - tooltip.offsetHeight - 5;
+
+      // Adjust position to ensure tooltip stays in viewport
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const tooltipMargin = 10;
+
+      if (tooltipLeft < tooltipMargin) {
+          tooltipLeft = tooltipMargin;
+      }
+      if (tooltipLeft + tooltip.offsetWidth > viewportWidth - tooltipMargin) {
+          tooltipLeft = viewportWidth - tooltip.offsetWidth - tooltipMargin;
+      }
+      if (tooltipTop < tooltipMargin) {
+          tooltipTop = rect.top + window.scrollY + rect.height + 5;
+      }
+      if (tooltipTop + tooltip.offsetHeight > viewportHeight - tooltipMargin) {
+          tooltipTop = viewportHeight - tooltip.offsetHeight - tooltipMargin;
+      }
+
+      // Set tooltip position and styles
+      tooltip.style.position = "absolute";
+      tooltip.style.left = `${tooltipLeft}px`;
+      tooltip.style.top = `${tooltipTop}px`;
+      tooltip.style.backgroundColor = "#7a2a2a";
+      tooltip.style.color = "#f9f9f9";
+      tooltip.style.padding = "5px 10px";
+      tooltip.style.borderRadius = "5px";
+      tooltip.style.fontSize = "12px";
+      tooltip.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
+  };
+
+  // Function to hide the tooltip
+  const hideTooltip = () => {
+      if (tooltip && tooltip.parentElement) {
+          tooltip.parentElement.removeChild(tooltip);
+          tooltip = null;
+      }
+  };
+
+  // Show tooltip on hover for desktop
+  titleDiv.addEventListener("mouseover", showTooltip);
+  titleDiv.addEventListener("mouseleave", hideTooltip);
+
+  // Show tooltip on click for mobile
+  titleDiv.addEventListener("click", showTooltip);
+
+  // Append title and icons to the title container
+  titleContainer.appendChild(titleDiv);
  
-         // Share icon
-         let shareIcon;
-         if(item.pdflink)
-{
-  shareIcon = document.createElement("i");
+// Share icon (PDF link)
+if (item.pdflink) {
+  const shareIcon = document.createElement("i");
   shareIcon.className = "fas fa-file-pdf icon mobileicon";
   shareIcon.title = "Pdf";
   shareIcon.addEventListener("click", () => {
-    window.open(item.pdflink, "_blank");  
-    // alert(`Sharing ${item.topic}`);
-      
+      window.open(item.pdflink, "_blank");
   });
-       } 
-         // Download icon
-         const downloadIcon = document.createElement("i");
-         downloadIcon.className = "fas fa-download icon mobileicon";
-         downloadIcon.title = "Download";
-         downloadIcon.addEventListener("click", () => {
-             window.open(item.audioUrl, "_blank");
-         });
- 
-         // Append title and icons to the title container
-         titleContainer.appendChild(titleDiv);
-         if(item.pdflink)
-           {
-         titleContainer.appendChild(shareIcon);
-           }
-         titleContainer.appendChild(downloadIcon);
- 
-         // Audio control
-         const audioControl = document.createElement("audio");
-         audioControl.className = "audioControl audioControlmobile";
-         audioControl.controls = true;
- 
-         const source = document.createElement("source");
-         source.src = item.audioUrl;
-         source.type = "audio/mp3";
-         audioControl.appendChild(source);
- 
-         // Append titleContainer and audio control to audio item
-         audioItem.appendChild(titleContainer);
-         audioItem.appendChild(audioControl);
- 
-         widgetContainer.appendChild(audioItem);
+  titleContainer.appendChild(shareIcon);
+}
+
+// Download icon
+const downloadIcon = document.createElement("i");
+downloadIcon.className = "fas fa-download icon mobileicon";
+downloadIcon.title = "Download";
+downloadIcon.addEventListener("click", () => {
+  window.open(item.audioUrl, "_blank");
+});
+titleContainer.appendChild(downloadIcon);
+
+// Audio control
+const audioControl = document.createElement("audio");
+audioControl.className = "audioControl audioControlmobile";
+audioControl.controls = true;
+
+const source = document.createElement("source");
+source.src = item.audioUrl;
+source.type = "audio/mp3";
+audioControl.appendChild(source);
+
+// Append titleContainer and audio control to audio item
+audioItem.appendChild(titleContainer);
+audioItem.appendChild(audioControl);
+
+widgetContainer.appendChild(audioItem);
      });
      }
  
