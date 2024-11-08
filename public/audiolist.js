@@ -169,51 +169,49 @@ document.addEventListener("mouseover", function(event) {
     tooltip.innerText = tooltipText;
     document.body.appendChild(tooltip);
 
-    // Get the position of the target element
+    // Get the position of the target element relative to the viewport
     let rect = event.target.getBoundingClientRect();
 
-    // Calculate the position for the tooltip
+    // Calculate tooltip position (position it above or below the title)
     let tooltipLeft = rect.left + window.scrollX;
-    let tooltipTop = rect.top + window.scrollY - tooltip.offsetHeight - 5; // 5px above the title
+    let tooltipTop = rect.top + window.scrollY - tooltip.offsetHeight - 5; // Position above the title (adjust by 5px)
 
-    // Ensure tooltip is within the viewport (adjust position if it goes off the screen)
+    // Ensure tooltip stays within the viewport (especially on mobile)
     const tooltipMargin = 10; // Margin from the edge of the viewport
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
-    // If the tooltip goes out of the viewport on the left side, adjust it
+    // If the tooltip goes off the left edge, move it to the right
     if (tooltipLeft < tooltipMargin) {
       tooltipLeft = tooltipMargin;
     }
 
-    // If the tooltip goes out of the viewport on the right side, adjust it
+    // If the tooltip goes off the right edge, move it to the left
     if (tooltipLeft + tooltip.offsetWidth > viewportWidth - tooltipMargin) {
       tooltipLeft = viewportWidth - tooltip.offsetWidth - tooltipMargin;
     }
 
-    // If the tooltip goes out of the viewport on the top side, adjust it
+    // If the tooltip goes off the top, move it below the title
     if (tooltipTop < tooltipMargin) {
-      tooltipTop = rect.top + window.scrollY + rect.height + 5; // Place below the title if it goes above
+      tooltipTop = rect.top + window.scrollY + rect.height + 5; // Place below the title
     }
 
-    // If the tooltip goes out of the viewport on the bottom side, adjust it
+    // If the tooltip goes off the bottom, move it up
     if (tooltipTop + tooltip.offsetHeight > viewportHeight - tooltipMargin) {
-      tooltipTop = viewportHeight - tooltip.offsetHeight - tooltipMargin; // Place at the bottom of the viewport
+      tooltipTop = viewportHeight - tooltip.offsetHeight - tooltipMargin; // Position at the bottom of the screen
     }
 
-    // Set the tooltip position
+    // Set tooltip position
+    tooltip.style.position = "absolute";
     tooltip.style.left = `${tooltipLeft}px`;
     tooltip.style.top = `${tooltipTop}px`;
 
-    // Remove the tooltip when mouse leaves
+    // Hide tooltip when mouse leaves the title
     event.target.addEventListener("mouseleave", function() {
-      if (tooltip.parentNode) { // Check if tooltip is still a child of body
-        document.body.removeChild(tooltip);
-      }
+      document.body.removeChild(tooltip);
     });
   }
 });
-
 // Handle mobile tap tooltip behavior (optional)
 document.addEventListener("click", function(event) {
   if (event.target && event.target.classList.contains("tooltip-target")) {
@@ -223,11 +221,12 @@ document.addEventListener("click", function(event) {
     tooltip.innerText = tooltipText;
     document.body.appendChild(tooltip);
 
+    // Get the position of the target element
     let rect = event.target.getBoundingClientRect();
     let tooltipLeft = rect.left + window.scrollX;
     let tooltipTop = rect.top + window.scrollY - tooltip.offsetHeight - 5;
 
-    // Adjust tooltip position to fit within the viewport
+    // Ensure tooltip stays within the viewport
     const tooltipMargin = 10;
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -248,19 +247,16 @@ document.addEventListener("click", function(event) {
       tooltipTop = viewportHeight - tooltip.offsetHeight - tooltipMargin;
     }
 
+    tooltip.style.position = "absolute";
     tooltip.style.left = `${tooltipLeft}px`;
     tooltip.style.top = `${tooltipTop}px`;
 
-    // Automatically remove tooltip after a short delay (2 seconds)
+    // Auto-hide tooltip after 2 seconds
     setTimeout(() => {
-      if (tooltip.parentNode) {
-        document.body.removeChild(tooltip);
-      }
-    }, 2000);
+      document.body.removeChild(tooltip);
+    }, 2000); // Tooltip will disappear after 2 seconds
   }
 });
-
-
    }
    })
    .catch(error => {
