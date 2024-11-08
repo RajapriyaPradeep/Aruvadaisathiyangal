@@ -125,15 +125,15 @@
     }
     /* Basic dropdown styles for desktop */
     .floating-icon{
-        top: 8% !important;
-    left: 85% !important;
+        top: 4% !important;
+    left: 80% !important;
     }
 }
 /* Tab ends */
 /* Desktop starts */
 @media (min-width: 769px) and (max-width: 1024px) {
     .floating-icon img{
-        height: 65px !important;
+        height: 30px !important;
     }
     .dropdown-item{
         font-size: x-small !important;
