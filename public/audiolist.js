@@ -48,11 +48,11 @@ else
 
        filteredData.forEach(item => {
          const audioItem = document.createElement("div");
-         audioItem.className = "audioItem";
+        //  audioItem.className = "audioItem";
  
          // Title container with icons
          const titleContainer = document.createElement("div");
-         titleContainer.className = "titleContainer";
+         titleContainer.className = "titleContainermobile";
  
          // Title text
          const titleDiv = document.createElement("div");
@@ -64,7 +64,7 @@ else
          if(item.pdflink)
 {
   shareIcon = document.createElement("i");
-  shareIcon.className = "fas fa-file-pdf icon";
+  shareIcon.className = "fas fa-file-pdf icon mobileicon";
   shareIcon.title = "Pdf";
   shareIcon.addEventListener("click", () => {
     window.open(item.pdflink, "_blank");  
@@ -74,7 +74,7 @@ else
        } 
          // Download icon
          const downloadIcon = document.createElement("i");
-         downloadIcon.className = "fas fa-download icon";
+         downloadIcon.className = "fas fa-download icon mobileicon";
          downloadIcon.title = "Download";
          downloadIcon.addEventListener("click", () => {
              window.open(item.audioUrl, "_blank");
@@ -90,7 +90,7 @@ else
  
          // Audio control
          const audioControl = document.createElement("audio");
-         audioControl.className = "audioControl";
+         audioControl.className = "audioControl audioControlmobile";
          audioControl.controls = true;
  
          const source = document.createElement("source");
@@ -132,7 +132,7 @@ else
             <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
           </a>
           ${pdfLink && pdfLink.trim() ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
-    <i class="fas fa-file-pdf icon" style="color:#e5d8c4;" title="Download PDF"></i>
+    <i class="fas fa-file-pdf icon" style="color:#7a2a2a;" title="Download PDF"></i>
   </a>` : ''}
         `);
           }

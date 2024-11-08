@@ -528,7 +528,15 @@ justify-content: center;
   align-items: center;
   margin-bottom: 5px;
 }
-
+.titleContainermobile {
+  font-size: smaller;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.mobileicon{
+  font-size: small;
+}
 .audioTitle {
   font-weight: bold;
   margin-right: 10px;
@@ -626,4 +634,7 @@ justify-content: center;
 }
 .form-inline .form-control{
   width: 100% !important;
+}
+.audioControlmobile{
+  height: 35px;
 }
