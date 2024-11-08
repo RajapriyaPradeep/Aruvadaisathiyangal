@@ -132,7 +132,7 @@ else
         
                 // Return formatted HTML with icons next to the title
                 return gridjs.html(`
-                  <span>${title}</span>
+                  <span title="${title}">${title}</span>
                   <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
                     <i class="fas fa-download icon" style="color:#7a2a2a;"></i>
                   </a>
@@ -183,10 +183,9 @@ else
        data: data.map(item => [
          item.topic,
          item.audioUrl,
-         item.audioUrl,
+         item.year,
          item.pdflink,
         //  item.sizeMb,
-         item.year
        ]),
        sort: true,
        pagination: true
