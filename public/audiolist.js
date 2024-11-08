@@ -131,9 +131,9 @@ else
           <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
             <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
           </a>
-          ${pdfLink != '' ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
-            <i class="fas fa-file-pdf icon" style="color:#e5d8c4;" title="Download PDF"></i>
-          </a>` : ''}
+          ${pdfLink && pdfLink.trim() ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
+    <i class="fas fa-file-pdf icon" style="color:#e5d8c4;" title="Download PDF"></i>
+  </a>` : ''}
         `);
           }
         },
