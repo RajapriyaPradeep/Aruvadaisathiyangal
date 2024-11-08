@@ -153,10 +153,11 @@ else
         }
       ],
       data: data.map(item => [
-        item.topic,
+        { topic: item.topic, pdflink: item.pdflink }, // Data object for TITLE with `pdflink`
+        // item.topic,
         item.audioUrl,
-        item.year,
-        item.pdflink  // We keep the `pdflink` data here but don’t display it as a separate column
+        item.year
+        // item.pdflink  // We keep the `pdflink` data here but don’t display it as a separate column
       ]),
       sort: true,
       pagination: true
