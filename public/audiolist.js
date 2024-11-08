@@ -112,84 +112,93 @@ else
    else{
      document.getElementById("titleAudioWidget").style.display = "none";
      document.getElementById("grid").style.display = "block";
-       new gridjs.Grid({
-         width: "100%",
-           columns: [
-            //  {
-            //    name: 'TITLE',  // Change header title for 'Topic' column
-            //    sort: true,
-            //    resizable: true
-            //  },
-            {
-              name: 'TITLE', // Column title
-              sort: true,
-              resizable: true,
-              formatter: (cell, row) => {
-                // Construct the HTML for title with download and PDF icons
-                const title = cell;
-                const audioUrl = row.cells[1].data; // Audio download link
-                const pdfLink = row.cells[2].data;   // PDF link
-        
-                // Return formatted HTML with icons next to the title
-                return gridjs.html(`
-                  <span title="${title}">${title}</span>
-                  <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
-                    <i class="fas fa-download icon" style="color:#7a2a2a;"></i>
-                  </a>
-                  ${pdfLink ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
-                    <i class="fas fa-file-pdf icon" style="color:#e5d8c4;"></i>
-                  </a>` : ''}
-                `);
-              }
-            },
-             {
-               name: 'Audio', // Change header title for 'Audio Preview' column
-               sort: false,
-               resizable: true,
-               formatter: (cell) => gridjs.html(`
-                 <audio controls style="    height: 30px;border:1px solid #7a2a2a;border-radius:25px;">
-                   <source src="${cell}" type="audio/mp3">
-                   Your browser does not support the audio element.
-                 </audio>`)
-             },
-            //  {
-            //   name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-download icon"></i>'),
-            //    id:'share',
-            //    resizable: true,
-            //    sort:false,
-            //    formatter: (cell, row) => {
-            //      return gridjs.html(`<a href="${row.cells[2].data}" target="_blank"><i class="fas fa-download icon" ></i></a>`);
-            //    }                
-            //  },
-            //  {
-            //    name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-file-pdf"></i>'),
-            //    id:'pdf',
-            //    resizable: true,
-            //    sort:false,
-            //    formatter: (cell, row) => {
-            //      console.log("cell data is " + cell);
-            //      if(cell  != '')                  
-            //      return gridjs.html(`<a href="${cell}" target="_blank"><i class="fas fa-file-pdf"></i></a>`);
-            //    else
-            //      return gridjs.html(``);
-            //    }                
-            //  },
-           
-             {
-               name: 'Year',  // Change header title for 'Timestamp' column
-               sort: true
-             }
-           ],
-       data: data.map(item => [
-         item.topic,
-         item.audioUrl,
-         item.year,
-         item.pdflink,
-        //  item.sizeMb,
-       ]),
-       sort: true,
-       pagination: true
-     }).render(document.getElementById("grid"));
+     new gridjs.Grid({
+      width: "100%",
+      columns: [
+        {
+          name: 'TITLE', // Column title
+          sort: true,
+          resizable: true,
+          formatter: (cell, row) => {
+            const title = cell;
+            const audioUrl = row.cells[1].data; // Audio download link
+            const pdfLink = row.cells[2].data;   // PDF link
+    
+            // Set up the HTML for the title with a tooltip
+            return gridjs.html(`
+              <span class="tooltip-target" data-tooltip="${title}">${title}</span>
+              <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
+                <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
+              </a>
+              ${pdfLink ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
+                <i class="fas fa-file-pdf icon" style="color:#e5d8c4;" title="Download PDF"></i>
+              </a>` : ''}
+            `);
+          }
+        },
+        {
+          name: 'Audio', // Change header title for 'Audio Preview' column
+          sort: false,
+          resizable: true,
+          formatter: (cell) => gridjs.html(`
+            <audio controls style="height: 30px; border:1px solid #7a2a2a; border-radius:25px;">
+              <source src="${cell}" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>`)
+        },
+        {
+          name: 'Year',  // Change header title for 'Timestamp' column
+          sort: true
+        }
+      ],
+      data: data.map(item => [
+        item.topic,
+        item.audioUrl,
+        item.year,
+        item.pdflink  // We keep the `pdflink` data here but don’t display it as a separate column
+      ]),
+      sort: true,
+      pagination: true
+    }).render(document.getElementById("grid"));
+
+    
+// Custom tooltip functionality
+document.addEventListener("mouseover", function(event) {
+  if (event.target && event.target.classList.contains("tooltip-target")) {
+    let tooltipText = event.target.getAttribute("data-tooltip");
+    let tooltip = document.createElement("div");
+    tooltip.classList.add("custom-tooltip");
+    tooltip.innerText = tooltipText;
+    document.body.appendChild(tooltip);
+
+    let rect = event.target.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + window.scrollX}px`;
+    tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 5}px`;
+
+    event.target.addEventListener("mouseleave", function() {
+      document.body.removeChild(tooltip);
+    });
+  }
+});
+
+// Handle mobile tap tooltip behavior (optional)
+document.addEventListener("click", function(event) {
+  if (event.target && event.target.classList.contains("tooltip-target")) {
+    let tooltipText = event.target.getAttribute("data-tooltip");
+    let tooltip = document.createElement("div");
+    tooltip.classList.add("custom-tooltip");
+    tooltip.innerText = tooltipText;
+    document.body.appendChild(tooltip);
+
+    let rect = event.target.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + window.scrollX}px`;
+    tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 5}px`;
+
+    setTimeout(() => {
+      document.body.removeChild(tooltip);
+    }, 2000); // Tooltip will disappear after 2 seconds (or you can set your own duration)
+  }
+});
    }
    })
    .catch(error => {
