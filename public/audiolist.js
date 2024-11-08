@@ -122,7 +122,7 @@ else
           formatter: (cell, row) => {
             const title = cell;
             const audioUrl = row.cells[1].data; // Audio download link
-            const pdfLink = row.cells[2].data;   // PDF link
+            const pdfLink = row.cells[3].data;   // PDF link
     
             // Set up the HTML for the title with a tooltip
             return gridjs.html(`
