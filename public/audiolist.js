@@ -120,10 +120,10 @@ else
           sort: true,
           resizable: true,
           formatter: (cell, row) => {
-            const title = row.cell.data.title;
+            const title = cell.title;
             const audioUrl = row.cells[1].data; // Audio download link
             // const pdfLink = row.cells[3].data;   // PDF link
-            const pdfLink = row._cells[0].data.pdflink;
+            const pdfLink = cell.pdflink;
     
             // Set up the HTML for title with conditional PDF link
         return gridjs.html(`

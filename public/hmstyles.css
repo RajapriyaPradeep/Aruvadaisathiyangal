@@ -279,7 +279,7 @@ body::before {
 /* Bottom right image */
 .home-bottom-right-image {
     position: fixed;
-    bottom: 6%;
+    bottom: 0%; 
     right: 1%;
     z-index: 3000;
     height: 300px;
@@ -623,4 +623,7 @@ justify-content: center;
   font-size: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   pointer-events: none;
+}
+.form-inline .form-control{
+  width: 100% !important;
 }
