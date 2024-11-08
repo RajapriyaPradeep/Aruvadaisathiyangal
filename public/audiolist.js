@@ -206,12 +206,28 @@ document.addEventListener("mouseover", function(event) {
     tooltip.style.left = `${tooltipLeft}px`;
     tooltip.style.top = `${tooltipTop}px`;
 
+    // Set custom styling for the tooltip
+    tooltip.style.backgroundColor = "#7a2a2a";
+    tooltip.style.color = "#f9f9f9";
+    tooltip.style.padding = "5px 10px";
+    tooltip.style.borderRadius = "5px";
+    tooltip.style.fontSize = "12px";
+    tooltip.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
+
     // Hide tooltip when mouse leaves the title
-    event.target.addEventListener("mouseleave", function() {
-      document.body.removeChild(tooltip);
-    });
+    function hideTooltip() {
+      if (tooltip && tooltip.parentElement) {
+        tooltip.parentElement.removeChild(tooltip);
+      }
+    }
+
+    event.target.addEventListener("mouseleave", hideTooltip);
+
+    // Optional: auto-remove tooltip after 2 seconds
+    setTimeout(hideTooltip, 2000);
   }
 });
+
 // Handle mobile tap tooltip behavior (optional)
 document.addEventListener("click", function(event) {
   if (event.target && event.target.classList.contains("tooltip-target")) {
@@ -251,12 +267,23 @@ document.addEventListener("click", function(event) {
     tooltip.style.left = `${tooltipLeft}px`;
     tooltip.style.top = `${tooltipTop}px`;
 
+    // Set custom styling for the tooltip
+    tooltip.style.backgroundColor = "#7a2a2a";
+    tooltip.style.color = "#f9f9f9";
+    tooltip.style.padding = "5px 10px";
+    tooltip.style.borderRadius = "5px";
+    tooltip.style.fontSize = "12px";
+    tooltip.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
+
     // Auto-hide tooltip after 2 seconds
     setTimeout(() => {
-      document.body.removeChild(tooltip);
+      if (tooltip && tooltip.parentElement) {
+        tooltip.parentElement.removeChild(tooltip);
+      }
     }, 2000); // Tooltip will disappear after 2 seconds
   }
 });
+
    }
    })
    .catch(error => {
