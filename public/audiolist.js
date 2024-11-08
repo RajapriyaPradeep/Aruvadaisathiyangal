@@ -115,11 +115,33 @@ else
        new gridjs.Grid({
          width: "100%",
            columns: [
-             {
-               name: 'TITLE',  // Change header title for 'Topic' column
-               sort: true,
-               resizable: true
-             },
+            //  {
+            //    name: 'TITLE',  // Change header title for 'Topic' column
+            //    sort: true,
+            //    resizable: true
+            //  },
+            {
+              name: 'TITLE', // Column title
+              sort: true,
+              resizable: true,
+              formatter: (cell, row) => {
+                // Construct the HTML for title with download and PDF icons
+                const title = cell;
+                const audioUrl = row.cells[1].data; // Audio download link
+                const pdfLink = row.cells[2].data;   // PDF link
+        
+                // Return formatted HTML with icons next to the title
+                return gridjs.html(`
+                  <span>${title}</span>
+                  <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
+                    <i class="fas fa-download icon" style="color:#7a2a2a;"></i>
+                  </a>
+                  ${pdfLink ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
+                    <i class="fas fa-file-pdf icon" style="color:#e5d8c4;"></i>
+                  </a>` : ''}
+                `);
+              }
+            },
              {
                name: 'Audio', // Change header title for 'Audio Preview' column
                sort: false,
@@ -130,33 +152,29 @@ else
                    Your browser does not support the audio element.
                  </audio>`)
              },
-             {
-              name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-download icon"></i>'),
-               id:'share',
-               resizable: true,
-               sort:false,
-               formatter: (cell, row) => {
-                 return gridjs.html(`<a href="${row.cells[2].data}" target="_blank"><i class="fas fa-download icon" ></i></a>`);
-               }                
-             },
-             {
-               name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-file-pdf"></i>'),
-               id:'pdf',
-               resizable: true,
-               sort:false,
-               formatter: (cell, row) => {
-                 console.log("cell data is " + cell);
-                 if(cell  != '')                  
-                 return gridjs.html(`<a href="${cell}" target="_blank"><i class="fas fa-file-pdf"></i></a>`);
-               else
-                 return gridjs.html(``);
-               }                
-             },
             //  {
-            //    name: 'Size',  // Change header title for 'Size (MB)' column
-            //    sort: false,
-            //    formatter: (cell) => `${cell} MB`
+            //   name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-download icon"></i>'),
+            //    id:'share',
+            //    resizable: true,
+            //    sort:false,
+            //    formatter: (cell, row) => {
+            //      return gridjs.html(`<a href="${row.cells[2].data}" target="_blank"><i class="fas fa-download icon" ></i></a>`);
+            //    }                
             //  },
+            //  {
+            //    name:gridjs.html('<i style="color:#e5d8c4"  class="fas fa-file-pdf"></i>'),
+            //    id:'pdf',
+            //    resizable: true,
+            //    sort:false,
+            //    formatter: (cell, row) => {
+            //      console.log("cell data is " + cell);
+            //      if(cell  != '')                  
+            //      return gridjs.html(`<a href="${cell}" target="_blank"><i class="fas fa-file-pdf"></i></a>`);
+            //    else
+            //      return gridjs.html(``);
+            //    }                
+            //  },
+           
              {
                name: 'Year',  // Change header title for 'Timestamp' column
                sort: true
