@@ -120,7 +120,7 @@ else
           sort: true,
           resizable: true,
           formatter: (cell, row) => {
-            const title = cell.title;
+            const title = cell.topic;
             const audioUrl = row.cells[1].data; // Audio download link
             // const pdfLink = row.cells[3].data;   // PDF link
             const pdfLink = cell.pdflink;
