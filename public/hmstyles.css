@@ -478,8 +478,8 @@ justify-content: center;
 /* New Icon starts here */
 .floating-icon {
   position: fixed;
-  top: 2%;
-  left: 23%;
+  top: 4%;
+  left: 33%;
   border-radius: 50%;
   display: flex;
   align-items: center;
