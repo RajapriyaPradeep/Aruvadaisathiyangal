@@ -71,7 +71,7 @@ else
       if (!tooltip) {
           tooltip = document.createElement("div");
           tooltip.classList.add("custom-tooltip");
-          tooltip.innerText = item.topic;
+          tooltip.innerText = item.tamil;
           document.body.appendChild(tooltip);
       }
 
@@ -184,10 +184,11 @@ widgetContainer.appendChild(audioItem);
             const audioUrl = row.cells[1].data; // Audio download link
             // const pdfLink = row.cells[3].data;   // PDF link
             const pdfLink = cell.pdflink;
+            const tamil = cell.tamil;
     
             // Set up the HTML for title with conditional PDF link
         return gridjs.html(`
-          <span class="tooltip-target" data-tooltip="${title}">${title}</span>
+          <span class="tooltip-target" data-tooltip="${tamil}">${title}</span>
           <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
             <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
           </a>
@@ -213,7 +214,7 @@ widgetContainer.appendChild(audioItem);
         }
       ],
       data: data.map(item => [
-        { topic: item.topic, pdflink: item.pdflink }, // Data object for TITLE with `pdflink`
+        { topic: item.topic, pdflink: item.pdflink,tamil:item.tamil }, // Data object for TITLE with `pdflink`
         // item.topic,
         item.audioUrl,
         item.year

@@ -1,156 +1,172 @@
 [
-    {
-      "topic": "Introduction and Parable of Sower",
-      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/IntroductionParableOfSower.mp3",
-      "sizeMb": 22.27,
-      "year": 2024,
-      "duration": "1:31:10",
-      "section": "Parables",
-      "pdflink":""
-    },
-    {
-      "topic": "Parable Talents",
-      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableTalents.mp3",
-      "sizeMb": 5.28,
+  {
+    "topic": "Introduction and Parable of Sower",
+    "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/IntroductionParableOfSower.mp3",
+    "sizeMb": 22.27,
+    "year": 2024,
+    "duration": "1:31:10",
+    "section": "Parables",
+    "pdflink":"",
+    "tamil":"விதைப்பவரின் அறிமுகம் மற்றும் உவமை"
+  },
+  {
+    "topic": "Parable Talents",
+    "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableTalents.mp3",
+    "sizeMb": 5.28,
+    "year": 2024,
+    "duration": "4",
+    "section": "Parables",
+    "pdflink":"",
+    "tamil":"உவமை திறமைகள்"
+  },
+  {
+    "topic": "Parable of Building a Tower and King making a War",
+    "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofBuildingaTowerKingmakingaWar.mp3",
+    "sizeMb": 5.60,
+    "year": 2024,
+    "duration": "4",
+    "section": "Parables",
+    "pdflink":"",
+    "tamil":"ஒரு கோபுரத்தைக் கட்டுவது மற்றும் அரசன் ஒரு போர் செய்வது போன்ற உவமை"
+  },
+  {
+      "topic": "Parable of Good Samaritan",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofGoodSamaritan.mp3",
+      "sizeMb": 5.6,
       "year": 2024,
       "duration": "4",
       "section": "Parables",
-      "pdflink":""
+      "pdflink":"",
+    "tamil":"நல்ல சமாரியன் உவமை"
     },
     {
-      "topic": "Parable of Building a Tower and King making a War",
-      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofBuildingaTowerKingmakingaWar.mp3",
-      "sizeMb": 5.60,
+      "topic": "Parable of Pounds",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofPounds.mp3",
+      "sizeMb": 4.63,
       "year": 2024,
       "duration": "4",
       "section": "Parables",
-      "pdflink":""
+      "pdflink":"",
+    "tamil":"பவுண்டுகளின் உவமை"
     },
     {
-        "topic": "Parable of Good Samaritan",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofGoodSamaritan.mp3",
-        "sizeMb": 5.6,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parable of Pounds",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofPounds.mp3",
-        "sizeMb": 4.63,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parable of Prayer",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofPrayer.mp3",
-        "sizeMb":6.33,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parable of Unjust Steaward",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofUnjustSteaward.mp3",
-        "sizeMb": 5.14,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parable of the Sheeps and Goats",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableoftheSheepsandGoats.mp3",
-        "sizeMb": 6.15,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parable of two Creditors and Debtors",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableoftwoCreditorsDebtors.mp3",
-        "sizeMb": 5.85,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parables of Lost goat and silver coin",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParablesofLostgoatsilvercoin.mp3",
-        "sizeMb": 8.14,
-        "year": 2024,
-        "duration": "1:28:56",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parables of Wicked Husband and Two Sons",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParablesofWickedHusbandmenandTwoSons.mp3",
-        "sizeMb": 6.12,
-        "year": 2024,
-        "duration": "1:06:51",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parables of those bidden,Great Supper Marriage feast and Garment",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParablesofthosebiddenGreatSupperMarriagefeastandGarment.mp3",
-        "sizeMb": 8.14,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "Parabolic statements",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/Parabolicstatements.mp3",
-        "sizeMb": 5.77,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": " Watchful",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/Watchful.mp3",
-        "sizeMb": 6.63,
-        "year": 2024,
-        "duration": "4",
-        "section": "Parables",
-        "pdflink":""
-      },
-      {
-        "topic": "1.Keys to unlock the Bible",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/1keystounlockthebible.mp3",
-        "sizeMb": 5.81,
-        "year": 2023,
-        "duration": "4",
-        "section": "basics53",
-        "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/1keystounlockthebible.pdf"
-      },
-      {
-        "topic": "2.Mystery of the cross part1",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/2mysteryofthecrosspart1.mp3",
-        "sizeMb": 6.42,
-        "year": 2024,
-        "duration": "4",
-        "section": "basics53",
-        "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/2mysteryofthecrosspart1.pdf"
-      },
-      {
-        "topic": "3.Mystery of the cross part2",
-        "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/3mysteryofthecrosspart2.mp3",
-        "sizeMb": 6.42,
-        "year": 2024,
-        "duration": "4",
-        "section": "basics53",
-        "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/3mysteryofthecrosspart2.pdf"
-      }
-  ]
-  
+      "topic": "Parable of Prayer",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofPrayer.mp3",
+      "sizeMb":6.33,
+      "year": 2024,
+      "duration": "4",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"பிரார்த்தனை உவமை"
+    },
+    {
+      "topic": "Parable of Unjust Steaward",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableofUnjustSteaward.mp3",
+      "sizeMb": 5.14,
+      "year": 2024,
+      "duration": "4",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"நீதியற்ற ஸ்டீவர்டின் உவமை"
+    },
+    {
+      "topic": "Parable of the Sheeps and Goats",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableoftheSheepsandGoats.mp3",
+      "sizeMb": 6.15,
+      "year": 2024,
+      "duration": "4",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"செம்மறி ஆடுகளின் உவமை"
+    },
+    {
+      "topic": "Parable of two Creditors and Debtors",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParableoftwoCreditorsDebtors.mp3",
+      "sizeMb": 5.85,
+      "year": 2024,
+      "duration": "4",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"இரண்டு கடனாளிகள் மற்றும் கடனாளிகளின் உவமை"
+    },
+    {
+      "topic": "Parables of Lost goat and silver coin",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParablesofLostgoatsilvercoin.mp3",
+      "sizeMb": 8.14,
+      "year": 2024,
+      "duration": "1:28:56",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"காணாமல் போன ஆடு மற்றும் வெள்ளி நாணயத்தின் உவமைகள்"
+    },
+    {
+      "topic": "Parables of Wicked Husband and Two Sons",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParablesofWickedHusbandmenandTwoSons.mp3",
+      "sizeMb": 6.12,
+      "year": 2024,
+      "duration": "1:06:51",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"பொல்லாத கணவன் மற்றும் இரண்டு மகன்களின் உவமைகள்"
+    },
+    {
+      "topic": "Parables of those bidden,Great Supper Marriage feast and Garment",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/ParablesofthosebiddenGreatSupperMarriagefeastandGarment.mp3",
+      "sizeMb": 8.14,
+      "year": 2024,
+      "duration": "4",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"அழைக்கப்பட்டவர்களின் உவமைகள், பெரிய இரவு உணவு திருமண விருந்து மற்றும் ஆடை"
+    },
+    {
+      "topic": "Parabolic statements",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/Parabolicstatements.mp3",
+      "sizeMb": 5.77,
+      "year": 2024,
+      "duration": "4",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"பரவளைய அறிக்கைகள்"
+    },
+    {
+      "topic": " Watchful",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/parables/main/Watchful.mp3",
+      "sizeMb": 6.63,
+      "year": 2024,
+      "duration": "4",
+      "section": "Parables",
+      "pdflink":"",
+    "tamil":"கவனத்துடன்"
+    },
+    {
+      "topic": "1.Keys to unlock the Bible",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/1keystounlockthebible.mp3",
+      "sizeMb": 5.81,
+      "year": 2023,
+      "duration": "4",
+      "section": "basicstudies",
+      "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/1keystounlockthebible.pdf",
+    "tamil":"பைபிளை திறப்பதற்கான விசைகள்"
+    },
+    {
+      "topic": "2.Mystery of the cross part1",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/2mysteryofthecrosspart1.mp3",
+      "sizeMb": 6.42,
+      "year": 2024,
+      "duration": "4",
+      "section": "basicstudies",
+      "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/2mysteryofthecrosspart1.pdf",
+    "tamil":"சிலுவையின் மர்மம் பகுதி1"
+    },
+    {
+      "topic": "3.Mystery of the cross part2",
+      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/3mysteryofthecrosspart2.mp3",
+      "sizeMb": 6.42,
+      "year": 2024,
+      "duration": "4",
+      "section": "basicstudies",
+      "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/3mysteryofthecrosspart2.pdf",
+    "tamil":"சிலுவையின் மர்மம் பகுதி2"
+    }
+]
