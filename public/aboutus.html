@@ -35,12 +35,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bring_front" >
         <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
-                <!-- <img src="./Assets/updated_logo.png" alt="Logo" width="75" height="75" onclick="navplaylist('home')"> -->
-            </a>
-            <img src="./Assets/titlelogo.png" class="projtitle" alt="Logo" onclick="navplaylist('aboutus')">
+            
+            <img src="./Assets/projecttitle_latest.png" onclick="navplaylist('home')" class="projtitle" alt="Logo" >
+            <!-- <img src="./Assets/projecttitle_latest.png" href="https://aruvadaisathiyangal.in" onclick="navplaylist('home')" class="projtitle" alt="Logo" > -->
             <!-- <img src="./Assets/projtitle.png" class="projtitle" alt="Logo" onclick="navplaylist('home')"> -->
             <!-- Toggler/collapsible button for mobile view -->
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,8 +50,14 @@
     <i class="fas fa-ellipsis-v"></i> <!-- Custom icon -->
 </button>
             <!-- Navbar items -->
+            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <div class="item"  onclick="navplaylist('recent')" >
+                    <span class="new-icon"></span>
+                    <p>New</p>
+                </div>
+                <!-- <ul class="navbar-nav ml-auto"> -->
+                <ul class="navbar-nav">
                     <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="audiodiscourse">DISCOURSES</a>
                         <div class="dropdown-menu " aria-labelledby="navbarDropdown">
@@ -109,6 +112,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="more">MORE</a>
                         <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#" data-lang="handouts">HANDOUTS</a>
+                            <a class="dropdown-item" href="#" data-lang="aboutus" onclick="navplaylist('aboutus')" >ABOUT US</a>
                         </div>
                     </li>   
                     <li class="nav-item search-bar">
@@ -119,6 +123,10 @@
                     </li>                 
                 </ul>
             </div>
+            <!-- Logo -->
+            <a class="navbar-brand" onclick="navplaylist('aboutus')">
+                <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
+            </a>
         </div>
     </nav>
 

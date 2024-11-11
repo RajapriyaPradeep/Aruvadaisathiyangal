@@ -1,5 +1,8 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .item {
+        float: right;
+    }
     .navbar-brand{
         display: none !important;
     }
@@ -68,6 +71,9 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .item {
+        float: right;
+    }
     .navbar-brand{
         display: none !important;
     }
