@@ -1,5 +1,8 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .navbar-brand{
+        display: none !important;
+    }
     .form-inline .form-control{
         width: 100% !important;
     }
@@ -65,6 +68,9 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .navbar-brand{
+        display: none !important;
+    }
     .form-inline .form-control{
         width: 100% !important;
     }

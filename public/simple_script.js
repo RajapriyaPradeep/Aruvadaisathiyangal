@@ -1,4 +1,10 @@
 const width = window.innerWidth;
+
+if (width <= 480 && ((localStorage.getItem("viewmode")==null) || localStorage.getItem("viewmode")==undefined))
+{
+    localStorage.setItem("viewmode","mobile");
+}
+
 if (width <= 480) {
 
 }
