@@ -24,81 +24,104 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Serve static files from "Public" directory (case-sensitive)
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(fileUpload({
-    limits: { fileSize: 50 * 1024 * 1024 }, // Set file size limit to 50MB (adjust this as needed)
-  }));
+// app.use(fileUpload({
+//     limits: { fileSize: 50 * 1024 * 1024 }, // Set file size limit to 50MB (adjust this as needed)
+//   }));
 
 // Path to the JSON files (adjust paths for Vercel’s read-only system)
 const audioDataFilePath = path.join(__dirname, 'audios.json');
 const faqDataFilePath = path.join(__dirname, 'faqs.json');
 const dataFile = "audios.json";
-
+// Path to your audios.json file
+const audiosJsonPath = path.join(__dirname, 'audios.json');
 // Admin part starts Here
 
-app.get("/entries", (req, res) => {
-    const data = JSON.parse(fs.readFileSync(dataFile));
-    res.json(data);
-  });
-  
-  app.post("/add-entry", async (req, res) => {
-    try {
-      const newEntry = {
-        topic: req.body.topic,
-        tamil: req.body.tamil,
-        section: req.body.section,
-        pdfUrl: req.body.pdfUrl,
-        audioUrl: req.body.audioUrl,
-        year: new Date().getFullYear(),
-      };
-  
-      const data = JSON.parse(fs.readFileSync(dataFile));
-      data.push(newEntry);
-      fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
-      res.sendStatus(201);
-    } catch (error) {
-      console.error("Error adding entry: ", error);
-      res.status(500).send("Failed to add entry.");
-    }
-  });
-  
-  app.delete("/delete-entry/:index", (req, res) => {
-    const data = JSON.parse(fs.readFileSync(dataFile));
-    data.splice(req.params.index, 1);
-    fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
-    res.sendStatus(204);
-  });
-  
-  async function uploadToGitHub(file) {
-    const url = `https://api.github.com/repos/${githubRepo}/contents/${file.name}`;
-    const content = file.data.toString("base64");
-  
-    await axios.put(
-      url,
-      {
-        message: `Upload ${file.name}`,
-        content,
-      },
-      {
-        headers: { Authorization: `Bearer ${githubToken}` },
-      }
-    );
-  
-    return `https://raw.githubusercontent.com/${githubRepo}/main/${file.name}`;
-  }
-  
-  function convertAmrToMp3(filePath) {
-    return new Promise((resolve, reject) => {
-      const mp3Path = filePath.replace(".amr", ".mp3");
-      ffmpeg(filePath)
-        .toFormat("mp3")
-        .save(mp3Path)
-        .on("end", () => resolve(mp3Path))
-        .on("error", (err) => reject(err));
+// Get all entries from audios.json
+app.get('/api/entries', (req, res) => {
+    fs.readFile(audiosJsonPath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading data');
+        }
+        res.json(JSON.parse(data));
     });
-  }
+});
+
+// Add a new entry to audios.json
+app.post('/api/add-entry', (req, res) => {
+    const newEntry = req.body;
+
+    fs.readFile(audiosJsonPath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading data');
+        }
+
+        const entries = JSON.parse(data);
+        entries.push(newEntry);
+
+        fs.writeFile(audiosJsonPath, JSON.stringify(entries, null, 2), (err) => {
+            if (err) {
+                return res.status(500).send('Error saving data');
+            }
+            res.status(200).send('Entry added');
+        });
+    });
+});
+
+// Update an existing entry in audios.json
+app.put('/api/update-entry/:id', (req, res) => {
+    const updatedEntry = req.body;
+    const entryId = parseInt(req.params.id, 10);
+
+    fs.readFile(audiosJsonPath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading data');
+        }
+
+        const entries = JSON.parse(data);
+        const entryIndex = entries.findIndex(entry => entry.id === entryId);
+
+        if (entryIndex === -1) {
+            return res.status(404).send('Entry not found');
+        }
+
+        entries[entryIndex] = updatedEntry;
+
+        fs.writeFile(audiosJsonPath, JSON.stringify(entries, null, 2), (err) => {
+            if (err) {
+                return res.status(500).send('Error saving data');
+            }
+            res.status(200).send('Entry updated');
+        });
+    });
+});
+
+// Delete an entry from audios.json
+app.delete('/api/delete-entry/:id', (req, res) => {
+    const entryId = parseInt(req.params.id, 10);
+
+    fs.readFile(audiosJsonPath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading data');
+        }
+
+        const entries = JSON.parse(data);
+        const updatedEntries = entries.filter(entry => entry.id !== entryId);
+
+        if (updatedEntries.length === entries.length) {
+            return res.status(404).send('Entry not found');
+        }
+
+        fs.writeFile(audiosJsonPath, JSON.stringify(updatedEntries, null, 2), (err) => {
+            if (err) {
+                return res.status(500).send('Error saving data');
+            }
+            res.status(200).send('Entry deleted');
+        });
+    });
+});
 
 // Admin part ends Here
 
