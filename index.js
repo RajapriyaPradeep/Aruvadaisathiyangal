@@ -54,7 +54,7 @@ app.post('/api/add-entry', async (req, res) => {
     const newEntry = req.body;
 
     try {
-        // Fetch the current audios.json from GitHub
+        // Fetch the current contents of audios.json from GitHub
         const fileRes = await axios.get(`https://api.github.com/repos/${githubRepo}/contents/audios.json`, {
             headers: {
                 Authorization: `token ${githubToken}`
@@ -66,26 +66,27 @@ app.post('/api/add-entry', async (req, res) => {
         // Add the new entry
         entries.push(newEntry);
 
-        // Update the file content and encode it in base64
+        // Encode updated content to base64
         const updatedContent = Buffer.from(JSON.stringify(entries, null, 2)).toString('base64');
 
-        // Commit the updated file to GitHub
+        // Push the updated content back to GitHub
         await axios.put(`https://api.github.com/repos/${githubRepo}/contents/audios.json`, {
-            message: "Add new entry",
+            message: "Add new entry to audios.json",
             content: updatedContent,
-            sha: fileRes.data.sha // SHA of the file being updated
+            sha: fileRes.data.sha // Required to update the file
         }, {
             headers: {
                 Authorization: `token ${githubToken}`
             }
         });
 
-        res.status(200).send('Entry added');
+        res.status(200).send('Entry added successfully');
     } catch (error) {
-        console.error("Error updating audios.json:", error);
+        console.error("Error updating audios.json:", error.response?.data || error.message);
         res.status(500).send('Error saving data');
     }
 });
+
 
 
 // Update an existing entry in audios.json
