@@ -23,7 +23,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(fileUpload());
+app.use(fileUpload({
+    limits: { fileSize: 50 * 1024 * 1024 }, // Set file size limit to 50MB (adjust this as needed)
+  }));
 
 // Path to the JSON files (adjust paths for Vercel’s read-only system)
 const audioDataFilePath = path.join(__dirname, 'audios.json');
