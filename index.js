@@ -36,115 +36,65 @@ const audioDataFilePath = path.join(__dirname, 'audios.json');
 const faqDataFilePath = path.join(__dirname, 'faqs.json');
 const dataFile = "audios.json";
 // Path to your audios.json file
-const audiosJsonPath = path.join(__dirname, 'audios.json');
+// const audiosJsonPath = path.join(__dirname, 'audios.json');
 // Admin part starts Here
+// Read audios.json
+const audiosJsonPath = path.resolve(__dirname, 'audios.json');
+const audiosData = JSON.parse(fs.readFileSync(audiosJsonPath, 'utf-8'));
 
-// Get all entries from audios.json
+// Insert data into the SQLite table
+// Get all entries
 app.get('/api/entries', (req, res) => {
-    fs.readFile(audiosJsonPath, 'utf8', (err, data) => {
+    db.all("SELECT * FROM audios", [], (err, rows) => {
         if (err) {
-            return res.status(500).send('Error reading data');
+            return res.status(500).send("Error fetching data");
         }
-        res.json(JSON.parse(data));
+        res.json(rows);
     });
 });
 
-// Add a new entry to audios.json
-app.post('/api/add-entry', async (req, res) => {
-    const newEntry = req.body;
-
-    try {
-        console.log("RP GITHUB_REPO:", githubRepo);
-        console.log("RP GITHUB_TOKEN:", githubToken ? "Token exists" : "Token missing");
-
-        // Fetch the current contents of audios.json from GitHub
-        const fileRes = await axios.get(`https://api.github.com/repos/${githubRepo}/contents/audios.json`, {
-            headers: {
-                Authorization: `token ${githubToken}`
-            }
-        });
-        const fileContent = Buffer.from(fileRes.data.content, 'base64').toString('utf-8');
-        const entries = JSON.parse(fileContent);
-
-        // Add the new entry
-        entries.push(newEntry);
-
-        // Encode updated content to base64
-        const updatedContent = Buffer.from(JSON.stringify(entries, null, 2)).toString('base64');
-
-        // Push the updated content back to GitHub
-        await axios.put(`https://api.github.com/repos/${githubRepo}/contents/audios.json`, {
-            message: "Add new entry to audios.json",
-            content: updatedContent,
-            sha: fileRes.data.sha // Required to update the file
-        }, {
-            headers: {
-                Authorization: `token ${githubToken}`
-            }
-        });
-
-        res.status(200).send('Entry added successfully');
-    } catch (error) {
-        console.error("Error updating audios.json:", error.response?.data || error.message);
-        res.status(500).send('Error saving data');
-    }
+// Add a new entry
+app.post('/api/add-entry', (req, res) => {
+    const { title, tamil, year, section, pdflink, audioUrl } = req.body;
+    const query = `
+        INSERT INTO audios (title, tamil, year, section, pdflink, audioUrl)
+        VALUES (?, ?, ?, ?, ?, ?)
+    `;
+    db.run(query, [title, tamil, year, section, pdflink, audioUrl], function(err) {
+        if (err) {
+            return res.status(500).send("Error saving data");
+        }
+        res.status(200).send({ id: this.lastID, message: "Entry added successfully" });
+    });
 });
 
-
-
-// Update an existing entry in audios.json
+// Update an entry
 app.put('/api/update-entry/:id', (req, res) => {
-    const updatedEntry = req.body;
-    const entryId = parseInt(req.params.id, 10);
-
-    fs.readFile(audiosJsonPath, 'utf8', (err, data) => {
+    const { title, tamil, year, section, pdflink, audioUrl } = req.body;
+    const { id } = req.params;
+    const query = `
+        UPDATE audios SET title = ?, tamil = ?, year = ?, section = ?, pdflink = ?, audioUrl = ?
+        WHERE id = ?
+    `;
+    db.run(query, [title, tamil, year, section, pdflink, audioUrl, id], function(err) {
         if (err) {
-            return res.status(500).send('Error reading data');
+            return res.status(500).send("Error updating data");
         }
-
-        const entries = JSON.parse(data);
-        const entryIndex = entries.findIndex(entry => entry.id === entryId);
-
-        if (entryIndex === -1) {
-            return res.status(404).send('Entry not found');
-        }
-
-        entries[entryIndex] = updatedEntry;
-
-        fs.writeFile(audiosJsonPath, JSON.stringify(entries, null, 2), (err) => {
-            if (err) {
-                return res.status(500).send('Error saving data');
-            }
-            res.status(200).send('Entry updated');
-        });
+        res.status(200).send("Entry updated successfully");
     });
 });
 
-// Delete an entry from audios.json
+// Delete an entry
 app.delete('/api/delete-entry/:id', (req, res) => {
-    const entryId = parseInt(req.params.id, 10);
-
-    fs.readFile(audiosJsonPath, 'utf8', (err, data) => {
+    const { id } = req.params;
+    const query = `DELETE FROM audios WHERE id = ?`;
+    db.run(query, [id], function(err) {
         if (err) {
-            return res.status(500).send('Error reading data');
+            return res.status(500).send("Error deleting data");
         }
-
-        const entries = JSON.parse(data);
-        const updatedEntries = entries.filter(entry => entry.id !== entryId);
-
-        if (updatedEntries.length === entries.length) {
-            return res.status(404).send('Entry not found');
-        }
-
-        fs.writeFile(audiosJsonPath, JSON.stringify(updatedEntries, null, 2), (err) => {
-            if (err) {
-                return res.status(500).send('Error saving data');
-            }
-            res.status(200).send('Entry deleted');
-        });
+        res.status(200).send("Entry deleted successfully");
     });
 });
-
 // Admin part ends Here
 
 
