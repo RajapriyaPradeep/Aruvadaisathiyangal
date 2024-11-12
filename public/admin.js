@@ -55,21 +55,39 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
   
   window.onload = loadEntries;
 
-  async function uploadFileToGitHub(file) {
+// Helper function to convert a file to Base64
+function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            const base64String = reader.result.split(",")[1]; // Get base64 content after the comma
+            resolve(base64String);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file); // Read file as Data URL to handle binary data
+    });
+}
+
+async function uploadFileToGitHub(file) {
+    // const url = `https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/${file.name}`;
     const url = `https://api.github.com/repos/RajapriyaPradeep/basics_studies/contents/${file.name}`;
-    const content = btoa(await file.text());  // Convert file to base64
+    const content = await fileToBase64(file); // Convert file to base64
 
     const response = await fetch(url, {
         method: "PUT",
         headers: {
-            "Authorization": `Bearer ${GITHUB_TOKEN}`,  // Use GitHub token
+            "Authorization": `Bearer ${GITHUB_TOKEN}`,  // Use GitHub token here
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
             message: `Upload ${file.name}`,
-            content: content,  // Base64 encoded file content
+            content: content,  // Use the base64 content of the file
         }),
     });
+
+    if (!response.ok) {
+        throw new Error("Failed to upload file to GitHub");
+    }
 
     const data = await response.json();
     return data.content.download_url;  // Return the URL of the uploaded file
