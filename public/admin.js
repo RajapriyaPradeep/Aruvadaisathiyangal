@@ -68,27 +68,49 @@ function fileToBase64(file) {
     });
 }
 
-async function uploadFileToGitHub(file) {
-    // const url = `https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/${file.name}`;
-    const url = `https://api.github.com/repos/RajapriyaPradeep/basics_studies/contents/${file.name}`;
-    const content = await fileToBase64(file); // Convert file to base64
+// async function uploadFileToGitHub(file) {
+//     // const url = `https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/${file.name}`;
+//     const url = `https://api.github.com/repos/RajapriyaPradeep/basics_studies/contents/${file.name}`;
+//     const content = await fileToBase64(file); // Convert file to base64
 
-    const response = await fetch(url, {
-        method: "PUT",
+//     const response = await fetch(url, {
+//         method: "PUT",
+//         headers: {
+//             "Authorization": `Bearer ${GITHUB_TOKEN}`,  // Use GitHub token here
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//             message: `Upload ${file.name}`,
+//             content: content,  // Use the base64 content of the file
+//         }),
+//     });
+
+//     if (!response.ok) {
+//         throw new Error("Failed to upload file to GitHub");
+//     }
+
+//     const data = await response.json();
+//     return data.content.download_url;  // Return the URL of the uploaded file
+// }
+
+async function uploadFileToGitHub(file) {
+    const fileContent = await fileToBase64(file);  // Convert file to Base64 as shown before
+
+    const response = await fetch('/api/githubProxy', {
+        method: 'POST',
         headers: {
-            "Authorization": `Bearer ${GITHUB_TOKEN}`,  // Use GitHub token here
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            message: `Upload ${file.name}`,
-            content: content,  // Use the base64 content of the file
+            fileName: file.name,
+            fileContent: fileContent,
         }),
     });
 
     if (!response.ok) {
-        throw new Error("Failed to upload file to GitHub");
+        throw new Error('Failed to upload file');
     }
 
     const data = await response.json();
-    return data.content.download_url;  // Return the URL of the uploaded file
+    return data.downloadUrl;
 }
