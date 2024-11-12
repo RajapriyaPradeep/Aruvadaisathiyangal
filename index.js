@@ -54,6 +54,9 @@ app.post('/api/add-entry', async (req, res) => {
     const newEntry = req.body;
 
     try {
+        console.log("RP GITHUB_REPO:", githubRepo);
+        console.log("RP GITHUB_TOKEN:", githubToken ? "Token exists" : "Token missing");
+
         // Fetch the current contents of audios.json from GitHub
         const fileRes = await axios.get(`https://api.github.com/repos/${githubRepo}/contents/audios.json`, {
             headers: {
