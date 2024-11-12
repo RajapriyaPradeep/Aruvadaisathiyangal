@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discources Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsgrid/dist/jsgrid.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsgrid/dist/jsgrid-theme.min.css" />
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Discources Dashboard</h2>
+        
+        <!-- Form Start -->
+        <form id="audioForm">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tamil">Tamil Title:</label>
+                    <input type="text" class="form-control" id="tamil" name="tamil" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="year">Year:</label>
+                    <input type="number" class="form-control" id="year" name="year" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="section">Section:</label>
+                    <select id="section" name="section" class="form-control">
+                        <option value="basicstudies">Basic Studies</option>
+                        <option value="advancedstudies">Advanced Studies</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="filename">File Name:</label>
+                    <input type="text" class="form-control" id="filename" name="filename" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="hasPdf">Has PDF:</label>
+                    <input type="checkbox" id="hasPdf" name="hasPdf" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="pdflink">PDF Link:</label>
+                    <input type="url" class="form-control" id="pdflink" name="pdflink" disabled />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="audioUrl">Audio URL:</label>
+                    <input type="url" class="form-control" id="audioUrl" name="audioUrl" disabled />
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <!-- Form End -->
+
+        <!-- JSGrid Table -->
+        <div id="jsGrid" class="mt-5"></div>
+    </div>
+
+    <!-- Bootstrap JS, jQuery, Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsgrid/dist/jsgrid.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
