@@ -15,6 +15,10 @@ const githubToken = process.env.GITHUB_TOKEN;
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Set the limits for both body parser and file upload
+app.use(bodyParser.json({ limit: '100mb' })); // Set a larger limit for JSON payload
+app.use(bodyParser.urlencoded({ extended: true, limit: '100mb' })); // Set larger limits for URL-encoded data
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
