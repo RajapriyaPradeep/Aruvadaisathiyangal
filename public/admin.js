@@ -1,11 +1,12 @@
 document.getElementById("uploadForm").addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    const pdfFile = document.getElementById("pdfFile").files[0];
+    // const pdfFile = document.getElementById("pdfFile").files[0];
     const audioFile = document.getElementById("audioFile").files[0];
 
     // Upload PDF and audio files directly to GitHub
-    const pdfUrl = await uploadFileToGitHub(pdfFile);
+    // const pdfUrl = await uploadFileToGitHub(pdfFile);
+    const pdfUrl = "";
     const audioUrl = await uploadFileToGitHub(audioFile);
 
     // Send the rest of the form data (metadata) to your backend
@@ -58,13 +59,18 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 // Helper function to convert a file to Base64
 function fileToBase64(file) {
     return new Promise((resolve, reject) => {
+        if (!(file instanceof Blob)) {
+            reject("The provided input is not a file.");
+            return;
+        }
+
         const reader = new FileReader();
         reader.onload = () => {
-            const base64String = reader.result.split(",")[1]; // Get base64 content after the comma
+            const base64String = reader.result.split(",")[1];
             resolve(base64String);
         };
         reader.onerror = reject;
-        reader.readAsDataURL(file); // Read file as Data URL to handle binary data
+        reader.readAsDataURL(file);
     });
 }
 
@@ -94,7 +100,7 @@ function fileToBase64(file) {
 // }
 
 async function uploadFileToGitHub(file) {
-    const fileContent = await fileToBase64(file);  // Convert file to Base64 as shown before
+    const fileContent = await fileToBase64(file); // Convert file to Base64
 
     const response = await fetch('/api/githubProxy', {
         method: 'POST',
@@ -102,7 +108,7 @@ async function uploadFileToGitHub(file) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            fileName: file.name,
+            fileName: file.name.endsWith(".amr") ? file.name.replace(".amr", ".mp3") : file.name,
             fileContent: fileContent,
         }),
     });
@@ -114,3 +120,4 @@ async function uploadFileToGitHub(file) {
     const data = await response.json();
     return data.downloadUrl;
 }
+
