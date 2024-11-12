@@ -9,7 +9,7 @@ const ffmpeg = require("fluent-ffmpeg");
 
 require("dotenv").config();
 
-const githubRepo = process.env.GITHUB_REPO;
+const githubRepo = process.env.GITHUB_REPOSITORY;
 const githubToken = process.env.GITHUB_TOKEN;
 
 const app = express();
