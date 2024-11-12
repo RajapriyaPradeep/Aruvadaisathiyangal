@@ -32,11 +32,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bring_front" >
-        <div class="container-fluid">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light bring_front" >
+        <div class="container-fluid d-flex justify-content-between align-items-center">
             
             <img src="./Assets/projecttitle_latest.png" onclick="navplaylist('home')" class="projtitle" alt="Logo" >
+            <div class="item mobile-latestdiscourses"  onclick="navplaylist('recent')" >
+                <span class="new-icon"></span>
+                <p style="margin-bottom:0px">New</p>
+            </div>
             <!-- <img src="./Assets/projecttitle_latest.png" href="https://aruvadaisathiyangal.in" onclick="navplaylist('home')" class="projtitle" alt="Logo" > -->
             <!-- <img src="./Assets/projtitle.png" class="projtitle" alt="Logo" onclick="navplaylist('home')"> -->
             <!-- Toggler/collapsible button for mobile view -->
@@ -52,12 +56,13 @@
             <!-- Navbar items -->
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="item"  onclick="navplaylist('recent')" >
-                    <span class="new-icon"></span>
-                    <p>New</p>
-                </div>
+                
                 <!-- <ul class="navbar-nav ml-auto"> -->
                 <ul class="navbar-nav">
+                    <div class="item web-latestdiscourses"  onclick="navplaylist('recent')" >
+                        <span class="new-icon"></span>
+                        <p style="margin-bottom:0px">New</p>
+                    </div>
                     <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="audiodiscourse">DISCOURSES</a>
                         <div class="dropdown-menu " aria-labelledby="navbarDropdown">

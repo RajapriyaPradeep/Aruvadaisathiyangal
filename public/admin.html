@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio & PDF Upload</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Upload Audio & PDF</h2>
+    <form id="uploadForm">
+      <div class="form-group">
+        <label for="topic">Topic:</label>
+        <input type="text" class="form-control" id="topic" name="topic" required>
+      </div>
+      <div class="form-group">
+        <label for="section">Section:</label>
+        <select class="form-control" id="section" name="section" required>
+          <option value="basicstudies">Basic Studies</option>
+          <option value="advancedstudies">Advanced Studies</option>
+          <!-- Add more options as necessary -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sizeMb">Size (MB):</label>
+        <input type="number" class="form-control" id="sizeMb" name="sizeMb" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="number" class="form-control" id="year" name="year" required>
+      </div>
+      <div class="form-group">
+        <label for="duration">Duration (Minutes):</label>
+        <input type="number" class="form-control" id="duration" name="duration" required>
+      </div>
+      <div class="form-group">
+        <label for="tamil">Tamil Title:</label>
+        <input type="text" class="form-control" id="tamil" name="tamil" required>
+      </div>
+      <div class="form-group">
+        <label for="pdfFile">Upload PDF:</label>
+        <input type="file" class="form-control-file" id="pdfFile" name="pdfFile" accept="application/pdf" required>
+      </div>
+      <div class="form-group">
+        <label for="audioFile">Upload Audio (AMR or MP3):</label>
+        <input type="file" class="form-control-file" id="audioFile" name="audioFile" accept=".mp3, .amr" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <h3 class="mt-5">Entries</h3>
+    <table class="table table-bordered" id="dataGrid">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Year</th>
+          <th>Duration</th>
+          <th>Size (MB)</th>
+          <th>Section</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="entryList">
+        <!-- Data entries will be displayed here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Fetch entries on load
+      fetchEntries();
+
+      // Form submission handler
+      $('#uploadForm').on('submit', function (event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+
+        $.ajax({
+          url: '/api/upload',
+          method: 'POST',
+          data: formData,
+          contentType: false,
+          processData: false,
+          success: function (response) {
+            alert('Entry added successfully!');
+            fetchEntries();
+          },
+          error: function () {
+            alert('Failed to add entry.');
+          },
+        });
+      });
+    });
+
+    // Fetch entries from the server and display them
+    function fetchEntries() {
+      $.get('/api/entries', function (entries) {
+        const entryList = $('#entryList');
+        entryList.empty();
+        entries.forEach((entry, index) => {
+          entryList.append(`
+            <tr>
+              <td>${entry.topic}</td>
+              <td>${entry.year}</td>
+              <td>${entry.duration}</td>
+              <td>${entry.sizeMb}</td>
+              <td>${entry.section}</td>
+              <td>
+                <button class="btn btn-warning" onclick="editEntry(${index})">Edit</button>
+                <button class="btn btn-danger" onclick="deleteEntry(${index})">Delete</button>
+              </td>
+            </tr>
+          `);
+        });
+      });
+    }
+
+    // Placeholder functions for edit and delete
+    function editEntry(index) {
+      // Implement edit functionality
+    }
+
+    function deleteEntry(index) {
+      // Implement delete functionality
+    }
+  </script>
+</body>
+</html>

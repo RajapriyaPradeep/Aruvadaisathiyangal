@@ -43,10 +43,13 @@ body::before {
 /* Body ends */
 /* Navigation starts */
 .biblestudentslogo{
+  float: right;
+  margin-left: auto;
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 height: 65px;
 width: 65px;
-border-radius: 7px; /*logo curve radius*/
+border-radius: 7px; 
+/*logo curve radius*/
 }
 .nav-link{
   font-weight: 500;
@@ -62,6 +65,12 @@ color:#7a2a2a !important;
 font-size: small;
 font-weight: 600;
 /* letter-spacing: 1px; */
+}
+.navbar-nav {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-item{
   padding-left: 25px;
@@ -281,7 +290,8 @@ font-family: 'Cardo' !important;
   position: fixed;
   bottom: 0%; 
   right: 1%;
-  z-index: 3000;
+  /* z-index: 3000; */
+  z-index: 1000;
   height: 300px;
 }
 /* Bottom right image */
@@ -376,8 +386,12 @@ font-family: 'Cardo' !important;
 /* Language toggle button ends here */
 /* project title starts here */
 .projtitle{
-  width: 200px;
-  max-width: 60%;
+  /* width: 200px;
+  max-width: 60%; */
+  float: left;
+    margin-right: auto;
+    max-height: 65px;
+    max-width: auto;
   cursor: pointer !important;
 }
 /* project title ends here */
@@ -640,17 +654,22 @@ height: 35px;
 }
 /* New animated icon */
 .item {
-position: relative;
-padding-left: 20px; /* Space for the icon */
-font-size: 16px;
+/* position: relative;
+padding-left: 20px; 
+font-size: 16px; */
 color:#7a2a2a;
 cursor: pointer;
+
+display: inline-flex;
+    align-items: center;
+    margin: 0 15px; /* Adjust spacing as needed */
 }
 
 .new-icon {
-position: absolute;
-top: 50%;
-left: 0;
+margin-right:5px;
+/* position: absolute; */
+/* top: 50%;
+left: 0; */
 transform: translateY(-50%);
 width: 10px;
 height: 10px;
@@ -671,4 +690,7 @@ animation: pulse 1.5s infinite;
 }
 .navbar-brand{
 cursor: pointer;
+}
+.mobile-latestdiscourses{
+  display: none;
 }

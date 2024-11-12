@@ -1,5 +1,17 @@
 /* Mobile starts */
 @media (max-width: 480px) {
+    .mobile-latestdiscourses{
+        display: contents;
+    }
+    .web-latestdiscourses{
+        display: none;
+        }
+    .quote-box {
+        margin-bottom: 10px;
+      }
+    .navbar-nav{
+        align-items:start
+    }
     .item {
         float: right;
     }
@@ -46,6 +58,7 @@
         bottom: 0%;
         right: 0%;
         visibility: visible !important;
+        z-index: 3000;
     }
     .author {
         text-align: start !important;
@@ -71,6 +84,18 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+    .mobile-latestdiscourses{
+        display: contents;
+    }
+    .web-latestdiscourses{
+        display: none;
+        }
+    .quote-box {
+        margin-bottom: 10px;
+      }
+    .navbar-nav{
+        align-items:start
+    }
     .item {
         float: right;
     }
@@ -118,6 +143,7 @@
         width: 100px; /* Adjust width for smaller screens */
         height: auto; /* Maintain aspect ratio */
         visibility: visible !important;
+        z-index: 3000;
     }
     .medievalsharp-regular{
         font-size: 12px !important;
@@ -144,6 +170,12 @@
 /* Tab ends */
 /* Desktop starts */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .mobile-latestdiscourses{
+        display: contents;
+    }
+    .web-latestdiscourses{
+        display: none;
+        }
     .floating-icon img{
         height: 30px !important;
     }
@@ -156,6 +188,7 @@
     .home-bottom-right-image,.question-book-right-top,.bottom-left-qimage,.reprint-bottom-right-image{
         width: 250px; /* Adjust for tablet-sized screens */
         height: auto;
+        z-index: 3000;
     }
     .lang{
         right: -8%;
