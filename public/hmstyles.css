@@ -695,3 +695,7 @@ cursor: pointer;
 .mobile-latestdiscourses{
   display: none;
 }
+
+#navbarNav{
+  padding-left: 20px;
+}
