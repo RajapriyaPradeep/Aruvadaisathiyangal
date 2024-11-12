@@ -24,7 +24,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Serve static files from "Public" directory (case-sensitive)
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.static("public"));
 // app.use(fileUpload({
