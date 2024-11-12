@@ -44,33 +44,13 @@ app.get("/entries", (req, res) => {
   });
   
   app.post("/add-entry", async (req, res) => {
-    if (!req.files || !req.files.pdf || !req.files.audio) {
-      return res.status(400).send("PDF and audio files are required.");
-    }
-  
-    const pdfFile = req.files.pdf;
-    const audioFile = req.files.audio;
-    const audioFilePath = audioFile.tempFilePath;
-  
-    let audioUrl = "";
-    let pdfUrl = "";
-  
     try {
-      pdfUrl = await uploadToGitHub(pdfFile);
-      if (audioFile.mimetype === "audio/amr") {
-        await convertAmrToMp3(audioFilePath);
-        audioUrl = await uploadToGitHub({ name: audioFile.name.replace(".amr", ".mp3"), data: fs.readFileSync(audioFilePath) });
-      } else {
-        audioUrl = await uploadToGitHub(audioFile);
-      }
-  
       const newEntry = {
         topic: req.body.topic,
         tamil: req.body.tamil,
         section: req.body.section,
-        pdfUrl,
-        audioUrl,
-        sizeMb: (audioFile.size / 1024 / 1024).toFixed(2),
+        pdfUrl: req.body.pdfUrl,
+        audioUrl: req.body.audioUrl,
         year: new Date().getFullYear(),
       };
   
@@ -79,6 +59,7 @@ app.get("/entries", (req, res) => {
       fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
       res.sendStatus(201);
     } catch (error) {
+      console.error("Error adding entry: ", error);
       res.status(500).send("Failed to add entry.");
     }
   });

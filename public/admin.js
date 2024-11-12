@@ -1,25 +1,36 @@
-document.getElementById("uploadForm").addEventListener("submit", async (e) => {
+document.getElementById("uploadForm").addEventListener("submit", async function (e) {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const entryData = {
-      topic: formData.get("topic"),
-      tamil: formData.get("tamil"),
-      section: formData.get("section"),
-      pdf: formData.get("pdflink"),
-      audio: formData.get("audioUrl"),
+
+    const pdfFile = document.getElementById("pdfFile").files[0];
+    const audioFile = document.getElementById("audioFile").files[0];
+
+    // Upload PDF and audio files directly to GitHub
+    const pdfUrl = await uploadFileToGitHub(pdfFile);
+    const audioUrl = await uploadFileToGitHub(audioFile);
+
+    // Send the rest of the form data (metadata) to your backend
+    const data = {
+        topic: "3.Mystery of the Cross Part 2",
+        audioUrl,
+        pdfUrl,
+        section: "basicstudies",
+        tamil: "சிலுவையின் மர்மம் பகுதி2",
     };
-  
-    try {
-      await fetch("/add-entry", {
+
+    const response = await fetch("/add-entry", {
         method: "POST",
-        body: formData,
-      });
-      alert("Entry added successfully!");
-      loadEntries();
-    } catch (err) {
-      alert("Error adding entry: " + err.message);
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+        alert("Entry added successfully!");
+    } else {
+        alert("Failed to add entry.");
     }
-  });
+});
   
   async function loadEntries() {
     const response = await fetch("/entries");
@@ -43,3 +54,23 @@ document.getElementById("uploadForm").addEventListener("submit", async (e) => {
   }
   
   window.onload = loadEntries;
+
+  async function uploadFileToGitHub(file) {
+    const url = `https://api.github.com/repos/RajapriyaPradeep/basics_studies/contents/${file.name}`;
+    const content = btoa(await file.text());  // Convert file to base64
+
+    const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+            "Authorization": `Bearer ${GITHUB_TOKEN}`,  // Use GitHub token
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            message: `Upload ${file.name}`,
+            content: content,  // Base64 encoded file content
+        }),
+    });
+
+    const data = await response.json();
+    return data.content.download_url;  // Return the URL of the uploaded file
+}
