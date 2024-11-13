@@ -1,3 +1,4 @@
+const { Low, JSONFile } = require('lowdb');
 const express = require('express');
 const fileUpload = require("express-fileupload");
 const bodyParser = require('body-parser');
@@ -36,6 +37,17 @@ app.use(express.static("public"));
 const audioDataFilePath = path.join(__dirname, 'audios.json');
 const faqDataFilePath = path.join(__dirname, 'faqs.json');
 const dataFile = "audios.json";
+
+// Define file path for the database
+const dbFile = path.join(__dirname, 'db.json');
+const adapter = new JSONFile(dbFile);
+const db = new Low(adapter);
+// Load initial data into the database
+(async () => {
+    await db.read();
+    db.data = db.data || { audios: [] }; // Initialize with an empty array if no data
+    await db.write();
+})();
 // Path to your audios.json file
 // const audiosJsonPath = path.join(__dirname, 'audios.json');
 // Admin part starts Here
@@ -45,57 +57,58 @@ const audiosData = JSON.parse(fs.readFileSync(audiosJsonPath, 'utf-8'));
 
 // Insert data into the SQLite table
 // Get all entries
-app.get('/api/entries', (req, res) => {
-    db.all("SELECT * FROM audios", [], (err, rows) => {
-        if (err) {
-            return res.status(500).send("Error fetching data");
-        }
-        res.json(rows);
-    });
+app.get('/api/entries', async (req, res) => {
+    await db.read(); // Read data from db.json file
+    res.json(db.data.audios);
 });
 
 // Add a new entry
-app.post('/api/add-entry', (req, res) => {
-    const { title, tamil, year, section, pdflink, audioUrl } = req.body;
-    const query = `
-        INSERT INTO audios (title, tamil, year, section, pdflink, audioUrl)
-        VALUES (?, ?, ?, ?, ?, ?)
-    `;
-    db.run(query, [title, tamil, year, section, pdflink, audioUrl], function(err) {
-        if (err) {
-            return res.status(500).send("Error saving data");
-        }
-        res.status(200).send({ id: this.lastID, message: "Entry added successfully" });
-    });
+app.post('/api/add-entry', async (req, res) => {
+    const newEntry = req.body;
+
+    await db.read();
+    db.data.audios.push(newEntry); // Add the new entry
+    await db.write(); // Save changes to db.json
+
+    res.status(200).send('Entry added');
 });
+
 
 // Update an entry
-app.put('/api/update-entry/:id', (req, res) => {
-    const { title, tamil, year, section, pdflink, audioUrl } = req.body;
-    const { id } = req.params;
-    const query = `
-        UPDATE audios SET title = ?, tamil = ?, year = ?, section = ?, pdflink = ?, audioUrl = ?
-        WHERE id = ?
-    `;
-    db.run(query, [title, tamil, year, section, pdflink, audioUrl, id], function(err) {
-        if (err) {
-            return res.status(500).send("Error updating data");
-        }
-        res.status(200).send("Entry updated successfully");
-    });
+app.put('/api/update-entry/:id', async (req, res) => {
+    const entryId = parseInt(req.params.id, 10);
+    const updatedEntry = req.body;
+
+    await db.read();
+    const entryIndex = db.data.audios.findIndex(entry => entry.id === entryId);
+
+    if (entryIndex === -1) {
+        return res.status(404).send('Entry not found');
+    }
+
+    db.data.audios[entryIndex] = updatedEntry;
+    await db.write();
+
+    res.status(200).send('Entry updated');
 });
 
+
 // Delete an entry
-app.delete('/api/delete-entry/:id', (req, res) => {
-    const { id } = req.params;
-    const query = `DELETE FROM audios WHERE id = ?`;
-    db.run(query, [id], function(err) {
-        if (err) {
-            return res.status(500).send("Error deleting data");
-        }
-        res.status(200).send("Entry deleted successfully");
-    });
+app.delete('/api/delete-entry/:id', async (req, res) => {
+    const entryId = parseInt(req.params.id, 10);
+
+    await db.read();
+    const initialLength = db.data.audios.length;
+    db.data.audios = db.data.audios.filter(entry => entry.id !== entryId);
+    
+    if (db.data.audios.length === initialLength) {
+        return res.status(404).send('Entry not found');
+    }
+
+    await db.write();
+    res.status(200).send('Entry deleted');
 });
+
 // Admin part ends Here
 
 
