@@ -1,10 +1,14 @@
-const { Low, JSONFile } = require('lowdb');
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const path = require('path');
+import express from 'express';
+import fileUpload from 'express-fileupload';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import path from 'path';
+import { Low, JSONFile } from 'lowdb';
+import dotenv from 'dotenv';
 
-require("dotenv").config();
+dotenv.config();
+const __dirname = path.resolve(); // Required for `__dirname` to work in ES modules
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
