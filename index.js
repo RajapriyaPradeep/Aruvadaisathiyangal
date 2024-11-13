@@ -1,113 +1,27 @@
-import express from 'express';
-import fileUpload from 'express-fileupload';
-import bodyParser from 'body-parser';
-import cors from 'cors';
+import { Low } from 'lowdb';
+import { JSONFile } from 'lowdb/node'; // Importing JSONFile specifically for Node environment
 import path from 'path';
-const { Low, JSONFile } = require('lowdb');
-import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
-dotenv.config();
-const __dirname = path.resolve(); // Required for `__dirname` to work in ES modules
+// Set up the file path for the database JSON file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const filePath = path.join(__dirname, 'db.json');
 
-const app = express();
-const PORT = process.env.PORT || 5000;
-
-// Set up LowDB in a writable directory for Vercel
-const dbFile = path.join('/tmp', 'db.json');
-const adapter = new JSONFile(dbFile);
+// Configure the database using JSONFile and Low
+const adapter = new JSONFile(filePath);
 const db = new Low(adapter);
 
-// Load initial data
-(async () => {
-    await db.read();
-    db.data = db.data || { audios: [] };
-    await db.write();
-})();
+// Function to initialize and use the database
+async function initializeDb() {
+  await db.read(); // Load data from JSON file
+  db.data = db.data || { items: [] }; // Initialize data if empty
 
-app.use(cors());
-app.use(bodyParser.json({ limit: '100mb' }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
+  // Example: Add an item to the database
+  db.data.items.push({ name: 'New Item' });
 
-// Get all entries
-app.get('/api/entries', async (req, res) => {
-    try {
-        await db.read();
-        res.json(db.data.audios);
-    } catch (error) {
-        console.error("Error in get entries:", error);
-        res.status(500).send('Error retrieving entries');
-    }
-});
+  await db.write(); // Save changes to the JSON file
+}
 
-// Add a new entry
-app.post('/api/add-entry', async (req, res) => {
-    try {
-        const newEntry = req.body;
-        
-        await db.read();
-        db.data.audios.push(newEntry);
-        await db.write();
-
-        res.status(200).send('Entry added');
-    } catch (error) {
-        console.error("Error in add-entry:", error);
-        res.status(500).send('Error saving data');
-    }
-});
-
-// Update an entry
-app.put('/api/update-entry/:id', async (req, res) => {
-    try {
-        const entryId = parseInt(req.params.id, 10);
-        const updatedEntry = req.body;
-
-        await db.read();
-        const entryIndex = db.data.audios.findIndex(entry => entry.id === entryId);
-
-        if (entryIndex === -1) {
-            return res.status(404).send('Entry not found');
-        }
-
-        db.data.audios[entryIndex] = updatedEntry;
-        await db.write();
-
-        res.status(200).send('Entry updated');
-    } catch (error) {
-        console.error("Error in update-entry:", error);
-        res.status(500).send('Error updating entry');
-    }
-});
-
-// Delete an entry
-app.delete('/api/delete-entry/:id', async (req, res) => {
-    try {
-        const entryId = parseInt(req.params.id, 10);
-
-        await db.read();
-        const initialLength = db.data.audios.length;
-        db.data.audios = db.data.audios.filter(entry => entry.id !== entryId);
-        
-        if (db.data.audios.length === initialLength) {
-            return res.status(404).send('Entry not found');
-        }
-
-        await db.write();
-        res.status(200).send('Entry deleted');
-    } catch (error) {
-        console.error("Error in delete-entry:", error);
-        res.status(500).send('Error deleting entry');
-    }
-});
-
-// Serve the home page
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
-
-module.exports = app;
+// Call the function to initialize and test the database
+initializeDb().catch(console.error);
