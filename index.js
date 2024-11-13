@@ -3,7 +3,7 @@ import fileUpload from 'express-fileupload';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import path from 'path';
-import { Low, JSONFile } from 'lowdb';
+const { Low, JSONFile } = require('lowdb');
 import dotenv from 'dotenv';
 
 dotenv.config();
