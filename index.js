@@ -1,4 +1,3 @@
-const { Low, JSONFile } = require('lowdb');
 const express = require('express');
 const fileUpload = require("express-fileupload");
 const bodyParser = require('body-parser');
@@ -7,7 +6,6 @@ const fs = require('fs');
 const path = require('path');
 const axios = require("axios");
 const ffmpeg = require("fluent-ffmpeg");
-const db = require('./db'); // Ensure the path is correct
 
 require("dotenv").config();
 
@@ -37,70 +35,8 @@ app.use(express.static("public"));
 const audioDataFilePath = path.join(__dirname, 'audios.json');
 const faqDataFilePath = path.join(__dirname, 'faqs.json');
 const dataFile = "audios.json";
-
-
 // Path to your audios.json file
 // const audiosJsonPath = path.join(__dirname, 'audios.json');
-// Admin part starts Here
-// Read audios.json
-const audiosJsonPath = path.resolve(__dirname, 'audios.json');
-const audiosData = JSON.parse(fs.readFileSync(audiosJsonPath, 'utf-8'));
-
-// Insert data into the SQLite table
-// Get all entries
-app.get('/api/entries', (req, res) => {
-    db.all("SELECT * FROM audios", [], (err, rows) => {
-        if (err) {
-            return res.status(500).send("Error fetching data");
-        }
-        res.json(rows);
-    });
-});
-
-// Add a new entry
-app.post('/api/add-entry', (req, res) => {
-    const { title, tamil, year, section, pdflink, audioUrl } = req.body;
-    const query = `
-        INSERT INTO audios (title, tamil, year, section, pdflink, audioUrl)
-        VALUES (?, ?, ?, ?, ?, ?)
-    `;
-    db.run(query, [title, tamil, year, section, pdflink, audioUrl], function(err) {
-        if (err) {
-            return res.status(500).send("Error saving data");
-        }
-        res.status(200).send({ id: this.lastID, message: "Entry added successfully" });
-    });
-});
-
-// Update an entry
-app.put('/api/update-entry/:id', (req, res) => {
-    const { title, tamil, year, section, pdflink, audioUrl } = req.body;
-    const { id } = req.params;
-    const query = `
-        UPDATE audios SET title = ?, tamil = ?, year = ?, section = ?, pdflink = ?, audioUrl = ?
-        WHERE id = ?
-    `;
-    db.run(query, [title, tamil, year, section, pdflink, audioUrl, id], function(err) {
-        if (err) {
-            return res.status(500).send("Error updating data");
-        }
-        res.status(200).send("Entry updated successfully");
-    });
-});
-
-// Delete an entry
-app.delete('/api/delete-entry/:id', (req, res) => {
-    const { id } = req.params;
-    const query = `DELETE FROM audios WHERE id = ?`;
-    db.run(query, [id], function(err) {
-        if (err) {
-            return res.status(500).send("Error deleting data");
-        }
-        res.status(200).send("Entry deleted successfully");
-    });
-});
-// Admin part ends Here
-
 
 // Function to read data from audios.json file
 const readData = () => {
