@@ -364,3 +364,113 @@ document.addEventListener("click", function(event) {
     window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?srch=' + document.getElementById("searchkeyword").value;
     }
 }
+function showdivineplan() {
+  const modal = document.getElementById("divinePlanModal");
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modal = document.getElementById("divinePlanModal");
+  modal.style.display = "none";
+}
+function navplaylist(modulename){
+  if(modulename == "home")
+      window.location.href = 'https://aruvadaisathiyangal.in/index.html';    
+  else if(modulename == "aboutus")
+      window.location.href = 'https://aruvadaisathiyangal.in/aboutus.html';
+  else
+      window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?module=' + modulename;
+      // window.location.href = 'file:///E:/NC/Task/video-listing-app/audiolist.html?module=' + modulename;
+}
+
+function searchaudio(){
+  if(document.getElementById("searchkeyword").value != ""){
+  let search_keyword = document.get
+  window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?srch=' + document.getElementById("searchkeyword").value;
+  }
+}
+// Getting the image map title exactly at the appropriate location
+// Function to show the custom styled tooltip based on the title attribute
+function showCustomTooltip(event) {
+  // Prevent the default tooltip by removing the title attribute temporarily
+  const title = event.target.getAttribute("title");
+  event.target.removeAttribute("title");
+
+  const tooltip = document.createElement("div"); // Create a new div for the tooltip
+  // tooltip.classList.add("custom-tooltip");
+  //Change color as per the type
+  if(title == "The World That Was --1st Dispensation" || title=="The Present Evil World --2nd Dispensation"|| title=="The World to Come --3rd Dispensation"||title=="Patriarchal Age"||title=="Jewish Age" ||title=="Gospel Age" ||title=="Messianic Age"||title=="Ages to Come"||title=="Israel's time of trouble in Jewish Harvest:Separation of Wheat and Chaff"||title=="World's time of trouble in Gospel Harvest:Separation of Wheat and Tares"||title=="Satan's Little Season")
+{tooltip.style.backgroundColor = "#f9f9f9";
+tooltip.style.color = "#555555";}
+else if(title == "State of divine glory and power of office" || title=="State of spirit birth" || title=="State of spirit begettal" || title=="State of God's favor (to humans)"||title=="State of God's typical favor"||title=="State of Sin and depravity")
+  {tooltip.style.backgroundColor = "#fcfcfc";
+  tooltip.style.color = "#1a73e8";}
+else if(title=="Adam in perfection" || title=="Fallen Adam and his posterity, before the flood" || title=="Ancient worthies as individuals" || title=="Mankind from flood to Messianic Age" || title=="Fleshly Israel typically justified as a nation")
+  {tooltip.style.backgroundColor = "#ffffff";
+      tooltip.style.color = "#ff6f61";}
+else if(title=="Jesus at age 30, a perfect man"||title=="Jesus, spirit-begotten at Jordan"||title=="Jesus, resurrected as a divine being"||title=="Jesus, 40 days after resurrection, in divine glory"||title=="Jesus, in Gospel Age, set down with Father on throne")
+  {tooltip.style.backgroundColor = "#7a2a2a";
+      tooltip.style.color = "#e5d8c4";}
+else if(title=="Spirit-begotten class who become the Great Company" || title=="Spirit-begotten Class who become the Bride of Christ" || title=="Believers, but not fully consecrated"||title=="Wolves in sheep's clothing; church-goers, but not believers; hypocrites")
+  {tooltip.style.backgroundColor = "#f5fffa";
+      tooltip.style.color = "#008080";}
+else if(title=="Jesus, at His second advent"||title=="Little Flock, separating from Babylon"||title=="Great Company, failing to gain chief reward"||title=="Babylon, larger part of the nominal church, falling; some remaining on Plane N, others falling below"||title=="Babylon, hypocrite element of nominal church, falling to Plane R with unbelievers"||title=="The glorified Christ, head and body")
+  {tooltip.style.backgroundColor = "#ffffff";
+  tooltip.style.color = "#2c2c2c";}
+else
+{tooltip.style.backgroundColor = "#f7f8ef";
+  tooltip.style.color = "#556b2f";}
+
+tooltip.style.position = "absolute";
+tooltip.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
+tooltip.style.padding = "8px";
+tooltip.style.borderRadius = "5px";
+tooltip.style.fontSize = "14px";
+tooltip.style.pointerEvents = "none"; // Prevents the tooltip from blocking other interactions
+tooltip.style.zIndex = "2000";
+tooltip.style.fontFamily = "serif";
+
+  tooltip.textContent = title; // Set the tooltip text to the removed title content
+
+  // Position the tooltip based on the area element's position
+  const area = event.target;
+  const coords = area.getAttribute("coords").split(",").map(Number);
+  const img = document.getElementById("chart-image");
+  const imgRect = img.getBoundingClientRect();
+
+  // Calculate tooltip position based on area coordinates
+  const x = coords[0] + imgRect.left + 10; // Slight offset for better alignment
+  const y = coords[1] + imgRect.top - 30; // Slight offset to avoid overlap
+
+  tooltip.style.left = `${x}px`;
+  tooltip.style.top = `${y}px`;
+
+  // Append the tooltip to the body
+  document.body.appendChild(tooltip);
+
+  // Store the tooltip and the original title text for later restoration
+  event.target.tooltip = tooltip;
+  event.target.originalTitle = title;
+}
+
+// Function to hide the custom tooltip
+function hideCustomTooltip(event) {
+  const tooltip = event.target.tooltip;
+  if (tooltip) {
+      tooltip.remove(); // Remove the custom tooltip from the DOM
+  }
+
+  // Restore the original title attribute to show the default tooltip again
+  const originalTitle = event.target.originalTitle;
+  if (originalTitle) {
+      event.target.setAttribute("title", originalTitle);
+  }
+}
+
+// Attach event listeners to each map area
+const areas = document.querySelectorAll('.area-tooltip');
+areas.forEach(area => {
+  area.addEventListener('mouseover', showCustomTooltip);
+  area.addEventListener('mouseout', hideCustomTooltip);
+});
+
