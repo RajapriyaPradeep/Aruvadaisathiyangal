@@ -363,7 +363,7 @@
       "topic": "1Sin_Introduction",
       "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Sin/main/1Sin_Introduction.mp3",
       "sizeMb": 6.42,
-      "year": 2011,
+      "year": 2019,
       "duration": "4",
       "section": "sin",
       "pdflink":"",
@@ -373,7 +373,7 @@
       "topic": "2Sin_KindsofSins",
       "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Sin/main/2Sin_KindsofSins.mp3",
       "sizeMb": 6.42,
-      "year": 2011,
+      "year": 2019,
       "duration": "4",
       "section": "sin",
       "pdflink":"",
@@ -383,7 +383,7 @@
       "topic": "4Sin_SecondDeathintheChurch_BrPrabhakaran_23918",
       "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Sin/main/4Sin_SecondDeathintheChurch_BrPrabhakaran_23918.mp3",
       "sizeMb": 6.42,
-      "year": 2011,
+      "year": 2019,
       "duration": "4",
       "section": "sin",
       "pdflink":"",
@@ -393,7 +393,7 @@
       "topic": "1Sin_Introduction",
       "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Sin/main/1Sin_Introduction.mp3",
       "sizeMb": 6.42,
-      "year": 2011,
+      "year": 2019,
       "duration": "4",
       "section": "sin",
       "pdflink":"",
@@ -403,9 +403,59 @@
       "topic": "5Sin_IfaPriestdoSin_BrPrabhakaran_06012019",
       "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Sin/main/5Sin_IfaPriestdoSin_BrPrabhakaran_06012019.mp3",
       "sizeMb": 6.42,
-      "year": 2011,
+      "year": 2019,
       "duration": "4",
       "section": "sin",
+      "pdflink":"",
+      "tamil":"ஸ்பிரிட் பெகெட்டல்"
+    }
+    ,{
+      "topic": "1Understandinggreattribulation_Part1_BrPrabhakaran",
+      "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/UnderstandingGreatTribulation/main/1Understandinggreattribulation_Part1_BrPrabhakaran.mp3",
+      "sizeMb": 6.42,
+      "year": 2019,
+      "duration": "4",
+      "section": "understandinggreattribulation",
+      "pdflink":"",
+      "tamil":"ஸ்பிரிட் பெகெட்டல்"
+    }
+    ,{
+      "topic": "2Understandinggreattribulation_Part2_BrPrabhakaran",
+      "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/UnderstandingGreatTribulation/main/2Understandinggreattribulation_Part2_BrPrabhakaran.mp3",
+      "sizeMb": 6.42,
+      "year": 2019,
+      "duration": "4",
+      "section": "understandinggreattribulation",
+      "pdflink":"",
+      "tamil":"ஸ்பிரிட் பெகெட்டல்"
+    }
+    ,{
+      "topic": "3Understandinggreattribulation_Part3_BrPrabhakaran",
+      "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/UnderstandingGreatTribulation/main/3Understandinggreattribulation_Part3_BrPrabhakaran.mp3",
+      "sizeMb": 6.42,
+      "year": 2019,
+      "duration": "4",
+      "section": "understandinggreattribulation",
+      "pdflink":"",
+      "tamil":"ஸ்பிரிட் பெகெட்டல்"
+    }
+    ,{
+      "topic": "4Understandinggreattribulation_Part4_BrPrabhakaran",
+      "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/UnderstandingGreatTribulation/main/4Understandinggreattribulation_Part4_BrPrabhakaran.mp3",
+      "sizeMb": 6.42,
+      "year": 2019,
+      "duration": "4",
+      "section": "understandinggreattribulation",
+      "pdflink":"",
+      "tamil":"ஸ்பிரிட் பெகெட்டல்"
+    }
+    ,{
+      "topic": "5Understandinggreattribulation_Part5_BrPrabhakaran",
+      "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/UnderstandingGreatTribulation/main/5Understandinggreattribulation_Part5_BrPrabhakaran.mp3",
+      "sizeMb": 6.42,
+      "year": 2019,
+      "duration": "4",
+      "section": "understandinggreattribulation",
       "pdflink":"",
       "tamil":"ஸ்பிரிட் பெகெட்டல்"
     }
