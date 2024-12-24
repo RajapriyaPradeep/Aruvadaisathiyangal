@@ -417,3 +417,9 @@ areas.forEach(area => {
     area.addEventListener('mouseout', hideCustomTooltip);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Ensure all dropdown menus are hidden initially
+    document.querySelectorAll('.dropdown-menu').forEach(function (menu) {
+        menu.classList.remove('show');
+    });
+});

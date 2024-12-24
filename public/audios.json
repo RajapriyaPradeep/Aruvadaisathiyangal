@@ -140,36 +140,6 @@
     "tamil":"கவனத்துடன்"
     },
     {
-      "topic": "1.Keys to unlock the Bible",
-      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/1keystounlockthebible.mp3",
-      "sizeMb": 5.81,
-      "year": 2023,
-      "duration": "4",
-      "section": "basicstudies",
-      "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/1keystounlockthebible.pdf",
-    "tamil":"பைபிளை திறப்பதற்கான விசைகள்"
-    },
-    {
-      "topic": "2.Mystery of the cross part1",
-      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/2mysteryofthecrosspart1.mp3",
-      "sizeMb": 6.42,
-      "year": 2024,
-      "duration": "4",
-      "section": "basicstudies",
-      "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/2mysteryofthecrosspart1.pdf",
-    "tamil":"சிலுவையின் மர்மம் பகுதி1"
-    },
-    {
-      "topic": "3.Mystery of the cross part2",
-      "audioUrl": "https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/3mysteryofthecrosspart2.mp3",
-      "sizeMb": 6.42,
-      "year": 2024,
-      "duration": "4",
-      "section": "basicstudies",
-      "pdflink":"https://raw.githubusercontent.com/RajapriyaPradeep/basics_studies/main/3mysteryofthecrosspart2.pdf",
-    "tamil":"சிலுவையின் மர்மம் பகுதி2"
-    },
-    {
       "topic": "1.Wilderness Wandering Introduction",
       "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/wildernesswandering/main/1WildernessWanderingIntroduction.mp3",
       "sizeMb": 6.42,
@@ -529,4 +499,566 @@
       "pdflink":"",
       "tamil":"ஸ்பிரிட் பெகெட்டல்"
     }
+    ,{
+      "topic": "00EYEOPENINGDAY1BIBLETHETREASUREBOOKOFGOD",
+      "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/00EYEOPENINGDAY1BIBLETHETREASUREBOOKOFGOD.mp3",
+      "sizeMb": 6.42,
+      "year": 2019,
+      "duration": "4",
+      "section": "basicstudies",
+      "pdflink":"",
+      "tamil":"ஸ்பிரிட் பெகெட்டல்"
+    }
+    ,{
+        "topic": "00EYEOPENINGDAY2BIBLETHETREASUREBOOKOFGOD",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/00EYEOPENINGDAY2BIBLETHETREASUREBOOKOFGOD.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "01THEKEYSTOUNLOCKTHEBIBLE",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/01THEKEYSTOUNLOCKTHEBIBLE.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "02THEMYSTERYOFTHECROSSI",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/02THEMYSTERYOFTHECROSSI.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "03THEMYSTERYOFTHECROSSII",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/03THEMYSTERYOFTHECROSSII.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "04THEDIVINEPLANOFTHEAGESFIRSTWORLD",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/04THEDIVINEPLANOFTHEAGESFIRSTWORLD.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "05THEDIVINEPLANOFTHEAGES_SECONDWORLD_BrPrabhakaran_110218",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/05THEDIVINEPLANOFTHEAGES_SECONDWORLD_BrPrabhakaran_110218.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "06SecondandThirdWorld,BroAPrabhakaran,Erd",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/06SecondandThirdWorld,BroAPrabhakaran,Erd.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "07FAITH_BrPrabhakaran_25022018",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/07FAITH_BrPrabhakaran_25022018.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "08THEMOSTHOLYFAITH_NEYVELI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/08THEMOSTHOLYFAITH_NEYVELI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "09THEFIFTHUNIVERSALKINGDOM",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/09THEFIFTHUNIVERSALKINGDOM.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "10-_-THE-THREE-WAYS_TUTICORIN_Br-Prabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/10-_-THE-THREE-WAYS_TUTICORIN_Br-Prabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "11-_-WHY-DOES-GOD-PERMIT-EVIL_Br-Prabhakaran_25032018",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/11-_-WHY-DOES-GOD-PERMIT-EVIL_Br-Prabhakaran_25032018.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "12-_-THE-IMPORTANCE-OF-OLD-TESTAMENT_Br-Prabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/12-_-THE-IMPORTANCE-OF-OLD-TESTAMENT_Br-Prabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "13-_-THE-HUMAN-SOUL-PART-1_Br-Prabhakaran_08042018",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/13-_-THE-HUMAN-SOUL-PART-1_Br-Prabhakaran_08042018.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "14THEHUMANSOUL-II_COVAI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/14THEHUMANSOUL-II_COVAI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "15THEHUMANSOULPART-3_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/15THEHUMANSOULPART-3_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "16THESEEDOFWOMANANDTHESEEDOFSERPENT_COVAI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/16THESEEDOFWOMANANDTHESEEDOFSERPENT_COVAI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "17THERIVERJORDAN_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/17THERIVERJORDAN_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "18THETRUTHABOUTHELL_BRPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/18THETRUTHABOUTHELL_BRPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "19THECHURCHOFCHRISTPARTI",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/19THECHURCHOFCHRISTPARTI.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "20THECHURCHOFCHRISTPART2",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/20THECHURCHOFCHRISTPART2.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "21THECHURCHOFCHRISTPARTIII",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/21THECHURCHOFCHRISTPARTIII.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "22THEGREATPYRAMIDOFGIZA",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/22THEGREATPYRAMIDOFGIZA.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "23THESTUDYOFTRINITYPART1",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/23THESTUDYOFTRINITYPART1.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "24THESTUDYOFTRINITYPARTII",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/24THESTUDYOFTRINITYPARTII.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "25THESTUDYOFTRINITYPART3",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/25THESTUDYOFTRINITYPART3.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "26BIBLECHRONOLOGY",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/26BIBLECHRONOLOGY.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "27THEFOURRIVERSOUTOFEDEN",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/27THEFOURRIVERSOUTOFEDEN.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "28THETWENTYFOURELDERS",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/28THETWENTYFOURELDERS.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "29THESTUDYOFTHETABERNACLE",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/29THESTUDYOFTHETABERNACLE.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "30THEATONEMENTDAYSACRIFICES",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/30THEATONEMENTDAYSACRIFICES.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "31THEKEYSTOUNLOCKTIMEPROPHECY",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/31THEKEYSTOUNLOCKTIMEPROPHECY.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "32NAAMAANSEVENDIPPINGS",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/32NAAMAANSEVENDIPPINGS.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "33THETHREECOVENANTS",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/33THETHREECOVENANTS.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "34THETHREEHARVESTSOFTHEBIBLE",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/34THETHREEHARVESTSOFTHEBIBLE.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "35THESTUDYOFANTICHRISTPARTI",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/35THESTUDYOFANTICHRISTPARTI.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "36THESTUDYOFANTICHRISTPART2",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/36THESTUDYOFANTICHRISTPART2.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "37THESTUDYOFANTICHRISTPARTIIINAGERCOIL",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/37THESTUDYOFANTICHRISTPARTIIINAGERCOIL.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "38THESTUDYOFANTICHRISTPART3B",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/38THESTUDYOFANTICHRISTPART3B.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "39THEJUBILEELAW",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/39THEJUBILEELAW.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "40THELESSONONPRAYER",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part2/main/40THELESSONONPRAYER.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "41#YOURADVERSARYTHEDEVIL_NEYVELI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/41#YOURADVERSARYTHEDEVIL_NEYVELI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "43#THESECRETOFTHENEWCREATURE_NEYVELI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/43#THESECRETOFTHENEWCREATURE_NEYVELI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "44#SECONDCOMINGPART1_GENERALEXPECTATIONS_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/44#SECONDCOMINGPART1_GENERALEXPECTATIONS_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "45#THESTUDYOFSECONDCOMING_THIYAGADURGAM_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/45#THESTUDYOFSECONDCOMING_THIYAGADURGAM_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "46#SECONDCOMINGPART3_BrPrabhakaran_281018",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/46#SECONDCOMINGPART3_BrPrabhakaran_281018.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "47#CHURCHHISTORY_NEYVELI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/47#CHURCHHISTORY_NEYVELI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "48#THEMYSTERYOFTHESILVERCOINS_NEYVELI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/48#THEMYSTERYOFTHESILVERCOINS_NEYVELI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "49#ARMAGEDDONANDTHEENDOFTHEWORLD_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/49#ARMAGEDDONANDTHEENDOFTHEWORLD_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "50#THELORD_SSUPPER_BrPrabhakaran_091218",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/50#THELORD_SSUPPER_BrPrabhakaran_091218.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "51#MIRACLES,PROPHECIES,_NAGERCOIL_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/51#MIRACLES,PROPHECIES,_NAGERCOIL_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "53#ISRAELINPROPHECY_COVAI_BrPrabhakaran",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/53#ISRAELINPROPHECY_COVAI_BrPrabhakaran.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "54#THEHIGHCALLING_BrPrabhakaran_060119",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/54#THEHIGHCALLING_BrPrabhakaran_060119.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "56THEEXPLANATIONOFTHECHARTPART2",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/56THEEXPLANATIONOFTHECHARTPART2.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    ,{
+        "topic": "57THECHRISTIANBAPTISM",
+        "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part3/main/57THECHRISTIANBAPTISM.mp3",
+        "sizeMb": 6.42,
+        "year": 2019,
+        "duration": "4",
+        "section": "basicstudies",
+        "pdflink":"",
+        "tamil":"ஸ்பிரிட் பெகெட்டல்"
+      }
+    
+    
 ]

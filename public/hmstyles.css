@@ -114,6 +114,26 @@ font-weight: 600;
   color: #ebd3b0;; /* White text on hover */
   font-weight: bold !important;
 }
+/* Position the submenu to appear beside the parent menu */
+/* Ensure the parent dropdown-submenu is positioned correctly */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Hide the submenu by default */
+.dropdown-submenu .dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute; /* Ensure proper positioning */
+  top: 0; /* Align at the same vertical level as the parent */
+  left: 100%; /* Position it to the right of the parent */
+  margin-top: 0;
+  z-index: 1050; /* Ensure it appears above other content */
+}
+
+/* Show the submenu when hovering over the parent dropdown item */
+.dropdown-submenu:hover .dropdown-menu {
+  display: block; /* Show submenu on hover */
+}
 
 /* Submenu Styles */
 .submenu-container .submenu {
@@ -827,3 +847,7 @@ cursor: pointer;
   color: #7a2a2a;
 }
 /* model styling ends here*/
+
+
+
+

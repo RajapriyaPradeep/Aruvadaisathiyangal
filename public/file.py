@@ -96,7 +96,7 @@ def extract_file_names(directory):
     return file_names
 
 # Example usage
-folder_path = "C:/Users/rajap/Downloads/CHRISTIAN CONCEPTS-20241224T200024Z-001/renameproper"
+folder_path = "C:/Users/rajap/Downloads/BASIC LESSONS-20241224T065702Z-001/forwc"
 file_names = extract_file_names(folder_path)
 
 print("Files found:")
