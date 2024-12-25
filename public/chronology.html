@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aruvadaisathiyangal</title>
+    <link rel="icon" type="image/png" href="./Assets/Alogo.jpg">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="hmstyles.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="stylesheet" href="chronology.css">
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light bring_front" >
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            
+            <img src="./Assets/projecttitle_latest.png" onclick="navplaylist('home')" class="projtitle" alt="Logo" >
+            <div class="item mobile-latestdiscourses"  onclick="navplaylist('recent')" >
+                <span class="new-icon"></span>
+                <p style="margin-bottom:0px !important">New</p>
+            </div>
+            <!-- <img src="./Assets/projecttitle_latest.png" href="https://aruvadaisathiyangal.in" onclick="navplaylist('home')" class="projtitle" alt="Logo" > -->
+            <!-- <img src="./Assets/projtitle.png" class="projtitle" alt="Logo" onclick="navplaylist('home')"> -->
+            <!-- Toggler/collapsible button for mobile view -->
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+                        <!-- Toggler/collapsible button for mobile view -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Hide default icon and insert custom icon -->
+    <span class="sr-only">Toggle navigation</span> <!-- Screen reader text -->
+    <i class="fas fa-ellipsis-v"></i> <!-- Custom icon -->
+</button>
+            <!-- Navbar items -->
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                
+                <!-- <ul class="navbar-nav ml-auto"> -->
+                <ul class="navbar-nav">
+                    <div class="item web-latestdiscourses"  onclick="navplaylist('recent')" >
+                        <span class="new-icon"></span>
+                        <p style="margin-bottom:0px !important">New</p>
+                    </div>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="audiodiscourse">DISCOURSES</a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" data-lang="basics53"  onclick="navplaylist('basicstudies')">BASICS 53</a>
+                            <a class="dropdown-item" href="#" data-lang="doctrinal"  onclick="navplaylist('doctrinal')">DOCTRINAL</a>
+                            <a class="dropdown-item" href="#" data-lang="memorial"  onclick="navplaylist('memorial')">MEMORIAL</a>
+                            <a class="dropdown-item" href="#" data-lang="prophetic"  onclick="navplaylist('prophetic')">PROPHETIC</a>
+                            <a class="dropdown-item" href="#" data-lang="spiritual"  onclick="navplaylist('spiritual')">SPIRITUAL</a>
+                            <a class="dropdown-item" href="#" data-lang="typeantitype"  onclick="navplaylist('typeantitype')">TYPE & ANTITYPE</a>
+                            <!-- Divider before the last three items -->
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-lang="paneldiscussions"  onclick="navplaylist('paneldiscussions')">PANEL DISCUSSIONS</a>
+                            <a class="dropdown-item" href="#" data-lang="testimonial"  onclick="navplaylist('testimonial')">TESTIMONIAL</a>                            
+                            <a class="dropdown-item" href="#" data-lang="vesperservice"  onclick="navplaylist('vesperservice')">VESPER SERVICE</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="volumestudy">VOLUME STUDY</a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" data-lang="thebattleofarmageddon"  onclick="navplaylist('thebattleofarmageddon')">THE BATTLE OF ARMAGEDDON</a>
+                            <a class="dropdown-item" href="#" data-lang="thenewcreation"  onclick="navplaylist('thenewcreation')">THE NEW CREATION</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="bookstudy">BOOK STUDY</a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" data-lang="lifeofjesuschrist"  onclick="navplaylist('lifeofjesuschrist')">LIFE OF JESUS CHRIST</a>
+                            <a class="dropdown-item" href="#" data-lang="lifeofdavid"  onclick="navplaylist('lifeofdavid')">LIFE OF DAVID</a>
+                            <a class="dropdown-item" href="#" data-lang="orderanddisipline"  onclick="navplaylist('orderanddisipline')">ORDER & DISCIPLINE</a>
+                            <a class="dropdown-item" href="#" data-lang="wildernesswandering"  onclick="navplaylist('wildernesswandering')">WILDERNESS WANDERING</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="topicalstudy">TOPICAL STUDY</a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" data-lang="christianconcepts"  onclick="navplaylist('christianconcepts')">CHRISTIAN CONCEPTS</a>
+                            <a class="dropdown-item" href="#" data-lang="ecclesiaelection"  onclick="navplaylist('ecclesiaelection')">ECCLESIA ELECTION</a>
+                            <a class="dropdown-item" href="#" data-lang="endtimeprophecy"  onclick="navplaylist('endtimeprophecy')">END TIME PROPHECY</a>
+                            <a class="dropdown-item" href="#" data-lang="goldenrule"  onclick="navplaylist('goldenrule')">GOLDEN RULE</a>
+                            <a class="dropdown-item" href="#" data-lang="gospelintheheaven"  onclick="navplaylist('gospelintheheaven')">GOSPEL IN THE HEAVEN</a>
+                            <a class="dropdown-item" href="#" data-lang="israel"  onclick="navplaylist('israel')">ISRAEL</a>
+                            <a class="dropdown-item" href="#" data-lang="pandemic"  onclick="navplaylist('pandemic')">PANDEMIC</a>                            
+                            <a class="dropdown-item" href="#" data-lang="parables"  onclick="navplaylist('parables')">PARABLES</a>
+                            <a class="dropdown-item" href="#" data-lang="perfectingholiness"  onclick="navplaylist('perfectingholiness')">PERFECTING HOLINESS</a>
+                            <a class="dropdown-item" href="#" data-lang="revelation"  onclick="navplaylist('revelation')">REVELATION</a>
+                            <a class="dropdown-item" href="#" data-lang="sin"  onclick="navplaylist('sin')">SIN</a>
+                            <a class="dropdown-item" href="#" data-lang="spiritbegettal"  onclick="navplaylist('spiritbegettal')">SPIRIT BEGETTAL</a>
+                            <a class="dropdown-item" href="#" data-lang="understandinggreattribulation"  onclick="navplaylist('understandinggreattribulation')">UNDERSTANDING GREAT TRIBULATION</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="more">MORE</a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" data-lang="handouts">HANDOUTS</a>
+                            <a class="dropdown-item" href="#" data-lang="handouts" onclick="showdivineplan()">DIVINE PLAN OF AGES</a>
+                            <a class="dropdown-item" href="#" data-lang="aboutus" onclick="navplaylist('aboutus')" >ABOUT US</a>
+                        </div>
+                    </li>   
+                    <li class="nav-item search-bar">
+                        <form class="form-inline search-border">
+                            <i class="fas fa-search" onclick="searchaudio()" ></i> <!-- Font Awesome Search Icon -->
+                            <input class="form-control search-box" id="searchkeyword" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>                 
+                </ul>
+            </div>
+            <!-- Logo -->
+            <a class="navbar-brand" onclick="navplaylist('aboutus')">
+                <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container content-area scripture-content">
+        <div class="ag-timeline-block">
+            <div class="ag-timeline_title-box">
+              <div class="ag-timeline_tagline">Bible Chronology</div>
+              <!-- <div class="ag-timeline_title">No Flex</div> -->
+            </div>
+            <section class="ag-section">
+              <div class="ag-format-container">
+                <div class="js-timeline ag-timeline">
+                  <div class="js-timeline_line ag-timeline_line">
+                    <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+                  </div>
+                  <div class="ag-timeline_list">
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point">606 yrs</div>
+                        </div>
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">Stage 7</div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_img-box">
+                            <img src="./Assets/stage7.png" class="ag-timeline-card_img" width="640" height="360" />
+                          </div>
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">Stage 7</div>
+                            <div class="ag-timeline-card_desc">
+                                FROM END OF THE KINGS PERIOD TILL THE YEAR 1 A.D.
+                                The period from the fall of King Zedekiah to 1 A.D. is 606 years.The first year of King Cyrus, 536 B.C., marks the people's freedom.The total number of years from Adam's creation to 1 A.D. is 4128 years.There is no "zero" year between 1 B.C. and 1 A.D.God's word provides an accurate and reliable chronology of history.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+          
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">Stage 6</div>
+                        </div>
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point">513 yrs</div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_img-box">
+                            <img src="./Assets/stage6.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                          </div>
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">Stage 6</div>
+                            <div class="ag-timeline-card_desc">
+                              THE PERIOD OF THE KINGS
+                              The reign of Israel's kings begins with King Saul and ends with King Zedekiah of Judah.Israel split into two nations after King Solomon: Israel (10 tribes) and Judah (2 tribes).The focus is on the Kings of Judah, from Rehoboam to Zedekiah, as the Messiah would come from Judah.Key kings of Judah: Rehoboam (17 years), Asa (41 years), Hezekiah (29 years), Josiah (31 years), Zedekiah (11 years).The total reign of the Kings of Judah is 513 years, excluding fractional years.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+          
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point">450 yrs</div>
+                        </div>
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">Stage 5</div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_img-box">
+                            <img src="./Assets/stage5.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                          </div>
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">Stage 5</div>
+                            <div class="ag-timeline-card_desc">
+                              THE PERIOD OF THE JUDGES
+                              The period of the Judges in Israel lasted approximately 450 years, from the division of the land to the anointing of Saul as King.This time frame is derived from Acts 13:20, as confirmed by the Apostle Paul, but it's an approximate calculation.The 450-year period includes overlaps between the beginning and end of the Judges' era.Joshua, the first judge, led during the division of the land, and Samuel, the last judge, continued until Saul's anointing.The 450 years represents a fitting period, with adjustments made to account for overlapping stages in Bible chronology.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+          
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">Stage 4</div>
+                        </div>
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point">46 yrs</div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_img-box">
+                            <img src="./Assets/stage4.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                          </div>
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">Stage 4</div>
+                            <div class="ag-timeline-card_desc">
+                              FROM THE GIVING OF THE LAW TILL THE DIVISION OF THE LAND
+                              The period begins from the last night in Egypt (Passover) and ends with the division of Canaan among 11 tribes (Levi excluded).The timeline consists of 1 year at Mount Sinai, 6 years journeying, and 39 years wandering (Numbers 14:33, 33:3).Caleb's account shows a total period of 45 years from Sinai to the land's division (Joshua 14:7,10).The division of land took 46 years (including 1 year at Sinai and 45 years thereafter).The timeline showcases God's exact timing and fulfillment of His promises.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+          
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point">430 yrs</div>
+                        </div>
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">Stage 3</div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_img-box">
+                            <img src="./Assets/stage3.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                          </div>
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">Stage 3</div>
+                            <div class="ag-timeline-card_desc">
+                              FROM THE PROMISE TILL THE GIVING OF THE LAW
+                              The first law was the ordinance of the Passover given the night before the Israelites left Egypt.The 430 years began when Abram first entered Egypt, not when Jacob arrived with his family.Exodus 12:40, Galatians 3:17, and Genesis 12:10 support this timeline.Israel’s identity before God began with Abram, as they were “in his loins.”The 430 years represent the period from Abram’s journey to Egypt until the Exodus, not just Jacob’s arrival.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+          
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">Stage 2</div>
+                        </div>
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point">427 yrs</div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_img-box">
+                            <img src="./Assets/stage2.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                          </div>
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">Stage 2</div>
+                            <div class="ag-timeline-card_desc">
+                                FROM THE FLOOD TILL THE PROMISE
+                                The promise referred to is not the Abrahamic promise made on Mount Moriah but an earlier promise made to Abram in Ur of the Chaldeans.God asked Abram to leave his country, kindred, and father's house for a great blessing (Genesis 12:1-3).Abram received this promise at 75 years old, shortly after his father Terah's death.This period begins after the Flood and traces the genealogy from Arphaxad to Terah (Genesis 11).Bible chronology calculations are derived from Genesis 11, marking key generations and ages.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+          
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point">1656 yrs</div>
+                        </div>
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">Stage 1</div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_img-box">
+                            <img src="./Assets/stage1.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                          </div>
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">Stage 1</div>
+                            <div class="ag-timeline-card_desc">
+                                FROM THE CREATION OF ADAM TILL THE FLOOD
+                                Genesis Chapter 5 provides the timeline from Adam’s creation to the Flood, clarifying the duration of the First World. To avoid overcounting, only the years up to the birth of each person’s firstborn should be added.This method creates a continuous timeline across nine generations leading to Noah.Adding Noah’s age at the time of the Flood gives the total years from Adam to the Flood.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+    </div>
+  <!-- Modal -->
+  <div class="modal" id="divinePlanModal" tabindex="-1" role="dialog" aria-labelledby="divinePlanModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="divinePlanModalLabel">Divine Plan of Ages</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Image with map -->
+                <div class="image-container" style="position: relative;">
+                    <img
+                        id="chart-image"
+                        src="./Assets/Chart_DPA.jpg"
+                        usemap="#image-map"
+                        style="position: relative;"
+                    />
+                    <!-- <img
+                        id="chart-image"
+                        src="./Assets/Chart_DPA.jpg"
+                        usemap="#image-map"
+                        style="width: 100%; position: relative;"
+                    /> -->
+                </div>
+
+                <map name="image-map">
+                    <!-- <area
+                        class="area-tooltip"
+                        title="The World That Was -- 1st Dispensation"
+                        coords="92,122,66,96"
+                        shape="rect"
+                    /> -->
+                    <area class="area-tooltip" title="The World That Was -- 1st Dispensation"  coords="93,123,63,95" shape="rect">
+<area class="area-tooltip" title="The Present Evil World -- 2nd Dispensation"  coords="310,35,340,63" shape="rect">
+<area class="area-tooltip" title="The World to Come -- 3rd Dispensation"  coords="665,31,693,61" shape="rect">
+<area class="area-tooltip" title="Patriarchal Age"  coords="148,106,173,128" shape="rect">
+<area class="area-tooltip" title="Jewish Age"  coords="241,86,272,111" shape="rect">
+<area class="area-tooltip" title="Gospel Age"  coords="404,73,431,101" shape="rect">
+<area class="area-tooltip" title="Messianic Age"  coords="589,69,618,95" shape="rect">
+<area class="area-tooltip" title="Ages to Come"  coords="718,103,741,128" shape="rect">
+<area class="area-tooltip" title="Israel's time of trouble in Jewish Harvest: Separation of Wheat and Chaff"  coords="321,302,343,324" shape="rect">
+<area class="area-tooltip" title="World's time of trouble in Gospel Harvest: Separation of Wheat and Tares"  coords="482,338,513,364" shape="rect">
+<area class="area-tooltip" title="State of divine glory and power of office"  coords="301,183,745,184,745,174,302,172,302,154,279,154,278,171,277,183" shape="poly">
+<area class="area-tooltip" title="State of spirit birth"  coords="304,212,746,210,745,202,301,201,305,189,277,189,279,206,277,211" shape="poly">
+<area class="area-tooltip" title="State of spirit begettal"  coords="300,272,541,272,542,270,302,268,300,272,541,272,305,267,303,247,278,247,278,263,277,273" shape="poly">
+<area class="area-tooltip" title="State of God's favor (to humans)"  coords="20,305,748,302,744,297,25,299,23,278,4,277,4,306" shape="poly">
+<area class="area-tooltip" title="State of God's typical favor"  coords="189,320,318,319,313,315,181,315,167,311,169,323,168,331,188,329" shape="poly">
+<area class="area-tooltip" title="State of Sin and depravity"  coords="23,375,750,374,747,368,36,368,37,347,10,346,9,374" shape="poly">
+<area class="area-tooltip" title="Fallen Adam and his posterity, before the flood"  coords="42,366,49,338,113,335,128,366" shape="poly">
+<area class="area-tooltip" title="Adam in perfection"  coords="29,296,34,277,51,276,54,296" shape="poly">
+<area class="area-tooltip" title="Ancient worthies as individuals"  coords="141,295,148,277,155,289,170,278,180,292,173,297" shape="poly">
+<area class="area-tooltip" title="Mankind from flood to Messianic Age"  coords="200,326,292,325,317,366,184,366" shape="poly">
+<area class="area-tooltip" title="Fleshly Israel typically justified as a nation"  coords="238,312,241,305,265,306,261,313" shape="poly">
+<area class="area-tooltip" title="Jesus at age 30, a perfect man"  coords="276,295,277,281,299,285,307,296" shape="poly">
+<area class="area-tooltip" title="Jesus, spirit-begotten at Jordan"  coords="309,264,317,237,326,242,325,265" shape="poly">
+<area class="area-tooltip" title="Jesus, resurrected as a divine being"  coords="311,199,319,186,335,190,340,200" shape="poly">
+<area class="area-tooltip" title="Jesus, 40 days after resurrection, in divine glory"  coords="313,171,321,156,330,162,339,157,352,171" shape="poly">
+<area class="area-tooltip" title="Jesus, in Gospel Age, set down with Father on throne"  coords="394,170,410,154,418,161,425,158,429,171" shape="poly">
+<area class="area-tooltip" title="Spirit-begotten class who become the Great Company"  coords="389,268,392,261,417,261,418,267" shape="poly">
+<area class="area-tooltip" title="Spirit-begotten Class who become the Bride of Christ"  coords="394,257,397,241,417,241,417,258" shape="poly">
+<area class="area-tooltip" title="Believers, but not fully consecrated"  coords="375,296,385,274,420,274,430,296" shape="poly">
+<area class="area-tooltip" title="Wolves in sheep's clothing; church-goers, but not believers; hypocrites"  coords="366,305,438,305,406,328" shape="poly">
+<area class="area-tooltip" title="Jesus, at His second advent"  coords="473,218,494,218,497,240,474,239" shape="poly">
+<area class="area-tooltip" title="Little Flock, separating from Babylon"  coords="472,186,496,186,497,199,471,200" shape="poly">
+<area class="area-tooltip" title="Great Company, failing to gain chief reward"  coords="508,264,519,239,533,237,537,254,540,266" shape="poly">
+<area class="area-tooltip" title="Babylon, larger part of the nominal church, falling; some remaining on Plane N, others falling below"  coords="485,291,513,269,542,284,537,296,502,295" shape="poly">
+<area class="area-tooltip" title="Babylon, hypocrite element of nominal church, falling to Plane R with unbelievers"  coords="468,307,487,303,500,308,517,316,540,330,540,344,522,344" shape="poly">
+<area class="area-tooltip" title="The glorified Christ, head and body"  coords="511,169,520,152,541,152,536,171,515,171" shape="poly">
+<area class="area-tooltip" title="The glorified Christ class, reigning"  coords="614,172,619,155,629,163,636,160,648,161,648,170" shape="poly">
+<area class="area-tooltip" title="The Great Company class"  coords="601,200,610,184,637,183,652,200" shape="poly">
+<area class="area-tooltip" title="Fleshly Israel restored and in prominence"  coords="584,228,594,213,658,211,668,225,657,228" shape="poly">
+<area class="area-tooltip" title="Mankind restored to perfection and harmony with God"  coords="547,293,581,231,661,231,669,227,713,293,710,293,663,293" shape="poly">
+                </map>
+            </div>
+            <div class="modal-footer">
+                <div style="display: flex; justify-content: flex-start; width: 100%;">
+                    <!-- Left section with two columns -->
+                    <div class="legends" style="flex: 1; display: flex; flex-direction: column; margin-right: 20px;    flex-direction: row-reverse;">
+                        <div><span style="width: 10px; height: 10px; background-color: #555555; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>Ages (Time Periods)</div>
+                        <div><span style="width: 10px; height: 10px; background-color: #1a73e8; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>Planes (Steps to Glory)</div>
+                        <div><span style="width: 10px; height: 10px; background-color: #6f42c1; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>Pyramids (Classes of People)</div>
+                        <div><span style="width: 10px; height: 10px; background-color:  #ff6f61; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>Christ</div>
+                    </div>
+                    <div  class="legends" style="flex: 1; display: flex; flex-direction: column;    flex-direction: row-reverse;">
+                        <div><span style="width: 10px; height: 10px; background-color: #008080; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>Christians in the Gospel Age</div>
+                        <div><span style="width: 10px; height: 10px; background-color: #2c2c2c; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>During the Gospel Harvest</div>
+                        <div><span style="width: 10px; height: 10px; background-color: #556b2f; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>During the Millennial Age</div>
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Custom JS -->
+    <!-- <script src="reprint.js"></script> -->
+    <script src="simple_script.js"></script>
+    <script src="chronology.js"></script>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
