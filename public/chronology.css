@@ -1,7 +1,7 @@
 body {
     /* background-color: #000; */
-  
-    overflow-x: hidden;
+    background-color: #ddcfb2;
+    /* overflow-x: hidden; */
   }
   
   @font-face {
@@ -47,6 +47,7 @@ body {
     margin: 0 auto;
   
     position: relative;
+ 
   }
   
   .ag-timeline-block {
@@ -332,20 +333,4 @@ body {
     }
   }
   
-  @media only screen and (max-width: 479px) {
   
-  }
-  
-  @media (min-width: 768px) and (max-width: 979px) {
-    .ag-format-container {
-      width: 750px;
-    }
-  
-  }
-  
-  @media (min-width: 980px) and (max-width: 1161px) {
-    .ag-format-container {
-      width: 960px;
-    }
-  
-  }
