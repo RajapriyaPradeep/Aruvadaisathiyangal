@@ -17,7 +17,7 @@ import os
 #     return file_names
 
 # # Example usage
-# folder_path = "C:/Users/rajap/Downloads/ECCLESIA ELECTION-20241225T000740Z-001/ECCLESIA ELECTION"
+# folder_path = "C:/Users/rajap/Downloads/GOLDEN RULE-20241225T001320Z-001/GOLDEN RULE"
 # file_names = extract_file_names(folder_path)
 
 # print("Files found:")
@@ -70,8 +70,8 @@ import os
 #             print(f"Copied and renamed: {old_file_path} -> {new_file_path}")
 
 # # Example usage
-# source_folder = "C:/Users/rajap/Downloads/ECCLESIA ELECTION-20241225T000740Z-001/convert"
-# destination_folder = "C:/Users/rajap/Downloads/ECCLESIA ELECTION-20241225T000740Z-001/rename"
+# source_folder = "C:/Users/rajap/Downloads/GOLDEN RULE-20241225T001320Z-001/convert"
+# destination_folder = "C:/Users/rajap/Downloads/GOLDEN RULE-20241225T001320Z-001/rename"
 # copy_and_rename_files(source_folder, destination_folder)
 
 #--------------------------------------------------------
@@ -94,7 +94,7 @@ def extract_file_names(directory):
     return file_names
 
 # Example usage
-folder_path = "C:/Users/rajap/Downloads/ECCLESIA ELECTION-20241225T000740Z-001/rename"
+folder_path = "C:/Users/rajap/Downloads/GOLDEN RULE-20241225T001320Z-001/rename"
 file_names = extract_file_names(folder_path)
 
 print("Files found:")
