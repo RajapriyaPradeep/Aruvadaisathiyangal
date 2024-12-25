@@ -17,7 +17,7 @@ import os
 #     return file_names
 
 # # Example usage
-# folder_path = "C:/Users/rajap/Downloads/PROPHETIC-20241225T001714Z-001/PROPHETIC/EZEKIAL PROPHECY/STUDY ON OT PROPHETS & ON PROPHECY BOOKS/AMR"
+# folder_path = "C:/Users/rajap/Downloads/THE BATTLE OF ARMAGEDDON-20241225T220731Z-001/THE BATTLE OF ARMAGEDDON"
 # file_names = extract_file_names(folder_path)
 
 # print("Files found:")
@@ -70,8 +70,8 @@ import os
 #             print(f"Copied and renamed: {old_file_path} -> {new_file_path}")
 
 # # Example usage
-# source_folder = "C:/Users/rajap/Downloads/PROPHETIC-20241225T001714Z-001/PROPHETIC/EZEKIAL PROPHECY/convert1"
-# destination_folder = "C:/Users/rajap/Downloads/PROPHETIC-20241225T001714Z-001/PROPHETIC/EZEKIAL PROPHECY/rename1"
+# source_folder = "C:/Users/rajap/Downloads/THE BATTLE OF ARMAGEDDON-20241225T220731Z-001/THE BATTLE OF ARMAGEDDON/convert"
+# destination_folder = "C:/Users/rajap/Downloads/THE BATTLE OF ARMAGEDDON-20241225T220731Z-001/THE BATTLE OF ARMAGEDDON/rename"
 # copy_and_rename_files(source_folder, destination_folder)
 
 #--------------------------------------------------------
@@ -94,7 +94,7 @@ import os
 #     return file_names
 
 # # Example usage
-# folder_path = "C:/Users/rajap/Downloads/PROPHETIC-20241225T001714Z-001/PROPHETIC/EZEKIAL PROPHECY/rename1"
+# folder_path = "C:/Users/rajap/Downloads/THE BATTLE OF ARMAGEDDON-20241225T220731Z-001/THE BATTLE OF ARMAGEDDON/rename"
 # file_names = extract_file_names(folder_path)
 
 # print("Files found:")
