@@ -17,7 +17,7 @@ import os
 #     return file_names
 
 # # Example usage
-# folder_path = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/CHARACTER DEVELOPMENT"
+# folder_path = "C:/Users/rajap/Downloads/SPIRITUAL-20241225T001745Z-001/SPIRITUAL"
 # file_names = extract_file_names(folder_path)
 
 # print("Files found:")
@@ -28,6 +28,7 @@ import os
 #-------------------------------------------------------
 #rename the file name by removing the space,.
 #-------------------------------------------------------
+# import os
 # import shutil
 # import re
 
@@ -44,7 +45,7 @@ import os
 #     name, ext = os.path.splitext(file_name)
 #     if ext.lower() == ".mp3":
 #         # Remove special characters including spaces, commas, and dashes
-#         name = re.sub(r'[.,#_/-/s]', '', name)
+#         name = re.sub(r'[.,#_/ -]', '', name)  # Explicitly match spaces and other special characters
 #     return f"{name}{ext}"
 
 # def copy_and_rename_files(src_folder, dest_folder):
@@ -69,35 +70,33 @@ import os
 #             print(f"Copied and renamed: {old_file_path} -> {new_file_path}")
 
 # # Example usage
-# source_folder = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/convert"
-# destination_folder = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/rename"
+# source_folder = "C:/Users/rajap/Downloads/SPIRITUAL-20241225T001745Z-001/convert"
+# destination_folder = "C:/Users/rajap/Downloads/SPIRITUAL-20241225T001745Z-001/rename"
 # copy_and_rename_files(source_folder, destination_folder)
-
-
 
 #--------------------------------------------------------
 #Extract the file name uploaded in the github
 #--------------------------------------------------------
-# def extract_file_names(directory):
-#     """
-#     Extracts file names from all files in a directory, including subfolders.
+def extract_file_names(directory):
+    """
+    Extracts file names from all files in a directory, including subfolders.
     
-#     Parameters:
-#         directory (str): Path to the directory to scan.
+    Parameters:
+        directory (str): Path to the directory to scan.
         
-#     Returns:
-#         list: List of file names (with extensions) in the directory.
-#     """
-#     file_names = []
-#     for root, _, files in os.walk(directory):
-#         for file in files:
-#             file_names.append(file)
-#     return file_names
+    Returns:
+        list: List of file names (with extensions) in the directory.
+    """
+    file_names = []
+    for root, _, files in os.walk(directory):
+        for file in files:
+            file_names.append(file)
+    return file_names
 
-# # Example usage
-# folder_path = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/rename"
-# file_names = extract_file_names(folder_path)
+# Example usage
+folder_path = "C:/Users/rajap/Downloads/SPIRITUAL-20241225T001745Z-001/rename"
+file_names = extract_file_names(folder_path)
 
-# print("Files found:")
-# for name in file_names:
-#     print(name)
+print("Files found:")
+for name in file_names:
+    print(name)
