@@ -17,7 +17,7 @@ import os
 #     return file_names
 
 # # Example usage
-# folder_path = "C:/Users/rajap/Downloads/KINGDOM MESSAGES-20241224T202541Z-001/KINGDOM MESSAGES"
+# folder_path = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/CHARACTER DEVELOPMENT"
 # file_names = extract_file_names(folder_path)
 
 # print("Files found:")
@@ -44,7 +44,7 @@ import os
 #     name, ext = os.path.splitext(file_name)
 #     if ext.lower() == ".mp3":
 #         # Remove special characters including spaces, commas, and dashes
-#         name = re.sub(r'[.,#_\-\s]', '', name)
+#         name = re.sub(r'[.,#_/-/s]', '', name)
 #     return f"{name}{ext}"
 
 # def copy_and_rename_files(src_folder, dest_folder):
@@ -69,8 +69,8 @@ import os
 #             print(f"Copied and renamed: {old_file_path} -> {new_file_path}")
 
 # # Example usage
-# source_folder = "C:/Users/rajap/Downloads/KINGDOM MESSAGES-20241224T202541Z-001/convert"
-# destination_folder = "C:/Users/rajap/Downloads/KINGDOM MESSAGES-20241224T202541Z-001/rename"
+# source_folder = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/convert"
+# destination_folder = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/rename"
 # copy_and_rename_files(source_folder, destination_folder)
 
 
@@ -95,7 +95,7 @@ import os
 #     return file_names
 
 # # Example usage
-# folder_path = "C:/Users/rajap/Downloads/KINGDOM MESSAGES-20241224T202541Z-001/rename"
+# folder_path = "C:/Users/rajap/Downloads/CHARACTER DEVELOPMENT-20241224T202555Z-001/rename"
 # file_names = extract_file_names(folder_path)
 
 # print("Files found:")
