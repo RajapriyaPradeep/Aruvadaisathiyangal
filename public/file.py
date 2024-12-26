@@ -1,28 +1,28 @@
 import os
 
-# def extract_file_names(directory):
-#     """
-#     Extracts file names from all files in a directory, including subfolders.
+def extract_file_names(directory):
+    """
+    Extracts file names from all files in a directory, including subfolders.
 
-#     Parameters:
-#         directory (str): Path to the directory to scan.
+    Parameters:
+        directory (str): Path to the directory to scan.
 
-#     Returns:
-#         list: List of file names (with extensions) in the directory.
-#     """
-#     file_names = []
-#     for root, _, files in os.walk(directory):
-#         for file in files:
-#             file_names.append(file)
-#     return file_names
+    Returns:
+        list: List of file names (with extensions) in the directory.
+    """
+    file_names = []
+    for root, _, files in os.walk(directory):
+        for file in files:
+            file_names.append(file)
+    return file_names
 
-# # Example usage
-# folder_path = "C:/Users/rajap/Downloads/MemorialConsolidated"
-# file_names = extract_file_names(folder_path)
+# Example usage
+folder_path = "C:/Users/rajap/Downloads/MemorialConsolidated"
+file_names = extract_file_names(folder_path)
 
-# print("Files found:")
-# for name in file_names:
-#     print(name)
+print("Files found:")
+for name in file_names:
+    print(name)
 
 
 #-------------------------------------------------------
@@ -77,26 +77,26 @@ import os
 #--------------------------------------------------------
 #Extract the file name uploaded in the github
 #--------------------------------------------------------
-def extract_file_names(directory):
-    """
-    Extracts file names from all files in a directory, including subfolders.
+# def extract_file_names(directory):
+#     """
+#     Extracts file names from all files in a directory, including subfolders.
 
-    Parameters:
-        directory (str): Path to the directory to scan.
+#     Parameters:
+#         directory (str): Path to the directory to scan.
 
-    Returns:
-        list: List of file names (with extensions) in the directory.
-    """
-    file_names = []
-    for root, _, files in os.walk(directory):
-        for file in files:
-            file_names.append(file)
-    return file_names
+#     Returns:
+#         list: List of file names (with extensions) in the directory.
+#     """
+#     file_names = []
+#     for root, _, files in os.walk(directory):
+#         for file in files:
+#             file_names.append(file)
+#     return file_names
 
-# Example usage
-folder_path = "C:/Users/rajap/Downloads/MemorialConsolidated/rename"
-file_names = extract_file_names(folder_path)
+# # Example usage
+# folder_path = "C:/Users/rajap/Downloads/MemorialConsolidated/rename"
+# file_names = extract_file_names(folder_path)
 
-print("Files found:")
-for name in file_names:
-    print(name)
+# print("Files found:")
+# for name in file_names:
+#     print(name)
