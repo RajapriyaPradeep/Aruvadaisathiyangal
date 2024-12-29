@@ -322,45 +322,76 @@ function showCustomTooltip(event) {
     event.target.removeAttribute("title");
 
     const tooltip = document.createElement("div"); // Create a new div for the tooltip
-    
+    // background: rgba(255, 255, 255, 0.14);
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(20px);
     // tooltip.classList.add("custom-tooltip");
     //Change color as per the type
     debugger
     if(title == "The World That Was -- 1st Dispensation" || title=="The Present Evil World -- 2nd Dispensation"|| title=="The World to Come -- 3rd Dispensation"||title=="Patriarchal Age"||title=="Jewish Age" ||title=="Gospel Age" ||title=="Messianic Age"||title=="Ages to Come"||title=="Israel's time of trouble in Jewish Harvest: Separation of Wheat and Chaff"||title=="World's time of trouble in Gospel Harvest: Separation of Wheat and Tares"||title=="Satan's Little Season")
-{tooltip.style.backgroundColor = "#b83a01";
-tooltip.style.color = "#ffffff";
-tooltip.innerHTML = `<i class="fas fa-clock" style="color:#ffffff"></i>&nbsp;&nbsp;${title} `;
+{
+// tooltip.style.backgroundColor = "#b83a01";
+tooltip.style.background = "rgba(184, 58, 1, 0.2)";
+tooltip.style.backdropFilter = 'blur(20px)';
+tooltip.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+tooltip.style.color = "#b83a01";
+tooltip.innerHTML = `<i class="fas fa-clock" style="color:#b83a01"></i>&nbsp;&nbsp;${title} `;
             // container.appendChild(tooltip);
 }
 else if(title == "State of divine glory and power of office" || title=="State of spirit birth" || title=="State of spirit begettal" || title=="State of God's favor (to humans)"||title=="State of God's typical favor"||title=="State of Sin and depravity")
-    {tooltip.style.backgroundColor = "#fb8345";
-    tooltip.style.color = "#ffffff";
-    tooltip.innerHTML = `<i class="fas fa-minus" style="color:#ffffff"></i>&nbsp;&nbsp;${title} `;
+    {
+        // tooltip.style.backgroundColor = "#fb8345";
+        tooltip.style.background = "rgba(251, 139, 61, 0.2)";
+        tooltip.style.backdropFilter = 'blur(20px)';
+tooltip.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+    tooltip.style.color = "#fb8345";
+    tooltip.innerHTML = `<i class="fas fa-minus" style="color:#fb8345"></i>&nbsp;&nbsp;${title} `;
 }
 else if(title=="Adam in perfection" || title=="Fallen Adam and his posterity, before the flood" || title=="Ancient worthies as individuals" || title=="Mankind from flood to Messianic Age" || title=="Fleshly Israel typically justified as a nation")
-    {tooltip.style.backgroundColor = "#8a6e37";
-        tooltip.style.color = "#ffffff";
-        tooltip.innerHTML = `<i class="fas fa-caret-up" style="color:#ffffff"></i>&nbsp;&nbsp;${title} `;
+    {
+        tooltip.style.background = "rgba(138, 110, 55, 0.2)";
+        tooltip.style.backdropFilter = 'blur(20px)';
+tooltip.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+        // tooltip.style.backgroundColor = "#8a6e37";
+        tooltip.style.color = "#8a6e37";
+        tooltip.innerHTML = `<i class="fas fa-caret-up" style="color:#8a6e37"></i>&nbsp;&nbsp;${title} `;
     }
 else if(title=="Jesus at age 30, a perfect man"||title=="Jesus, spirit-begotten at Jordan"||title=="Jesus, resurrected as a divine being"||title=="Jesus, 40 days after resurrection, in divine glory"||title=="Jesus, in Gospel Age, set down with Father on throne")
-    {tooltip.style.backgroundColor = "#79121a";
-        tooltip.style.color = "#ffffff";
-        tooltip.innerHTML = `<i class="fas fa-cross" style="color:#ffffff"></i>&nbsp;&nbsp;${title} `;
+    {
+        tooltip.style.background = "rgba(121, 18, 26, 0.2)";
+        tooltip.style.backdropFilter = 'blur(20px)';
+tooltip.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+        // tooltip.style.backgroundColor = "#79121a";
+        tooltip.style.color = "#79121a";
+        tooltip.innerHTML = `<i class="fas fa-cross" style="color:#79121a"></i>&nbsp;&nbsp;${title} `;
     }
 else if(title=="Spirit-begotten class who become the Great Company" || title=="Spirit-begotten Class who become the Bride of Christ" || title=="Believers, but not fully consecrated"||title=="Wolves in sheep's clothing; church-goers, but not believers; hypocrites")
-    {tooltip.style.backgroundColor = "#53382f";
-        tooltip.style.color = "#ffffff";
-        tooltip.innerHTML = `<i class="fas fa-bible" style="color:#ffffff"></i>&nbsp;&nbsp;${title} `;
+    {
+        tooltip.style.background = "rgba(83, 56, 47, 0.2)";
+        tooltip.style.backdropFilter = 'blur(20px)';
+tooltip.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+        // tooltip.style.backgroundColor = "#53382f";
+        tooltip.style.color = "#53382f";
+        tooltip.innerHTML = `<i class="fas fa-bible" style="color:#53382f"></i>&nbsp;&nbsp;${title} `;
     }
 else if(title=="Jesus, at His second advent"||title=="Little Flock, separating from Babylon"||title=="Great Company, failing to gain chief reward"||title=="Babylon, larger part of the nominal church, falling; some remaining on Plane N, others falling below"||title=="Babylon, hypocrite element of nominal church, falling to Plane R with unbelievers"||title=="The glorified Christ, head and body")
-    {tooltip.style.backgroundColor = "#a6643d";
-    tooltip.style.color = "#ffffff";
-    tooltip.innerHTML = `<i class="fas fa-seedling" style="color:#ffffff"></i>&nbsp;&nbsp;${title} `;
+    {
+        tooltip.style.background = "rgba(166, 100, 61, 0.2)";
+        tooltip.style.backdropFilter = 'blur(20px)';
+tooltip.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+        // tooltip.style.backgroundColor = "#a6643d";
+    tooltip.style.color = "#a6643d";
+    tooltip.innerHTML = `<i class="fas fa-seedling" style="color:#a6643d"></i>&nbsp;&nbsp;${title} `;
 }
 else
-{tooltip.style.backgroundColor = "#eca325";
-    tooltip.style.color = "#ffffff";
-    tooltip.innerHTML = `<i class="fas fa-sun" style="color:#ffffff"></i>&nbsp;&nbsp;${title} `;
+{
+    tooltip.style.background = "rgba(236,163,37, 0.2)";
+        tooltip.style.backdropFilter = 'blur(20px)';
+tooltip.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+tooltip.style.fontWeight = "bolder";
+    // tooltip.style.backgroundColor = "#eca325";
+    tooltip.style.color = "#eca325";
+    tooltip.innerHTML = `<i class="fas fa-sun" style="color:#eca325"></i>&nbsp;&nbsp;${title} `;
 }
 
     tooltip.style.fontFamily = "FontAwesome, serif";
