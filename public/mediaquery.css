@@ -103,7 +103,8 @@
         display: none !important;
     }
     .form-inline .form-control{
-        width: 100% !important;
+        /* width: 100% !important; */
+        width: 75% !important;
     }
     .wwr-block{
         border-right: 0px solid #7a2a2a;

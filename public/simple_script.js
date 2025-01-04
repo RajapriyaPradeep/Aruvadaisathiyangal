@@ -12,6 +12,23 @@ else{
     document.getElementById("footersec").style.display = "none";
 }
 
+var Dropdowns = function() {
+    var t = $(".dropup, .dropright, .dropdown, .dropleft")
+      , e = $(".dropdown-menu")
+      , r = $(".dropdown-menu .dropdown-menu");
+    $(".dropdown-menu .dropdown-toggle").on("click", function() {
+        var a;
+        return (a = $(this)).closest(t).siblings(t).find(e).removeClass("show"),
+        a.next(r).toggleClass("show"),
+        !1
+    }),
+    t.on("hide.bs.dropdown", function() {
+        var a, t;
+        a = $(this),
+        (t = a.find(r)).length && t.removeClass("show")
+    })
+}()
+
 function viewmode(mode){
     if(mode == "mobile")
         localStorage.setItem("viewmode","mobile");
@@ -327,7 +344,6 @@ function showCustomTooltip(event) {
     // backdrop-filter: blur(20px);
     // tooltip.classList.add("custom-tooltip");
     //Change color as per the type
-    debugger
     if(title == "The World That Was -- 1st Dispensation" || title=="The Present Evil World -- 2nd Dispensation"|| title=="The World to Come -- 3rd Dispensation"||title=="Patriarchal Age"||title=="Jewish Age" ||title=="Gospel Age" ||title=="Messianic Age"||title=="Ages to Come"||title=="Israel's time of trouble in Jewish Harvest: Separation of Wheat and Chaff"||title=="World's time of trouble in Gospel Harvest: Separation of Wheat and Tares"||title=="Satan's Little Season")
 {
 // tooltip.style.backgroundColor = "#b83a01";
@@ -338,7 +354,8 @@ tooltip.style.color = "#b83a01";
 tooltip.innerHTML = `<i class="fas fa-clock" style="color:#b83a01"></i>&nbsp;&nbsp;${title} `;
             // container.appendChild(tooltip);
 }
-else if(title == "State of divine glory and power of office" || title=="State of spirit birth" || title=="State of spirit begettal" || title=="State of God's favor (to humans)"||title=="State of God's typical favor"||title=="State of Sin and depravity")
+// else if(title == "State of divine glory and power of office" || title=="State of spirit birth" || title=="State of spirit begettal" || title=="State of God's favor (to humans)"||title=="State of God's typical favor"||title=="State of Sin and depravity")
+else if(title == "Plane Of Divine Glory And Power Of Office" || title=="Plane Of Spirit Birth" || title=="Plane Of Spirit Begettal" || title=="Plane Of God's Favor (to Humans)"||title=="Plane Of God's Typical Favor"||title=="Plane Of Sin And Depravity")
     {
         // tooltip.style.backgroundColor = "#fb8345";
         tooltip.style.background = "rgba(251, 139, 61, 0.2)";
