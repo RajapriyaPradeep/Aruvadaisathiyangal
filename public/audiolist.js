@@ -138,6 +138,17 @@ if (item.pdflink) {
   });
   titleContainer.appendChild(shareIcon);
 }
+// Share icon (PDF link)
+if (item.pptlink) {
+  const pptIcon = document.createElement("i");
+  pptIcon.className = "fas fa-file-powerpoint icon mobileicon";
+  // <i class="fa-solid fa-file-powerpoint"></i>
+  pptIcon.title = "PPT";
+  pptIcon.addEventListener("click", () => {
+      window.open(item.pdflink, "_blank");
+  });
+  titleContainer.appendChild(pptIcon);
+}
 
 // Download icon
 const downloadIcon = document.createElement("i");
@@ -184,6 +195,7 @@ widgetContainer.appendChild(audioItem);
             const audioUrl = row.cells[1].data; // Audio download link
             // const pdfLink = row.cells[3].data;   // PDF link
             const pdfLink = cell.pdflink;
+            const pptLink = cell.pptlink;
             const tamil = cell.tamil;
     
             // Set up the HTML for title with conditional PDF link
@@ -195,7 +207,22 @@ widgetContainer.appendChild(audioItem);
           ${pdfLink && pdfLink.trim() ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
     <i class="fas fa-file-pdf icon" style="color:#7a2a2a;" title="Download PDF"></i>
   </a>` : ''}
+  <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
+            <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
+          </a>
+          ${pptLink && pptLink.trim() ? `<a href="${pptLink}" target="_blank" style="margin-left: 8px;">
+    <i class="fas fa-file-pdf icon" style="color:#7a2a2a;" title="Download PDF"></i>
+  </a>` : ''}
         `);
+  //       return gridjs.html(`
+  //         <span class="tooltip-target" data-tooltip="${tamil}">${title}</span>
+  //         <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
+  //           <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
+  //         </a>
+  //         ${pdfLink && pdfLink.trim() ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
+  //   <i class="fas fa-file-pdf icon" style="color:#7a2a2a;" title="Download PDF"></i>
+  // </a>` : ''}
+  //       `);
           }
         },
         {
@@ -214,7 +241,7 @@ widgetContainer.appendChild(audioItem);
         }
       ],
       data: data.map(item => [
-        { topic: item.topic, pdflink: item.pdflink,tamil:item.tamil }, // Data object for TITLE with `pdflink`
+        { topic: item.topic, pdflink: item.pdflink,pptLink: item.pptLink,tamil:item.tamil }, // Data object for TITLE with `pdflink`
         // item.topic,
         item.audioUrl,
         item.year
