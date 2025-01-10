@@ -280,6 +280,7 @@ font-family: 'Cardo' !important;
 /*  */
 /* Bottom right image */
 .home-bottom-right-image {
+  filter: grayscale(0.2);
   position: fixed;
   bottom: 0%; 
   right: 1%;
@@ -386,6 +387,7 @@ font-family: 'Cardo' !important;
     max-height: 65px;
     max-width: auto;
   cursor: pointer !important;
+  filter: brightness(0.7);
 }
 /* project title ends here */
 /* scripture about us image starts here */

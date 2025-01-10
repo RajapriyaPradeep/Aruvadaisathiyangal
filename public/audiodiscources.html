@@ -34,109 +34,123 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg navbar-light bring_front" >
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            
+      <!--Navbar Starts Here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: transparent !important;">
+        <!-- <a class="navbar-brand" href="#">
             <img src="./Assets/projecttitle_latest.png" onclick="navplaylist('home')" class="projtitle" alt="Logo" >
-            <div class="item mobile-latestdiscourses"  onclick="navplaylist('recent')" >
+        </a> -->
+        <img src="./Assets/projecttitle_latest.png" onclick="navplaylist('home')" class="projtitle" alt="Logo" >
+        <div class="item mobile-latestdiscourses"  onclick="navplaylist('recent')" >
+            <span class="new-icon"></span>
+            <p style="margin-bottom:0px !important">New</p>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>                <i class="fas fa-ellipsis-v"></i>
+        </button> 
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> -->
+            <div class="item web-latestdiscourses"  onclick="navplaylist('recent')" >
                 <span class="new-icon"></span>
                 <p style="margin-bottom:0px !important">New</p>
             </div>
-            <!-- <img src="./Assets/projecttitle_latest.png" href="https://aruvadaisathiyangal.in" onclick="navplaylist('home')" class="projtitle" alt="Logo" > -->
-            <!-- <img src="./Assets/projtitle.png" class="projtitle" alt="Logo" onclick="navplaylist('home')"> -->
-            <!-- Toggler/collapsible button for mobile view -->
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-                        <!-- Toggler/collapsible button for mobile view -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <!-- Hide default icon and insert custom icon -->
-    <span class="sr-only">Toggle navigation</span> <!-- Screen reader text -->
-    <i class="fas fa-ellipsis-v"></i> <!-- Custom icon -->
-</button>
-            <!-- Navbar items -->
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <li class="nav-item dropdown">
                 
-                <!-- <ul class="navbar-nav ml-auto"> -->
-                <ul class="navbar-nav">
-                    <div class="item web-latestdiscourses"  onclick="navplaylist('recent')" >
-                        <span class="new-icon"></span>
-                        <p style="margin-bottom:0px !important">New</p>
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-lang="audiodiscourse" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    DISCOURSES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#" data-lang="basics53"  onclick="navplaylist('basicstudies')">BASICS 53</a>
+                  <li class="dropright">
+                    <a class="dropdown-item dropdown-toggle" href="#!" data-toggle="dropdown" data-lang="doctrinal">
+                        DOCTRINAL
+                          </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#" data-lang="kingdommessage" onclick="navplaylist('kingdommessage')">KINGDOM MESSAGE</a>
+                      <a class="dropdown-item" href="#" data-lang="characterdevelopment" onclick="navplaylist('characterdevelopment')">CHARACTER DEVELOPMENT</a>
                     </div>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="audiodiscourse">DISCOURSES</a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" data-lang="basics53"  onclick="navplaylist('basicstudies')">BASICS 53</a>
-                            <a class="dropdown-item" href="#" data-lang="doctrinal"  onclick="navplaylist('doctrinal')">DOCTRINAL</a>
-                            <a class="dropdown-item" href="#" data-lang="memorial"  onclick="navplaylist('memorial')">MEMORIAL</a>
-                            <a class="dropdown-item" href="#" data-lang="prophetic"  onclick="navplaylist('prophetic')">PROPHETIC</a>
-                            <a class="dropdown-item" href="#" data-lang="spiritual"  onclick="navplaylist('spiritual')">SPIRITUAL</a>
-                            <a class="dropdown-item" href="#" data-lang="typeantitype"  onclick="navplaylist('typeantitype')">TYPE & ANTITYPE</a>
-                            <!-- Divider before the last three items -->
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-lang="paneldiscussions"  onclick="navplaylist('paneldiscussions')">PANEL DISCUSSIONS</a>
-                            <a class="dropdown-item" href="#" data-lang="testimonial"  onclick="navplaylist('testimonial')">TESTIMONIAL</a>                            
-                            <a class="dropdown-item" href="#" data-lang="vesperservice"  onclick="navplaylist('vesperservice')">VESPER SERVICE</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="volumestudy">VOLUME STUDY</a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" data-lang="thebattleofarmageddon"  onclick="navplaylist('thebattleofarmageddon')">THE BATTLE OF ARMAGEDDON</a>
-                            <a class="dropdown-item" href="#" data-lang="thenewcreation"  onclick="navplaylist('thenewcreation')">THE NEW CREATION</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="bookstudy">BOOK STUDY</a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" data-lang="lifeofjesuschrist"  onclick="navplaylist('lifeofjesuschrist')">LIFE OF JESUS CHRIST</a>
-                            <a class="dropdown-item" href="#" data-lang="lifeofdavid"  onclick="navplaylist('lifeofdavid')">LIFE OF DAVID</a>
-                            <a class="dropdown-item" href="#" data-lang="orderanddisipline"  onclick="navplaylist('orderanddisipline')">ORDER & DISCIPLINE</a>
-                            <a class="dropdown-item" href="#" data-lang="wildernesswandering"  onclick="navplaylist('wildernesswandering')">WILDERNESS WANDERING</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="topicalstudy">TOPICAL STUDY</a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" data-lang="christianconcepts"  onclick="navplaylist('christianconcepts')">CHRISTIAN CONCEPTS</a>
-                            <a class="dropdown-item" href="#" data-lang="ecclesiaelection"  onclick="navplaylist('ecclesiaelection')">ECCLESIA ELECTION</a>
-                            <a class="dropdown-item" href="#" data-lang="endtimeprophecy"  onclick="navplaylist('endtimeprophecy')">END TIME PROPHECY</a>
-                            <a class="dropdown-item" href="#" data-lang="goldenrule"  onclick="navplaylist('goldenrule')">GOLDEN RULE</a>
-                            <a class="dropdown-item" href="#" data-lang="gospelintheheaven"  onclick="navplaylist('gospelintheheaven')">GOSPEL IN THE HEAVEN</a>
-                            <a class="dropdown-item" href="#" data-lang="israel"  onclick="navplaylist('israel')">ISRAEL</a>
-                            <a class="dropdown-item" href="#" data-lang="pandemic"  onclick="navplaylist('pandemic')">PANDEMIC</a>                            
-                            <a class="dropdown-item" href="#" data-lang="parables"  onclick="navplaylist('parables')">PARABLES</a>
-                            <a class="dropdown-item" href="#" data-lang="perfectingholiness"  onclick="navplaylist('perfectingholiness')">PERFECTING HOLINESS</a>
-                            <a class="dropdown-item" href="#" data-lang="revelation"  onclick="navplaylist('revelation')">REVELATION</a>
-                            <a class="dropdown-item" href="#" data-lang="sin"  onclick="navplaylist('sin')">SIN</a>
-                            <a class="dropdown-item" href="#" data-lang="spiritbegettal"  onclick="navplaylist('spiritbegettal')">SPIRIT BEGETTAL</a>
-                            <a class="dropdown-item" href="#" data-lang="understandinggreattribulation"  onclick="navplaylist('understandinggreattribulation')">UNDERSTANDING GREAT TRIBULATION</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="more">MORE</a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" data-lang="handouts">HANDOUTS</a>
-                            <a class="dropdown-item" href="#" data-lang="handouts" onclick="showdivineplan()">DIVINE PLAN OF AGES</a>
-                            <a class="dropdown-item" href="#" data-lang="aboutus" onclick="navplaylist('aboutus')" >ABOUT US</a>
-                        </div>
-                    </li>   
-                    <li class="nav-item search-bar">
-                        <form class="form-inline search-border">
-                            <i class="fas fa-search" onclick="searchaudio()" ></i> <!-- Font Awesome Search Icon -->
-                            <input class="form-control search-box" id="searchkeyword" type="search" placeholder="Search" aria-label="Search">
-                        </form>
-                    </li>                 
+                  </li>
+                  <a class="dropdown-item" href="#" data-lang="memorial"  onclick="navplaylist('memorial')">MEMORIAL</a>
+                  <a class="dropdown-item" data-lang="prophetic"  onclick="navplaylist('prophetic')">PROPHETIC</a>
+                  <a class="dropdown-item" data-lang="spiritual"  onclick="navplaylist('spiritual')">SPIRITUAL</a>
+                  <a class="dropdown-item" data-lang="typeantitype"  onclick="navplaylist('typeantitype')">TYPE & ANTITYPE</a>
+                  
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-lang="paneldiscussions"  onclick="navplaylist('paneldiscussions')">PANEL DISCUSSIONS</a>
+                  <a class="dropdown-item" href="#" data-lang="testimonial"  onclick="navplaylist('testimonial')">TESTIMONIAL</a>                            
+                  <a class="dropdown-item" href="#" data-lang="vesperservice"  onclick="navplaylist('vesperservice')">VESPER SERVICE</a>
                 </ul>
-            </div>
-            <!-- Logo -->
-            <a class="navbar-brand" onclick="navplaylist('aboutus')">
-                <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
-            </a>
+              </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-lang="volumestudy" aria-haspopup="true" aria-expanded="false">
+                    VOLUME STUDY
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" data-lang="thebattleofarmageddon"  onclick="navplaylist('thebattleofarmageddon')">THE BATTLE OF ARMAGEDDON</a>
+                  <a class="dropdown-item" data-lang="thenewcreation"  onclick="navplaylist('thenewcreation')">THE NEW CREATION</a>
+                </ul>
+              </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-lang="bookstudy" aria-haspopup="true" aria-expanded="false">
+                    BOOK STUDY
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" data-lang="lifeofjesuschrist"  onclick="navplaylist('lifeofjesuschrist')">LIFE OF JESUS CHRIST</a>
+                  <a class="dropdown-item" data-lang="lifeofdavid"  onclick="navplaylist('lifeofdavid')">LIFE OF DAVID</a>
+                  <a class="dropdown-item" data-lang="orderanddisipline"  onclick="navplaylist('orderanddisipline')">ORDER & DISCIPLINE</a>
+                  <a class="dropdown-item" data-lang="wildernesswandering"  onclick="navplaylist('wildernesswandering')">WILDERNESS WANDERING</a>
+                </ul>
+              </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-lang="topicalstudy" aria-haspopup="true" aria-expanded="false">
+                    TOPICAL STUDY
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" data-lang="christianconcepts"  onclick="navplaylist('christianconcepts')">CHRISTIAN CONCEPTS</a>
+                  <a class="dropdown-item" data-lang="ecclesiaelection"  onclick="navplaylist('ecclesiaelection')">ECCLESIA ELECTION</a>
+                  <a class="dropdown-item" data-lang="endtimeprophecy"  onclick="navplaylist('endtimeprophecy')">END TIME PROPHECY</a>
+                  <a class="dropdown-item" data-lang="goldenrule"  onclick="navplaylist('goldenrule')">GOLDEN RULE</a>
+                  <a class="dropdown-item" data-lang="gospelintheheaven"  onclick="navplaylist('gospelintheheaven')">GOSPEL IN THE HEAVEN</a>
+                  <a class="dropdown-item" data-lang="israel"  onclick="navplaylist('israel')">ISRAEL</a>
+                  <a class="dropdown-item" data-lang="pandemic"  onclick="navplaylist('pandemic')">PANDEMIC</a>                            
+                  <a class="dropdown-item" data-lang="parables"  onclick="navplaylist('parables')">PARABLES</a>
+                  <a class="dropdown-item" data-lang="perfectingholiness"  onclick="navplaylist('perfectingholiness')">PERFECTING HOLINESS</a>
+                  <a class="dropdown-item" data-lang="revelation"  onclick="navplaylist('revelation')">REVELATION</a>
+                  <a class="dropdown-item" data-lang="sin"  onclick="navplaylist('sin')">SIN</a>
+                  <a class="dropdown-item" data-lang="spiritbegettal"  onclick="navplaylist('spiritbegettal')">SPIRIT BEGETTAL</a>
+                  <a class="dropdown-item" data-lang="understandinggreattribulation"  onclick="navplaylist('understandinggreattribulation')">UNDERSTANDING GREAT TRIBULATION</a>
+                </ul>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MORE
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">HANDOUTS</a>
+                <a class="dropdown-item" href="#" data-lang="handouts" onclick="showdivineplan()">DIVINE PLAN OF AGES</a>
+                <a class="dropdown-item" href="#" data-lang="aboutus" onclick="navplaylist('aboutus')">ABOUT US</a>
+              </ul>
+            </li>
+            <li class="nav-item search-bar">
+                <form class="form-inline search-border">
+                    <i class="fas fa-search" onclick="searchaudio()" ></i> <!-- Font Awesome Search Icon -->
+                    <input class="form-control search-box" id="searchkeyword" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </li>                 
+            <li class="nav-item">
+                <a class="navbar-brand" onclick="navplaylist('aboutus')">
+                    <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
+                </a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
+    <!--Navbar Ends Here -->
     <!-- Main Content Area -->
     <div class="container content-area" style="margin-top: 1%;">
         <div id="grid" class="discoursedesktop"></div>
