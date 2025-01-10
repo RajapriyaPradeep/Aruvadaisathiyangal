@@ -26,7 +26,6 @@ fetch(apiUrl)
     return response.json();  // Parse the response as JSON
   })
   .then(data => {
-    debugger
     const width = window.innerWidth;
 
     if (width <= 480 && (localStorage.getItem("viewmode") == "mobile")) {
@@ -184,7 +183,6 @@ fetch(apiUrl)
       renderAudioItems(data);
     }
     else {
-      debugger;
       document.getElementById("titleAudioWidget").style.display = "none";
       document.getElementById("grid").style.display = "block";
       new gridjs.Grid({
@@ -195,7 +193,6 @@ fetch(apiUrl)
             sort: true,
             resizable: true,
             formatter: (cell, row) => {
-              debugger
               const title = cell.topic;
               const audioUrl = row.cells[1].data; // Audio download link
               // const pdfLink = row.cells[3].data;   // PDF link
