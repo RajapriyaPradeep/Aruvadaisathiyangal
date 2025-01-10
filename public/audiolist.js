@@ -5,6 +5,7 @@ const urlParams = new URLSearchParams(queryString);
 const searchdata = urlParams.get('module');
 const searchkeyword = urlParams.get('srch');
 let apiUrl = "";
+debugger
 // const search = 'Technology';
 // const apiUrl = 'http://localhost:5000/api/defaultvideos';
 //const apiUrl = 'http://localhost:5000/api/videos?search=' + searchdata;
@@ -374,12 +375,111 @@ fetch(apiUrl)
       });
 
     }
+
+    updatesectiontitle(searchdata)
+
   })
   .catch(error => {
     console.error('Error fetching data:', error);  // Log the error in the console
     alert(`An error occurred while fetching the data: ${error.message}`);  // Display an alert with the error message
   });
+function updatesectiontitle(sectionname) {
 
+  if (sectionname == "recent") {
+    document.getElementById("discourcesectionname").textContent = "Recent Discources";
+  }
+  else if (sectionname == "basicstudies") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - BASICS 53";
+  }
+  else if (sectionname == "kingdommessage") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - KINGDOM MESSAGE";
+  }
+  else if (sectionname == "characterdevelopment") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - CHARACTER DEVELOPMENT";
+  }
+  else if (sectionname == "memorial") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - MEMORIAL";
+  }
+  else if (sectionname == "prophetic") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - PROPHETIC";
+  }
+  else if (sectionname == "spiritual") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - SPIRITUAL";
+  }
+  else if (sectionname == "typeantitype") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - TYPE AND ANTITYPE";
+  }
+  else if (sectionname == "paneldiscussions") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - PANEL DISCUSSIONS";
+  }
+  else if (sectionname == "testimonial") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - TESTIMONAL";
+  }
+  else if (sectionname == "vesperservice") {
+    document.getElementById("discourcesectionname").textContent = "DISCOURCES - VESPER SERVICE";
+  }
+  else if (sectionname == "thebattleofarmageddon") {
+    document.getElementById("discourcesectionname").textContent = "VOLUME STUDY 4 - THE BATTLE OF ARMAGEDDON";
+  }
+  else if (sectionname == "thenewcreation") {
+    document.getElementById("discourcesectionname").textContent = "VOLUME STUDY 6 - THE NEW CREATION";
+  }
+  else if (sectionname == "lifeofjesuschrist") {
+    document.getElementById("discourcesectionname").textContent = "BOOK STUDY - LIFE OF JESUS CHRIST";
+  }
+  else if (sectionname == "lifeofdavid") {
+    document.getElementById("discourcesectionname").textContent = "BOOK STUDY - LIFE OF DAVID";
+  }
+  else if (sectionname == "orderanddisipline") {
+    document.getElementById("discourcesectionname").textContent = "BOOK STUDY - ORDER AND DISCIPLINE";
+  }
+  else if (sectionname == "wildernesswandering") {
+    document.getElementById("discourcesectionname").textContent = "BOOK STUDY - WILDERNESS WANDERING";
+  }
+  else if (sectionname == "christianconcepts") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - CHRISTIAN CONCEPTS";
+  }
+  else if (sectionname == "ecclesiaelection") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - ECCLESIA ELECTION";
+  }
+  else if (sectionname == "endtimeprophecy") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - END TIME PROPHECY";
+  }
+  else if (sectionname == "goldenrule") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - GOLDEN RULE";
+  }
+  else if (sectionname == "gospelintheheaven") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - GOSPEL IN THE HEAVEN";
+  }
+  else if (sectionname == "israel") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - ISRAEL";
+  }
+  else if (sectionname == "pandemic") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - PANDEMIC";
+  }
+  else if (sectionname == "parables") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - PARABLES";
+  }
+  else if (sectionname == "perfectingholiness") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - PERFECTING HOLINESS";
+  }
+  else if (sectionname == "revelation") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - REVELATION";
+  }
+  else if (sectionname == "sin") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - SIN";
+  }
+  else if (sectionname == "spiritbegettal") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - SPIRIT BEGETTAL";
+  }
+  else if (sectionname == "understandinggreattribulation") {
+    document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - UNDERSTANDING GREAT TRIBULATION";
+  }
+  else {
+    document.getElementById("discourcesectionname").textContent = searchdata;
+  }
+
+}
 // Function to handle sharing
 function shareAudio(url) {
   alert(`Sharing audio: ${url}`);

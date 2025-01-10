@@ -1,69 +1,85 @@
-
 #grid {
-    /* width: 98%; */
-    margin: auto;
-    font-family: 'Cardo';
-    /* max-height: 65%;  */
-    /* overflow-y: auto;
+  /* width: 98%; */
+  margin: auto;
+  font-family: 'Cardo';
+  /* max-height: 65%;  */
+  /* overflow-y: auto;
     overflow-x: auto;   */
-    /* Enable horizontal scrolling on small screens */
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  }
+  /* Enable horizontal scrolling on small screens */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
 
 /* Custom classes for row styling */
 td.gridjs-td {
-    border: 1px solid #7a2a2a1f !important;
-    box-sizing: content-box;
-    padding: 3px 7px !important;
-    background: #e5d8c4 !important;
-    text-align: left;
-    font-size: small;
-    font-weight: 500;
-  }
-  th.gridjs-th {
-    background-color: #7A2A2A !important;
-    padding: 1% !important;
-    border:1px solid #7a2a2a !important;
-  }
+  border: 1px solid #7a2a2a1f !important;
+  box-sizing: content-box;
+  padding: 3px 7px !important;
+  background: #e5d8c4 !important;
+  text-align: left;
+  font-size: small;
+  font-weight: 500;
+}
 
-  th.gridjs-th .gridjs-th-content{
-    color: #e5d8c4 !important;
-  }
-  button.gridjs-sort{
-    color: #e5d8c4 !important;
-  }
-  .gridjs-pagination .gridjs-summary{
-    color: #e5d8c4 !important;
-  }
-  .gridjs-footer {
-    position: sticky; /* Keep it fixed */
-    bottom: 0; /* Stick to the bottom */
-    z-index: 2; /* Stay above other elements */
-    background-color:#7A2A2A !important /* Ensure visibility */
-  }
-  .table.gridjs-table{
-    width: auto;
-  }
+th.gridjs-th {
+  background-color: #7A2A2A !important;
+  padding: 1% !important;
+  border: 1px solid #7a2a2a !important;
+}
 
-  .gridjs-td{
-    color:#7A2A2A;
-  }
+th.gridjs-th .gridjs-th-content {
+  color: #e5d8c4 !important;
+}
 
-  /* Optional: style the scrollbars */
-  #grid::-webkit-scrollbar {
-    width: 8px;
-  }
+button.gridjs-sort {
+  color: #e5d8c4 !important;
+}
 
-  #grid::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-  }
+.gridjs-pagination .gridjs-summary {
+  color: #e5d8c4 !important;
+}
 
-  #grid::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-  }
+.gridjs-footer {
+  position: sticky;
+  /* Keep it fixed */
+  bottom: 0;
+  /* Stick to the bottom */
+  z-index: 2;
+  /* Stay above other elements */
+  background-color: #7A2A2A !important
+    /* Ensure visibility */
+}
+
+.table.gridjs-table {
+  width: auto;
+}
+
+.gridjs-td {
+  color: #7A2A2A;
+}
+
+/* Optional: style the scrollbars */
+#grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+#grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+#grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
 /* Display a resize cursor on column edges */
-.gridjs-th, .gridjs-td {
+.gridjs-th,
+.gridjs-td {
   cursor: col-resize;
+}
+
+.discource_title {
+  display: flex;
+  justify-content: flex-start;
+  color:#7a2a2a
 }
