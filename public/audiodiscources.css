@@ -81,5 +81,25 @@ button.gridjs-sort {
 .discource_title {
   display: flex;
   justify-content: flex-start;
-  color:#7a2a2a
+  color: #7a2a2a;
+  position: relative;
+  width: 100%;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  /* Prevent text from wrapping to the next line */
+  overflow: hidden;
+  /* Hide the overflowing text */
+  text-overflow: ellipsis;
+  /* Show the ellipsis ("...") for overflow */
+  width: 100%;
+  /* Set the width to fit within the container */
+  display: inline-block;
+  /* Ensure proper behavior for inline elements */
+}
+
+.discource_title h5:hover {
+  cursor: pointer;
+  /* Indicate interactivity when hovered */
 }
