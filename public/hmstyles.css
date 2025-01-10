@@ -716,7 +716,7 @@ cursor: pointer;
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #e5d8c4;/*#fff;*/
   border: 1px solid #dee2e6;
   border-radius: 0.3rem;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
