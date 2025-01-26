@@ -241,6 +241,9 @@ font-family: 'Cardo' !important;
 /* author note ends here */
 /* Brother russell quotes starts here */
 .quote-box {
+
+  
+
   border: 2px solid goldenrod;
   width: 90%;
   position: relative;
@@ -248,14 +251,21 @@ font-family: 'Cardo' !important;
   font-family: 'Georgia', serif;
   font-size: 1.5em;
   color: #555;
-  background-color: #eee9e0;
+  /* background-color: #eee9e0; */
   /* background-color: #e5d8c4; */
   padding: 20px;
   margin: 20px;
   margin-bottom: 0.5px;
   position: relative;
   border-radius: 15px;
-  box-shadow: #721c2436 0px 2px 5px -1px, #721c2494 0px 1px 3px -1px;
+  /* box-shadow: #721c2436 0px 2px 5px -1px, #721c2494 0px 1px 3px -1px; */
+
+  background: rgba(255, 255, 255, 0.29);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.5px);
+-webkit-backdrop-filter: blur(6.5px);
+border: 1px solid rgba(255, 255, 255, 0.57);
 }
 .quote-text {
   font-family: serif;
