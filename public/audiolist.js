@@ -190,7 +190,7 @@ fetch(apiUrl)
         width: "100%",
         columns: [
           {
-            name: 'TITLE', // Column title
+            name: 'Title', // Column title
             sort: true,
             resizable: true,
             formatter: (cell, row) => {
