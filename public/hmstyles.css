@@ -1,10 +1,12 @@
 /* Common style */
-*{
+* {
   font-family: cardo;
 }
-i{
-color: #7a2a2a;
+
+i {
+  color: #7a2a2a;
 }
+
 .cardo-regular {
   font-family: "Cardo", serif;
   font-weight: 400;
@@ -25,9 +27,10 @@ color: #7a2a2a;
 
 /* Common style */
 /* Body */
-body{
+body {
   margin: 0;
 }
+
 body::before {
   content: '';
   position: absolute;
@@ -36,84 +39,106 @@ body::before {
   width: 100%;
   height: 100%;
   background: url('./Assets/harvestwheats.png') no-repeat center center/cover;
-  opacity: 0.7; 
-  z-index: -1; /* Place behind the content */
+  opacity: 0.7;
+  z-index: -1;
+  /* Place behind the content */
 }
 
 /* Body ends */
 /* Navigation starts */
-.biblestudentslogo{
+.biblestudentslogo {
   float: right;
   margin-left: auto;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-height: 65px;
-width: 65px;
-border-radius: 7px; 
-/*logo curve radius*/
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  height: 65px;
+  width: 65px;
+  border-radius: 7px;
+  /*logo curve radius*/
 }
-.nav-link{
+
+.nav-link {
   font-weight: 500;
   /* letter-spacing: 3px; */
   padding-right: 10px;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-color:#7a2a2a !important;
-/* font-size: medium; */
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #7a2a2a !important;
+  /* font-size: medium; */
 }
-.navbar-light .navbar-nav .nav-link{
-color:#7a2a2a !important;
-font-size: small;
-font-weight: 600;
-/* letter-spacing: 1px; */
+
+.navbar-light .navbar-nav .nav-link {
+  color: #7a2a2a !important;
+  font-size: small;
+  font-weight: 600;
+  /* letter-spacing: 1px; */
 }
+
 .navbar-nav {
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.nav-item{
+
+.nav-item {
   padding-left: 25px;
-  
+
 }
+
 .nav-link:hover {
-  color: #7a2a2a; /* Change to your desired color */
+  color: #7a2a2a;
+  /* Change to your desired color */
   font-weight: bold;
 }
-.navbar-nav .dropdown-menu{
-  box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  z-index:2000;
+
+.navbar-nav .dropdown-menu {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 2000;
 }
+
 /* Dropdown Menu Styles */
 .dropdown:hover .dropdown-menu {
-  display: block; /* Show the dropdown on hover */
-  
+  display: block;
+  /* Show the dropdown on hover */
+
 }
+
 /* Dropdown Item Styles */
 .dropdown-menu {
-  background: #e5d8c4; /* Brown background for dropdown */
-  border: none; /* Remove border */
+  background: #e5d8c4;
+  /* Brown background for dropdown */
+  border: none;
+  /* Remove border */
 }
+
 .dropdown-menu.show {
-  max-height: 500px; /* Adjust based on your submenu height */
+  max-height: 500px;
+  /* Adjust based on your submenu height */
   opacity: 1;
 }
+
 .dropdown-item {
-  color: #7A2A2A; /* Beige text color */
-  font-size:x-small !important;
+  color: #7A2A2A;
+  /* Beige text color */
+  font-size: x-small !important;
   font-weight: 600 !important;
-  border:0px;
+  border: 0px;
   border-bottom: 1px solid #7a2a2a2e;
   padding: .4rem 1.5rem;
 }
 
 .dropdown-item:hover {
-  background-color:#7A2A2A !important;
+  background-color: #7A2A2A !important;
   /* margin: 5%; */
   /* width: 90%; */
-  color: #ebd3b0;; /* White text on hover */
+  color: #ebd3b0;
+  ;
+  /* White text on hover */
   font-weight: bold !important;
 }
+
 /* Position the submenu to appear beside the parent menu */
 /* Ensure the parent dropdown-submenu is positioned correctly */
 .dropdown-submenu {
@@ -124,35 +149,49 @@ font-weight: 600;
 
 /* Search keyword starts here */
 .search-bar {
-  position: relative; /* Position relative to contain the icon */
+  position: relative;
+  /* Position relative to contain the icon */
 }
+
 .search-bar input {
-  padding-left: 10px; /* Add padding to avoid overlapping with the icon */
+  padding-left: 10px;
+  /* Add padding to avoid overlapping with the icon */
   background-color: #e7dbca;
-  color:#721c24 ;
+  color: #721c24;
 }
+
 .search-bar .fa-search {
-    position: absolute; /* Position icon absolutely within the search bar */
-    right: 75px; /* Distance from the left */
-    /* right: 10px;  */
-    top: 50%; /* Center the icon vertically */
-    transform: translateY(-50%); /* Adjust for the exact center */
-    color: #7f2a2a;
+  position: absolute;
+  /* Position icon absolutely within the search bar */
+  right: 75px;
+  /* Distance from the left */
+  /* right: 10px;  */
+  top: 50%;
+  /* Center the icon vertically */
+  transform: translateY(-50%);
+  /* Adjust for the exact center */
+  color: #7f2a2a;
 }
-.search-box{
+
+.search-box {
   border: 0px solid #721c24 !important;
   box-shadow: #721c2436 0px 2px 5px -1px, #721c2494 0px 1px 3px -1px;
 }
+
 .search-box::placeholder {
-  color: #721c24; /* Replace with your desired color */
-  opacity: 1;  /* Optional, to keep the color consistent across browsers */
+  color: #721c24;
+  /* Replace with your desired color */
+  opacity: 1;
+  /* Optional, to keep the color consistent across browsers */
 }
+
 /* Search keyword ends here */
 /* Boby content starts here */
 .content-area {
   position: relative;
   min-height: 400px;
 }
+
 /* Boby content ends here */
 /* Bible verse starts here */
 .medievalsharp-regular {
@@ -162,87 +201,108 @@ font-weight: 600;
   padding: 15px;
   border-radius: 40px;
 }
-.txt-animate {
-  opacity: 0; /* Start with the paragraph invisible */
-  transform: translateY(20px); /* Start slightly below */
-  animation: fadeIn 3s forwards; /* Animation to apply */
-  font-size: 20px; /* Font size for the paragraph */
-  color: #e5d8c4 !important; /* Text color */
-}
-.hr-text {
-line-height: 1em;
-position: relative;
-outline: 0;
-border: 0;
-color: #74603f;
-text-align: center;
-height: 1.5em;
-opacity: 1;
-/* opacity: .5; */
-&:before {
-  content: '';
-  background: linear-gradient(to right, transparent, #818078, transparent);
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-}
-&:after {
-  content: attr(data-content);
-  position: relative;
-  display: inline-block;
-  padding: 0 .5em;
-  line-height: 1.5em;
-  color: #74603f;
-  font-size: larger;
-  background-color: #fcfcfa;
-}
-}
-.welcome-txt{
-color:#74603f;
-}
-.glory-God{
 
-color: #530909 !important;
-font-style: italic;
-/* font-weight: 600; */
+.txt-animate {
+  opacity: 0;
+  /* Start with the paragraph invisible */
+  transform: translateY(20px);
+  /* Start slightly below */
+  animation: fadeIn 3s forwards;
+  /* Animation to apply */
+  font-size: 20px;
+  /* Font size for the paragraph */
+  color: #e5d8c4 !important;
+  /* Text color */
 }
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: #74603f;
+  text-align: center;
+  height: 1.5em;
+  opacity: 1;
+
+  /* opacity: .5; */
+  &:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #74603f;
+    font-size: larger;
+    background-color: #fcfcfa;
+  }
+}
+
+.welcome-txt {
+  color: #74603f;
+}
+
+.glory-God {
+  font-size: large;
+  color: #530909 !important;
+  font-style: italic;
+  /* font-weight: 600; */
+}
+
 /* Keyframes for the fade-in effect */
 @keyframes fadeIn {
   to {
-      opacity: 1; /* End with the paragraph visible */
-      transform: translateY(0); /* Move to its original position */
+    opacity: 1;
+    /* End with the paragraph visible */
+    transform: translateY(0);
+    /* Move to its original position */
   }
 }
+
 @keyframes slideIn {
   to {
-      opacity: 1;
-      transform: translateX(0); /* Move to original position */
+    opacity: 1;
+    transform: translateX(0);
+    /* Move to original position */
   }
 }
+
 @keyframes zoomIn {
   to {
-      transform: scale(1); /* Grow to original size */
+    transform: scale(1);
+    /* Grow to original size */
   }
 }
-.shadow-style{
+
+.shadow-style {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 3px, rgba(0, 0, 0, 0.24) 13px 11px 12px;
 }
+
 /* Bible verse ends here */
 /* author note starts here */
-.biblestudent_note{
-font-family: 'Cardo' !important;
+.biblestudent_note {
+  font-family: 'Cardo' !important;
   /* font-style: italic; */
   font-family: none;
   font-size: 16px;
-  color:#530909 !important;
+  color: #530909 !important;
 }
+
 /* author note ends here */
 /* Brother russell quotes starts here */
 .quote-box {
 
-  
+
 
   border: 2px solid goldenrod;
   width: 90%;
@@ -261,52 +321,59 @@ font-family: 'Cardo' !important;
   /* box-shadow: #721c2436 0px 2px 5px -1px, #721c2494 0px 1px 3px -1px; */
 
   background: rgba(255, 255, 255, 0.29);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(6.5px);
--webkit-backdrop-filter: blur(6.5px);
-border: 1px solid rgb(255 255 255 / 0%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgb(255 255 255 / 0%);
 }
+
 .quote-text {
   font-family: serif;
   quotes: "“" "”" "‘" "’";
   font-size: 18px;
   color: #7a2a2a !important;
 }
+
 .quote-text::before {
   content: open-quote;
 }
+
 .quote-text::after {
   content: close-quote;
 }
+
 .author {
   text-align: center;
   /* text-align: right; */
   font-style: italic;
   margin-top: 10px;
   color: #7a2a2a !important;
-    font-size: 18px;
+  font-size: 18px;
 }
+
 /* Brother russell quotes ends here */
 /*  */
 /* Bottom right image */
 .home-bottom-right-image {
   filter: grayscale(0.2);
   position: fixed;
-  bottom: 0%; 
+  bottom: 0%;
   right: 1%;
   /* z-index: 3000; */
   z-index: 1000;
   height: 300px;
 }
+
 /* Bottom right image */
 /* Language toggle button starts here */
-.lang{
+.lang {
   position: fixed;
   bottom: 2%;
   right: -8%;
   z-index: 1500;
 }
+
 .switches-container {
   width: 16rem;
   position: relative;
@@ -319,12 +386,14 @@ border: 1px solid rgb(255 255 255 / 0%);
   margin-left: auto;
   margin-right: auto;
 }
+
 /* input (radio) for toggling. hidden - use labels for clicking on */
 .switches-container input {
   visibility: hidden;
   position: absolute;
   top: 0;
 }
+
 /* labels for the input (radio) boxes - something to click on */
 .switches-container label {
   font-size: x-small;
@@ -336,6 +405,7 @@ border: 1px solid rgb(255 255 255 / 0%);
   cursor: pointer;
   color: #7a2a2a;
 }
+
 /* switch highlighters wrapper (sliding left / right) 
   - need wrapper to enable the even margins around the highlight box
 */
@@ -349,12 +419,14 @@ border: 1px solid rgb(255 255 255 / 0%);
   transition: transform .5s cubic-bezier(.77, 0, .175, 1);
   /* transition: transform 1s; */
 }
+
 /* switch box highlighter */
 .switch {
   border-radius: 3rem;
   background: #7a2a2a;
   height: 100%;
 }
+
 /* switch box labels
   - default setup
   - toggle afterwards based on radio:checked status 
@@ -372,69 +444,82 @@ border: 1px solid rgb(255 255 255 / 0%);
   top: 0;
   left: 0;
 }
+
 /* slide the switch box from right to left */
 .switches-container input:nth-of-type(1):checked~.switch-wrapper {
   transform: translateX(0%);
 }
+
 /* slide the switch box from left to right */
 .switches-container input:nth-of-type(2):checked~.switch-wrapper {
   transform: translateX(100%);
 }
+
 /* toggle the switch box labels - first checkbox:checked - show first switch div */
 .switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
   opacity: 1;
 }
+
 /* toggle the switch box labels - second checkbox:checked - show second switch div */
 .switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
   opacity: 1;
-}  
+}
+
 /* Language toggle button ends here */
 /* project title starts here */
-.projtitle{
+.projtitle {
   /* width: 200px;
   max-width: 60%; */
   float: left;
-    margin-right: auto;
-    max-height: 65px;
-    max-width: auto;
+  margin-right: auto;
+  max-height: 65px;
+  max-width: auto;
   cursor: pointer !important;
   filter: brightness(0.7);
 }
+
 /* project title ends here */
 /* scripture about us image starts here */
-.scripture-img{
-height: 280px;
-border-radius: 20px;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+.scripture-img {
+  height: 280px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 /* scripture about us image ends here */
 /* scripture about us content starts here */
-.scripture-content{
-display: flex;
+.scripture-content {
+  display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
 .quote-container {
-padding: 5%;
+  padding: 5%;
   background-color: antiquewhite;
   border-radius: 20px;
   color: #7a2a2a;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-family: 'Cardo';
   height: 80vh;
-  overflow-y: auto;  /* Enable vertical scroll */
-scrollbar-width: thin;  /* For Firefox: Thin scrollbar */
-scrollbar-color: #985050 #f9f9f9; /* For Firefox: Scrollbar color */
+  overflow-y: auto;
+  /* Enable vertical scroll */
+  scrollbar-width: thin;
+  /* For Firefox: Thin scrollbar */
+  scrollbar-color: #985050 #f9f9f9;
+  /* For Firefox: Scrollbar color */
   font-size: 14px;
 }
-.wwr-block{
-border-right: 1.5px solid #7a2a2a;
-display: flex;
-align-items: flex-start;
-flex-direction: column;
-justify-content: center;
+
+.wwr-block {
+  border-right: 1.5px solid #7a2a2a;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
-.quote-scripture{
+
+.quote-scripture {
   padding: 2%;
   height: 60vh;
   font-size: smaller;
@@ -442,268 +527,305 @@ justify-content: center;
   overflow-y: scroll;
   scrollbar-width: thin;
 }
+
 .quote-container p {
-margin: 1em 0;
-font-size: 1.1em;
-line-height: 1.6;
+  margin: 1em 0;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 .quote-container cite {
-display: block;
-margin-top: 0.5em;
-font-size: 0.9em;
-color: #7a2a2a;
-text-align: right;
-font-weight: bold; /* Makes the cite text bold */
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #7a2a2a;
+  text-align: right;
+  font-weight: bold;
+  /* Makes the cite text bold */
 }
-.reprint-bottom-right-image{
-position: fixed;
-bottom: 3%;
-right: -2%;
-z-index: 3000;
-height: 220px;
+
+.reprint-bottom-right-image {
+  position: fixed;
+  bottom: 3%;
+  right: -2%;
+  z-index: 3000;
+  height: 220px;
 }
+
 /* Style the scrollbars */
 
 
 /* For Chrome, Safari, and Edge */
 .quote-container::-webkit-scrollbar {
-width: 10px; /* Scrollbar width */
+  width: 10px;
+  /* Scrollbar width */
 }
 
 .quote-container::-webkit-scrollbar-track {
-background: #f9f9f9; /* Track background */
+  background: #f9f9f9;
+  /* Track background */
 }
 
 .quote-container::-webkit-scrollbar-thumb {
-background-color: #888; /* Scrollbar color */
-border-radius: 10px; /* Round the scroll thumb */
-border: 2px solid #f9f9f9; /* Space around the thumb */
+  background-color: #888;
+  /* Scrollbar color */
+  border-radius: 10px;
+  /* Round the scroll thumb */
+  border: 2px solid #f9f9f9;
+  /* Space around the thumb */
 }
 
 .quote-container::-webkit-scrollbar-thumb:hover {
-background-color: #555; /* Scrollbar thumb on hover */
+  background-color: #555;
+  /* Scrollbar thumb on hover */
 }
 
 /* Optional: To make the scroll visible when hovering over the section */
 .quote-container {
-position: relative;
-transition: all 0.3s ease;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .quote-container:hover::-webkit-scrollbar {
-opacity: 1;
+  opacity: 1;
 }
+
 /* scripture about us content ends here */
 /* New Icon starts here */
 .floating-icon {
-position: fixed;
-top: 4%;
-left: 33%;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-z-index: 2000;
+  position: fixed;
+  top: 4%;
+  left: 33%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
 }
 
 .floating-icon img {
-/* width: 60%;            
+  /* width: 60%;            
 height: 60%; */
 }
 
 .floating-icon:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
 /* New Icon ends here */
 
 
 .discoursemobile {
-padding: 5%;
+  padding: 5%;
   background-color: #e8e1d7;
   border-radius: 20px;
   color: #7a2a2a;
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
   font-family: 'Cardo';
   height: 85vh;
-  overflow-y: auto;  /* Enable vertical scroll */
-scrollbar-width: thin;  /* For Firefox: Thin scrollbar */
-scrollbar-color: #985050 #f9f9f9; /* For Firefox: Scrollbar color */
+  overflow-y: auto;
+  /* Enable vertical scroll */
+  scrollbar-width: thin;
+  /* For Firefox: Thin scrollbar */
+  scrollbar-color: #985050 #f9f9f9;
+  /* For Firefox: Scrollbar color */
   font-size: 14px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .audioItem {
-margin-bottom: 15px;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 8px;
-background-color: #e5d8c4;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #e5d8c4;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .titleContainer {
-display: flex;
-align-items: center;
-margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
+
 .titleContainermobile {
-font-size: smaller;
-display: flex;
-align-items: center;
-margin-bottom: 5px;
+  font-size: smaller;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
-.mobileicon{
-font-size: small;
+
+.mobileicon {
+  font-size: small;
 }
+
 .audioTitle {
-font-weight: bold;
-margin-right: 10px;
-flex-grow: 1; /* Take up remaining space */
+  font-weight: bold;
+  margin-right: 10px;
+  flex-grow: 1;
+  /* Take up remaining space */
 }
 
 .icon {
-/* font-size: 18px; */
-color: #7a2a2a;
-margin-left: 10px;
-cursor: pointer;
+  /* font-size: 18px; */
+  color: #7a2a2a;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .icon:hover {
-color: #963535;
+  color: #963535;
 }
 
 .audioControl {
-width: 100%;
-border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
+
 .navbar-toggler-icon {
-display: none;
+  display: none;
 }
-.navbar-light .navbar-toggler{
-border:0px solid red;
+
+.navbar-light .navbar-toggler {
+  border: 0px solid red;
 }
-.navbar-toggler{
-font-size: 1rem !important;
+
+.navbar-toggler {
+  font-size: 1rem !important;
 }
-.scripturetitle{
-text-align: center;
-color: #7A2A2A;
+
+.scripturetitle {
+  text-align: center;
+  color: #7A2A2A;
 }
 
 .hover-text-button {
-background-color: #007bff;
-color: white;
-padding: 10px 20px;
-border: none;
-font-size: 1rem;
-transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .hover-text-button:hover {
-background-color: #0056b3;
+  background-color: #0056b3;
 }
-.abouttoscripture{
 
-}
+.abouttoscripture {}
+
 /* Footer styling */
 .site-footer {
-background-color: #7a2a2a; /* Footer background color */
-color: #e5d8c4; /* Text color */
-text-align: center;
-padding: 10px 0;
-font-family: 'Cardo', serif;
-font-size: 14px;
-position: absolute;
-/* position: relative; */
-bottom: 0;
-width: 100%;
-box-shadow: rgba(0, 0, 0, 0.1) 0px -3px 6px;
+  background-color: #7a2a2a;
+  /* Footer background color */
+  color: #e5d8c4;
+  /* Text color */
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Cardo', serif;
+  font-size: 14px;
+  position: absolute;
+  /* position: relative; */
+  bottom: 0;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -3px 6px;
 }
 
 .footer-content {
-max-width: 1200px;
-margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-links a {
-color: #e5d8c4;
-text-decoration: none;
-margin: 0 10px;
+  color: #e5d8c4;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 .footer-links a:hover {
-color: #ebd3b0; /* Hover color */
-font-weight: bold;
+  color: #ebd3b0;
+  /* Hover color */
+  font-weight: bold;
 }
-.dropdown-divider{
-height: 0;
+
+.dropdown-divider {
+  height: 0;
   margin: 0rem 0;
   overflow: hidden;
   border-top: 2px solid #721c24b0;
 }
+
 .custom-tooltip {
-position: absolute;
-background-color: #7a2a2a;
-color: #e5d8c4;
-padding: 5px 10px;
-border-radius: 5px;
-font-size: 12px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-pointer-events: none;
+  position: absolute;
+  background-color: #7a2a2a;
+  color: #e5d8c4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
-.form-inline .form-control{
-/* width: 100% !important; */
-width: 75% !important;
+
+.form-inline .form-control {
+  /* width: 100% !important; */
+  width: 75% !important;
 }
-.audioControlmobile{
-height: 35px;
+
+.audioControlmobile {
+  height: 35px;
 }
+
 /* New animated icon */
 .item {
-/* position: relative;
+  /* position: relative;
 padding-left: 20px; 
 font-size: 16px; */
-color:#7a2a2a;
-cursor: pointer;
+  color: #7a2a2a;
+  cursor: pointer;
 
-display: inline-flex;
-    align-items: center;
-    margin: 0 15px; /* Adjust spacing as needed */
+  display: inline-flex;
+  align-items: center;
+  margin: 0 15px;
+  /* Adjust spacing as needed */
 }
 
 .new-icon {
-margin-right:5px;
-/* position: absolute; */
-/* top: 50%;
+  margin-right: 5px;
+  /* position: absolute; */
+  /* top: 50%;
 left: 0; */
-transform: translateY(-50%);
-width: 10px;
-height: 10px;
-background-color: #7a2a2a; /* Bright red color */
-border-radius: 50%;
-animation: pulse 1.5s infinite;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #7a2a2a;
+  /* Bright red color */
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
-0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
-}
-50% {
+  }
+
+  50% {
     transform: scale(1.5);
     opacity: 0.6;
+  }
 }
+
+.navbar-brand {
+  cursor: pointer;
 }
-.navbar-brand{
-cursor: pointer;
-}
-.mobile-latestdiscourses{
+
+.mobile-latestdiscourses {
   display: none;
 }
 
-#navbarNav{
+#navbarNav {
   padding-left: 20px;
 }
 
@@ -728,7 +850,8 @@ cursor: pointer;
 }
 
 .modal-content {
-  background-color: #e5d8c4;/*#fff;*/
+  background-color: #e5d8c4;
+  /*#fff;*/
   border: 1px solid #dee2e6;
   border-radius: 0.3rem;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -738,14 +861,15 @@ cursor: pointer;
 .modal-header {
   display: flex;
   justify-content: center;
-    align-items: center;
-    width: 100%;
+  align-items: center;
+  width: 100%;
 }
 
 .modal-title {
   text-align: center;
   width: 100%;
-  color: #7A2A2A;;
+  color: #7A2A2A;
+  ;
 }
 
 .modal-body {
@@ -765,6 +889,7 @@ cursor: pointer;
   color: #000;
   opacity: 0.5;
 }
+
 /* Tooltip styles */
 /* Custom styled tooltip */
 .custom-tooltip {
@@ -775,7 +900,8 @@ cursor: pointer;
   padding: 8px;
   border-radius: 5px;
   font-size: 14px;
-  pointer-events: none; /* Prevents the tooltip from blocking other interactions */
+  pointer-events: none;
+  /* Prevents the tooltip from blocking other interactions */
   z-index: 2000;
   font-family: serif;
   /* opacity: 0.9; */
@@ -804,7 +930,8 @@ cursor: pointer;
 
 /* Tooltip text */
 .area-tooltip:hover::after {
-  content: attr(data-title); /* Use custom attribute for tooltip text */
+  content: attr(data-title);
+  /* Use custom attribute for tooltip text */
   position: absolute;
   left: 50%;
   bottom: 150%;
@@ -827,18 +954,25 @@ cursor: pointer;
   visibility: visible;
 }
 
-.legends{
+.legends {
   font-family: 'Cardo' !important;
   font-size: 12px;
   color: #7a2a2a;
 }
+
 /* model styling ends here*/
 
 
-.legend-item{
-  margin-bottom:5px;
-  margin-bottom:5px;width: 20px; height: 20px; 
-  border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 8px;
+.legend-item {
+  margin-bottom: 5px;
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
 }
 
 /* Ficker the verse starts here */
@@ -864,11 +998,9 @@ cursor: pointer;
   align-items: center;
   width: 50%;
   height: 50%;
-  background-image: radial-gradient(
-    ellipse 50% 35% at 50% 50%,
-    #6b1839,
-    transparent
-  );
+  background-image: radial-gradient(ellipse 50% 35% at 50% 50%,
+      #6b1839,
+      transparent);
   transform: translate(-50%, -50%);
   letter-spacing: 2;
   left: 50%;
@@ -877,7 +1009,7 @@ cursor: pointer;
   text-transform: uppercase;
   font-size: 6em;
   color: #ffe6ff;
-  text-shadow: 0 0 0.6rem #f5f5dc, 0 0 1.5rem #eedd82, 
+  text-shadow: 0 0 0.6rem #f5f5dc, 0 0 1.5rem #eedd82,
     -0.2rem 0.1rem 1rem #eedd82, 0.2rem 0.1rem 1rem #eedd82,
     0 -0.5rem 2rem #d2b48c, 0 0.5rem 3rem #d2b48c;
 
@@ -888,25 +1020,28 @@ cursor: pointer;
 }
 
 @keyframes blink {
+
   0%,
   22%,
   36%,
   75% {
     color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #f5f5dc, 0 0 1.5rem #eedd82, 
-    -0.2rem 0.1rem 1rem #eedd82, 0.2rem 0.1rem 1rem #eedd82,
-    0 -0.5rem 2rem #d2b48c, 0 0.5rem 3rem #d2b48c;
+    text-shadow: 0 0 0.6rem #f5f5dc, 0 0 1.5rem #eedd82,
+      -0.2rem 0.1rem 1rem #eedd82, 0.2rem 0.1rem 1rem #eedd82,
+      0 -0.5rem 2rem #d2b48c, 0 0.5rem 3rem #d2b48c;
 
     /* text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
       -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
       0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483; */
   }
+
   28%,
   33% {
     color: #eedd82;
     /* color: #ff65bd; */
     text-shadow: none;
   }
+
   82%,
   97% {
     color: #d2b48c;
@@ -928,11 +1063,12 @@ cursor: pointer;
     color: #6b1839;
     text-shadow: none;
   }
+
   100% {
     color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #f5f5dc, 0 0 1.5rem #eedd82, 
-    -0.2rem 0.1rem 1rem #eedd82, 0.2rem 0.1rem 1rem #eedd82,
-    0 -0.5rem 2rem #d2b48c, 0 0.5rem 3rem #d2b48c;
+    text-shadow: 0 0 0.6rem #f5f5dc, 0 0 1.5rem #eedd82,
+      -0.2rem 0.1rem 1rem #eedd82, 0.2rem 0.1rem 1rem #eedd82,
+      0 -0.5rem 2rem #d2b48c, 0 0.5rem 3rem #d2b48c;
     /* text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
       -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
       0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483; */
@@ -1066,3 +1202,20 @@ cursor: pointer;
 }
 
 /* Ficker the verse ends here */
+
+.home_bible {
+  width: auto;
+  max-width: 300px;
+}
+
+/* .home_bible {
+  margin-left: 30px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.home_bible:hover {
+  margin-left: 0;
+} */

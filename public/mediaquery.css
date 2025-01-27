@@ -1,199 +1,281 @@
 /* Mobile starts */
 @media (max-width: 480px) {
-    .mobile-latestdiscourses{
+    .mobile-latestdiscourses {
         display: contents;
     }
-    .web-latestdiscourses{
+
+    .web-latestdiscourses {
         display: none;
-        }
+    }
+
     .quote-box {
         margin-bottom: 10px;
-      }
-    .navbar-nav{
-        align-items:start
     }
+
+    .navbar-nav {
+        align-items: start
+    }
+
     .item {
         float: right;
     }
-    .navbar-brand{
+
+    .navbar-brand {
         display: none !important;
     }
-    .form-inline .form-control{
+
+    .form-inline .form-control {
         width: 100% !important;
     }
-    .wwr-block{
+
+    .wwr-block {
         border-right: 0px solid #7a2a2a;
-        }
-    .projtitle{
+    }
+
+    .projtitle {
         width: 170px;
     }
-    .audioscreenbody{
+
+    .audioscreenbody {
         background-color: #d5cdc6;
     }
-    .quote-container{
+
+    .quote-container {
         font-size: 10px !important;
     }
-    .floating-icon img{
+
+    .floating-icon img {
         height: 45px !important;
     }
-    .nav-item{
+
+    .nav-item {
         font-size: small !important;
-       }
-       .dropdown-item{
+    }
+
+    .dropdown-item {
         font-size: xx-small !important;
     }
+
     .quote-box {
-      width: 95% !important;
+        width: 95% !important;
     }
-    .reprint-bottom-right-image{
-        width: 200px; /* Adjust width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+
+    .reprint-bottom-right-image {
+        width: 200px;
+        /* Adjust width for smaller screens */
+        height: auto;
+        /* Maintain aspect ratio */
         bottom: 0%;
         right: 0%;
         visibility: visible !important;
     }
-    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top{
-        width: 100px; /* Adjust width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+
+    .home-bottom-right-image,
+    .bottom-left-qimage,
+    .question-book-right-top {
+        width: 100px;
+        /* Adjust width for smaller screens */
+        height: auto;
+        /* Maintain aspect ratio */
         bottom: 0%;
         right: 0%;
         visibility: visible !important;
         z-index: 3000;
     }
+
     .author {
         text-align: start !important;
-      }
-    .medievalsharp-regular{
+    }
+
+    .medievalsharp-regular {
         font-size: 12px !important;
     }
-    .quote-text,.author {
+
+    .quote-text,
+    .author {
         font-size: 12px !important;
     }
-    .biblestudent_note{
+
+    .biblestudent_note {
         font-size: 10px !important;
     }
-    .lang{
+
+    .lang {
         right: -30%;
     }
-    .biblestudentslogo{
+
+    .biblestudentslogo {
         height: 45px;
-  width: 45px;
+        width: 45px;
     }
+
+    .home_bible {
+        width: auto;
+        max-width: 180px !important;
+    }
+
     /* Basic dropdown styles for desktop */
 }
+
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
-    .mobile-latestdiscourses{
+    .mobile-latestdiscourses {
         display: contents;
     }
-    .web-latestdiscourses{
+
+    .web-latestdiscourses {
         display: none;
-        }
+    }
+
     .quote-box {
         margin-bottom: 10px;
-      }
-    .navbar-nav{
-        align-items:start
     }
+
+    .navbar-nav {
+        align-items: start
+    }
+
     .item {
         float: right;
     }
-    .navbar-brand{
+
+    .navbar-brand {
         display: none !important;
     }
-    .form-inline .form-control{
+
+    .form-inline .form-control {
         /* width: 100% !important; */
         width: 75% !important;
     }
-    .wwr-block{
+
+    .wwr-block {
         border-right: 0px solid #7a2a2a;
-        }
-    .projtitle{
+    }
+
+    .projtitle {
         width: 170px;
     }
-    .audioscreenbody{
+
+    .audioscreenbody {
         background-color: #d5cdc6;
     }
-    .quote-container{
+
+    .quote-container {
         font-size: 10px !important;
     }
+
     .author {
         text-align: start !important;
-      }
-    .floating-icon img{
+    }
+
+    .floating-icon img {
         height: 30px !important;
     }
-    .nav-item{
-     font-size: small !important;
+
+    .nav-item {
+        font-size: small !important;
     }
-    .dropdown-item{
+
+    .dropdown-item {
         font-size: xx-small !important;
     }
+
     .quote-box {
-      width: 90% !important;
+        width: 90% !important;
     }
-    .reprint-bottom-right-image{
-        width: 200px; /* Adjust width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+
+    .reprint-bottom-right-image {
+        width: 200px;
+        /* Adjust width for smaller screens */
+        height: auto;
+        /* Maintain aspect ratio */
         bottom: 0%;
         right: 0%;
         visibility: visible !important;
     }
-    .home-bottom-right-image,.bottom-left-qimage,.question-book-right-top{
-        width: 100px; /* Adjust width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+
+    .home-bottom-right-image,
+    .bottom-left-qimage,
+    .question-book-right-top {
+        width: 100px;
+        /* Adjust width for smaller screens */
+        height: auto;
+        /* Maintain aspect ratio */
         visibility: visible !important;
         z-index: 3000;
     }
-    .medievalsharp-regular{
+
+    .medievalsharp-regular {
         font-size: 12px !important;
     }
-    .quote-text,.author {
+
+    .quote-text,
+    .author {
         font-size: 12px !important;
     }
-    .biblestudent_note{
+
+    .biblestudent_note {
         font-size: 10px !important;
     }
-    .lang{
+
+    .lang {
         right: -30%;
     }
-    .biblestudentslogo{
+
+    .biblestudentslogo {
         height: 45px;
-  width: 45px;
+        width: 45px;
     }
+
     /* Basic dropdown styles for desktop */
-    .floating-icon{
+    .floating-icon {
         top: 4% !important;
-    left: 80% !important;
+        left: 80% !important;
+    }
+
+    .home_bible {
+        width: auto;
+        max-width: 250px;
     }
 }
+
 /* Tab ends */
 /* Desktop starts */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .mobile-latestdiscourses{
+    .mobile-latestdiscourses {
         display: contents;
     }
-    .web-latestdiscourses{
+
+    .web-latestdiscourses {
         display: none;
-        }
-    .floating-icon img{
+    }
+
+    .floating-icon img {
         height: 30px !important;
     }
-    .dropdown-item{
+
+    .dropdown-item {
         font-size: x-small !important;
     }
+
     .quote-box {
-      width: 90% !important;
+        width: 90% !important;
     }
-    .home-bottom-right-image,.question-book-right-top,.bottom-left-qimage,.reprint-bottom-right-image{
-        width: 250px; /* Adjust for tablet-sized screens */
+
+    .home-bottom-right-image,
+    .question-book-right-top,
+    .bottom-left-qimage,
+    .reprint-bottom-right-image {
+        width: 250px;
+        /* Adjust for tablet-sized screens */
         height: auto;
         z-index: 3000;
     }
-    .lang{
+
+    .lang {
         right: -8%;
     }
 }
-/* Desktop ends */
 
+/* Desktop ends */
