@@ -1208,6 +1208,30 @@ left: 0; */
   max-width: 300px;
 }
 
+.home_bible_div {
+  display: flex !important;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  /* Prevents overflow if the image size changes */
+  display: inline-block;
+  position: relative;
+}
+
+.fade-in-image {
+  opacity: 0; /* Initially invisible */
+  transform: scale(0.9); /* Slightly scaled down */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+  width: 100%; /* Adjust image size as needed */
+  height: auto;
+}
+.fade-in-image.loaded {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Scaled to normal size */
+}
 /* .home_bible {
   margin-left: 30px;
   -webkit-transform: scale(1.5);
