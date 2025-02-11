@@ -1,0 +1,1 @@
+// https://www.sliderrevolution.com/resources/css-text-animation/

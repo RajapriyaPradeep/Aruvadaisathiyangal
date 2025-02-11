@@ -32,13 +32,13 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('./Assets/harvestwheats.png') no-repeat center center/cover;
+  background: url("./Assets/harvestwheats.png") no-repeat center center/cover;
   opacity: 0.7;
   z-index: -1;
   /* Place behind the content */
@@ -83,8 +83,8 @@ body::before {
 }
 
 .nav-item {
-  padding-left: 25px;
-
+  padding-left: 10px;
+  /* padding-left: 25px; */
 }
 
 .nav-link:hover {
@@ -94,7 +94,9 @@ body::before {
 }
 
 .navbar-nav .dropdown-menu {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   z-index: 2000;
 }
 
@@ -102,7 +104,6 @@ body::before {
 .dropdown:hover .dropdown-menu {
   display: block;
   /* Show the dropdown on hover */
-
 }
 
 /* Dropdown Item Styles */
@@ -120,21 +121,20 @@ body::before {
 }
 
 .dropdown-item {
-  color: #7A2A2A;
+  color: #7a2a2a;
   /* Beige text color */
   font-size: x-small !important;
   font-weight: 600 !important;
   border: 0px;
   border-bottom: 1px solid #7a2a2a2e;
-  padding: .4rem 1.5rem;
+  padding: 0.4rem 1.5rem;
 }
 
 .dropdown-item:hover {
-  background-color: #7A2A2A !important;
+  background-color: #7a2a2a !important;
   /* margin: 5%; */
   /* width: 90%; */
   color: #ebd3b0;
-  ;
   /* White text on hover */
   font-weight: bold !important;
 }
@@ -197,7 +197,22 @@ body::before {
 .medievalsharp-regular {
   font-style: normal;
   font-size: medium !important;
-  background-color: #7a2a2a;
+  /* background-color: #7a2a2a; */
+  background: linear-gradient(
+    90deg,
+    rgba(122, 42, 42, 1),
+    rgba(228, 151, 89, 1)
+  );
+  -webkit-background: linear-gradient(
+    90deg,
+    rgba(122, 42, 42, 1),
+    rgba(228, 151, 89, 1)
+  );
+  -moz-background: linear-gradient(
+    90deg,
+    rgba(122, 42, 42, 1),
+    rgba(228, 151, 89, 1)
+  );
   padding: 15px;
   border-radius: 40px;
 }
@@ -227,7 +242,7 @@ body::before {
 
   /* opacity: .5; */
   &:before {
-    content: '';
+    content: "";
     background: linear-gradient(to right, transparent, #818078, transparent);
     position: absolute;
     left: 0;
@@ -240,7 +255,7 @@ body::before {
     content: attr(data-content);
     position: relative;
     display: inline-block;
-    padding: 0 .5em;
+    padding: 0 0.5em;
     line-height: 1.5em;
     color: #74603f;
     font-size: larger;
@@ -285,13 +300,14 @@ body::before {
 }
 
 .shadow-style {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 3px, rgba(0, 0, 0, 0.24) 13px 11px 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 3px,
+    rgba(0, 0, 0, 0.24) 13px 11px 12px;
 }
 
 /* Bible verse ends here */
 /* author note starts here */
 .biblestudent_note {
-  font-family: 'Cardo' !important;
+  font-family: "Cardo" !important;
   /* font-style: italic; */
   font-family: none;
   font-size: 16px;
@@ -301,14 +317,11 @@ body::before {
 /* author note ends here */
 /* Brother russell quotes starts here */
 .quote-box {
-
-
-
   border: 2px solid goldenrod;
   width: 90%;
   position: relative;
   z-index: 1001;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 1.5em;
   color: #555;
   /* background-color: #eee9e0; */
@@ -416,7 +429,7 @@ body::before {
   width: 20%;
   padding: 0.15rem;
   z-index: 3;
-  transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   /* transition: transform 1s; */
 }
 
@@ -438,7 +451,7 @@ body::before {
   opacity: 0;
   display: block;
   color: #e5d8c4;
-  transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+  transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
   will-change: opacity;
   position: absolute;
   top: 0;
@@ -446,22 +459,30 @@ body::before {
 }
 
 /* slide the switch box from right to left */
-.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+.switches-container input:nth-of-type(1):checked ~ .switch-wrapper {
   transform: translateX(0%);
 }
 
 /* slide the switch box from left to right */
-.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+.switches-container input:nth-of-type(2):checked ~ .switch-wrapper {
   transform: translateX(100%);
 }
 
 /* toggle the switch box labels - first checkbox:checked - show first switch div */
-.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+.switches-container
+  input:nth-of-type(1):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(1) {
   opacity: 1;
 }
 
 /* toggle the switch box labels - second checkbox:checked - show second switch div */
-.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+.switches-container
+  input:nth-of-type(2):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(2) {
   opacity: 1;
 }
 
@@ -483,7 +504,8 @@ body::before {
 .scripture-img {
   height: 280px;
   border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 /* scripture about us image ends here */
@@ -496,11 +518,11 @@ body::before {
 
 .quote-container {
   padding: 5%;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   border-radius: 20px;
   color: #7a2a2a;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-family: 'Cardo';
+  font-family: "Cardo";
   height: 80vh;
   overflow-y: auto;
   /* Enable vertical scroll */
@@ -509,6 +531,11 @@ body::before {
   scrollbar-color: #985050 #f9f9f9;
   /* For Firefox: Scrollbar color */
   font-size: 14px;
+
+  background: rgba(255, 255, 255, 0.5);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(6.5px); */
 }
 
 .wwr-block {
@@ -532,6 +559,7 @@ body::before {
   margin: 1em 0;
   font-size: 1.1em;
   line-height: 1.6;
+  font-style: italic;
 }
 
 .quote-container cite {
@@ -541,6 +569,7 @@ body::before {
   color: #7a2a2a;
   text-align: right;
   font-weight: bold;
+  font-style: normal;
   /* Makes the cite text bold */
 }
 
@@ -553,7 +582,6 @@ body::before {
 }
 
 /* Style the scrollbars */
-
 
 /* For Chrome, Safari, and Edge */
 .quote-container::-webkit-scrollbar {
@@ -614,14 +642,13 @@ height: 60%; */
 
 /* New Icon ends here */
 
-
 .discoursemobile {
   padding: 5%;
   background-color: #e8e1d7;
   border-radius: 20px;
   color: #7a2a2a;
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
-  font-family: 'Cardo';
+  font-family: "Cardo";
   height: 85vh;
   overflow-y: auto;
   /* Enable vertical scroll */
@@ -630,7 +657,8 @@ height: 60%; */
   scrollbar-color: #985050 #f9f9f9;
   /* For Firefox: Scrollbar color */
   font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .audioItem {
@@ -639,7 +667,8 @@ height: 60%; */
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #e5d8c4;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .titleContainer {
@@ -696,7 +725,7 @@ height: 60%; */
 
 .scripturetitle {
   text-align: center;
-  color: #7A2A2A;
+  color: #7a2a2a;
 }
 
 .hover-text-button {
@@ -712,7 +741,8 @@ height: 60%; */
   background-color: #0056b3;
 }
 
-.abouttoscripture {}
+.abouttoscripture {
+}
 
 /* Footer styling */
 .site-footer {
@@ -722,13 +752,14 @@ height: 60%; */
   /* Text color */
   text-align: center;
   padding: 10px 0;
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
   font-size: 14px;
   position: absolute;
   /* position: relative; */
   bottom: 0;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px -3px 6px;
+  z-index: 1999;
 }
 
 .footer-content {
@@ -804,7 +835,6 @@ left: 0; */
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     transform: scale(1);
@@ -868,8 +898,7 @@ left: 0; */
 .modal-title {
   text-align: center;
   width: 100%;
-  color: #7A2A2A;
-  ;
+  color: #7a2a2a;
 }
 
 .modal-body {
@@ -918,9 +947,6 @@ left: 0; */
   cursor: pointer;
 }
 
-
-
-
 /* Tooltip container */
 .area-tooltip {
   position: relative;
@@ -955,13 +981,12 @@ left: 0; */
 }
 
 .legends {
-  font-family: 'Cardo' !important;
+  font-family: "Cardo" !important;
   font-size: 12px;
   color: #7a2a2a;
 }
 
 /* model styling ends here*/
-
 
 .legend-item {
   margin-bottom: 5px;
@@ -998,9 +1023,11 @@ left: 0; */
   align-items: center;
   width: 50%;
   height: 50%;
-  background-image: radial-gradient(ellipse 50% 35% at 50% 50%,
-      #6b1839,
-      transparent);
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #6b1839,
+    transparent
+  );
   transform: translate(-50%, -50%);
   letter-spacing: 2;
   left: 50%;
@@ -1020,7 +1047,6 @@ left: 0; */
 }
 
 @keyframes blink {
-
   0%,
   22%,
   36%,
@@ -1243,3 +1269,38 @@ left: 0; */
 .home_bible:hover {
   margin-left: 0;
 } */
+
+/* Floating BS logo starts here */
+.floating-button {
+  position: fixed;
+  /* bottom: 10px; */
+  top: 90vh;
+  right: 10px;
+  /* left: 10px; */
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  background: url("./Assets/Alogo.jpg") no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px rgb(226 190 143);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.floating-button:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05); /* Slightly enlarges */
+}
+/* Make it slightly smaller on smaller screens */
+@media (max-width: 600px) {
+  .floating-button {
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+/* Floating BS logo ends here */
