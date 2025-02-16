@@ -5,7 +5,6 @@ const urlParams = new URLSearchParams(queryString);
 const searchdata = urlParams.get('module');
 const searchkeyword = urlParams.get('srch');
 let apiUrl = "";
-debugger
 // const search = 'Technology';
 // const apiUrl = 'http://localhost:5000/api/defaultvideos';
 //const apiUrl = 'http://localhost:5000/api/videos?search=' + searchdata;
@@ -186,11 +185,13 @@ fetch(apiUrl)
     else {
       document.getElementById("titleAudioWidget").style.display = "none";
       document.getElementById("grid").style.display = "block";
+      debugger;
       new gridjs.Grid({
+        search: true,
         width: "100%",
         columns: [
           {
-            name: 'Title', // Column title
+            name: updatesectiontitle(searchdata), // Column title
             sort: true,
             resizable: true,
             formatter: (cell, row) => {
@@ -226,7 +227,7 @@ fetch(apiUrl)
             }
           },
           {
-            name: 'Audio', // Change header title for 'Audio Preview' column
+            name: 'AUDIO', // Change header title for 'Audio Preview' column
             sort: false,
             resizable: true,
             formatter: (cell) => gridjs.html(`
@@ -236,7 +237,7 @@ fetch(apiUrl)
             </audio>`)
           },
           {
-            name: 'Year',  // Change header title for 'Timestamp' column
+            name: 'YEAR',  // Change header title for 'Timestamp' column
             sort: true
           }
         ],
@@ -387,96 +388,127 @@ function updatesectiontitle(sectionname) {
 
   if (sectionname == "recent") {
     document.getElementById("discourcesectionname").textContent = "Recent Discources";
+    return "Recent Discources";
   }
   else if (sectionname == "basicstudies") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - BASICS 53";
+    return "DISCOURCES - BASICS 53";
   }
   else if (sectionname == "kingdommessage") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - KINGDOM MESSAGE";
+    return "DISCOURCES - KINGDOM MESSAGE";
   }
   else if (sectionname == "characterdevelopment") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - CHARACTER DEVELOPMENT";
+    return "DISCOURCES - CHARACTER DEVELOPMENT";
   }
   else if (sectionname == "memorial") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - MEMORIAL";
+    return "DISCOURCES - MEMORIAL";
   }
   else if (sectionname == "prophetic") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - PROPHETIC";
+    return "DISCOURCES - PROPHETIC";
   }
   else if (sectionname == "spiritual") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - SPIRITUAL";
+    return "DISCOURCES - SPIRITUAL";
   }
   else if (sectionname == "typeantitype") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - TYPE AND ANTITYPE";
+    return "DISCOURCES - TYPE AND ANTITYPE";
   }
   else if (sectionname == "paneldiscussions") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - PANEL DISCUSSIONS";
+    return "DISCOURCES - PANEL DISCUSSIONS";
   }
   else if (sectionname == "testimonial") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - TESTIMONAL";
+    return "DISCOURCES - TESTIMONAL";
   }
   else if (sectionname == "vesperservice") {
     document.getElementById("discourcesectionname").textContent = "DISCOURCES - VESPER SERVICE";
+    return "DISCOURCES - VESPER SERVICE";
   }
   else if (sectionname == "thebattleofarmageddon") {
     document.getElementById("discourcesectionname").textContent = "VOLUME STUDY 4 - THE BATTLE OF ARMAGEDDON";
+    return "VOLUME STUDY 4 - THE BATTLE OF ARMAGEDDON";
   }
   else if (sectionname == "thenewcreation") {
     document.getElementById("discourcesectionname").textContent = "VOLUME STUDY 6 - THE NEW CREATION";
+    return "VOLUME STUDY 6 - THE NEW CREATION";
   }
   else if (sectionname == "lifeofjesuschrist") {
     document.getElementById("discourcesectionname").textContent = "BOOK STUDY - LIFE OF JESUS CHRIST";
+    return "BOOK STUDY - LIFE OF JESUS CHRIST";
   }
   else if (sectionname == "lifeofdavid") {
     document.getElementById("discourcesectionname").textContent = "BOOK STUDY - LIFE OF DAVID";
+    return "BOOK STUDY - LIFE OF DAVID";
   }
   else if (sectionname == "orderanddisipline") {
     document.getElementById("discourcesectionname").textContent = "BOOK STUDY - ORDER AND DISCIPLINE";
+    return "BOOK STUDY - ORDER AND DISCIPLINE";
   }
   else if (sectionname == "wildernesswandering") {
     document.getElementById("discourcesectionname").textContent = "BOOK STUDY - WILDERNESS WANDERING";
+    return "BOOK STUDY - WILDERNESS WANDERING";
   }
   else if (sectionname == "christianconcepts") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - CHRISTIAN CONCEPTS";
+    return "TOPICAL STUDY - CHRISTIAN CONCEPTS";
   }
   else if (sectionname == "ecclesiaelection") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - ECCLESIA ELECTION";
+    return "TOPICAL STUDY - ECCLESIA ELECTION";
   }
   else if (sectionname == "endtimeprophecy") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - END TIME PROPHECY";
+    return "TOPICAL STUDY - END TIME PROPHECY";
   }
   else if (sectionname == "goldenrule") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - GOLDEN RULE";
+    return "TOPICAL STUDY - GOLDEN RULE";
   }
   else if (sectionname == "gospelintheheaven") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - GOSPEL IN THE HEAVEN";
+    return "TOPICAL STUDY - GOSPEL IN THE HEAVEN";
   }
   else if (sectionname == "israel") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - ISRAEL";
+    return "TOPICAL STUDY - ISRAEL";
   }
   else if (sectionname == "pandemic") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - PANDEMIC";
+    return "TOPICAL STUDY - PANDEMIC";
   }
   else if (sectionname == "parables") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - PARABLES";
+    return "TOPICAL STUDY - PARABLES";
   }
   else if (sectionname == "perfectingholiness") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - PERFECTING HOLINESS";
+    return "TOPICAL STUDY - PERFECTING HOLINESS";
   }
   else if (sectionname == "revelation") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - REVELATION";
+    return "TOPICAL STUDY - REVELATION";
   }
   else if (sectionname == "sin") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - SIN";
+    return "TOPICAL STUDY - SIN";
   }
   else if (sectionname == "spiritbegettal") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - SPIRIT BEGETTAL";
+    return "TOPICAL STUDY - SPIRIT BEGETTAL";
   }
   else if (sectionname == "understandinggreattribulation") {
     document.getElementById("discourcesectionname").textContent = "TOPICAL STUDY - UNDERSTANDING GREAT TRIBULATION";
+    return "TOPICAL STUDY - UNDERSTANDING GREAT TRIBULATION";
   }
   else {
     document.getElementById("discourcesectionname").textContent = searchdata;
+    return searchdata;
   }
 
 }

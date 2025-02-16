@@ -1304,3 +1304,9 @@ left: 0; */
 }
 
 /* Floating BS logo ends here */
+/* Add grid filter to the right side starts here */
+.gridjs-head {
+  display: flex;
+  justify-content: flex-end;
+}
+/* Add grid filter to the right side ends here */
