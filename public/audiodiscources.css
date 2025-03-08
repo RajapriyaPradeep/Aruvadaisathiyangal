@@ -1,7 +1,7 @@
 #grid {
   /* width: 98%; */
   margin: auto;
-  font-family: 'Cardo';
+  font-family: "Cardo";
   /* max-height: 65%;  */
   /* overflow-y: auto;
     overflow-x: auto;   */
@@ -21,7 +21,7 @@ td.gridjs-td {
 }
 
 th.gridjs-th {
-  background-color: #7A2A2A !important;
+  background-color: #7a2a2a !important;
   padding: 1% !important;
   border: 1px solid #7a2a2a !important;
 }
@@ -45,8 +45,8 @@ button.gridjs-sort {
   /* Stick to the bottom */
   z-index: 2;
   /* Stay above other elements */
-  background-color: #7A2A2A !important
-    /* Ensure visibility */
+  background-color: #7a2a2a !important;
+  /* Ensure visibility */
 }
 
 .table.gridjs-table {
@@ -54,7 +54,7 @@ button.gridjs-sort {
 }
 
 .gridjs-td {
-  color: #7A2A2A;
+  color: #7a2a2a;
 }
 
 /* Optional: style the scrollbars */
@@ -103,3 +103,26 @@ button.gridjs-sort {
   cursor: pointer;
   /* Indicate interactivity when hovered */
 }
+/* floating icon starts here */
+.floating-cicon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Changed from right to left */
+  width: 50px;
+  height: 50px;
+  /* background-color: #007bff; */
+  /* color: white; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 1px 1px 6px 3px #c0a682;
+}
+
+.floating-cicon:hover {
+  font-size: 40px;
+}
+
+/* floating icon ends here*/

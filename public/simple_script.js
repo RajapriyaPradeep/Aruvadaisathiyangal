@@ -1,15 +1,15 @@
-const width = window.innerWidth;
+// const width = window.innerWidth;
 
-if (width <= 480 && ((localStorage.getItem("viewmode") == null) || localStorage.getItem("viewmode") == undefined)) {
-    localStorage.setItem("viewmode", "mobile");
-}
+// if (width <= 480 && ((localStorage.getItem("viewmode") == null) || localStorage.getItem("viewmode") == undefined)) {
+//     localStorage.setItem("viewmode", "mobile");
+// }
 
-if (width <= 480) {
+// if (width <= 480) {
 
-}
-else {
-    document.getElementById("footersec").style.display = "none";
-}
+// }
+// else {
+//     document.getElementById("footersec").style.display = "none";
+// }
 
 var Dropdowns = function () {
     var t = $(".dropup, .dropright, .dropdown, .dropleft")
