@@ -184,7 +184,7 @@ function fetchaudiodiscourses() {
             {
               name: updatesectiontitle(searchdata),
               sort: true,
-              resizable: true,
+              // resizable: true,
               formatter: (cell, row) => {
                 const title = cell.topic;
                 const audioUrl = row.cells[1].data;
@@ -209,7 +209,7 @@ function fetchaudiodiscourses() {
             {
               name: 'AUDIO',
               sort: false,
-              resizable: true,
+              // resizable: true,
               formatter: (cell) => gridjs.html(`
                 <audio controls style="height: 30px; border:1px solid #7a2a2a; border-radius:25px;">
                   <source src="${cell}" type="audio/mp3">
@@ -258,7 +258,7 @@ function toggleViewMode() {
 function updatesectiontitle(sectionname) {
 
   if (sectionname == "recent") {
-    document.getElementById("discourcesectionname").textContent = "Recent Discources";
+    document.getElementById("discourcesectionname").textContent = "RECENT DISCOURCES";
     return "Recent Discources";
   }
   else if (sectionname == "basicstudies") {
