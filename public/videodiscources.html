@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Video Popup</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .video-thumbnail {
+        cursor: pointer;
+        width: 200px;
+        margin: 10px;
+      }
+      #popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+      }
+      #popup iframe {
+        width: 80%;
+        height: 80%;
+      }
+      #popup .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube Video Thumbnails</h1>
+
+    <div id="video-thumbnails">
+      <!-- Video thumbnails will be loaded here -->
+    </div>
+
+    <!-- Popup Modal for YouTube Video -->
+    <div id="popup">
+      <span class="close-btn" onclick="closePopup()">X</span>
+      <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="videodiscources.js"></script>
+  </body>
+</html>

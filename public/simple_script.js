@@ -319,6 +319,8 @@ function navplaylist(modulename) {
         window.location.href = 'https://aruvadaisathiyangal.in/index.html';
     else if (modulename == "aboutus")
         window.location.href = 'https://aruvadaisathiyangal.in/aboutus.html';
+    else if (modulename == "youtubevideos")
+        window.location.href = 'https://aruvadaisathiyangal.in/youtubediscourses.html';
     else
         window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?module=' + modulename;
     // window.location.href = 'file:///E:/NC/Task/video-listing-app/audiolist.html?module=' + modulename;
