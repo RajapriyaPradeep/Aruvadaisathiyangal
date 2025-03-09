@@ -1,16 +1,17 @@
 // List of YouTube video IDs to display
-const videoimgpair = [{ imgid: 'proper.png', title: "Proper seeking of divine favour", videoid: 'pGY9SdGrRWg?si=I9tIr22Kynvb75jl' },
-{ imgid: 'gospelinheaven.jpg', title: "Gospel in Heavens", videoid: 'ZbLAq75sSNE?si=bQdyuyoiLVZIkE_j' },
-{ imgid: 'santification.png', title: "Perfecting sanctification with Godly fear", videoid: '3btLNYYEgXM?si=CY2AfYiIY2qkP3vL' },
-{ imgid: 'internationconvention.png', title: "One day Convention - Apostle James", videoid: 'byWAsAduQRQ?si=EiZgEzG1laTh6PGo' },
-{ imgid: 'overcoming.png', title: "Internation Convention - Overcoming", videoid: 'aR0CK28qfis?si=_n1qvsG2F7cZiKqI' },
-{ imgid: 'prememorialconvention.png', title: "Prememorial Convention", videoid: 'M75fVWj9oAM?si=r27_SU-VlMWhomZ1' },
-{ imgid: 'callingelectsure.png', title: "Making our calling and election sure", videoid: 'QW5B0-RYRXc?si=QluH9MMnktIESvaO' },
-{ imgid: 'onedayconventionnagercoil.png', title: "Clean and unclean creatures", videoid: 'hyVQZvJQVDM?si=j_tZu29amec2pG9U' },
-{ imgid: 'trialofChrist.png', title: "Trials of Jesus Christ", videoid: 'nQbmXtNdrlY?si=CVPwOyxRGERL54_V' },
-// { imgid: 'bread-wine-religious-ceremony.jpg', title: "", videoid: 'C2VrI1b6evY?si=gHgddrzdTX7uUEj0' },
-{ imgid: 'bread-wine-religious-ceremony.jpg', title: "Memorial at the end of the age", videoid: '1Grs8Qc0j8E?si=DW2UVm9V-ZuzstSA' },
-{ imgid: 'Memorialmeditation.png', title: "Memorial meditation", videoid: 'kteTv28w6KI?si=CqkvRtD4UhsaJeRG' }
+const videoimgpair = [
+    { imgid: 'thewordmadeflesh.png', title: "The word was made flesh", videoid: 'Ni7bOEQVsZc?si=Rcstg00vt4C3EvnP' },
+    { imgid: 'proper.png', title: "Proper seeking of divine favour", videoid: 'pGY9SdGrRWg?si=I9tIr22Kynvb75jl' },
+    { imgid: 'gospelinheaven.jpg', title: "Gospel in Heavens", videoid: 'ZbLAq75sSNE?si=bQdyuyoiLVZIkE_j' },
+    { imgid: 'santification.png', title: "Perfecting sanctification with Godly fear", videoid: '3btLNYYEgXM?si=CY2AfYiIY2qkP3vL' },
+    { imgid: 'internationconvention.png', title: "One day Convention - Apostle James", videoid: 'byWAsAduQRQ?si=EiZgEzG1laTh6PGo' },
+    { imgid: 'overcoming.png', title: "Internation Convention - Overcoming", videoid: 'aR0CK28qfis?si=_n1qvsG2F7cZiKqI' },
+    { imgid: 'prememorialconvention.png', title: "Prememorial Convention", videoid: 'M75fVWj9oAM?si=r27_SU-VlMWhomZ1' },
+    { imgid: 'callingelectsure.png', title: "Making our calling and election sure", videoid: 'QW5B0-RYRXc?si=QluH9MMnktIESvaO' },
+    { imgid: 'onedayconventionnagercoil.png', title: "Clean and unclean creatures", videoid: 'hyVQZvJQVDM?si=j_tZu29amec2pG9U' },
+    { imgid: 'trialofChrist.png', title: "Trials of Jesus Christ", videoid: 'nQbmXtNdrlY?si=CVPwOyxRGERL54_V' },
+    { imgid: 'bread-wine-religious-ceremony.jpg', title: "Memorial at the end of the age", videoid: '1Grs8Qc0j8E?si=DW2UVm9V-ZuzstSA' },
+    { imgid: 'Memorialmeditation.png', title: "Memorial meditation", videoid: 'kteTv28w6KI?si=CqkvRtD4UhsaJeRG' }
 
 ];  // Replace these with actual video IDs
 // const videoimgpair = [{ imgid: 'bread-wine-religious-ceremony.jpg', title: "Pre memorial convention", videoid: 'https://www.youtube.com/live/pGY9SdGrRWg?si=I9tIr22Kynvb75jl' },
