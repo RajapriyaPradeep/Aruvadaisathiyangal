@@ -13,7 +13,8 @@ const videoimgpair = [
     { imgid: 'internationconvention.png', title: "One day Convention - Apostle James", videoid: 'byWAsAduQRQ?si=EiZgEzG1laTh6PGo' },
     { imgid: 'overcoming.png', title: "Internation Convention - Overcoming", videoid: 'aR0CK28qfis?si=_n1qvsG2F7cZiKqI' },
     { imgid: 'prememorialconvention.png', title: "Prememorial Convention", videoid: 'M75fVWj9oAM?si=r27_SU-VlMWhomZ1' },
-    { imgid: 'bread-wine-religious-ceremony.jpg', title: "International Bible Students Pre Memorial Convention", videoid: 'Jsn2Lz8517o?si=Lqw1z-1zlJ1HTg8o' }
+    { imgid: 'bread-wine-religious-ceremony.jpg', title: "International Bible Students Pre Memorial Convention", videoid: 'Jsn2Lz8517o?si=Lqw1z-1zlJ1HTg8o' },
+    { imgid: 'paneldiscussionpsalms83.png', title: "Panel Discussion - Psalms 83", videoid: 'iTsajhFSGKg?si=C8D6thfvv6AEFvKG' }
 
 ];  // Replace these with actual video IDs
 // const videoimgpair = [{ imgid: 'bread-wine-religious-ceremony.jpg', title: "Pre memorial convention", videoid: 'https://www.youtube.com/live/pGY9SdGrRWg?si=I9tIr22Kynvb75jl' },
