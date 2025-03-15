@@ -66,6 +66,7 @@ const videoimgpair = [
     { imgid: 'santification.png', section: "Memorial Studies", title: "Perfecting sanctification with Godly fear", videoid: '3btLNYYEgXM?si=CY2AfYiIY2qkP3vL' },
     { imgid: 'callingelectsure.png', section: "New Creature", title: "Making our calling and election sure", videoid: 'QW5B0-RYRXc?si=QluH9MMnktIESvaO' },
     { imgid: 'onedayconventionnagercoil.png', section: "Spiritual", title: "Clean and unclean creatures", videoid: 'hyVQZvJQVDM?si=j_tZu29amec2pG9U' },
+    { imgid: 'sin.png', section: "Spiritual", title: "Sin - Types and Definitions", videoid: 'oMT1Up9mJjg?si=BzSmx_vN_MA8AhYa' },
     { imgid: 'trialofChrist.png', section: "Memorial Studies", title: "Trials of Jesus Christ", videoid: 'nQbmXtNdrlY?si=CVPwOyxRGERL54_V' },
     { imgid: 'bread-wine-religious-ceremony.jpg', section: "Memorial Studies", title: "Memorial at the end of the age", videoid: '1Grs8Qc0j8E?si=DW2UVm9V-ZuzstSA' },
     { imgid: 'Memorialmeditation.png', section: "Memorial Studies", title: "Memorial meditation", videoid: 'kteTv28w6KI?si=CqkvRtD4UhsaJeRG' },
