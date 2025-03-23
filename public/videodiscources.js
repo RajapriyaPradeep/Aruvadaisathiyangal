@@ -59,6 +59,7 @@ function loadVideoThumbnails() {
 
 // Keep the rest of your existing code (openPopup, closePopup, etc.)
 const videoimgpair = [
+    { imgid: 'troublescomfort.png', section: "Memorial Studies", title: "Troubles and Comfort", videoid: 'ximF0endJnw?si=vAGlC1uHOnsO6z4i' },
     { imgid: 'thewordmadeflesh.png', section: "Memorial Studies", title: "The word was made flesh", videoid: 'Ni7bOEQVsZc?si=Rcstg00vt4C3EvnP' },
     { imgid: 'hourofdarkness.png', section: "Memorial Studies", title: "39 hours of darkness", videoid: 'EXHZh9-HdCo?si=4kGpVPuUetev6bd2' },
     { imgid: 'proper.png', section: "Memorial Studies", title: "Proper seeking of divine favour", videoid: 'pGY9SdGrRWg?si=I9tIr22Kynvb75jl' },
