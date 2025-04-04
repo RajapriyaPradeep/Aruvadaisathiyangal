@@ -76,6 +76,7 @@ const videoimgpair = [
     { imgid: 'overcoming.png', section: "Conventions", title: "Internation Convention - Overcoming", videoid: 'aR0CK28qfis?si=_n1qvsG2F7cZiKqI' },
     { imgid: 'prememorialonvention.png', section: "Memorial Studies", title: "Pre Memorial Convention - 2024", videoid: 'fH9NAYdx-oo?si=9W8tF3asd2VSjiqT' },
     { imgid: 'prememorialconvention.png', section: "Memorial Studies", title: "Prememorial Convention", videoid: 'M75fVWj9oAM?si=r27_SU-VlMWhomZ1' },
+    { imgid: 'vellorememorial.png', section: "Memorial Studies", title: "Nature of the cup that did not pass", videoid: 'U4Z3YGlguWg?si=CbcTFRT5OnT4SxEJ' },
     { imgid: 'bread-wine-religious-ceremony.jpg', section: "Memorial Studies", title: "International Bible Students Pre Memorial Convention", videoid: 'Jsn2Lz8517o?si=Lqw1z-1zlJ1HTg8o' },
     { imgid: 'paneldiscussionpsalms83.png', section: "Panel Discussion", title: "Panel Discussion - Psalms 83", videoid: 'iTsajhFSGKg?si=C8D6thfvv6AEFvKG' },
     { imgid: 'cc1.png', section: "Christian Concepts", title: "Christian Concepts - Truth", videoid: '32wmlPhibfI?si=cSLRQRcLpqnIV2zK' },
