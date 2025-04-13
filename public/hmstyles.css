@@ -39,7 +39,8 @@ body::before {
   width: 100%;
   height: 100%;
   background: url("./Assets/harvestwheats.png") no-repeat center center/cover;
-  opacity: 0.7;
+  /* opacity: 0.7; */
+  opacity: 0.85;
   z-index: -1;
   /* Place behind the content */
 }
@@ -260,7 +261,7 @@ body::before {
     line-height: 1.5em;
     color: #721c24;
     font-size: larger;
-    background-color: #f1e3c3;
+    background-color: #e7dbca;
     border-radius: 7px;
   }
 }
@@ -498,7 +499,11 @@ body::before {
   max-height: 65px;
   max-width: auto;
   cursor: pointer !important;
-  filter: brightness(0.7);
+  /* filter: brightness(0.7); */
+  filter: drop-shadow(2px 4px 6px #e7dbca);
+  /* border-radius: 10px 100px / 120px; */
+  border-radius: 40px 999em 999em 40px;
+  background-color: #e7dbca;
 }
 
 /* project title ends here */
@@ -1079,11 +1084,13 @@ left: 0; */
 }
 
 .flicker {
-  animation: shine 2s forwards, blink 3s 2s infinite;
+  animation: shine 2s forwards;
+  /* animation: shine 2s forwards, blink 3s 2s infinite; */
 }
 
 .fast-flicker {
-  animation: shine 2s forwards, blink 10s 1s infinite;
+  animation: shine 2s forwards;
+  /* animation: shine 2s forwards, blink 10s 1s infinite; */
 }
 
 @keyframes shine {
