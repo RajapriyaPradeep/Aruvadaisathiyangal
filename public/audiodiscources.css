@@ -28,6 +28,7 @@ th.gridjs-th {
 
 th.gridjs-th .gridjs-th-content {
   color: #e5d8c4 !important;
+  text-align: center;
 }
 
 button.gridjs-sort {

@@ -1314,6 +1314,6 @@ left: 0; */
 /* Add grid filter to the right side ends here */
 .input.gridjs-input {
   padding-left: 10px;
-  background-color: #e7dbca;
+  background-color: #e7dbca !important;
   color: #721c24 !important;
 }
