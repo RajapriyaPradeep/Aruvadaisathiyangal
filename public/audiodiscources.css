@@ -127,3 +127,243 @@ button.gridjs-sort {
 }
 
 /* floating icon ends here*/
+
+/* Card Design starts here */
+.card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-top: 5%;
+}
+
+/* .audio-card {
+  background: #fff8f0;
+  border: 2px solid #7a2a2a;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s;
+} */
+
+.audio-card {
+  position: relative;
+  /* background-color: #fff8f0; */
+  padding-top: 70px; /* So content doesn't collide with the circle */
+  /* border: 2px solid #7a2a2a; */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  text-align: center;
+  margin-top: 12%;
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  background: rgba(0, 0, 0, 0.1);
+  /* border: 2px solid #ffffff; */
+  /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  min-height: 340px; /* tweak based on your layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-divider {
+  width: 40px;
+  height: 2px;
+  background: #7a2a2a;
+  margin: 0.3rem auto;
+  border: none;
+}
+
+.audio-player {
+  background: rgba(122, 42, 42, 0.15); /* soft translucent brown */
+  border-radius: 2rem;
+  padding: 0.3rem 1rem;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.audio-player audio {
+  width: 100%;
+  background-color: transparent; /* transparent to avoid white */
+}
+
+.audio-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.1),
+    rgba(50, 50, 50, 0.2)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.audio-card > * {
+  position: relative;
+  z-index: 2;
+}
+.circle-icon {
+  width: 120px;
+  height: 120px;
+  /* background-color: #7a2a2a; */
+  border-radius: 50%;
+  position: absolute;
+  top: -50px; /* half of the height to overlap */
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: 4px solid #fff8f0; */
+  /* Optional white outline */
+  z-index: 10;
+}
+.audio-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+  filter: brightness(1.03);
+}
+
+.audio-card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.audio-card .image {
+  background: #7a2a2a;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.audio-card .card-details h3 {
+  font-size: 16px;
+  text-align: center;
+  padding: 5px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  color: #7a2a2a;
+  /* font-size: 1rem; */
+  width: 90%;
+  margin: 0 auto;
+  /* font-weight: 500; */
+  word-break: break-word;
+}
+.audio-card h3,
+.audio-card p {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  font-size: 1.1rem;
+  /* color: #7a2a2a; */
+
+  color: #3b0a0a;
+  /* text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3); */
+}
+.audio-card .card-details p {
+  padding: 5px;
+}
+
+.audio-card .card-details span {
+  font-size: 12px;
+  color: #963535;
+  padding: 5px;
+}
+
+.audio-card .audio-player {
+  margin: 0.8rem 0;
+  padding: 5px;
+}
+
+.audio-card audio {
+  width: 100%;
+}
+
+.card-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  opacity: 1;
+  transform: translateY(0);
+  /* transform: translateY(10px); */
+  /* transition: opacity 0.3s ease, transform 0.3s ease; */
+}
+
+/* .audio-card:hover .card-icons {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+.card-icons li a {
+  color: #7a2a2a;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.card-icons li a:hover {
+  color: #963535;
+}
+
+/* Always show icons on mobile */
+@media (max-width: 480px) {
+  .card-icons {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.scrollable-wrapper {
+  scroll-behavior: smooth;
+  height: calc(
+    100vh - 150px
+  ); /* Adjust 150px if your navbar/footer take more/less */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 10px; /* Prevent audio bar cutoff */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.scrollable-wrapper::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Optional: Firefox scrollbar hide */
+.scrollable-wrapper {
+  scrollbar-width: none; /* Firefox */
+}
+body {
+  overflow: hidden;
+}
+
+.circle-icon img.circle-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* Card Design ends here */

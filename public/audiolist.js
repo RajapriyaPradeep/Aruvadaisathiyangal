@@ -10,16 +10,15 @@ let apiUrl = "";
 const width = window.innerWidth;
 
 window.onload = function () {
-  debugger
-  if (width <= 480 && ((localStorage.getItem("viewmode") == null) || localStorage.getItem("viewmode") == undefined)) {
-    localStorage.setItem("viewmode", "mobile");
-  }
-  if (width <= 480) {
+  // if (width <= 480 && ((localStorage.getItem("viewmode") == null) || localStorage.getItem("viewmode") == undefined)) {
+  //   localStorage.setItem("viewmode", "mobile");
+  // }
+  // if (width <= 480) {
 
-  }
-  else {
-    document.getElementById("devicemode").style.display = "none";
-  }
+  // }
+  // else {
+  //   // document.getElementById("devicemode").style.display = "none";
+  // }
   fetchaudiodiscourses();
 }
 // const search = 'Technology';
@@ -54,359 +53,101 @@ function fetchaudiodiscourses() {
     .then(data => {
       const width = window.innerWidth;
 
-      if (width <= 480 && (localStorage.getItem("viewmode") == "mobile")) {
-        document.getElementById("grid").style.display = "none";
-        document.getElementById("titleAudioWidget").style.display = "block";
-        //for mobile version
+      // if (width <= 480 && (localStorage.getItem("viewmode") == "mobile")) {
+      document.getElementById("grid").style.display = "none";
+      document.getElementById("titleAudioWidget").style.display = "block";
+      //for mobile version
+      const widgetContainer = document.getElementById("titleAudioWidget");
+      // Function to render audio items
+      function renderAudioItems(filteredData) {
         const widgetContainer = document.getElementById("titleAudioWidget");
-        // Function to render audio items
-        function renderAudioItems(filteredData) {
-          widgetContainer.innerHTML = ""; // Clear existing items
+        widgetContainer.innerHTML = "";
 
-          // Check if there are no records to display
-          if (filteredData.length === 0) {
-            const noRecordsMessage = document.createElement("div");
-            noRecordsMessage.className = "noRecordsMessage";
-            noRecordsMessage.textContent = "No records available";
-            widgetContainer.appendChild(noRecordsMessage);
-            return; // Exit the function if no records to display
-          }
-
-          filteredData.forEach(item => {
-            const audioItem = document.createElement("div");
-            //  audioItem.className = "audioItem";
-
-            // Title container with icons
-            const titleContainer = document.createElement("div");
-            titleContainer.className = "titleContainermobile";
-
-            //  // Title text
-            //  const titleDiv = document.createElement("div");
-            //  titleDiv.className = "audioTitle";
-            //  titleDiv.textContent = item.topic;
-
-            // Title text with custom tooltip
-            const titleDiv = document.createElement("div");
-            titleDiv.className = "audioTitle";
-            titleDiv.textContent = item.topic;
-
-            // Tooltip element
-            let tooltip;
-            // Function to show the tooltip
-            const showTooltip = () => {
-              if (!tooltip) {
-                tooltip = document.createElement("div");
-                tooltip.classList.add("custom-tooltip");
-                tooltip.innerText = item.tamil;
-                document.body.appendChild(tooltip);
-              }
-
-              // Get position of titleDiv relative to viewport
-              const rect = titleDiv.getBoundingClientRect();
-              let tooltipLeft = rect.left + window.scrollX;
-              let tooltipTop = rect.top + window.scrollY - tooltip.offsetHeight - 5;
-
-              // Adjust position to ensure tooltip stays in viewport
-              const viewportWidth = window.innerWidth;
-              const viewportHeight = window.innerHeight;
-              const tooltipMargin = 10;
-
-              if (tooltipLeft < tooltipMargin) {
-                tooltipLeft = tooltipMargin;
-              }
-              if (tooltipLeft + tooltip.offsetWidth > viewportWidth - tooltipMargin) {
-                tooltipLeft = viewportWidth - tooltip.offsetWidth - tooltipMargin;
-              }
-              if (tooltipTop < tooltipMargin) {
-                tooltipTop = rect.top + window.scrollY + rect.height + 5;
-              }
-              if (tooltipTop + tooltip.offsetHeight > viewportHeight - tooltipMargin) {
-                tooltipTop = viewportHeight - tooltip.offsetHeight - tooltipMargin;
-              }
-
-              // Set tooltip position and styles
-              tooltip.style.position = "absolute";
-              tooltip.style.left = `${tooltipLeft}px`;
-              tooltip.style.top = `${tooltipTop}px`;
-              tooltip.style.backgroundColor = "#7a2a2a";
-              tooltip.style.color = "#f9f9f9";
-              tooltip.style.padding = "5px 10px";
-              tooltip.style.borderRadius = "5px";
-              tooltip.style.fontSize = "12px";
-              tooltip.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
-            };
-
-            // Function to hide the tooltip
-            const hideTooltip = () => {
-              if (tooltip && tooltip.parentElement) {
-                tooltip.parentElement.removeChild(tooltip);
-                tooltip = null;
-              }
-            };
-
-            // Show tooltip on hover for desktop
-            titleDiv.addEventListener("mouseover", showTooltip);
-            titleDiv.addEventListener("mouseleave", hideTooltip);
-
-            // Show tooltip on click for mobile
-            titleDiv.addEventListener("click", showTooltip);
-
-            // Append title and icons to the title container
-            titleContainer.appendChild(titleDiv);
-
-            // Share icon (PDF link)
-            if (item.pdflink) {
-              const shareIcon = document.createElement("i");
-              shareIcon.className = "fas fa-file-pdf icon mobileicon";
-              shareIcon.title = "Pdf";
-              shareIcon.addEventListener("click", () => {
-                window.open(item.pdflink, "_blank");
-              });
-              titleContainer.appendChild(shareIcon);
-            }
-
-
-            // Download icon
-            const downloadIcon = document.createElement("i");
-            downloadIcon.className = "fas fa-download icon mobileicon";
-            downloadIcon.title = "Download";
-            downloadIcon.addEventListener("click", () => {
-              window.open(item.audioUrl, "_blank");
-            });
-            titleContainer.appendChild(downloadIcon);
-
-
-            // Share icon (PPT link)
-            if (item.pptlink) {
-              const pptIcon = document.createElement("i");
-              pptIcon.className = "fas fa-file-pdf icon mobileicon";
-              // <i class="fa-solid fa-file-powerpoint"></i>
-              pptIcon.title = "PPT";
-              pptIcon.addEventListener("click", () => {
-                window.open(item.pdflink, "_blank");
-              });
-              titleContainer.appendChild(pptIcon);
-            }
-            // Audio control
-            const audioControl = document.createElement("audio");
-            audioControl.className = "audioControl audioControlmobile";
-            audioControl.controls = true;
-
-            const source = document.createElement("source");
-            source.src = item.audioUrl;
-            source.type = "audio/mp3";
-            audioControl.appendChild(source);
-
-            // Append titleContainer and audio control to audio item
-            audioItem.appendChild(titleContainer);
-            audioItem.appendChild(audioControl);
-
-            widgetContainer.appendChild(audioItem);
-          });
+        if (filteredData.length === 0) {
+          const noRecordsMessage = document.createElement("div");
+          noRecordsMessage.className = "noRecordsMessage";
+          noRecordsMessage.textContent = "No records available";
+          widgetContainer.appendChild(noRecordsMessage);
+          return;
         }
 
-        // Initial render
-        renderAudioItems(data);
-      }
-      else {
-        document.getElementById("titleAudioWidget").style.display = "none";
-        document.getElementById("grid").style.display = "block";
+        filteredData.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "audio-card";
 
-        // Clear the grid before re-rendering
-        const gridContainer = document.getElementById("grid");
-        gridContainer.innerHTML = ""; // Clear the grid container
-        // Initialize Grid.js with new data
-        new gridjs.Grid({
-          search: true,
-          width: "100%",
-          columns: [
-            {
-              name: updatesectiontitle(searchdata), // Column title
-              sort: true,
-              resizable: true,
-              formatter: (cell, row) => {
-                const title = cell.topic;
-                const audioUrl = row.cells[1].data; // Audio download link
-                // const pdfLink = row.cells[3].data;   // PDF link
-                const pdfLink = cell.pdflink;
-                const pptlink = cell.pptlink;
-                const tamil = cell.tamil;
+          // Top circle image (overlapping)
+          const circleIcon = document.createElement("div");
+          circleIcon.className = "circle-icon";
+          if (searchdata != null)
+            circleIcon.innerHTML = `
+            <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
+                 alt = "Badge Icon" class="circle-img" />
+            `;
 
-                // Set up the HTML for title with conditional PDF link
-                return gridjs.html(`
-              <span class="tooltip-target" data-tooltip="${tamil}">${title}</span>
-              <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
-                <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
-              </a>
-              ${pdfLink && pdfLink.trim() ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
-                <i class="fas fa-file-pdf icon" style="color:#7a2a2a;" title="Download PDF"></i>
-              </a>` : ''}
-              ${pptlink && pptlink.trim() ? `<a href="${pptlink}" target="_blank" style="margin-left: 8px;">
-                <i class="fas fa-file-powerpoint icon" style="color:#7a2a2a;" title="Download PPT"></i>
-              </a>` : ''}
-            `);
-                //       return gridjs.html(`
-                //         <span class="tooltip-target" data-tooltip="${tamil}">${title}</span>
-                //         <a href="${audioUrl}" target="_blank" style="margin-left: 8px;">
-                //           <i class="fas fa-download icon" style="color:#7a2a2a;" title="Download Audio"></i>
-                //         </a>
-                //         ${pdfLink && pdfLink.trim() ? `<a href="${pdfLink}" target="_blank" style="margin-left: 8px;">
-                //   <i class="fas fa-file-pdf icon" style="color:#7a2a2a;" title="Download PDF"></i>
-                // </a>` : ''}
-                //       `);
-              }
-            },
-            {
-              name: 'Audio', // Change header title for 'Audio Preview' column
-              sort: false,
-              resizable: true,
-              formatter: (cell) => gridjs.html(`
-            <audio controls style="height: 30px; border:1px solid #7a2a2a; border-radius:25px;">
-              <source src="${cell}" type="audio/mp3">
+          // circleIcon.innerHTML = `
+          // <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
+          //      alt = "Badge Icon" class="circle-img" />
+          // `;
+          // circleIcon.innerHTML = `
+          //   <img src="${item.imageUrl || './Assets/audioimages/basics53.png'}" 
+          //        alt="Badge Icon" class="circle-img" />
+          // `;
+
+          // Card content
+          const cardDetails = document.createElement("div");
+          cardDetails.className = "card-details";
+          cardDetails.innerHTML = `
+            <h3>${item.topic}</h3>
+            <hr class="card-divider">
+            <h3>${item.tamil}</h3>
+          `;
+
+          // Audio player container
+          const audioPlayer = document.createElement("div");
+          audioPlayer.className = "audio-player";
+          audioPlayer.innerHTML = `
+            <audio controls>
+              <source src="${item.audioUrl}" type="audio/mp3">
               Your browser does not support the audio element.
-            </audio>`)
-            },
-            {
-              name: 'Year',  // Change header title for 'Timestamp' column
-              sort: true
-            }
-          ],
-          data: data.map(item => [
-            { topic: item.topic, pdflink: item.pdflink, pptlink: item.pptlink, tamil: item.tamil }, // Data object for TITLE with `pdflink`
-            // item.topic,
-            item.audioUrl,
-            item.year
-            // item.pdflink  // We keep the `pdflink` data here but don’t display it as a separate column
-          ]),
-          sort: true,
-          pagination: true
-        }).render(document.getElementById("grid"));
-        // Custom tooltip functionality
-        document.addEventListener("mouseover", function (event) {
-          if (event.target && event.target.classList.contains("tooltip-target")) {
-            let tooltipText = event.target.getAttribute("data-tooltip");
-            let tooltip = document.createElement("div");
-            tooltip.classList.add("custom-tooltip");
-            tooltip.innerText = tooltipText;
-            document.body.appendChild(tooltip);
+            </audio>
+          `;
 
-            // Get the position of the target element relative to the viewport
-            let rect = event.target.getBoundingClientRect();
+          // Action icons
+          const iconList = document.createElement("ul");
+          iconList.className = "card-icons";
 
-            // Calculate tooltip position (position it above or below the title)
-            let tooltipLeft = rect.left + window.scrollX;
-            let tooltipTop = rect.top + window.scrollY - tooltip.offsetHeight - 5; // Position above the title (adjust by 5px)
-
-            // Ensure tooltip stays within the viewport (especially on mobile)
-            const tooltipMargin = 10; // Margin from the edge of the viewport
-            const viewportWidth = window.innerWidth;
-            const viewportHeight = window.innerHeight;
-
-            // If the tooltip goes off the left edge, move it to the right
-            if (tooltipLeft < tooltipMargin) {
-              tooltipLeft = tooltipMargin;
-            }
-
-            // If the tooltip goes off the right edge, move it to the left
-            if (tooltipLeft + tooltip.offsetWidth > viewportWidth - tooltipMargin) {
-              tooltipLeft = viewportWidth - tooltip.offsetWidth - tooltipMargin;
-            }
-
-            // If the tooltip goes off the top, move it below the title
-            if (tooltipTop < tooltipMargin) {
-              tooltipTop = rect.top + window.scrollY + rect.height + 5; // Place below the title
-            }
-
-            // If the tooltip goes off the bottom, move it up
-            if (tooltipTop + tooltip.offsetHeight > viewportHeight - tooltipMargin) {
-              tooltipTop = viewportHeight - tooltip.offsetHeight - tooltipMargin; // Position at the bottom of the screen
-            }
-
-            // Set tooltip position
-            tooltip.style.position = "absolute";
-            tooltip.style.left = `${tooltipLeft}px`;
-            tooltip.style.top = `${tooltipTop}px`;
-
-            // Set custom styling for the tooltip
-            tooltip.style.backgroundColor = "#7a2a2a";
-            tooltip.style.color = "#f9f9f9";
-            tooltip.style.padding = "5px 10px";
-            tooltip.style.borderRadius = "5px";
-            tooltip.style.fontSize = "12px";
-            tooltip.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
-
-            // Hide tooltip when mouse leaves the title
-            function hideTooltip() {
-              if (tooltip && tooltip.parentElement) {
-                tooltip.parentElement.removeChild(tooltip);
-              }
-            }
-
-            event.target.addEventListener("mouseleave", hideTooltip);
-
-            // Optional: auto-remove tooltip after 2 seconds
-            setTimeout(hideTooltip, 2000);
+          if (item.pdflink) {
+            const pdfIcon = document.createElement("li");
+            pdfIcon.innerHTML = `<a href="${item.pdflink}" target="_blank" title="PDF"><img src="./Assets/audioimages/audiopdfres.png" height="75px"></a>`;
+            iconList.appendChild(pdfIcon);
           }
-        });
 
-        // Handle mobile tap tooltip behavior (optional)
-        document.addEventListener("click", function (event) {
-          if (event.target && event.target.classList.contains("tooltip-target")) {
-            let tooltipText = event.target.getAttribute("data-tooltip");
-            let tooltip = document.createElement("div");
-            tooltip.classList.add("custom-tooltip");
-            tooltip.innerText = tooltipText;
-            document.body.appendChild(tooltip);
-
-            // Get the position of the target element
-            let rect = event.target.getBoundingClientRect();
-            let tooltipLeft = rect.left + window.scrollX;
-            let tooltipTop = rect.top + window.scrollY - tooltip.offsetHeight - 5;
-
-            // Ensure tooltip stays within the viewport
-            const tooltipMargin = 10;
-            const viewportWidth = window.innerWidth;
-            const viewportHeight = window.innerHeight;
-
-            if (tooltipLeft < tooltipMargin) {
-              tooltipLeft = tooltipMargin;
-            }
-
-            if (tooltipLeft + tooltip.offsetWidth > viewportWidth - tooltipMargin) {
-              tooltipLeft = viewportWidth - tooltip.offsetWidth - tooltipMargin;
-            }
-
-            if (tooltipTop < tooltipMargin) {
-              tooltipTop = rect.top + window.scrollY + rect.height + 5;
-            }
-
-            if (tooltipTop + tooltip.offsetHeight > viewportHeight - tooltipMargin) {
-              tooltipTop = viewportHeight - tooltip.offsetHeight - tooltipMargin;
-            }
-
-            tooltip.style.position = "absolute";
-            tooltip.style.left = `${tooltipLeft}px`;
-            tooltip.style.top = `${tooltipTop}px`;
-
-            // Set custom styling for the tooltip
-            tooltip.style.backgroundColor = "#7a2a2a";
-            tooltip.style.color = "#f9f9f9";
-            tooltip.style.padding = "5px 10px";
-            tooltip.style.borderRadius = "5px";
-            tooltip.style.fontSize = "12px";
-            tooltip.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
-
-            // Auto-hide tooltip after 2 seconds
-            setTimeout(() => {
-              if (tooltip && tooltip.parentElement) {
-                tooltip.parentElement.removeChild(tooltip);
-              }
-            }, 2000); // Tooltip will disappear after 2 seconds
+          if (item.pptlink) {
+            const pptIcon = document.createElement("li");
+            pptIcon.innerHTML = `<a href="${item.pptlink}" target="_blank" title="PPT"><img src="./Assets/audioimages/audiopptres.png" height="75px"></a>`;
+            iconList.appendChild(pptIcon);
           }
-        });
 
+          const downloadIcon = document.createElement("li");
+          downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><img src="./Assets/audioimages/audioresdownload.png" height="75px"></a>`;
+          // downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><i class="fas fa-download"></i></a>`;
+          iconList.appendChild(downloadIcon);
+
+          // Assemble card
+          card.appendChild(circleIcon);
+          card.appendChild(cardDetails);
+          card.appendChild(audioPlayer);
+          card.appendChild(iconList);
+          widgetContainer.appendChild(card);
+        });
       }
 
+
+
+
+
+      // Initial render
+      renderAudioItems(data);
       updatesectiontitle(searchdata)
 
     })
@@ -416,16 +157,17 @@ function fetchaudiodiscourses() {
     });
 }
 function toggleViewMode() {
-  isMobileView = !isMobileView;
+  // isMobileView = !isMobileView;
 
-  if (isMobileView) {
-    localStorage.setItem("viewmode", "mobile");
-    document.getElementById("devicemode").innerHTML = "💻";
-  }
-  else {
-    localStorage.setItem("viewmode", "desktop");
-    document.getElementById("devicemode").innerHTML = "📱";
-  }
+  // if (true) {
+  //   // if (isMobileView) {
+  //   localStorage.setItem("viewmode", "mobile");
+  //   document.getElementById("devicemode").innerHTML = "💻";
+  // }
+  // else {
+  //   localStorage.setItem("viewmode", "desktop");
+  //   document.getElementById("devicemode").innerHTML = "📱";
+  // }
   // document.getElementById('tooltip').innerText = isMobileView ? 'mobile' : 'Desktop Mode';
   // viewmode(isMobileView ? 'mobile' : 'desktop');
   fetchaudiodiscourses();

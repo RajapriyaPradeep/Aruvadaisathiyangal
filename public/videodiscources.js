@@ -34,11 +34,13 @@ function loadVideoThumbnails() {
             const videoDiv = document.createElement('div');
             videoDiv.className = 'video-item';
             videoDiv.innerHTML = `
+            <div class="video-div">
+                <label class="video-title">${id.title}</label>
                 <img src="./Assets/Videothumbnail/${id.imgid}" 
                      alt="${id.title}" 
                      class="video-thumbnail"
                      onclick="openPopup('${id.videoid}')">
-                <label class="video-title">${id.title}</label>
+                     </div>
             `;
             content.appendChild(videoDiv);
         });
@@ -60,6 +62,7 @@ function loadVideoThumbnails() {
 // Keep the rest of your existing code (openPopup, closePopup, etc.)
 const videoimgpair = [
     { imgid: 'vellorememorial.png', section: "Memorial Studies", title: "Nature of the cup that did not pass", videoid: 'U4Z3YGlguWg?si=CbcTFRT5OnT4SxEJ' },
+    { imgid: 'risenmemorial.png', section: "Memorial Studies", title: "Christ Resurrected from Death", videoid: 'XfHAEO1XaTM?si=sVPZRzJXDHuhahQ_' },
     { imgid: 'troublescomfort.png', section: "Memorial Studies", title: "Troubles and Comfort", videoid: 'ximF0endJnw?si=vAGlC1uHOnsO6z4i' },
     { imgid: 'thewordmadeflesh.png', section: "Memorial Studies", title: "The word was made flesh", videoid: 'Ni7bOEQVsZc?si=Rcstg00vt4C3EvnP' },
     { imgid: 'hourofdarkness.png', section: "Memorial Studies", title: "39 hours of darkness", videoid: 'EXHZh9-HdCo?si=4kGpVPuUetev6bd2' },

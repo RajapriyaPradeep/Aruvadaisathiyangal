@@ -1,222 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Aruvadaisathiyangal</title>
-    
+
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="hmstyles.css">
-    <link rel="stylesheet" href="faq.css">
-    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="stylesheet" href="hmstyles.css" />
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="mediaquery.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    </head>
-    <body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bring_front" >
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="./Assets/Alogo.jpg" alt="Logo" width="75" height="75" onclick="navplaylist('home')">
-            </a>
-            <img src="./Assets/projtitle.png" class="projtitle" alt="Logo" onclick="navplaylist('home')">
-            <!-- Toggler/collapsible button for mobile view -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navbar items -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="audiodiscourse">AUDIO DISCOURSES</a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <div id="topicalstudy_submenu" class="submenu-container dropdown-item dropdown-toggle"  data-lang="topicalstudies" >TOPICAL STUDIES
-                                <div class="submenu">
-                                    <a class="dropdown-item" href="#" data-lang="chronology" onclick="navplaylist('chronology')">CHRONOLOGY</a>
-                                    <a class="dropdown-item" href="#" data-lang="characterdevelopment" onclick="navplaylist('characterdevelopment')">CHARACTER DEVELOPMENT</a>
-                                    <a class="dropdown-item" href="#" data-lang="isreal" onclick="navplaylist('isreal')">ISREAL</a>
-                                    <a class="dropdown-item" href="#" data-lang="parables" onclick="navplaylist('parables')">PARABLES</a>
-                                    <a class="dropdown-item" href="#" data-lang="spiritbegotten" onclick="navplaylist('spiritbegotten')">SPIRIT BEGOTTEN</a>
-                                </div>
-                            </div>
-                            <div id="volumestudy_submenu" class="submenu-container dropdown-item dropdown-toggle" data-lang="volumestudy" >VOLUME STUDIES
-                                <div class="submenu">
-                                    <a class="dropdown-item" href="#" data-lang="volume1" onclick="navplaylist('volume1')">VOLUME 1</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume2" onclick="navplaylist('volume2')">VOLUME 2</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume3" onclick="navplaylist('volume3')">VOLUME 3</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume4" onclick="navplaylist('volume4')">VOLUME 4</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume5" onclick="navplaylist('volume5')">VOLUME 5</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume6" onclick="navplaylist('volume6')">VOLUME 6</a>
-                                </div>
-                            </div>
-                            <a class="dropdown-item" href="#" data-lang="basicstudies"  onclick="navplaylist('basicstudies')">BASIC STUDIES</a>
-                            <a class="dropdown-item" href="#" data-lang="conventions"  onclick="navplaylist('conventions')">CONVENTIONS</a>
-                            <a class="dropdown-item" href="#" data-lang="memorialstudies"  onclick="navplaylist('memorialstudies')">MEMORIAL STUDIES</a>
-                            <a class="dropdown-item" href="#" data-lang="paneldiscussion"  onclick="navplaylist('paneldiscussion')">PANEL DISCUSSION</a>
-                            <a class="dropdown-item" href="#" data-lang="spiritualstudies"  onclick="navplaylist('spiritualstudies')">SPRITUAL STUDIES</a>
-                            <a class="dropdown-item" href="#" data-lang="symposium"  onclick="navplaylist('symposium')">SYMPOSIUM</a>
-                            <a class="dropdown-item" href="#" data-lang="timeprophecy"  onclick="navplaylist('timeprophecy')">TIME PROPHECY</a>                            
-                            
-                            <a class="dropdown-item" href="#" data-lang="wildernesswondering"  onclick="navplaylist('wildernesswondering')">WILDERNESS WONDERING</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-lang="questionbook" href="https://aruvadaisathiyangal.in/faq.html">QUESTION BOOK</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-lang="reprint" href="https://aruvadaisathiyangal.in/reprint.html">REPRINT</a>
-                    </li>
-                    <!-- Search form -->
-                    <li class="nav-item search-bar">
-                        <form class="form-inline search-border">
-                            <i class="fas fa-search" onclick="searchaudio()" ></i> <!-- Font Awesome Search Icon -->
-                            <input class="form-control search-box" id="searchkeyword" type="search" placeholder="Search" aria-label="Search">
-                        </form>
-                    </li>
-                 
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bring_front">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="./Assets/Alogo.jpg"
+            alt="Logo"
+            width="75"
+            height="75"
+            onclick="navplaylist('home')"
+          />
+        </a>
+        <img
+          src="./Assets/projtitle.png"
+          class="projtitle"
+          alt="Logo"
+          onclick="navplaylist('home')"
+        />
+        <!-- Toggler/collapsible button for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-lang="audiodiscourse"
+                >AUDIO DISCOURSES</a
+              >
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div
+                  id="topicalstudy_submenu"
+                  class="submenu-container dropdown-item dropdown-toggle"
+                  data-lang="topicalstudies"
+                >
+                  TOPICAL STUDIES
+                  <div class="submenu">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="chronology"
+                      onclick="navplaylist('chronology')"
+                      >CHRONOLOGY</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="characterdevelopment"
+                      onclick="navplaylist('characterdevelopment')"
+                      >CHARACTER DEVELOPMENT</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="isreal"
+                      onclick="navplaylist('isreal')"
+                      >ISREAL</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="parables"
+                      onclick="navplaylist('parables')"
+                      >PARABLES</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="spiritbegotten"
+                      onclick="navplaylist('spiritbegotten')"
+                      >SPIRIT BEGOTTEN</a
+                    >
+                  </div>
+                </div>
+                <div
+                  id="volumestudy_submenu"
+                  class="submenu-container dropdown-item dropdown-toggle"
+                  data-lang="volumestudy"
+                >
+                  VOLUME STUDIES
+                  <div class="submenu">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume1"
+                      onclick="navplaylist('volume1')"
+                      >VOLUME 1</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume2"
+                      onclick="navplaylist('volume2')"
+                      >VOLUME 2</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume3"
+                      onclick="navplaylist('volume3')"
+                      >VOLUME 3</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume4"
+                      onclick="navplaylist('volume4')"
+                      >VOLUME 4</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume5"
+                      onclick="navplaylist('volume5')"
+                      >VOLUME 5</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume6"
+                      onclick="navplaylist('volume6')"
+                      >VOLUME 6</a
+                    >
+                  </div>
+                </div>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="basicstudies"
+                  onclick="navplaylist('basicstudies')"
+                  >BASIC STUDIES</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="conventions"
+                  onclick="navplaylist('conventions')"
+                  >CONVENTIONS</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="memorialstudies"
+                  onclick="navplaylist('memorialstudies')"
+                  >MEMORIAL STUDIES</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="paneldiscussion"
+                  onclick="navplaylist('paneldiscussion')"
+                  >PANEL DISCUSSION</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="spiritualstudies"
+                  onclick="navplaylist('spiritualstudies')"
+                  >SPRITUAL STUDIES</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="symposium"
+                  onclick="navplaylist('symposium')"
+                  >SYMPOSIUM</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="timeprophecy"
+                  onclick="navplaylist('timeprophecy')"
+                  >TIME PROPHECY</a
+                >
+
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="wildernesswondering"
+                  onclick="navplaylist('wildernesswondering')"
+                  >WILDERNESS WONDERING</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-lang="questionbook"
+                href="https://aruvadaisathiyangal.in/faq.html"
+                >QUESTION BOOK</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-lang="reprint"
+                href="https://aruvadaisathiyangal.in/reprint.html"
+                >REPRINT</a
+              >
+            </li>
+            <!-- Search form -->
+            <li class="nav-item search-bar">
+              <form class="form-inline search-border">
+                <i class="fas fa-search" onclick="searchaudio()"></i>
+                <!-- Font Awesome Search Icon -->
+                <input
+                  class="form-control search-box"
+                  id="searchkeyword"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+              </form>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Main Content Area -->
-    <div class="container content-area" style="margin-top: 1%;">
-    <div style="    margin: 0 auto;    width: 100%;    max-width: 800px;">
-    <span class="badge badge-harvest" onclick="loadFAQsection('A')">A</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('B')">B</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('C')">C</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('D')">D</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('E')">E</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('F')">F</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('G')">G</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('H')">H</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('I')">I</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('J')">J</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('K')">K</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('L')">L</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('M')">M</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('N')">N</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('O')">O</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('P')">P</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('Q')">Q</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('R')">R</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('S')">S</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('T')">T</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('U')">U</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('V')">V</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('W')">W</span>
-    <span class="badge badge-harvest" onclick="loadFAQsection('Z')">Z</span>
-    </div>
+    <div class="container content-area" style="margin-top: 1%">
+      <div style="margin: 0 auto; width: 100%; max-width: 800px">
+        <span class="badge badge-harvest" onclick="loadFAQsection('A')">A</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('B')">B</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('C')">C</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('D')">D</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('E')">E</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('F')">F</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('G')">G</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('H')">H</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('I')">I</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('J')">J</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('K')">K</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('L')">L</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('M')">M</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('N')">N</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('O')">O</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('P')">P</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('Q')">Q</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('R')">R</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('S')">S</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('T')">T</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('U')">U</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('V')">V</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('W')">W</span>
+        <span class="badge badge-harvest" onclick="loadFAQsection('Z')">Z</span>
+      </div>
 
-        <div class="faq-section" id="faq-section">
-            <!-- FAQ items will be loaded here dynamically -->
-          </div>
+      <div class="faq-section" id="faq-section">
+        <!-- FAQ items will be loaded here dynamically -->
+      </div>
 
-        <img src="./Assets/Biblekey.png" alt="Bottom Left Image" class="question-book-right-top">
-        <img src="./Assets/dalle_scrolls.png" alt="Bottom Left Image" class="bottom-left-qimage">
-
+      <img
+        src="./Assets/Biblekey.png"
+        alt="Bottom Left Image"
+        class="question-book-right-top"
+      />
+      <img
+        src="./Assets/dalle_scrolls.png"
+        alt="Bottom Left Image"
+        class="bottom-left-qimage"
+      />
     </div>
     <script>
-        function navplaylist(modulename){
-            if(modulename == "home")
-                window.location.href = 'https://aruvadaisathiyangal.in/index.html';
-            else
-                window.location.href = 'https://aruvadaisathiyangal.in/audiodiscources.html?module=' + modulename;
+      function navplaylist(modulename) {
+        if (modulename == "home")
+          window.location.href = "https://aruvadaisathiyangal.in/index.html";
+        else
+          window.location.href =
+            "https://aruvadaisathiyangal.in/audiodiscources.html?module=" +
+            modulename;
+      }
+      // Function to fetch the FAQ data and display it
+      async function loadFAQ() {
+        const apiUrl = `https://aruvadaisathiyangal.vercel.app/api/faqs?search=${"A"}`; // Replace with your API endpoint
+        try {
+          const response = await fetch(apiUrl);
+          const faqData = await response.json();
+
+          const faqSection = document.getElementById("faq-section");
+          faqSection.innerHTML = ""; // Clear the section
+
+          // Loop through the fetched FAQ data and create HTML elements
+          faqData.forEach((item) => {
+            const faqItem = document.createElement("div");
+            faqItem.classList.add("faq-item");
+
+            const details = document.createElement("details");
+            const summary = document.createElement("summary");
+            // "First Line\nSecond Line"
+            summary.innerHTML =
+              '<span style="font-weight:bold">' +
+              item.title +
+              "</span><br>" +
+              item.question;
+            // summary.textContent = item.question;
+
+            const answer = document.createElement("p");
+            answer.textContent = item.answer;
+
+            details.appendChild(summary);
+            details.appendChild(answer);
+            faqItem.appendChild(details);
+            faqSection.appendChild(faqItem);
+          });
+        } catch (error) {
+          console.error("Error fetching FAQ data:", error);
         }
-        // Function to fetch the FAQ data and display it
-        async function loadFAQ() {
-          const apiUrl = `https://aruvadaisathiyangal.vercel.app/api/faqs?search=${"A"}`;  // Replace with your API endpoint
-          try {
-            const response = await fetch(apiUrl);
-            const faqData = await response.json();
-    
-            const faqSection = document.getElementById('faq-section');
-            faqSection.innerHTML = '';  // Clear the section
-    
-            // Loop through the fetched FAQ data and create HTML elements
-            faqData.forEach(item => {
-              debugger
-              const faqItem = document.createElement('div');
-              faqItem.classList.add('faq-item');
-    
-              const details = document.createElement('details');
-              const summary = document.createElement('summary');
-              // "First Line\nSecond Line"
-              summary.innerHTML = '<span style="font-weight:bold">' +  item.title + '</span><br>' + item.question;
-              // summary.textContent = item.question;
-    
-              const answer = document.createElement('p');
-              answer.textContent = item.answer;
-    
-              details.appendChild(summary);
-              details.appendChild(answer);
-              faqItem.appendChild(details);
-              faqSection.appendChild(faqItem);
-            });
-    
-          } catch (error) {
-            console.error('Error fetching FAQ data:', error);
-          }
+      }
+
+      // Function to fetch the FAQ data and display it
+      async function loadFAQsection(sectionvalue) {
+        let searchdata = sectionvalue ? sectionvalue : "A";
+        const apiUrl = `https://aruvadaisathiyangal.vercel.app/api/faqs?search=${searchdata}`; // Replace with your API endpoint
+        try {
+          const response = await fetch(apiUrl);
+          const faqData = await response.json();
+
+          const faqSection = document.getElementById("faq-section");
+          faqSection.innerHTML = ""; // Clear the section
+
+          // Loop through the fetched FAQ data and create HTML elements
+          faqData.forEach((item) => {
+            const faqItem = document.createElement("div");
+            faqItem.classList.add("faq-item");
+
+            const details = document.createElement("details");
+            const summary = document.createElement("summary");
+            // "First Line\nSecond Line"
+            summary.innerHTML =
+              '<span style="font-weight:bold">' +
+              item.title +
+              "</span><br>" +
+              item.question;
+            // summary.textContent = item.question;
+
+            const answer = document.createElement("p");
+            answer.textContent = item.answer;
+
+            details.appendChild(summary);
+            details.appendChild(answer);
+            faqItem.appendChild(details);
+            faqSection.appendChild(faqItem);
+          });
+        } catch (error) {
+          console.error("Error fetching FAQ data:", error);
         }
-        
-    // Function to fetch the FAQ data and display it
-    async function loadFAQsection(sectionvalue) {
-          let searchdata = sectionvalue ? sectionvalue:'A';
-          const apiUrl = `https://aruvadaisathiyangal.vercel.app/api/faqs?search=${searchdata}`;  // Replace with your API endpoint
-          try {
-            const response = await fetch(apiUrl);
-            const faqData = await response.json();
-    
-            const faqSection = document.getElementById('faq-section');
-            faqSection.innerHTML = '';  // Clear the section
-    
-            // Loop through the fetched FAQ data and create HTML elements
-            faqData.forEach(item => {
-              debugger
-              const faqItem = document.createElement('div');
-              faqItem.classList.add('faq-item');
-    
-              const details = document.createElement('details');
-              const summary = document.createElement('summary');
-              // "First Line\nSecond Line"
-              summary.innerHTML = '<span style="font-weight:bold">' +  item.title + '</span><br>' + item.question;
-              // summary.textContent = item.question;
-    
-              const answer = document.createElement('p');
-              answer.textContent = item.answer;
-    
-              details.appendChild(summary);
-              details.appendChild(answer);
-              faqItem.appendChild(details);
-              faqSection.appendChild(faqItem);
-            });
-    
-          } catch (error) {
-            console.error('Error fetching FAQ data:', error);
-          }
-        }
-        // Load FAQ data when the page loads
-        window.onload = loadFAQ;
-      </script>
+      }
+      // Load FAQ data when the page loads
+      window.onload = loadFAQ;
+    </script>
     <!-- Custom JS -->
     <!-- <script src="audiolist.js"></script> -->
     <script src="faq.js"></script>
@@ -225,5 +434,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
