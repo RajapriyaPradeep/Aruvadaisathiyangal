@@ -313,6 +313,47 @@ button.gridjs-sort {
   opacity: 1;
   transform: translateY(0);
 } */
+.glass-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 215, 160, 0.1),
+    rgba(255, 235, 180, 0.2)
+  );
+  border: 1px solid rgba(255, 215, 160, 0.4);
+}
+
+.glass-icon {
+  font-size: 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffcc70, #c85000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+&:hover {
+  box-shadow: 0 0 10px rgba(255, 200, 120, 0.6);
+  transform: scale(1.05);
+}
+.glass-icon-wrapper:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.glass-icon-wrapper:hover .glass-icon {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
 
 .card-icons li a {
   color: #7a2a2a;

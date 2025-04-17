@@ -118,19 +118,22 @@ function fetchaudiodiscourses() {
 
           if (item.pdflink) {
             const pdfIcon = document.createElement("li");
-            pdfIcon.innerHTML = `<a href="${item.pdflink}" target="_blank" title="PDF"><img src="./Assets/audioimages/audiopdfres.png" height="75px"></a>`;
+            // pdfIcon.innerHTML = `<a href="${item.pdflink}" target="_blank" title="PDF"><img src="./Assets/audioimages/audiopdfres.png" height="75px"></a>`;
+            pdfIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pdflink}" target="_blank" title="PDF"><i class="fas fa-file-pdf glass-icon"></i></a></div>`;
+
             iconList.appendChild(pdfIcon);
           }
 
           if (item.pptlink) {
             const pptIcon = document.createElement("li");
-            pptIcon.innerHTML = `<a href="${item.pptlink}" target="_blank" title="PPT"><img src="./Assets/audioimages/audiopptres.png" height="75px"></a>`;
+            // pptIcon.innerHTML = `<a href="${item.pptlink}" target="_blank" title="PPT"><img src="./Assets/audioimages/audiopptres.png" height="75px"></a>`;
+            pptIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pptlink}" target="_blank" title="PPT"><i class="fas fa-file-powerpoint glass-icon"></i></a></div>`;
             iconList.appendChild(pptIcon);
           }
 
           const downloadIcon = document.createElement("li");
-          downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><img src="./Assets/audioimages/audioresdownload.png" height="75px"></a>`;
-          // downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><i class="fas fa-download"></i></a>`;
+          // downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><img src="./Assets/audioimages/audioresdownload.png" height="75px"></a>`;
+          downloadIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.audioUrl}" target="_blank" title="Download"><i class="fas fa-download glass-icon"></i></a></div>`;
           iconList.appendChild(downloadIcon);
 
           // Assemble card
