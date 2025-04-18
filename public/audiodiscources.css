@@ -227,9 +227,9 @@ button.gridjs-sort {
   z-index: 10;
 }
 .audio-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  transform: scale(1.02);
+  /* transform: scale(1.02); */
   filter: brightness(1.03);
 }
 
@@ -343,7 +343,7 @@ button.gridjs-sort {
 }
 &:hover {
   box-shadow: 0 0 10px rgba(255, 200, 120, 0.6);
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 .glass-icon-wrapper:hover {
   transform: translateY(-4px) scale(1.05);
