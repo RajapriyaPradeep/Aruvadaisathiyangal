@@ -169,10 +169,12 @@ button.gridjs-sort {
   /* border: 2px solid #ffffff; */
   /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  min-height: 340px; /* tweak based on your layout */
+  /* min-height: 340px; */
+  /* tweak based on your layout */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
 }
 .card-divider {
   width: 40px;
