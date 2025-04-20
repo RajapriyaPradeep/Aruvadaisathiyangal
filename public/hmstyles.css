@@ -75,6 +75,8 @@ body::before {
   color: #7a2a2a !important;
   font-size: small;
   font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
+
   /* letter-spacing: 1px; */
 }
 
@@ -97,6 +99,12 @@ body::before {
 }
 
 .navbar-nav .dropdown-menu {
+  /* border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -498,14 +506,14 @@ body::before {
   max-width: 60%; */
   float: left;
   margin-right: auto;
-  max-height: 65px;
+  max-height: 75px;
   max-width: auto;
   cursor: pointer !important;
   /* filter: brightness(0.7); */
-  filter: drop-shadow(2px 4px 6px #e7dbca);
+  /* filter: drop-shadow(2px 4px 6px #e7dbca); */
   /* border-radius: 10px 100px / 120px; */
-  border-radius: 40px 999em 999em 40px;
-  background-color: #e7dbca;
+  /* border-radius: 40px 999em 999em 40px;
+  background-color: #e7dbca; */
 }
 
 /* project title ends here */

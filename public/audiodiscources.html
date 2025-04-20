@@ -401,19 +401,6 @@
               >
             </ul>
           </li>
-          <li class="nav-item search-bar">
-            <form class="form-inline search-border">
-              <i class="fas fa-search" onclick="searchaudio()"></i>
-              <!-- Font Awesome Search Icon -->
-              <input
-                class="form-control search-box"
-                id="searchkeyword"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
-          </li>
           <!-- <li class="nav-item">
                 <a class="navbar-brand" onclick="navplaylist('aboutus')">
                     <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
@@ -429,13 +416,66 @@
       class="container content-area"
       style="margin-top: 1%"
     >
-      <div class="discource_title" hidden>
+      <!-- <div class="discource_title" hidden>
         <h5 class="ellipsis" id="discourcesectionname">Discource Section</h5>
-      </div>
+      </div> -->
       <div id="grid" class="discoursedesktop"></div>
       <div class="scrollable-wrapper">
+        <!-- Sort + Search Row Below Cards -->
+        <div class="filterbar">
+          <div class="glass-icon-wrapper" title="Sort A-Z">
+            <i
+              class="fas fa-sort-alpha-down glass-icon"
+              onclick="sortDiscourses('alphabet')"
+            ></i>
+          </div>
+          <div class="glass-icon-wrapper" title="Sort by Year">
+            <i
+              class="fas fa-calendar-alt glass-icon"
+              onclick="sortDiscourses('year')"
+            ></i>
+          </div>
+
+          <div class="glass-search-wrapper">
+            <input
+              id="keywordsearch"
+              type="text"
+              placeholder="Search topics..."
+              onkeyup="filterDiscourses()"
+              class="glass-search-box"
+            />
+          </div>
+        </div>
         <div id="titleAudioWidget" class="card-grid"></div>
       </div>
+
+      <!-- <div class="discource_title">        
+        <div>
+          <div class="glass-icon-wrapper">
+            <i
+              class="fas fa-sort-alpha-down glass-icon"
+              title="Sort A-Z"
+              onclick="sortDiscourses('alphabet')"
+            ></i>
+          </div>
+          <div class="glass-icon-wrapper">
+            <i
+              class="fas fa-calendar-alt glass-icon"
+              title="Sort by Year"
+              onclick="sortDiscourses('year')"
+            ></i>
+          </div>          
+            <input
+              id="keywordsearch"
+              type="text"
+              placeholder="Search topics..."
+              onkeyup="filterDiscourses()"
+              class="glass-search-box"
+            />        
+        </div>
+      <div class="scrollable-wrapper">
+        <div id="titleAudioWidget" class="card-grid"></div>
+      </div> -->
       <!-- <div class="footer-links">          
         Version:<a onclick="viewmode('mobile')">Mobile</a> |
         <a onclick="viewmode('desktop')">Desktop</a>

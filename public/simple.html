@@ -1,78 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Responsive Page</title>
-    
+
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="simple_styles.css">
+    <link rel="stylesheet" href="simple_styles.css" />
     <!-- <link rel="stylesheet" href="ribbon.css"> -->
     <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bring_front" >
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="./Assets/updated_logo.png" alt="Logo" width="75" height="75" onclick="navplaylist('home')">
-            </a>
-            
-            <!-- Toggler/collapsible button for mobile view -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-            <!-- Navbar items -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="audiodiscourse">AUDIO DISCOURSES</a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <div class="submenu-container dropdown-item dropdown-toggle" onclick="toggleSubmenu(this)" data-lang="topicalstudies" >TOPICAL STUDIES
-                                <div class="submenu">
-                                    <a class="dropdown-item" href="#" data-lang="chronology" onclick="navplaylist('chronology')">CHRONOLOGY</a>
-                                    <a class="dropdown-item" href="#" data-lang="characterdevelopment" onclick="navplaylist('characterdevelopment')">CHARACTER DEVELOPMENT</a>
-                                    <a class="dropdown-item" href="#" data-lang="isreal" onclick="navplaylist('isreal')">ISREAL</a>
-                                    <a class="dropdown-item" href="#" data-lang="parables" onclick="navplaylist('parables')">PARABLES</a>
-                                    <a class="dropdown-item" href="#" data-lang="spiritbegotten" onclick="navplaylist('spiritbegotten')">SPIRIT BEGOTTEN</a>
-                                </div>
-                            </div>
-                            <div class="submenu-container dropdown-item dropdown-toggle" onclick="toggleSubmenu(this)" data-lang="volumestudy" >VOLUME STUDIES
-                                <div class="submenu">
-                                    <a class="dropdown-item" href="#" data-lang="volume1" onclick="navplaylist('volume1')">VOLUME 1</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume2" onclick="navplaylist('volume2')">VOLUME 2</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume3" onclick="navplaylist('volume3')">VOLUME 3</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume4" onclick="navplaylist('volume4')">VOLUME 4</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume5" onclick="navplaylist('volume5')">VOLUME 5</a>
-                                    <a class="dropdown-item" href="#" data-lang="volume6" onclick="navplaylist('volume6')">VOLUME 6</a>
-                                </div>
-                            </div>
-                            <a class="dropdown-item" href="#" data-lang="basicstudies"  onclick="navplaylist('basicstudies')">BASIC STUDIES</a>
-                            <a class="dropdown-item" href="#" data-lang="conventions"  onclick="navplaylist('conventions')">CONVENTIONS</a>
-                            <a class="dropdown-item" href="#" data-lang="memorialstudies"  onclick="navplaylist('memorialstudies')">MEMORIAL STUDIES</a>
-                            <a class="dropdown-item" href="#" data-lang="paneldiscussion"  onclick="navplaylist('paneldiscussion')">PANEL DISCUSSION</a>
-                            <a class="dropdown-item" href="#" data-lang="spiritualstudies"  onclick="navplaylist('spiritualstudies')">SPRITUAL STUDIES</a>
-                            <a class="dropdown-item" href="#" data-lang="symposium"  onclick="navplaylist('symposium')">SYMPOSIUM</a>
-                            <a class="dropdown-item" href="#" data-lang="timeprophecy"  onclick="navplaylist('timeprophecy')">TIME PROPHECY</a>                            
-                            
-                            <a class="dropdown-item" href="#" data-lang="wildernesswondering"  onclick="navplaylist('wildernesswondering')">WILDERNESS WONDERING</a>
-                        </div>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bring_front">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="./Assets/updated_logo.png"
+            alt="Logo"
+            width="75"
+            height="75"
+            onclick="navplaylist('home')"
+          />
+        </a>
+
+        <!-- Toggler/collapsible button for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-lang="audiodiscourse"
+                >AUDIO DISCOURSES</a
+              >
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div
+                  class="submenu-container dropdown-item dropdown-toggle"
+                  onclick="toggleSubmenu(this)"
+                  data-lang="topicalstudies"
+                >
+                  TOPICAL STUDIES
+                  <div class="submenu">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="chronology"
+                      onclick="navplaylist('chronology')"
+                      >CHRONOLOGY</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="characterdevelopment"
+                      onclick="navplaylist('characterdevelopment')"
+                      >CHARACTER DEVELOPMENT</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="isreal"
+                      onclick="navplaylist('isreal')"
+                      >ISREAL</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="parables"
+                      onclick="navplaylist('parables')"
+                      >PARABLES</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="spiritbegotten"
+                      onclick="navplaylist('spiritbegotten')"
+                      >SPIRIT BEGOTTEN</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="submenu-container dropdown-item dropdown-toggle"
+                  onclick="toggleSubmenu(this)"
+                  data-lang="volumestudy"
+                >
+                  VOLUME STUDIES
+                  <div class="submenu">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume1"
+                      onclick="navplaylist('volume1')"
+                      >VOLUME 1</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume2"
+                      onclick="navplaylist('volume2')"
+                      >VOLUME 2</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume3"
+                      onclick="navplaylist('volume3')"
+                      >VOLUME 3</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume4"
+                      onclick="navplaylist('volume4')"
+                      >VOLUME 4</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume5"
+                      onclick="navplaylist('volume5')"
+                      >VOLUME 5</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-lang="volume6"
+                      onclick="navplaylist('volume6')"
+                      >VOLUME 6</a
+                    >
+                  </div>
+                </div>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="basicstudies"
+                  onclick="navplaylist('basicstudies')"
+                  >BASIC STUDIES</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="conventions"
+                  onclick="navplaylist('conventions')"
+                  >CONVENTIONS</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="memorialstudies"
+                  onclick="navplaylist('memorialstudies')"
+                  >MEMORIAL STUDIES</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="paneldiscussion"
+                  onclick="navplaylist('paneldiscussion')"
+                  >PANEL DISCUSSION</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="spiritualstudies"
+                  onclick="navplaylist('spiritualstudies')"
+                  >SPRITUAL STUDIES</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="symposium"
+                  onclick="navplaylist('symposium')"
+                  >SYMPOSIUM</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="timeprophecy"
+                  onclick="navplaylist('timeprophecy')"
+                  >TIME PROPHECY</a
+                >
+
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-lang="wildernesswondering"
+                  onclick="navplaylist('wildernesswondering')"
+                  >WILDERNESS WONDERING</a
+                >
+              </div>
+            </li>
+            <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-lang="volumestudy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VOLUME STUDY</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#" data-lang="volume1" onclick="navplaylist('volume1')">VOLUME 1</a>
@@ -83,68 +246,102 @@
                             <a class="dropdown-item" href="#" data-lang="volume6" onclick="navplaylist('volume6')">VOLUME 6</a>
                         </div>
                     </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" data-lang="questionbook" href="file:///E:/NC/Task/video-listing-app/questions.html">QUESTION BOOK</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-lang="reprint" href="file:///E:/NC/Task/video-listing-app/reprint.html">REPRINT</a>
-                    </li>
-                    <!-- Search form -->
-                    <li class="nav-item search-bar">
-                        <form class="form-inline search-border">
-                            <i class="fas fa-search" onclick="searchaudio()" ></i> <!-- Font Awesome Search Icon -->
-                            <input class="form-control search-box" id="searchkeyword" type="search" placeholder="Search" aria-label="Search">
-                        </form>
-                    </li>
-                 
-                </ul>
-            </div>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-lang="questionbook"
+                href="file:///E:/NC/Task/video-listing-app/questions.html"
+                >QUESTION BOOK</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-lang="reprint"
+                href="file:///E:/NC/Task/video-listing-app/reprint.html"
+                >REPRINT</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Main Content Area -->
-    <div class="container content-area"> 
-        <h1 data-lang="truthverse" class="medievalsharp-regular my-5 text-center txt-animate shadow-style bring_front">Sanctify them through thy truth: thy word is truth.- John 17:17</h1>
-        <!-- <h1 id="ta" class="lang-content medievalsharp-regular my-5 text-center txt-animate shadow-style bring_front">உமது சத்தியத்தினாலே அவர்களைப் பரிசுத்தமாக்கும்: உமது வார்த்தை சத்தியம்.- யோவான் 17:17</h1> -->
-        <!-- <p class="text-center footer_note">The Brotherhood Repository: Spiritual Insights from Bro.Prabhakaran</p> -->
-        <p data-lang="reasonforsite" class="text-center footer_note bring_front">We were moved to create this site as stewards of the resources we've been entrusted with, especially given the growing number of requests for them. Over the years, the Lord has allowed us to collect various studies and materials that have been a blessing to His people, and many have expressed a need for easier access. This site is meant to be a simple archive of those resources, and we will update it as more are made available, trusting in the Lord’s provision.</p>
+    <div class="container content-area">
+      <h1
+        data-lang="truthverse"
+        class="medievalsharp-regular my-5 text-center txt-animate shadow-style bring_front"
+      >
+        Sanctify them through thy truth: thy word is truth.- John 17:17
+      </h1>
+      <!-- <h1 id="ta" class="lang-content medievalsharp-regular my-5 text-center txt-animate shadow-style bring_front">உமது சத்தியத்தினாலே அவர்களைப் பரிசுத்தமாக்கும்: உமது வார்த்தை சத்தியம்.- யோவான் 17:17</h1> -->
+      <!-- <p class="text-center footer_note">The Brotherhood Repository: Spiritual Insights from Bro.Prabhakaran</p> -->
+      <p data-lang="reasonforsite" class="text-center footer_note bring_front">
+        We were moved to create this site as stewards of the resources we've
+        been entrusted with, especially given the growing number of requests for
+        them. Over the years, the Lord has allowed us to collect various studies
+        and materials that have been a blessing to His people, and many have
+        expressed a need for easier access. This site is meant to be a simple
+        archive of those resources, and we will update it as more are made
+        available, trusting in the Lord’s provision.
+      </p>
 
-        <div class="quote-box bring_front">
-            <p class="quote-text" data-lang="brorussellmsg">
-                The true Gospel is not merely a message of good tidings respecting salvation to a few, but a message of great joy which shall be unto all people — the declaration that a Savior and Deliverer has been provided, and that in God's due time He shall be made known to all and His blessing shall be extended to all the families of the earth.
-            </p>
-            <p class="author" data-lang="brorussellname">— Charles Taze Russell</p>
-        </div>
+      <div class="quote-box bring_front">
+        <p class="quote-text" data-lang="brorussellmsg">
+          The true Gospel is not merely a message of good tidings respecting
+          salvation to a few, but a message of great joy which shall be unto all
+          people — the declaration that a Savior and Deliverer has been
+          provided, and that in God's due time He shall be made known to all and
+          His blessing shall be extended to all the families of the earth.
+        </p>
+        <p class="author" data-lang="brorussellname">— Charles Taze Russell</p>
+      </div>
 
+      <!-- <img class="text-center" src="./Assets/christandflock.png"> -->
+      <!-- Absolute positioned images -->
+      <!-- <img src="./Assets/dalle_scrolls.png" alt="Bottom Left Logo" class="bottom-left-logo">-->
+      <!-- <img src="./Assets/scroll2.png" alt="Top Right Image" class="top-right-image">  -->
+      <!-- <img src="./Assets/quill.png" alt="Bottom Left Image" class="bottom-left-image"> -->
+      <!-- <img src="./Assets/trumpet.png" alt="Bottom Left Image" class="bottom-left-image"> -->
+      <img
+        src="./Assets/harvest.png"
+        alt="Bottom Left Image"
+        class="bottom-left-image"
+      />
+      <!-- <img src="./Assets/wsickle4.png" alt="Bottom Left Image" class="bottom-left-image"> -->
 
-        <!-- <img class="text-center" src="./Assets/christandflock.png"> -->
-        <!-- Absolute positioned images -->
-        <!-- <img src="./Assets/dalle_scrolls.png" alt="Bottom Left Logo" class="bottom-left-logo">-->
-        <!-- <img src="./Assets/scroll2.png" alt="Top Right Image" class="top-right-image">  -->
-        <!-- <img src="./Assets/quill.png" alt="Bottom Left Image" class="bottom-left-image"> -->
-        <!-- <img src="./Assets/trumpet.png" alt="Bottom Left Image" class="bottom-left-image"> -->
-        <img src="./Assets/harvest.png" alt="Bottom Left Image" class="bottom-left-image">
-        <!-- <img src="./Assets/wsickle4.png" alt="Bottom Left Image" class="bottom-left-image"> -->
-
-        <div class="lang">
+      <div class="lang">
         <div class="switches-container">
-            <input type="radio" id="switchEnglish" onclick="setLanguage('en')" name="switchPlan" value="English" checked="checked" />
-            <input type="radio" id="switchTamil" onclick="setLanguage('ta')" name="switchPlan" value="Tamil" />
-            <label for="switchEnglish">English</label>
-            <label for="switchTamil">தமிழ்</label>
-            <div class="switch-wrapper">
-              <div class="switch">
-                <div>English</div>
-                <div>தமிழ்</div>
-              </div>
+          <input
+            type="radio"
+            id="switchEnglish"
+            onclick="setLanguage('en')"
+            name="switchPlan"
+            value="English"
+            checked="checked"
+          />
+          <input
+            type="radio"
+            id="switchTamil"
+            onclick="setLanguage('ta')"
+            name="switchPlan"
+            value="Tamil"
+          />
+          <label for="switchEnglish">English</label>
+          <label for="switchTamil">தமிழ்</label>
+          <div class="switch-wrapper">
+            <div class="switch">
+              <div>English</div>
+              <div>தமிழ்</div>
             </div>
           </div>
-          </div>
-        <!-- <img src="./Assets/goldenshofar.png" alt="Bottom Left Image" class="bottom-left-image"> -->
-        <!-- <img src="./Assets/harvestwheats.png" alt="Bottom Left Image" class="bottom-right-image"> -->
-        <!-- <img src="./Assets/wheattrumpetremovebgpreview.png" alt="Bottom Left Image" class="bottom-right-image"> -->
-        <!-- <img src="./Assets/christandflock1.png" alt="Bottom Left Image" class="bottom-left-image"> -->
-
+        </div>
+      </div>
+      <!-- <img src="./Assets/goldenshofar.png" alt="Bottom Left Image" class="bottom-left-image"> -->
+      <!-- <img src="./Assets/harvestwheats.png" alt="Bottom Left Image" class="bottom-right-image"> -->
+      <!-- <img src="./Assets/wheattrumpetremovebgpreview.png" alt="Bottom Left Image" class="bottom-right-image"> -->
+      <!-- <img src="./Assets/christandflock1.png" alt="Bottom Left Image" class="bottom-left-image"> -->
     </div>
 
     <!-- Custom JS -->
@@ -164,5 +361,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>

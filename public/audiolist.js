@@ -24,7 +24,92 @@ window.onload = function () {
 // const search = 'Technology';
 // const apiUrl = 'http://localhost:5000/api/defaultvideos';
 //const apiUrl = 'http://localhost:5000/api/videos?search=' + searchdata;
+// Function to render audio items
+function renderAudioItems(filteredData) {
+  const widgetContainer = document.getElementById("titleAudioWidget");
+  widgetContainer.innerHTML = "";
 
+  if (filteredData.length === 0) {
+    const noRecordsMessage = document.createElement("div");
+    noRecordsMessage.className = "noRecordsMessage";
+    noRecordsMessage.textContent = "No records available";
+    widgetContainer.appendChild(noRecordsMessage);
+    return;
+  }
+
+  filteredData.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "audio-card";
+
+    // Top circle image (overlapping)
+    const circleIcon = document.createElement("div");
+    circleIcon.className = "circle-icon";
+    if (searchdata != null)
+      circleIcon.innerHTML = `
+      <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
+           alt = "Badge Icon" class="circle-img" />
+      `;
+
+    // circleIcon.innerHTML = `
+    // <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
+    //      alt = "Badge Icon" class="circle-img" />
+    // `;
+    // circleIcon.innerHTML = `
+    //   <img src="${item.imageUrl || './Assets/audioimages/basics53.png'}" 
+    //        alt="Badge Icon" class="circle-img" />
+    // `;
+
+    // Card content
+    const cardDetails = document.createElement("div");
+    cardDetails.className = "card-details";
+    cardDetails.innerHTML = `
+      <h3>${item.topic}</h3>
+      <hr class="card-divider">
+      <h3>${item.tamil}</h3>
+    `;
+
+    // Audio player container
+    const audioPlayer = document.createElement("div");
+    audioPlayer.className = "audio-player";
+    audioPlayer.innerHTML = `
+      <audio controls>
+        <source src="${item.audioUrl}" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    `;
+
+    // Action icons
+    const iconList = document.createElement("ul");
+    iconList.className = "card-icons";
+
+    if (item.pdflink) {
+      const pdfIcon = document.createElement("li");
+      // pdfIcon.innerHTML = `<a href="${item.pdflink}" target="_blank" title="PDF"><img src="./Assets/audioimages/audiopdfres.png" height="75px"></a>`;
+      pdfIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pdflink}" target="_blank" title="PDF"><i class="fas fa-file-pdf glass-icon"></i></a></div>`;
+
+      iconList.appendChild(pdfIcon);
+    }
+
+    if (item.pptlink) {
+      const pptIcon = document.createElement("li");
+      // pptIcon.innerHTML = `<a href="${item.pptlink}" target="_blank" title="PPT"><img src="./Assets/audioimages/audiopptres.png" height="75px"></a>`;
+      pptIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pptlink}" target="_blank" title="PPT"><i class="fas fa-file-powerpoint glass-icon"></i></a></div>`;
+      iconList.appendChild(pptIcon);
+    }
+
+    const downloadIcon = document.createElement("li");
+    // downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><img src="./Assets/audioimages/audioresdownload.png" height="75px"></a>`;
+    downloadIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.audioUrl}" target="_blank" title="Download"><i class="fas fa-download glass-icon"></i></a></div>`;
+    iconList.appendChild(downloadIcon);
+
+    // Assemble card
+    card.appendChild(circleIcon);
+    card.appendChild(cardDetails);
+    card.appendChild(audioPlayer);
+    card.appendChild(iconList);
+    widgetContainer.appendChild(card);
+  });
+}
 
 function fetchaudiodiscourses() {
 
@@ -58,92 +143,7 @@ function fetchaudiodiscourses() {
       document.getElementById("titleAudioWidget").style.display = "block";
       //for mobile version
       const widgetContainer = document.getElementById("titleAudioWidget");
-      // Function to render audio items
-      function renderAudioItems(filteredData) {
-        const widgetContainer = document.getElementById("titleAudioWidget");
-        widgetContainer.innerHTML = "";
 
-        if (filteredData.length === 0) {
-          const noRecordsMessage = document.createElement("div");
-          noRecordsMessage.className = "noRecordsMessage";
-          noRecordsMessage.textContent = "No records available";
-          widgetContainer.appendChild(noRecordsMessage);
-          return;
-        }
-
-        filteredData.forEach(item => {
-          const card = document.createElement("div");
-          card.className = "audio-card";
-
-          // Top circle image (overlapping)
-          const circleIcon = document.createElement("div");
-          circleIcon.className = "circle-icon";
-          if (searchdata != null)
-            circleIcon.innerHTML = `
-            <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
-                 alt = "Badge Icon" class="circle-img" />
-            `;
-
-          // circleIcon.innerHTML = `
-          // <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
-          //      alt = "Badge Icon" class="circle-img" />
-          // `;
-          // circleIcon.innerHTML = `
-          //   <img src="${item.imageUrl || './Assets/audioimages/basics53.png'}" 
-          //        alt="Badge Icon" class="circle-img" />
-          // `;
-
-          // Card content
-          const cardDetails = document.createElement("div");
-          cardDetails.className = "card-details";
-          cardDetails.innerHTML = `
-            <h3>${item.topic}</h3>
-            <hr class="card-divider">
-            <h3>${item.tamil}</h3>
-          `;
-
-          // Audio player container
-          const audioPlayer = document.createElement("div");
-          audioPlayer.className = "audio-player";
-          audioPlayer.innerHTML = `
-            <audio controls>
-              <source src="${item.audioUrl}" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-          `;
-
-          // Action icons
-          const iconList = document.createElement("ul");
-          iconList.className = "card-icons";
-
-          if (item.pdflink) {
-            const pdfIcon = document.createElement("li");
-            // pdfIcon.innerHTML = `<a href="${item.pdflink}" target="_blank" title="PDF"><img src="./Assets/audioimages/audiopdfres.png" height="75px"></a>`;
-            pdfIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pdflink}" target="_blank" title="PDF"><i class="fas fa-file-pdf glass-icon"></i></a></div>`;
-
-            iconList.appendChild(pdfIcon);
-          }
-
-          if (item.pptlink) {
-            const pptIcon = document.createElement("li");
-            // pptIcon.innerHTML = `<a href="${item.pptlink}" target="_blank" title="PPT"><img src="./Assets/audioimages/audiopptres.png" height="75px"></a>`;
-            pptIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pptlink}" target="_blank" title="PPT"><i class="fas fa-file-powerpoint glass-icon"></i></a></div>`;
-            iconList.appendChild(pptIcon);
-          }
-
-          const downloadIcon = document.createElement("li");
-          // downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><img src="./Assets/audioimages/audioresdownload.png" height="75px"></a>`;
-          downloadIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.audioUrl}" target="_blank" title="Download"><i class="fas fa-download glass-icon"></i></a></div>`;
-          iconList.appendChild(downloadIcon);
-
-          // Assemble card
-          card.appendChild(circleIcon);
-          card.appendChild(cardDetails);
-          card.appendChild(audioPlayer);
-          card.appendChild(iconList);
-          widgetContainer.appendChild(card);
-        });
-      }
 
 
 
@@ -151,7 +151,7 @@ function fetchaudiodiscourses() {
 
       // Initial render
       renderAudioItems(data);
-      updatesectiontitle(searchdata)
+      // updatesectiontitle(searchdata)
 
     })
     .catch(error => {
@@ -432,3 +432,37 @@ areas.forEach(area => {
   area.addEventListener('mouseout', hideCustomTooltip);
 });
 
+function sortDiscourses(mode) {
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      let sortedData = [...data];
+      if (mode === "alphabet") {
+        sortedData.sort((a, b) => a.topic.localeCompare(b.topic));
+      } else if (mode === "year") {
+        sortedData.sort((a, b) => {
+          const yearA = parseInt(a.year || a.topic.match(/\b\d{4}\b/)?.[0]) || 0;
+          const yearB = parseInt(b.year || b.topic.match(/\b\d{4}\b/)?.[0]) || 0;
+          return yearB - yearA; // descending year
+        });
+      }
+
+      // Re-render with sorted data
+      document.getElementById("titleAudioWidget").innerHTML = ""; // Clear
+      renderAudioItems(sortedData); // Call the same render function used earlier
+    })
+    .catch(error => console.error("Sort error:", error));
+}
+function filterDiscourses() {
+  const keyword = document.getElementById("keywordsearch").value.toLowerCase();
+  fetch(apiUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      const filtered = data.filter(
+        (item) =>
+          item.topic.toLowerCase().includes(keyword) ||
+          (item.tamil && item.tamil.toLowerCase().includes(keyword))
+      );
+      renderAudioItems(filtered);
+    });
+}

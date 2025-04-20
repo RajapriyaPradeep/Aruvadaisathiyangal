@@ -133,8 +133,8 @@ button.gridjs-sort {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  padding: 1rem;
-  margin-top: 5%;
+  padding: 0.5rem;
+  /* margin-top: 5%; */
 }
 
 /* .audio-card {
@@ -411,3 +411,61 @@ body {
   object-fit: cover;
 }
 /* Card Design ends here */
+.glass-search-wrapper {
+  /* margin-left: 15px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.glass-search-box {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
+  /* background: rgba(255, 255, 255, 0.15); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* color: #ffffff; */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  color: #7a2a2a;
+  font-family: "Cardo", serif;
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
+  transition: all 0.3s ease;
+  width: 220px;
+  border: 1px solid rgba(255, 215, 160, 0.4);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 215, 160, 0.1),
+    rgba(255, 235, 180, 0.2)
+  );
+}
+
+.glass-search-box::placeholder {
+  color: #7a2a2a;
+  font-style: italic;
+}
+
+.glass-search-box:focus {
+  outline: none;
+  border: 1px solid #ffc67a;
+  box-shadow: 0 8px 24px rgba(255, 200, 120, 0.3);
+}
+.filterbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 0.5rem;
+  /* margin: 1.5rem 0 0 1rem; */
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .filterbar {
+    /* flex-direction: column; */
+    align-items: stretch;
+    gap: 10px;
+    margin: 1rem;
+  }
+}
