@@ -159,10 +159,7 @@ body::before {
 /* Navigation ends */
 
 /* Search keyword starts here */
-.search-bar {
-  position: relative;
-  /* Position relative to contain the icon */
-}
+/*  */
 
 .search-bar input {
   padding-left: 10px;
@@ -264,6 +261,7 @@ body::before {
   }
 
   &:after {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
     content: attr(data-content);
     position: relative;
     display: inline-block;
@@ -284,6 +282,7 @@ body::before {
   font-size: large;
   color: #530909 !important;
   font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
   /* font-weight: 600; */
 }
 
@@ -320,6 +319,7 @@ body::before {
 /* Bible verse ends here */
 /* author note starts here */
 .biblestudent_note {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
   font-family: "Cardo" !important;
   /* font-style: italic; */
   font-family: none;
@@ -376,6 +376,7 @@ body::before {
   margin-top: 10px;
   color: #7a2a2a !important;
   font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Brother russell quotes ends here */
@@ -509,7 +510,7 @@ body::before {
   max-height: 75px;
   max-width: auto;
   cursor: pointer !important;
-  /* filter: brightness(0.7); */
+  filter: brightness(0.7);
   /* filter: drop-shadow(2px 4px 6px #e7dbca); */
   /* border-radius: 10px 100px / 120px; */
   /* border-radius: 40px 999em 999em 40px;
@@ -816,7 +817,7 @@ height: 60%; */
 
 .form-inline .form-control {
   /* width: 100% !important; */
-  width: 75% !important;
+  /* width: 75% !important; */
 }
 
 .audioControlmobile {
@@ -1321,6 +1322,31 @@ left: 0; */
     right: 5px;
   }
 }
+.floating-button-nav {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  background: url("./Assets/Alogo.jpg") no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px rgb(226 190 143);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.floating-button-nav:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05); /* Slightly enlarges */
+}
+/* Make it slightly smaller on smaller screens */
+@media (max-width: 600px) {
+  .floating-button-nav {
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
 
 /* Floating BS logo ends here */
 /* Add grid filter to the right side starts here */
@@ -1333,4 +1359,186 @@ left: 0; */
   padding-left: 10px;
   background-color: #e7dbca !important;
   color: #721c24 !important;
+}
+/* Initially hide the search box */
+.search-box.hidden {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* When shown */
+.search-box.show {
+  width: 180px;
+  opacity: 1;
+  padding: 6px 10px;
+  border: 1px solid #ffc67a;
+  background: rgba(255, 235, 180, 0.2);
+  backdrop-filter: blur(10px);
+  color: #7a2a2a;
+  font-family: "Cardo", serif;
+  margin-left: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Optional: style the search icon */
+.search-toggle {
+  cursor: pointer;
+  font-size: 18px;
+  color: #7a2a2a;
+  padding: 6px;
+  transition: transform 0.3s ease;
+}
+.search-toggle:hover {
+  transform: scale(1.2);
+}
+.search-bar .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.search-bar .search-toggle {
+  font-size: 18px;
+  cursor: pointer;
+  color: #7a2a2a;
+  transition: transform 0.3s ease;
+}
+
+.search-bar .search-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Override margin spacing on nav-item to fix alignment */
+.navbar-nav .nav-item.search-bar {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .search-box.show {
+    width: 100px;
+  }
+}
+.glass-search-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+/*.glass-search-box {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  color: #7a2a2a;
+  font-family: "Cardo", serif;
+  transition: all 0.3s ease;
+  width: 60%;
+  border: 1px solid rgba(255, 215, 160, 0.4);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 215, 160, 0.1),
+    rgba(255, 235, 180, 0.2)
+  );
+} */
+
+.glass-search-box {
+  padding: 14px 20px;
+  font-size: 17px;
+  border-radius: 18px;
+  width: 60%;
+  max-width: 500px;
+
+  /* Background and border */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 240, 200, 0.6)
+  );
+  border: 1.5px solid rgba(120, 60, 20, 0.4);
+
+  /* Frosted glass effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Font and color */
+  font-family: "Cardo", serif;
+  color: #5e2a1b;
+  font-weight: 500;
+
+  /* Inner shadow for depth */
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.5),
+    0 4px 10px rgba(120, 60, 20, 0.2);
+
+  transition: all 0.3s ease;
+
+  padding-left: 40px;
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/search.svg");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-blend-mode: overlay;
+}
+.glass-search-box:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(190, 140, 80, 0.4),
+    inset 0 0 5px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 240, 220, 0.8)
+  );
+}
+.glass-search-box::placeholder {
+  color: #6d4532;
+  font-style: italic;
+  opacity: 1;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+}
+.glass-icon-wrapper {
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 215, 160, 0.1),
+    rgba(255, 235, 180, 0.2)
+  );
+  border: 1px solid rgba(255, 215, 160, 0.4);
+}
+
+.glass-icon {
+  font-size: 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffcc70, #c85000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+&:hover {
+  box-shadow: 0 0 10px rgba(255, 200, 120, 0.6);
+  /* transform: scale(1.05); */
+}
+.glass-icon-wrapper:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.glass-icon-wrapper:hover .glass-icon {
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }

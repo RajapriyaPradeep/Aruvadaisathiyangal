@@ -455,17 +455,58 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   margin-top: 0.5rem;
   /* margin: 1.5rem 0 0 1rem; */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 @media (max-width: 768px) {
   .filterbar {
     /* flex-direction: column; */
     align-items: stretch;
-    gap: 10px;
+    gap: 5px;
     margin: 1rem;
   }
+}
+.badge-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.badge {
+  font-family: "Cardo", serif;
+  font-size: 12px;
+  padding: 4px 10px;
+  /* border-radius: 12px; */
+  background: #ebd3b0;
+  color: #7a2a2a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.badge.year {
+  background-color: #721c24;
+  color: hsl(41.32deg 88.33% 76.47%) !important;
+}
+
+.badge.section {
+  background-color: #c7b198;
+}
+.card-top {
+  position: absolute;
+  top: -80%;
+  right: 5%;
+}
+.year-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.glass-search-wrapper-discourse {
+  display: flex;
+  justify-content: center;
 }

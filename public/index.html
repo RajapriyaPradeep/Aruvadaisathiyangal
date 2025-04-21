@@ -78,6 +78,7 @@
           <!-- <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li> -->
+
           <div
             class="item web-latestdiscourses"
             onclick="navplaylist('recent')"
@@ -130,13 +131,6 @@
                     data-lang="kingdommessage"
                     onclick="navplaylist('kingdommessage')"
                     >KINGDOM MESSAGE</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-lang="characterdevelopment"
-                    onclick="navplaylist('characterdevelopment')"
-                    >CHARACTER DEVELOPMENT</a
                   >
                 </div>
               </li>
@@ -274,6 +268,12 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a
                 class="dropdown-item"
+                data-lang="characterdevelopment"
+                onclick="navplaylist('characterdevelopment')"
+                >CHARACTER DEVELOPMENT</a
+              >
+              <a
+                class="dropdown-item"
                 data-lang="christianconcepts"
                 onclick="navplaylist('christianconcepts')"
                 >CHRISTIAN CONCEPTS</a
@@ -389,6 +389,41 @@
               >
             </ul>
           </li>
+          <!-- <li class="nav-item search-bar">
+            <div class="search-container">
+              <i
+                class="fas fa-search search-toggle"
+                onclick="toggleSearch()"
+              ></i>
+              <input
+                id="searchkeyword"
+                class="form-control search-box"
+                type="search"
+                placeholder="Search topics..."
+                aria-label="Search"
+                onkeypress="if(event.key === 'Enter') searchaudio()"
+              />
+            </div>
+          </li> -->
+
+          <li class="nav-item">
+            <button
+              class="floating-button-nav"
+              onclick="navplaylist('aboutus')"
+            ></button>
+          </li>
+          <!-- <li class="nav-item search-bar">
+            <form class="form-inline search-border">
+              <i class="fas fa-search" onclick="searchaudio()"></i>
+              <input
+                class="form-control search-box"
+                id="searchkeyword"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </li> -->
           <!-- <li class="nav-item">
           <a class="navbar-brand" onclick="navplaylist('aboutus')">
             <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65"
@@ -416,22 +451,29 @@
         Sanctify them through thy <span class="flicker">TRUTH</span>: thy word
         is <span class="fast-flicker">TRUTH.</span>- John 17:17
       </h1>
-      <hr class="hr-text" data-content="Welcome to the Place of Light" />
-      <!-- <p class="text-center glory-God">This site is dedicated to the Praise and Honor of the King of Kings and Lord of Lords, Jesus Christ.</p> -->
-      <!-- <p class="text-center glory-God" style="margin: 0;">It is sponsored by Bro. Prabhakaran.</p> -->
-      <!-- <p data-lang="reasonforsite" id="biblestudenttxt" class="text-center biblestudent_note bring_front">We were moved to create this site as stewards of the resources we've been entrusted with, especially given the growing number of requests for them. Over the years, the Lord has allowed us to collect various studies and materials that have been a blessing to His people, and many have expressed a need for easier access. This site is meant to be a simple archive of those resources, and we will update it as more are made available, trusting in the Lord’s provision.</p> -->
-      <!-- <p class="quote-text" id="brorussellquotes" data-lang="brorussellmsg">
-      The true Gospel is not merely a message of good tidings respecting salvation to a few, but a message of great joy
-      which shall be unto all people — the declaration that a Savior and Deliverer has been provided, and that in God's
-      due time He shall be made known to all and His blessing shall be extended to all the families of the earth.
-    </p> -->
-      <div class="home_bible_div">
+      <!-- <div class="home_bible_div">
         <img
           src="./Assets/bible_1.png"
           class="home_bible fade-in-image"
           alt="Bottom Left Image"
         />
+      </div> -->
+      <div class="glass-search-wrapper">
+        <input
+          type="search"
+          class="glass-search-box"
+          id="searchkeyword"
+          placeholder="Search topics..."
+          onkeypress="if(event.key === 'Enter') searchaudio()"
+        />
+        <div class="glass-icon-wrapper">
+          <i
+            class="fas fa-sort-alpha-down glass-icon"
+            onclick="searchaudio()"
+          ></i>
+        </div>
       </div>
+
       <div class="quote-box bring_front">
         <p class="text-center glory-God">
           This site is dedicated to the Praise and Honor of the King of Kings
@@ -458,7 +500,7 @@
         </p>
       </div>
       <!-- Bible students logo starts here -->
-      <button class="floating-button" onclick="navplaylist('aboutus')"></button>
+      <!-- <button class="floating-button" onclick="navplaylist('aboutus')"></button> -->
       <!-- Bible students logo ends here -->
       <!-- <div class="container content-area"> 
         <h1 data-lang="truthverse" id="Bibleverse" class="medievalsharp-regular my-4 text-center txt-animate shadow-style bring_front">Sanctify them through thy truth: thy word is truth.- John 17:17</h1>

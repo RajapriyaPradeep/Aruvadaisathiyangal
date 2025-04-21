@@ -143,13 +143,13 @@
                     onclick="navplaylist('kingdommessage')"
                     >KINGDOM MESSAGE</a
                   >
-                  <a
+                  <!-- <a
                     class="dropdown-item"
                     href="#"
                     data-lang="characterdevelopment"
                     onclick="navplaylist('characterdevelopment')"
                     >CHARACTER DEVELOPMENT</a
-                  >
+                  > -->
                 </div>
               </li>
               <a
@@ -284,6 +284,12 @@
               TOPICAL STUDY
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a
+                class="dropdown-item"
+                data-lang="characterdevelopment"
+                onclick="navplaylist('characterdevelopment')"
+                >CHARACTER DEVELOPMENT</a
+              >
               <a
                 class="dropdown-item"
                 data-lang="christianconcepts"
@@ -423,20 +429,28 @@
       <div class="scrollable-wrapper">
         <!-- Sort + Search Row Below Cards -->
         <div class="filterbar">
-          <div class="glass-icon-wrapper" title="Sort A-Z">
+          <div
+            class="glass-icon-wrapper"
+            style="margin-left: 0px"
+            title="Sort A-Z"
+          >
             <i
               class="fas fa-sort-alpha-down glass-icon"
               onclick="sortDiscourses('alphabet')"
             ></i>
           </div>
-          <div class="glass-icon-wrapper" title="Sort by Year">
+          <div
+            class="glass-icon-wrapper"
+            style="margin-left: 0px"
+            title="Sort by Year"
+          >
             <i
               class="fas fa-calendar-alt glass-icon"
               onclick="sortDiscourses('year')"
             ></i>
           </div>
 
-          <div class="glass-search-wrapper">
+          <div class="glass-search-wrapper-discourse">
             <input
               id="keywordsearch"
               type="text"
@@ -483,11 +497,11 @@
       <!-- <div class="floating-cicon" id="devicemode" onclick="toggleViewMode()">
         📱
       </div> -->
-      <img
+      <!-- <img
         src="./Assets/quill.png"
         alt="Bottom Left Image"
         class="home-bottom-right-image"
-      />
+      /> -->
     </div>
     <!-- Modal -->
     <div

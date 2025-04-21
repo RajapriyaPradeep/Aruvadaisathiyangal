@@ -37,36 +37,46 @@ function renderAudioItems(filteredData) {
     return;
   }
 
-  filteredData.forEach(item => {
+  filteredData.forEach((item, index) => {
     const card = document.createElement("div");
     card.className = "audio-card";
 
     // Top circle image (overlapping)
     const circleIcon = document.createElement("div");
     circleIcon.className = "circle-icon";
-    if (searchdata != null)
+    if (searchdata != null) {
       circleIcon.innerHTML = `
-      <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
-           alt = "Badge Icon" class="circle-img" />
+        <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
+             alt="Badge Icon" class="circle-img" />
       `;
+    }
 
-    // circleIcon.innerHTML = `
-    // <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
-    //      alt = "Badge Icon" class="circle-img" />
-    // `;
-    // circleIcon.innerHTML = `
-    //   <img src="${item.imageUrl || './Assets/audioimages/basics53.png'}" 
-    //        alt="Badge Icon" class="circle-img" />
-    // `;
+    // Year badge on top-right corner
+    if (item.year) {
+      const yearBadge = document.createElement("div");
+      yearBadge.className = "year-badge";
+      yearBadge.innerHTML = `<span class="badge year">${item.year}</span>`;
+      card.appendChild(yearBadge);
+    }
 
     // Card content
     const cardDetails = document.createElement("div");
     cardDetails.className = "card-details";
     cardDetails.innerHTML = `
-      <h3>${item.topic}</h3>
+      <h3>${index + 1}.${item.topic}</h3>
       <hr class="card-divider">
       <h3>${item.tamil}</h3>
     `;
+    // const cardDetails = document.createElement("div");
+    // cardDetails.className = "card-details";
+    // cardDetails.innerHTML = `
+    //   <h3>${item.topic}</h3>
+    //   <hr class="card-divider">
+    //   <h3>${item.tamil}</h3>
+    //   <div class="badge-container">
+    //     ${item.section ? `<span class="badge section">${item.section}</span>` : ""}
+    //   </div>
+    // `;
 
     // Audio player container
     const audioPlayer = document.createElement("div");
@@ -84,21 +94,17 @@ function renderAudioItems(filteredData) {
 
     if (item.pdflink) {
       const pdfIcon = document.createElement("li");
-      // pdfIcon.innerHTML = `<a href="${item.pdflink}" target="_blank" title="PDF"><img src="./Assets/audioimages/audiopdfres.png" height="75px"></a>`;
       pdfIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pdflink}" target="_blank" title="PDF"><i class="fas fa-file-pdf glass-icon"></i></a></div>`;
-
       iconList.appendChild(pdfIcon);
     }
 
     if (item.pptlink) {
       const pptIcon = document.createElement("li");
-      // pptIcon.innerHTML = `<a href="${item.pptlink}" target="_blank" title="PPT"><img src="./Assets/audioimages/audiopptres.png" height="75px"></a>`;
       pptIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.pptlink}" target="_blank" title="PPT"><i class="fas fa-file-powerpoint glass-icon"></i></a></div>`;
       iconList.appendChild(pptIcon);
     }
 
     const downloadIcon = document.createElement("li");
-    // downloadIcon.innerHTML = `<a href="${item.audioUrl}" target="_blank" title="Download"><img src="./Assets/audioimages/audioresdownload.png" height="75px"></a>`;
     downloadIcon.innerHTML = `<div class="glass-icon-wrapper"><a href="${item.audioUrl}" target="_blank" title="Download"><i class="fas fa-download glass-icon"></i></a></div>`;
     iconList.appendChild(downloadIcon);
 
@@ -110,6 +116,7 @@ function renderAudioItems(filteredData) {
     widgetContainer.appendChild(card);
   });
 }
+
 
 function fetchaudiodiscourses() {
 
@@ -178,127 +185,127 @@ function toggleViewMode() {
 function updatesectiontitle(sectionname) {
 
   if (sectionname == "recent") {
-    document.getElementById("discourcesectionname").textContent = "Recent Discources";
-    return "Recent Discources";
+    // document.getElementById("discourcesectionname").textContent = "Recent Discources";
+    return "New";
   }
   else if (sectionname == "basicstudies") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Basics 53";
-    return "Discources - Basics 53";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Basics 53";
+    return "Basics 53";
   }
   else if (sectionname == "kingdommessage") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Kingdom Message";
-    return "Discources - Kingdom Message";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Kingdom Message";
+    return "Kingdom Message";
   }
   else if (sectionname == "characterdevelopment") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Character Development";
-    return "Discources - Character Development";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Character Development";
+    return "Character Development";
   }
   else if (sectionname == "memorial") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Memorial";
-    return "Discources - Memorial";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Memorial";
+    return "Memorial";
   }
   else if (sectionname == "prophetic") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Prophetic";
-    return "Discources - Prophetic";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Prophetic";
+    return "Prophetic";
   }
   else if (sectionname == "spiritual") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Spiritual";
-    return "Discources - Spiritual";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Spiritual";
+    return "Spiritual";
   }
   else if (sectionname == "typeantitype") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Type and Antitype";
-    return "Discources - Type and Antitype";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Type and Antitype";
+    return "Type and Antitype";
   }
   else if (sectionname == "paneldiscussions") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Panel Discussions";
-    return "Discources - Panel Discussions";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Panel Discussions";
+    return "Panel Discussions";
   }
   else if (sectionname == "testimonial") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Testimonal";
-    return "Discources - Testimonal";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Testimonal";
+    return "Testimonal";
   }
   else if (sectionname == "vesperservice") {
-    document.getElementById("discourcesectionname").textContent = "Discources - Vesper Service";
-    return "Discources - Vesper Service";
+    // document.getElementById("discourcesectionname").textContent = "Discources - Vesper Service";
+    return "Vesper Service";
   }
   else if (sectionname == "thebattleofarmageddon") {
-    document.getElementById("discourcesectionname").textContent = "Volume Study 4 - The Battle of Armageddon";
-    return "Volume Study 4 - The Battle of Armageddon";
+    // document.getElementById("discourcesectionname").textContent = "Volume Study 4 - The Battle of Armageddon";
+    return "V4 The Battle of Armageddon";
   }
   else if (sectionname == "thenewcreation") {
-    document.getElementById("discourcesectionname").textContent = "Volume Study 6 - The New Creation";
-    return "Volume Study 6 - The New Creation";
+    // document.getElementById("discourcesectionname").textContent = "Volume Study 6 - The New Creation";
+    return "V6 The New Creation";
   }
   else if (sectionname == "lifeofjesuschrist") {
-    document.getElementById("discourcesectionname").textContent = "Book Study - Life of Jesus Christ";
-    return "Book Study - Life of Jesus Christ";
+    // document.getElementById("discourcesectionname").textContent = "Book Study - Life of Jesus Christ";
+    return "Life of Jesus Christ";
   }
   else if (sectionname == "lifeofdavid") {
-    document.getElementById("discourcesectionname").textContent = "Book Study - Life of David";
-    return "Book Study - Life of David";
+    // document.getElementById("discourcesectionname").textContent = "Book Study - Life of David";
+    return "Life of David";
   }
   else if (sectionname == "orderanddisipline") {
-    document.getElementById("discourcesectionname").textContent = "Book Study - Order and Discipline";
-    return "Book Study - Order and Discipline";
+    // document.getElementById("discourcesectionname").textContent = "Book Study - Order and Discipline";
+    return "Order and Discipline";
   }
   else if (sectionname == "wildernesswandering") {
-    document.getElementById("discourcesectionname").textContent = "Book Study - Wilderness Wandering";
-    return "Book Study - Wilderness Wandering";
+    // document.getElementById("discourcesectionname").textContent = "Book Study - Wilderness Wandering";
+    return "Wilderness Wandering";
   }
   else if (sectionname == "christianconcepts") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Christian Concepts";
-    return "Topical Study - Christian Concepts";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Christian Concepts";
+    return "Christian Concepts";
   }
   else if (sectionname == "ecclesiaelection") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Ecclesia Election";
-    return "Topical Study - Ecclesia Election";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Ecclesia Election";
+    return "Ecclesia Election";
   }
   else if (sectionname == "endtimeprophecy") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - End Time Prophecy";
-    return "Topical Study - End Time Prophecy";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - End Time Prophecy";
+    return "End Time Prophecy";
   }
   else if (sectionname == "goldenrule") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Golden Rule";
-    return "Topical Study - Golden Rule";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Golden Rule";
+    return "Golden Rule";
   }
   else if (sectionname == "gospelintheheaven") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Gospel in the Heaven";
-    return "Topical Study - Gospel in the Heaven";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Gospel in the Heaven";
+    return "Gospel in the Heaven";
   }
   else if (sectionname == "israel") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Israel";
-    return "Topical Study - Israel";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Israel";
+    return "Israel";
   }
   else if (sectionname == "pandemic") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Pandemic";
-    return "Topical Study - Pandemic";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Pandemic";
+    return "Pandemic";
   }
   else if (sectionname == "parables") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Parables";
-    return "Topical Study - Parables";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Parables";
+    return "Parables";
   }
   else if (sectionname == "perfectingholiness") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Perfecting Holiness";
-    return "Topical Study - Perfecting Holiness";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Perfecting Holiness";
+    return "Perfecting Holiness";
   }
   else if (sectionname == "revelation") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Revelation";
-    return "Topical Study - Revelation";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Revelation";
+    return "Revelation";
   }
   else if (sectionname == "sin") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Sin";
-    return "Topical Study - Sin";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Sin";
+    return "Sin";
   }
   else if (sectionname == "spiritbegettal") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Spirit Begettal";
-    return "Topical Study - Spirit Begettal";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Spirit Begettal";
+    return "Spirit Begettal";
   }
   else if (sectionname == "understandinggreattribulation") {
-    document.getElementById("discourcesectionname").textContent = "Topical Study - Understanding Great Tribulation";
-    return "Topical Study - Understanding Great Tribulation";
+    // document.getElementById("discourcesectionname").textContent = "Topical Study - Understanding Great Tribulation";
+    return "Understanding Great Tribulation";
   }
   else {
-    document.getElementById("discourcesectionname").textContent = searchdata;
+    // document.getElementById("discourcesectionname").textContent = searchdata;
     return searchdata;
   }
 
