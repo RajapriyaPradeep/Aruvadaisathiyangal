@@ -125,10 +125,17 @@
 /* Mobile ends */
 /* Tab starts */
 @media (max-width: 768px) {
+  body::before {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important; /* prevent weird scroll lag on iOS */
+  }
   .mobile-latestdiscourses {
     display: contents;
   }
-
+  .navbar-light .navbar-nav .nav-link {
+    font-size: small;
+  }
   .web-latestdiscourses {
     display: none;
   }
@@ -285,3 +292,127 @@
 }
 
 /* Desktop ends */
+@media (max-width: 480px) {
+  /* Hide everything except logo, mobile 'New', and toggler */
+  .navbar-collapse {
+    /* display: none !important; */
+  }
+
+  .navbar-toggler {
+    display: block !important;
+    margin-left: auto;
+    color: #7a2a2a;
+    font-size: 1.3rem;
+  }
+
+  .navbar-toggler .fas.fa-ellipsis-v {
+    font-size: 20px;
+    color: #7a2a2a;
+  }
+
+  .projtitle {
+    display: inline-block !important;
+    max-height: 45px;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .mobile-latestdiscourses {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
+  }
+  .nav-item:not(.mobile-latestdiscourses) {
+    /* display: none !important; */
+  }
+  .web-latestdiscourses {
+    display: none !important;
+  }
+  .navbar-nav {
+    /* flex-direction: row !important;
+    justify-content: flex-start !important; */
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    /* padding-left: 1rem;
+    padding-top: 0.5rem;
+    overflow-x: hidden; */
+  }
+  .nav-item {
+    /* display: block !important; */
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .nav-link {
+    display: block;
+    width: 100%;
+    color: #7a2a2a !important;
+    font-weight: bold;
+  }
+  .dropdown-menu {
+    position: static !important; /* remove absolute positioning */
+    float: none !important;
+    width: 100% !important;
+    margin-top: 0;
+    background-color: #f5efe3 !important;
+    box-shadow: none !important;
+    padding: 0.3rem 1rem;
+    border-radius: 8px;
+    display: none; /* hide by default */
+  }
+
+  .dropdown-menu.show {
+    display: block !important;
+  }
+
+  .dropdown-item {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7a2a2a !important;
+    border-bottom: 1px solid #e0d2b3;
+  }
+
+  .dropdown-toggle::after {
+    float: right;
+    margin-top: 6px;
+  }
+
+  /* Optional: Add indentation to submenus */
+  .dropdown-menu .dropdown-menu {
+    padding-left: 1rem;
+  }
+
+  .dropright > .dropdown-menu {
+    margin-left: 0;
+  }
+  body {
+    overflow-x: hidden !important;
+  }
+  .navbar-collapse {
+    background: linear-gradient(
+      145deg,
+      rgba(255, 215, 160, 0.1),
+      rgba(255, 235, 180, 0.2)
+    );
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-toggler-icon {
+    display: none !important;
+  }
+
+  .fas.fa-ellipsis-v {
+    display: block;
+    color: #7a2a2a;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    font-size: small;
+  }
+  body::before {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important; /* prevent weird scroll lag on iOS */
+  }
+}

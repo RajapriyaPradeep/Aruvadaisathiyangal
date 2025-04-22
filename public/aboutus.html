@@ -61,23 +61,21 @@
 
     <!--Navbar Starts Here-->
     <nav
-      class="navbar navbar-expand-lg navbar-light bg-light"
-      style="background: transparent !important"
+      class="container content-area navbar navbar-expand-lg navbar-light bg-light"
+      style="background: transparent !important; min-height: 0px"
     >
-      <!-- <a class="navbar-brand" href="#">
-            <img src="./Assets/projecttitle_latest.png" onclick="navplaylist('home')" class="projtitle" alt="Logo" >
-        </a> -->
-      <img
-        src="./Assets/projecttitle_latest.png"
-        onclick="navplaylist('home')"
-        class="projtitle"
-        alt="Logo"
-      />
+      <div>
+        <img
+          src="./Assets/projecttitle_latest.png"
+          onclick="navplaylist('home')"
+          class="projtitle"
+          alt="Logo"
+        />
+      </div>
       <div class="item mobile-latestdiscourses" onclick="navplaylist('recent')">
         <span class="new-icon"></span>
         <p style="margin-bottom: 0px !important">New</p>
       </div>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -90,18 +88,30 @@
         <span class="navbar-toggler-icon"></span>
         <i class="fas fa-ellipsis-v"></i>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li> -->
+        <ul
+          class="navbar-nav mr-auto"
+          style="
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+          "
+        >
           <div
             class="item web-latestdiscourses"
             onclick="navplaylist('recent')"
           >
             <span class="new-icon"></span>
-            <p style="margin-bottom: 0px !important">New</p>
+
+            <p
+              style="
+                margin-bottom: 0px !important;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
+              "
+            >
+              New
+            </p>
           </div>
           <li class="nav-item dropdown">
             <a
@@ -141,13 +151,6 @@
                     onclick="navplaylist('kingdommessage')"
                     >KINGDOM MESSAGE</a
                   >
-                  <!-- <a
-                    class="dropdown-item"
-                    href="#"
-                    data-lang="characterdevelopment"
-                    onclick="navplaylist('characterdevelopment')"
-                    >CHARACTER DEVELOPMENT</a
-                  > -->
                 </div>
               </li>
               <a
@@ -405,12 +408,12 @@
               >
             </ul>
           </li>
-
-          <!-- <li class="nav-item">
-                <a class="navbar-brand" onclick="navplaylist('aboutus')">
-                    <img src="./Assets/Alogo.jpg" class="biblestudentslogo" alt="Logo" width="65" height="65" onclick="navplaylist('home')">
-                </a>
-            </li> -->
+          <li class="nav-item">
+            <button
+              class="floating-button-nav"
+              onclick="navplaylist('aboutus')"
+            ></button>
+          </li>
         </ul>
       </div>
     </nav>

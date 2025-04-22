@@ -27,21 +27,28 @@ i {
 
 /* Common style */
 /* Body */
+html,
 body {
   margin: 0;
-  max-width: 100vw;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("./Assets/harvestwheats.png") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  background: url("./Assets/harvestwheats.png");
   /* opacity: 0.7; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   opacity: 0.85;
   z-index: -1;
   /* Place behind the content */
@@ -68,12 +75,11 @@ body::before {
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
   color: #7a2a2a !important;
-  /* font-size: medium; */
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: #7a2a2a !important;
-  font-size: small;
+  font-size: medium;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
 
@@ -340,7 +346,9 @@ body::before {
   /* background-color: #eee9e0; */
   /* background-color: #e5d8c4; */
   padding: 20px;
-  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 20px; */
   margin-bottom: 0.5px;
   position: relative;
   border-radius: 15px;
@@ -510,7 +518,8 @@ body::before {
   max-height: 75px;
   max-width: auto;
   cursor: pointer !important;
-  filter: brightness(0.7);
+  border-radius: 10px;
+  /* filter: brightness(0.7); */
   /* filter: drop-shadow(2px 4px 6px #e7dbca); */
   /* border-radius: 10px 100px / 120px; */
   /* border-radius: 40px 999em 999em 40px;
@@ -1323,15 +1332,15 @@ left: 0; */
   }
 }
 .floating-button-nav {
-  width: 50px; /* Adjust size as needed */
-  height: 50px;
+  width: 75px; /* Adjust size as needed */
+  height: 75px;
   background: url("./Assets/Alogo.jpg") no-repeat center center;
   background-size: contain;
   border: none;
   cursor: pointer;
   z-index: 2000;
   border-radius: 5px;
-  box-shadow: 4px 4px 5px rgb(226 190 143);
+  /* box-shadow: 4px 4px 5px rgb(226 190 143); */
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 .floating-button-nav:hover {
