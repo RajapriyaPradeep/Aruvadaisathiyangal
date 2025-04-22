@@ -1538,6 +1538,14 @@ left: 0; */
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
 }
+.glass-icon-dark {
+  font-size: 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #7a2a2a, #c85000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
 &:hover {
   box-shadow: 0 0 10px rgba(255, 200, 120, 0.6);
   /* transform: scale(1.05); */
