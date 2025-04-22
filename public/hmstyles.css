@@ -515,7 +515,7 @@ body::before {
   max-width: 60%; */
   float: left;
   margin-right: auto;
-  max-height: 75px;
+  max-height: 100px;
   max-width: auto;
   cursor: pointer !important;
   border-radius: 10px;
@@ -1332,8 +1332,8 @@ left: 0; */
   }
 }
 .floating-button-nav {
-  width: 75px; /* Adjust size as needed */
-  height: 75px;
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
   background: url("./Assets/Alogo.jpg") no-repeat center center;
   background-size: contain;
   border: none;
