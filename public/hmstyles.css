@@ -354,12 +354,17 @@ body::before {
   border-radius: 15px;
   /* box-shadow: #721c2436 0px 2px 5px -1px, #721c2494 0px 1px 3px -1px; */
 
-  background: rgba(255, 255, 255, 0.29);
-  border-radius: 16px;
+  /* background: rgba(255, 255, 255, 0.29); */
+  /* border-radius: 16px; */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.5px);
-  -webkit-backdrop-filter: blur(6.5px);
+  /* backdrop-filter: blur(6.5px); */
+  /* -webkit-backdrop-filter: blur(6.5px); */
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(255 255 255 / 0%);
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .quote-text {
@@ -1558,4 +1563,120 @@ left: 0; */
 .glass-icon-wrapper:hover .glass-icon {
   transform: scale(1.2);
   filter: brightness(1.2);
+}
+.tamil-header {
+  font-family: "Catamaran", "Noto Sans Tamil", sans-serif;
+  font-size: medium;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #7a2a2a;
+
+  /* Glassmorphism background */
+  /* background: rgba(255, 255, 255, 0.2); */
+  /* border-radius: 20px; */
+  padding: 5px 32px;
+  margin: 10px auto 10px auto;
+  width: fit-content;
+
+  /* Frosted glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* border: 1px solid rgba(255, 255, 255, 0.4); */
+
+  /* Inner and outer glow for softness */
+  /* box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2),
+    0 4px 30px rgba(0, 0, 0, 0.1); */
+
+  transition: all 0.4s ease;
+}
+.tamil-header:hover {
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.3),
+    0 6px 40px rgba(0, 0, 0, 0.15);
+  transform: scale(1.01);
+}
+@keyframes fadeInGlow {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3), 0 0 12px #ffcc66,
+      0 0 18px #ffcc66;
+    transform: translateY(0);
+  }
+}
+.bible-verse-ribbon {
+  position: relative;
+  display: inline-block;
+  background: #7a2a2a;
+  color: #e5d8c4;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 14px 40px;
+  border-radius: 0;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.bible-verse-ribbon::before,
+.bible-verse-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 32px solid transparent;
+  border-bottom: 32px solid transparent;
+  z-index: -1;
+}
+
+.bible-verse-ribbon::before {
+  left: -30px;
+  border-right: 30px solid #7a2a2a;
+}
+
+.bible-verse-ribbon::after {
+  right: -30px;
+  border-left: 30px solid #7a2a2a;
+}
+/* Wrapper for verse + logos */
+.verse-banner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+/* Logos */
+.verse-logo {
+  max-height: 100px;
+  max-width: auto;
+  cursor: pointer !important;
+  border-radius: 10px;
+}
+
+/* Hide logos on small screens */
+@media (max-width: 768px) {
+  .verse-logo {
+    display: none !important;
+  }
+
+  .verse-banner-wrapper {
+    flex-direction: column;
+  }
+
+  .verse-text {
+    font-size: 1.2rem !important;
+  }
+}
+.mobile-only-nav {
+  display: none;
 }

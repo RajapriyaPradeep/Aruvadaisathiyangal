@@ -256,6 +256,9 @@
 /* Tab ends */
 /* Desktop starts */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .mobile-only-nav {
+    display: none !important;
+  }
   .mobile-latestdiscourses {
     display: contents;
   }
@@ -414,5 +417,8 @@
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: scroll !important; /* prevent weird scroll lag on iOS */
+  }
+  .mobile-only-nav {
+    display: contents;
   }
 }
