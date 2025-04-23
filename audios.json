@@ -963,7 +963,7 @@
     "year": 2019,
     "duration": "4",
     "section": "basicstudies",
-    "pdflink": "",
+    "pdflink": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Basics53Part1/main/33.Lessonabout.pdf",
     "tamil": "உடன்படிக்கைகளை பற்றிய பாடம்",
     "pptlink": ""
   },
@@ -1309,17 +1309,6 @@
     "pptlink": ""
   },
   {
-    "topic": "Humility and Meekness - 1",
-    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/01HUMILITYANDMEEKNESSBRPRABHAKARAN.mp3",
-    "sizeMb": 6.42,
-    "year": 2019,
-    "duration": "4",
-    "section": "characterdevelopment",
-    "pdflink": "",
-    "tamil": "04 - தாழ்மை மற்றும் சாந்த குணம் - பாகம் 1",
-    "pptlink": ""
-  },
-  {
     "topic": "Faith - 2",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/02CDFAITHPART2.mp3",
     "sizeMb": 6.42,
@@ -1328,17 +1317,6 @@
     "section": "characterdevelopment",
     "pdflink": "",
     "tamil": "02 - விசுவாசம் - பாகம் 2",
-    "pptlink": ""
-  },
-  {
-    "topic": "Humility and Meekness  - 2",
-    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/02HUMILITYANDMEEKNESSBRPRABHAKARAN.mp3",
-    "sizeMb": 6.42,
-    "year": 2019,
-    "duration": "4",
-    "section": "characterdevelopment",
-    "pdflink": "",
-    "tamil": "05 - தாழ்மை மற்றும் சாந்த குணம் - பாகம் 2",
     "pptlink": ""
   },
   {
@@ -1353,25 +1331,25 @@
     "pptlink": ""
   },
   {
-    "topic": "Brotherly Love",
-    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/CDBrotherlyLovepart1BrPrabhakaran.mp3",
+    "topic": "Humility and Meekness - 1",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/01HUMILITYANDMEEKNESSBRPRABHAKARAN.mp3",
     "sizeMb": 6.42,
     "year": 2019,
     "duration": "4",
     "section": "characterdevelopment",
     "pdflink": "",
-    "tamil": "09 - சகோதர அன்பு",
+    "tamil": "04 - தாழ்மை மற்றும் சாந்த குணம் - பாகம் 1",
     "pptlink": ""
   },
   {
-    "topic": "Evil Speaking",
-    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/CDEvilSpeakingBrPrabhakaran.mp3",
+    "topic": "Humility and Meekness  - 2",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/02HUMILITYANDMEEKNESSBRPRABHAKARAN.mp3",
     "sizeMb": 6.42,
     "year": 2019,
     "duration": "4",
     "section": "characterdevelopment",
     "pdflink": "",
-    "tamil": "11 - தீமை பேசுதல்",
+    "tamil": "05 - தாழ்மை மற்றும் சாந்த குணம் - பாகம் 2",
     "pptlink": ""
   },
   {
@@ -1397,6 +1375,28 @@
     "pptlink": ""
   },
   {
+    "topic": "Self Control",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/CDSelfControlBrPrabhakaran.mp3",
+    "sizeMb": 6.42,
+    "year": 2019,
+    "duration": "4",
+    "section": "characterdevelopment",
+    "pdflink": "",
+    "tamil": "08 - சுய கட்டுப்பாடு",
+    "pptlink": ""
+  },
+  {
+    "topic": "Brotherly Love",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/CDBrotherlyLovepart1BrPrabhakaran.mp3",
+    "sizeMb": 6.42,
+    "year": 2019,
+    "duration": "4",
+    "section": "characterdevelopment",
+    "pdflink": "",
+    "tamil": "09 - சகோதர அன்பு",
+    "pptlink": ""
+  },
+  {
     "topic": "Prayer",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/CDPrayerBrPrabhakaran.mp3",
     "sizeMb": 6.42,
@@ -1408,14 +1408,14 @@
     "pptlink": ""
   },
   {
-    "topic": "Self Control",
-    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/CDSelfControlBrPrabhakaran.mp3",
+    "topic": "Evil Speaking",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/CharacterDevelopment/main/CDEvilSpeakingBrPrabhakaran.mp3",
     "sizeMb": 6.42,
     "year": 2019,
     "duration": "4",
     "section": "characterdevelopment",
     "pdflink": "",
-    "tamil": "08 - சுய கட்டுப்பாடு",
+    "tamil": "11 - தீமை பேசுதல்",
     "pptlink": ""
   },
   {

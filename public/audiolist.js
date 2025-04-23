@@ -63,7 +63,7 @@ function renderAudioItems(filteredData) {
     const cardDetails = document.createElement("div");
     cardDetails.className = "card-details";
     cardDetails.innerHTML = `
-      <h3>${index + 1}.${item.topic}</h3>
+      <h3>${item.topic}</h3>
       <hr class="card-divider">
       <h3>${item.tamil}</h3>
     `;
