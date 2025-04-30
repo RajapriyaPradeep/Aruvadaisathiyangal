@@ -2057,3 +2057,7 @@ div.fg::after {
   background-color: rgba(245, 235, 220, 0.25);
   border-radius: 6px;
 }
+.wrapper .bg,
+.wrapper .fg {
+  font-size: 2.75rem; /* Increase as needed */
+}

@@ -473,6 +473,10 @@
 
 /* Desktop ends */
 @media (max-width: 480px) {
+  .wrapper .bg,
+  .wrapper .fg {
+    font-size: 1.5rem; /* Increase as needed */
+  }
   .navbar-logo {
     height: 75px !important;
   }
