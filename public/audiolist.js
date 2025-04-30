@@ -1,5 +1,3 @@
-
-
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const searchdata = urlParams.get('module');
@@ -8,6 +6,48 @@ let isMobileView = true;
 let apiUrl = "";
 
 const width = window.innerWidth;
+let currentView = "card";
+
+// function toggleLayout() {
+//   const widget = document.getElementById("titleAudioWidget");
+//   const icon = document.querySelector("#viewToggleBtn i");
+
+//   // Update currentView before fetching
+//   if (currentView === "card") {
+//     widget.classList.remove("card-grid");
+//     widget.classList.add("list-view");
+//     icon.classList.remove("fa-th-large");
+//     icon.classList.add("fa-list");
+//     currentView = "list";
+//   } else {
+//     widget.classList.remove("list-view");
+//     widget.classList.add("card-grid");
+//     icon.classList.remove("fa-list");
+//     icon.classList.add("fa-th-large");
+//     currentView = "card";
+//   }
+
+//   // Now refetch and render based on new view mode
+//   fetchaudiodiscourses();
+// }
+function toggleLayout() {
+  const widget = document.getElementById("titleAudioWidget");
+  const icon = document.querySelector("#viewToggleBtn i");
+
+  if (currentView === "card") {
+    currentView = "grid";
+    icon.classList.remove("fa-th-large");
+    icon.classList.add("fa-table");
+  } else {
+    currentView = "card";
+    icon.classList.remove("fa-table");
+    icon.classList.add("fa-th-large");
+  }
+
+  fetchaudiodiscourses();
+}
+
+
 
 window.onload = function () {
   // if (width <= 480 && ((localStorage.getItem("viewmode") == null) || localStorage.getItem("viewmode") == undefined)) {
@@ -41,18 +81,24 @@ function renderAudioItems(filteredData) {
     const card = document.createElement("div");
     card.className = "audio-card";
 
+
+
     // Top circle image (overlapping)
-    const circleIcon = document.createElement("div");
-    circleIcon.className = "circle-icon";
-    if (searchdata != null) {
+    let circleIcon = null;
+    if (currentView === "card" && searchdata != null) {
+      circleIcon = document.createElement("div");
+      circleIcon.className = "circle-icon";
       circleIcon.innerHTML = `
-        <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
-             alt="Badge Icon" class="circle-img" />
-      `;
+    <img src="${item.imageUrl || './Assets/audioimages/' + searchdata + '.png'}" 
+         alt="Badge Icon" class="circle-img" />
+  `;
     }
 
+    if (circleIcon) {
+      card.appendChild(circleIcon);
+    }
     // Year badge on top-right corner
-    if (item.year) {
+    if (currentView === "card" && item.year) {
       const yearBadge = document.createElement("div");
       yearBadge.className = "year-badge";
       yearBadge.innerHTML = `<span class="badge year">${item.year}</span>`;
@@ -109,7 +155,9 @@ function renderAudioItems(filteredData) {
     iconList.appendChild(downloadIcon);
 
     // Assemble card
-    card.appendChild(circleIcon);
+    if (circleIcon) {
+      card.appendChild(circleIcon);
+    }
     card.appendChild(cardDetails);
     card.appendChild(audioPlayer);
     card.appendChild(iconList);
@@ -146,8 +194,8 @@ function fetchaudiodiscourses() {
       const width = window.innerWidth;
 
       // if (width <= 480 && (localStorage.getItem("viewmode") == "mobile")) {
-      document.getElementById("grid").style.display = "none";
-      document.getElementById("titleAudioWidget").style.display = "block";
+      // document.getElementById("grid").style.display = "none";
+      // document.getElementById("titleAudioWidget").style.display = "block";
       //for mobile version
       const widgetContainer = document.getElementById("titleAudioWidget");
 
@@ -157,8 +205,22 @@ function fetchaudiodiscourses() {
 
 
       // Initial render
-      renderAudioItems(data);
+      // renderAudioItems(data);
       // updatesectiontitle(searchdata)
+
+      if (currentView === "card") {
+        document.getElementById("grid").style.display = "none";
+        document.getElementById("grid-scroll").style.display = "none";
+        document.getElementById("scrollable-wrapper").style.display = "block";
+        document.getElementById("titleAudioWidget").style.display = "block";
+        renderAudioItems(data);
+      } else if (currentView === "grid") {
+        document.getElementById("titleAudioWidget").style.display = "none";
+        document.getElementById("scrollable-wrapper").style.display = "none";
+        document.getElementById("grid").style.display = "block";
+        document.getElementById("grid-scroll").style.display = "block";
+        renderGridView(data);
+      }
 
     })
     .catch(error => {
@@ -472,4 +534,78 @@ function filterDiscourses() {
       );
       renderAudioItems(filtered);
     });
+}
+function renderGridView(data) {
+  document.getElementById("grid").innerHTML = "";
+  new gridjs.Grid({
+    columns: [
+      { name: "Topic", width: "25%" },
+      { name: "Tamil", width: "30%" },
+      { name: "Year", width: "10%" },
+      {
+        name: "Audio",
+        width: "35%",
+        formatter: (_, row) => gridjs.html(`<audio controls src="${row.cells[3].data}"></audio>`)
+      }
+    ],
+    data: data.map(item => [
+      item.topic || "-",
+      item.tamil || "-",
+      item.year || "-",
+      item.audioUrl || "#"
+    ]),
+    search: true,
+    sort: true,
+    pagination: {
+      limit: 8
+    },
+    style: {
+      table: {
+        borderRadius: '12px',
+        overflow: 'hidden',
+        fontFamily: 'Cardo',
+        background: 'rgba(255, 255, 255, 0.15)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
+      },
+      th: {
+        backgroundColor: '#7a2a2a',
+        color: '#e5d8c4',
+        textAlign: 'center',
+        padding: '10px'
+      },
+      td: {
+        backgroundColor: '#e5d8c4',
+        color: '#7a2a2a',
+        padding: '10px',
+        fontWeight: '500'
+      }
+    }
+  }).render(document.getElementById("grid"));
+}
+
+function openNav() {
+  document.getElementById("mobileSideNav").classList.add("open");
+}
+
+function closeNav() {
+  document.getElementById("mobileSideNav").classList.remove("open");
+}
+function toggleSubmenu(el) {
+  const allSubmenus = document.querySelectorAll(".submenu");
+  const allItems = document.querySelectorAll(".has-submenu");
+
+  allSubmenus.forEach((submenu) => {
+    if (submenu !== el.nextElementSibling) submenu.style.display = "none";
+  });
+
+  allItems.forEach((item) => {
+    if (item !== el.parentElement) item.classList.remove("active");
+  });
+
+  const submenu = el.nextElementSibling;
+  const isVisible = submenu.style.display === "block";
+  submenu.style.display = isVisible ? "none" : "block";
+  el.parentElement.classList.toggle("active", !isVisible);
 }

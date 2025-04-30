@@ -11,7 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -20,6 +23,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="hmstyles.css" />
     <link rel="stylesheet" type="text/css" href="mediaquery.css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <!-- <link rel="stylesheet" href="ribbon.css"> -->
     <!-- Google Fonts -->
     <link
@@ -46,413 +58,457 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
-    <!--Navbar Starts Here-->
-    <nav
-      class="container content-area navbar navbar-expand-lg navbar-light bg-light"
-      style="background: transparent !important; min-height: 0px"
-    >
-      <div>
-        <img
-          src="./Assets/projecttitle_latest.png"
-          onclick="navplaylist('home')"
-          class="projtitle mobile-only-nav"
-          alt="Logo"
-        />
-      </div>
-      <div class="item mobile-latestdiscourses" onclick="navplaylist('recent')">
-        <span class="new-icon"></span>
-        <p style="margin-bottom: 0px !important">New</p>
-      </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-        <i class="fas fa-ellipsis-v"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul
-          class="navbar-nav mr-auto"
-          style="
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-          "
-        >
-          <div
-            class="item web-latestdiscourses"
-            onclick="navplaylist('recent')"
-          >
-            <span class="new-icon"></span>
-
-            <p
-              style="
-                margin-bottom: 0px !important;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
-              "
-            >
-              New
-            </p>
+    <!-- Test -->
+    <div id="mobileSideNav" class="mobile-sidenav">
+      <button class="closebtn" onclick="closeNav()">×</button>
+      <ul class="mobile-menu-list">
+        <li class="has-submenu">
+          <div class="submenu-toggle" onclick="toggleSubmenu(this)">
+            DISCOURSES
           </div>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              data-lang="audiodiscourse"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              DISCOURSES
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="basics53"
-                onclick="navplaylist('basicstudies')"
-                >BASICS 53</a
+          <ul class="submenu">
+            <li onclick="navplaylist('basicstudies')">BASICS 53</li>
+            <li onclick="navplaylist('kingdommessage')">KINGDOM MESSAGE</li>
+            <li onclick="navplaylist('memorial')">MEMORIAL</li>
+            <li onclick="navplaylist('prophetic')">PROPHETIC</li>
+            <li onclick="navplaylist('spiritual')">SPIRITUAL</li>
+            <li onclick="navplaylist('typeantitype')">TYPE & ANTITYPE</li>
+            <li onclick="navplaylist('paneldiscussions')">PANEL DISCUSSIONS</li>
+            <li onclick="navplaylist('testimonial')">TESTIMONIAL</li>
+            <li onclick="navplaylist('vesperservice')">VESPER SERVICE</li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <div class="submenu-toggle" onclick="toggleSubmenu(this)">
+            VOLUME STUDY
+          </div>
+          <ul class="submenu">
+            <li onclick="navplaylist('thebattleofarmageddon')">THE BATTLE OF ARMAGEDDON</li>
+            <li onclick="navplaylist('thenewcreation')">THE NEW CREATION</li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <div class="submenu-toggle" onclick="toggleSubmenu(this)">
+            BOOK STUDY
+          </div>
+          <ul class="submenu">
+            <li onclick="navplaylist('lifeofjesuschrist')">LIFE OF JESUS CHRIST</li>
+            <li onclick="navplaylist('lifeofdavid')">LIFE OF DAVID</li>
+            <li onclick="navplaylist('orderanddisipline')">ORDER & DISCIPLINE</li>
+            <li onclick="navplaylist('wildernesswandering')">WILDERNESS WANDERING</li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <div class="submenu-toggle" onclick="toggleSubmenu(this)">
+            TOPICAL STUDY
+          </div>
+          <ul class="submenu">
+            <li onclick="navplaylist('characterdevelopment')">CHARACTER DEVELOPMENT</li>
+            <li onclick="navplaylist('christianconcepts')">CHRISTIAN CONCEPTS</li>
+            <li onclick="navplaylist('ecclesiaelection')">ECCLESIA ELECTION</li>
+            <li onclick="navplaylist('endtimeprophecy')">END TIME PROPHECY</li>
+            <li onclick="navplaylist('goldenrule')">GOLDEN RULE</li>
+            <li onclick="navplaylist('gospelintheheaven')">GOSPEL IN THE HEAVEN</li>
+            <li onclick="navplaylist('israel')">ISRAEL</li>
+            <li onclick="navplaylist('pandemic')">PANDEMIC</li>
+            <li onclick="navplaylist('parables')">PARABLES</li>
+            <li onclick="navplaylist('perfectingholiness')">PERFECTING HOLINESS</li>
+            <li onclick="navplaylist('revelation')">REVELATION</li>
+            <li onclick="navplaylist('sin')">SIN</li>
+            <li onclick="navplaylist('spiritbegettal')">SPIRIT BEGETTAL</li>
+            <li onclick="navplaylist('understandinggreattribulation')">UNDERSTANDING GREAT TRIBULATION</li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <div class="submenu-toggle" onclick="toggleSubmenu(this)">
+            MORE
+          </div>
+          <ul class="submenu">
+            <li >HANDOUTS</li>
+            <li onclick="showdivineplan()">DIVINE PLAN OF AGES</li>
+            <li onclick="navplaylist('aboutus')">ABOUT US</li>
+          </ul>
+        </li>
+    </div>
+
+    <nav class="custom-navbar">
+      <div class="navbar-container">
+        <!-- Logo Left -->
+        <div class="left-logo">
+          <img
+            src="./Assets/projecttitle_latest.png"
+            onclick="navplaylist('home')"
+            class="navbar-logo logo-animate"
+            alt="Left Logo"
+          />
+        </div>
+        <!-- Center: Menu + Verse -->
+        <div class="center-nav">
+          <div class="wrapper d">
+            <div class="bg">அறுவடை சத்தியங்கள்</div>
+            <div class="fg">அறுவடை சத்தியங்கள்</div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <div
+                class="item web-latestdiscourses"
+                onclick="navplaylist('recent')"
               >
-              <li class="dropright">
-                <a
-                  class="dropdown-item dropdown-toggle"
-                  href="#!"
-                  data-toggle="dropdown"
-                  data-lang="doctrinal"
+                <span class="new-icon"></span>
+
+                <p
+                  style="
+                    margin-bottom: 0px !important;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
+                  "
                 >
-                  DOCTRINAL
+                  New
+                </p>
+              </div>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  data-lang="audiodiscourse"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  DISCOURSES
                 </a>
-                <div class="dropdown-menu">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a
                     class="dropdown-item"
                     href="#"
-                    data-lang="kingdommessage"
-                    onclick="navplaylist('kingdommessage')"
-                    >KINGDOM MESSAGE</a
+                    data-lang="basics53"
+                    onclick="navplaylist('basicstudies')"
+                    >BASICS 53</a
                   >
-                </div>
-              </li>
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="memorial"
-                onclick="navplaylist('memorial')"
-                >MEMORIAL</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="prophetic"
-                onclick="navplaylist('prophetic')"
-                >PROPHETIC</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="spiritual"
-                onclick="navplaylist('spiritual')"
-                >SPIRITUAL</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="typeantitype"
-                onclick="navplaylist('typeantitype')"
-                >TYPE & ANTITYPE</a
-              >
+                  <li class="dropright">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      data-toggle="dropdown"
+                      data-lang="doctrinal"
+                    >
+                      DOCTRINAL
+                    </a>
+                    <div class="dropdown-menu">
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        data-lang="kingdommessage"
+                        onclick="navplaylist('kingdommessage')"
+                        >KINGDOM MESSAGE</a
+                      >
+                    </div>
+                  </li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="memorial"
+                    onclick="navplaylist('memorial')"
+                    >MEMORIAL</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="prophetic"
+                    onclick="navplaylist('prophetic')"
+                    >PROPHETIC</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="spiritual"
+                    onclick="navplaylist('spiritual')"
+                    >SPIRITUAL</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="typeantitype"
+                    onclick="navplaylist('typeantitype')"
+                    >TYPE & ANTITYPE</a
+                  >
 
-              <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="paneldiscussions"
-                onclick="navplaylist('paneldiscussions')"
-                >PANEL DISCUSSIONS</a
-              >
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="testimonial"
-                onclick="navplaylist('testimonial')"
-                >TESTIMONIAL</a
-              >
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="vesperservice"
-                onclick="navplaylist('vesperservice')"
-                >VESPER SERVICE</a
-              >
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="paneldiscussions"
+                    onclick="navplaylist('paneldiscussions')"
+                    >PANEL DISCUSSIONS</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="testimonial"
+                    onclick="navplaylist('testimonial')"
+                    >TESTIMONIAL</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="vesperservice"
+                    onclick="navplaylist('vesperservice')"
+                    >VESPER SERVICE</a
+                  >
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  data-lang="volumestudy"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  VOLUME STUDY
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a
+                    class="dropdown-item"
+                    data-lang="thebattleofarmageddon"
+                    onclick="navplaylist('thebattleofarmageddon')"
+                    >THE BATTLE OF ARMAGEDDON</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="thenewcreation"
+                    onclick="navplaylist('thenewcreation')"
+                    >THE NEW CREATION</a
+                  >
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  data-lang="bookstudy"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  BOOK STUDY
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a
+                    class="dropdown-item"
+                    data-lang="lifeofjesuschrist"
+                    onclick="navplaylist('lifeofjesuschrist')"
+                    >LIFE OF JESUS CHRIST</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="lifeofdavid"
+                    onclick="navplaylist('lifeofdavid')"
+                    >LIFE OF DAVID</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="orderanddisipline"
+                    onclick="navplaylist('orderanddisipline')"
+                    >ORDER & DISCIPLINE</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="wildernesswandering"
+                    onclick="navplaylist('wildernesswandering')"
+                    >WILDERNESS WANDERING</a
+                  >
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  data-lang="topicalstudy"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  TOPICAL STUDY
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a
+                    class="dropdown-item"
+                    data-lang="characterdevelopment"
+                    onclick="navplaylist('characterdevelopment')"
+                    >CHARACTER DEVELOPMENT</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="christianconcepts"
+                    onclick="navplaylist('christianconcepts')"
+                    >CHRISTIAN CONCEPTS</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="ecclesiaelection"
+                    onclick="navplaylist('ecclesiaelection')"
+                    >ECCLESIA ELECTION</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="endtimeprophecy"
+                    onclick="navplaylist('endtimeprophecy')"
+                    >END TIME PROPHECY</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="goldenrule"
+                    onclick="navplaylist('goldenrule')"
+                    >GOLDEN RULE</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="gospelintheheaven"
+                    onclick="navplaylist('gospelintheheaven')"
+                    >GOSPEL IN THE HEAVEN</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="israel"
+                    onclick="navplaylist('israel')"
+                    >ISRAEL</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="pandemic"
+                    onclick="navplaylist('pandemic')"
+                    >PANDEMIC</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="parables"
+                    onclick="navplaylist('parables')"
+                    >PARABLES</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="perfectingholiness"
+                    onclick="navplaylist('perfectingholiness')"
+                    >PERFECTING HOLINESS</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="revelation"
+                    onclick="navplaylist('revelation')"
+                    >REVELATION</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="sin"
+                    onclick="navplaylist('sin')"
+                    >SIN</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="spiritbegettal"
+                    onclick="navplaylist('spiritbegettal')"
+                    >SPIRIT BEGETTAL</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-lang="understandinggreattribulation"
+                    onclick="navplaylist('understandinggreattribulation')"
+                    >UNDERSTANDING GREAT TRIBULATION</a
+                  >
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  MORE
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">HANDOUTS</a>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="handouts"
+                    onclick="navplaylist('youtubevideos')"
+                    >VIDEO DISCOURCES</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="handouts"
+                    onclick="showdivineplan()"
+                    >DIVINE PLAN OF AGES</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="aboutus"
+                    onclick="navplaylist('aboutus')"
+                    >ABOUT US</a
+                  >
+                </ul>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="floating-button-nav mobile-only-nav"
+                  onclick="navplaylist('aboutus')"
+                ></button>
+              </li>
             </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              data-lang="volumestudy"
-              aria-haspopup="true"
-              aria-expanded="false"
+          </div>
+          <div class="navbar-verse-row">
+            <h1
+              data-lang="truthverse"
+              id="Bibleverse"
+              class="verse-text medievalsharp-regular text-center txt-animate fade-in-on-load fade-delay-1"
             >
-              VOLUME STUDY
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a
-                class="dropdown-item"
-                data-lang="thebattleofarmageddon"
-                onclick="navplaylist('thebattleofarmageddon')"
-                >THE BATTLE OF ARMAGEDDON</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="thenewcreation"
-                onclick="navplaylist('thenewcreation')"
-                >THE NEW CREATION</a
-              >
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              data-lang="bookstudy"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              BOOK STUDY
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a
-                class="dropdown-item"
-                data-lang="lifeofjesuschrist"
-                onclick="navplaylist('lifeofjesuschrist')"
-                >LIFE OF JESUS CHRIST</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="lifeofdavid"
-                onclick="navplaylist('lifeofdavid')"
-                >LIFE OF DAVID</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="orderanddisipline"
-                onclick="navplaylist('orderanddisipline')"
-                >ORDER & DISCIPLINE</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="wildernesswandering"
-                onclick="navplaylist('wildernesswandering')"
-                >WILDERNESS WANDERING</a
-              >
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              data-lang="topicalstudy"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              TOPICAL STUDY
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a
-                class="dropdown-item"
-                data-lang="characterdevelopment"
-                onclick="navplaylist('characterdevelopment')"
-                >CHARACTER DEVELOPMENT</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="christianconcepts"
-                onclick="navplaylist('christianconcepts')"
-                >CHRISTIAN CONCEPTS</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="ecclesiaelection"
-                onclick="navplaylist('ecclesiaelection')"
-                >ECCLESIA ELECTION</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="endtimeprophecy"
-                onclick="navplaylist('endtimeprophecy')"
-                >END TIME PROPHECY</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="goldenrule"
-                onclick="navplaylist('goldenrule')"
-                >GOLDEN RULE</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="gospelintheheaven"
-                onclick="navplaylist('gospelintheheaven')"
-                >GOSPEL IN THE HEAVEN</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="israel"
-                onclick="navplaylist('israel')"
-                >ISRAEL</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="pandemic"
-                onclick="navplaylist('pandemic')"
-                >PANDEMIC</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="parables"
-                onclick="navplaylist('parables')"
-                >PARABLES</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="perfectingholiness"
-                onclick="navplaylist('perfectingholiness')"
-                >PERFECTING HOLINESS</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="revelation"
-                onclick="navplaylist('revelation')"
-                >REVELATION</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="sin"
-                onclick="navplaylist('sin')"
-                >SIN</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="spiritbegettal"
-                onclick="navplaylist('spiritbegettal')"
-                >SPIRIT BEGETTAL</a
-              >
-              <a
-                class="dropdown-item"
-                data-lang="understandinggreattribulation"
-                onclick="navplaylist('understandinggreattribulation')"
-                >UNDERSTANDING GREAT TRIBULATION</a
-              >
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              MORE
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">HANDOUTS</a>
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="handouts"
-                onclick="navplaylist('youtubevideos')"
-                >VIDEO DISCOURCES</a
-              >
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="handouts"
-                onclick="showdivineplan()"
-                >DIVINE PLAN OF AGES</a
-              >
-              <a
-                class="dropdown-item"
-                href="#"
-                data-lang="aboutus"
-                onclick="navplaylist('aboutus')"
-                >ABOUT US</a
-              >
-            </ul>
-          </li>
-          <li class="nav-item">
+              Sanctify them through thy <span class="flicker">TRUTH</span>: thy
+              word is <span class="fast-flicker">TRUTH</span> – John 17:17
+            </h1>
+          </div>
+        </div>
+        <!-- Logo Right -->
+        <div class="right-logo">
+          <img src="./Assets/Alogo.jpg" alt="Right Logo" class="navbar-logo logo-animate" />
+        </div>
+
+        <!-- ☰ Menu Button -->
+        <div class="mobile-toggle-wrapper mobile-only">
+          <div class="new-old-container">
             <button
-              class="floating-button-nav mobile-only-nav"
-              onclick="navplaylist('aboutus')"
-            ></button>
-          </li>
-        </ul>
+              class="navbar-toggler-new"
+              onclick="navplaylist('recent')"
+              type="button"
+            >
+              <i class="fas fa-star"></i>New
+            </button>
+            <button class="navbar-toggler" onclick="openNav()" type="button">
+              <i class="fas fa-bars"></i>Old
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
-    <!--Navbar Ends Here -->
-    <!--  -->
-    <!-- Navbar -->
-    <!-- <div class="tamil-header">அறுவடை சத்தியங்கள்</div> -->
-    <div class="tamil-header">
-      <span class="tamil-text">அறுவடை சத்தியங்கள்</span>
+    <!-- Test -->
+    <div class="wrapper m">
+      <div class="bg">அறுவடை சத்தியங்கள்</div>
+      <div class="fg">அறுவடை சத்தியங்கள்</div>
     </div>
 
     <!-- Main Content Area -->
     <div class="container content-area">
-      <!-- <h1
-        data-lang="truthverse"
-        id="Bibleverse"
-        class="medievalsharp-regular my-4 text-center txt-animate shadow-style bring_front"
-      >
-        Sanctify them through thy <span class="flicker">TRUTH</span>: thy word
-        is <span class="fast-flicker">TRUTH.</span>- John 17:17
-      </h1> -->
-
-      <div class="verse-banner-wrapper">
-        <img
-          src="./Assets/projecttitle_latest.png"
-          onclick="navplaylist('home')"
-          class="verse-logo left-logo"
-          alt="Logo"
-        />
-        <h1
-          data-lang="truthverse"
-          id="Bibleverse"
-          class="verse-text medievalsharp-regular text-center txt-animate shadow-style bring_front"
-        >
-          Sanctify them through thy <span class="flicker">TRUTH</span>: thy word
-          is <span class="fast-flicker">TRUTH.</span> – John 17:17
-        </h1>
-        <img
-          src="./Assets/Alogo.jpg"
-          alt="Bible Students Right"
-          class="verse-logo right-logo"
-        />
-      </div>
-
-      <!-- <div class="home_bible_div">
-        <img
-          src="./Assets/bible_1.png"
-          class="home_bible fade-in-image"
-          alt="Bottom Left Image"
-        />
-      </div> -->
       <div class="glass-search-wrapper">
         <input
           type="search"
@@ -466,7 +522,7 @@
         </div>
       </div>
 
-      <div class="quote-box bring_front">
+      <div class="quote-box bring_front fade-in-on-load fade-delay-2">
         <p class="text-center glory-God">
           This site is dedicated to the Praise and Honor of the King of Kings
           and Lord of Lords, Jesus Christ.
@@ -484,57 +540,11 @@
           a simple archive of those resources, and we will update it as more are
           made available, trusting in the Lord’s provision.
         </p>
-        <!-- <p class="quote-text" id="brorussellquotes" data-lang="brorussellmsg">
-                The true Gospel is not merely a message of good tidings respecting salvation to a few, but a message of great joy which shall be unto all people — the declaration that a Savior and Deliverer has been provided, and that in God's due time He shall be made known to all and His blessing shall be extended to all the families of the earth.
-            </p> -->
         <p class="author" id="brorussellname" data-lang="brorussellname">
           It is sponsored by Bro. Prabhakaran.
         </p>
       </div>
-      <!-- Bible students logo starts here -->
-      <!-- <button class="floating-button" onclick="navplaylist('aboutus')"></button> -->
-      <!-- Bible students logo ends here -->
-      <!-- <div class="container content-area"> 
-        <h1 data-lang="truthverse" id="Bibleverse" class="medievalsharp-regular my-4 text-center txt-animate shadow-style bring_front">Sanctify them through thy truth: thy word is truth.- John 17:17</h1>
-        <hr class="hr-text" data-content="Welcome to the Place of Light">
-        <p class="text-center glory-God">This site is dedicated to the Praise and Honor of the King of Kings and Lord of Lords, Jesus Christ.</p>
-        <p class="text-center glory-God" style="margin: 0;">It is sponsored by Bro. Prabhakaran.</p>
-        <p data-lang="reasonforsite" id="biblestudenttxt" class="text-center biblestudent_note bring_front">We were moved to create this site as stewards of the resources we've been entrusted with, especially given the growing number of requests for them. Over the years, the Lord has allowed us to collect various studies and materials that have been a blessing to His people, and many have expressed a need for easier access. This site is meant to be a simple archive of those resources, and we will update it as more are made available, trusting in the Lord’s provision.</p>
-        <div class="quote-box bring_front">
-            <p class="quote-text" id="brorussellquotes" data-lang="brorussellmsg">
-                The true Gospel is not merely a message of good tidings respecting salvation to a few, but a message of great joy which shall be unto all people — the declaration that a Savior and Deliverer has been provided, and that in God's due time He shall be made known to all and His blessing shall be extended to all the families of the earth.
-            </p>
-            <p class="author" id="brorussellname" data-lang="brorussellname">— Charles Taze Russell</p>
-        </div> -->
-      <!-- Bottom Right Image -->
-      <!-- <img src="./Assets/harvest.png" alt="Bottom Left Image" class="home-bottom-right-image"> -->
-      <!-- <div class="floating-icon">
-              <img src="./Assets/glitter.png" onclick="navplaylist('recent')" alt="Back to Top">
-          </div> -->
-      <!-- Language Toogle -->
-      <!-- <div class="lang">
-        <div class="switches-container">
-            <input type="radio" id="switchEnglish" onclick="setLanguage('en')" name="switchPlan" value="English" checked="checked" />
-            <input type="radio" id="switchTamil" onclick="setLanguage('ta')" name="switchPlan" value="Tamil" />
-            <label for="switchEnglish">English</label>
-            <label for="switchTamil">தமிழ்</label>
-            <div class="switch-wrapper">
-              <div class="switch">
-                <div>English</div>
-                <div>தமிழ்</div>
-              </div>
-            </div>
-          </div>
-          </div> -->
     </div>
-    <!-- <footer class="site-footer" id="footersec">
-      <div class="footer-content">
-        <div class="footer-links">          
-          Version:<a onclick="viewmode('mobile')">Mobile</a> |
-          <a onclick="viewmode('desktop')">Desktop</a>
-        </div>
-      </div>
-    </footer> -->
     <!-- Modal -->
     <div
       class="modal"
@@ -569,20 +579,8 @@
                 usemap="#image-map"
                 style="position: relative; border-radius: 16px"
               />
-              <!-- <img
-                            id="chart-image"
-                            src="./Assets/Chart_DPA.jpg"
-                            usemap="#image-map"
-                            style="width: 100%; position: relative;"
-                        /> -->
             </div>
             <map name="image-map">
-              <!-- <area
-                            class="area-tooltip"
-                            title="The World That Was -- 1st Dispensation"
-                            coords="92,122,66,96"
-                            shape="rect"
-                        /> -->
               <area
                 class="area-tooltip"
                 title="The World That Was -- 1st Dispensation"
@@ -679,12 +677,6 @@
                 coords="23,375,750,374,747,368,36,368,37,347,10,346,9,374"
                 shape="poly"
               />
-              <!-- <area class="area-tooltip" title="Plane Of Divine Glory And Power Of Office"  coords="301,183,745,184,745,174,302,172,302,154,279,154,278,171,277,183" shape="poly">
-    <area class="area-tooltip" title="State of spirit birth"  coords="304,212,746,210,745,202,301,201,305,189,277,189,279,206,277,211" shape="poly">
-    <area class="area-tooltip" title="State of spirit begettal"  coords="300,272,541,272,542,270,302,268,300,272,541,272,305,267,303,247,278,247,278,263,277,273" shape="poly">
-    <area class="area-tooltip" title="State of God's favor (to humans)"  coords="20,305,748,302,744,297,25,299,23,278,4,277,4,306" shape="poly">
-    <area class="area-tooltip" title="State of God's typical favor"  coords="189,320,318,319,313,315,181,315,167,311,169,323,168,331,188,329" shape="poly">
-    <area class="area-tooltip" title="State of Sin and depravity"  coords="23,375,750,374,747,368,36,368,37,347,10,346,9,374" shape="poly"> -->
               <area
                 class="area-tooltip"
                 title="Fallen Adam and his posterity, before the flood"
@@ -918,11 +910,9 @@
         </div>
       </div>
     </div>
-
     <!-- Custom JS -->
     <script src="simple_script.js"></script>
     <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
