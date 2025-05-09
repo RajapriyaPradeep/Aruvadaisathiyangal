@@ -512,3 +512,33 @@ function toggleSubmenu(el) {
     submenu.style.display = isVisible ? "none" : "block";
     el.parentElement.classList.toggle("active", !isVisible);
 }
+tsParticles.load("golden-particles", {
+    fullScreen: { enable: false },
+    background: { color: "transparent" },
+    particles: {
+        number: { value: 50, density: { enable: true, area: 800 } },
+        color: { value: "#FFD700" },
+        shape: { type: "circle" },
+        opacity: {
+            value: 0.3,
+            random: true,
+            anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false }
+        },
+        size: {
+            value: 2,
+            random: { enable: true, minimumValue: 1 }
+        },
+        move: {
+            enable: true,
+            speed: 0.2,
+            direction: "top-right",
+            random: false,
+            straight: false,
+            outModes: { default: "out" }
+        }
+    },
+    interactivity: {
+        events: { onhover: { enable: false }, onclick: { enable: false } },
+    },
+    detectRetina: true
+});

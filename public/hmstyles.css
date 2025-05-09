@@ -107,7 +107,7 @@ body::before {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -231,6 +231,7 @@ body::before {
   font-style: normal;
   font-size: medium !important;
   background: linear-gradient(360deg, rgb(123 43 43), #721c24);
+  margin-bottom: 0px;
   /* background-color: #7a2a2a; */
   /* background: linear-gradient(
     90deg,
@@ -1493,7 +1494,7 @@ left: 0; */
 } */
 
 .glass-search-box {
-  padding: 14px 20px;
+  padding: 7px 20px;
   font-size: 17px;
   border-radius: 18px;
   width: 60%;
@@ -1641,13 +1642,13 @@ left: 0; */
   animation: float-underline 3s ease-in-out infinite alternate;
 } */
 
-.tamil-text {
+/* .tamil-text {
   transition: letter-spacing 0.3s ease, text-shadow 0.3s ease;
 }
 
 .tamil-header:hover .tamil-text {
   letter-spacing: 3px;
-}
+} */
 
 @keyframes float-underline {
   0% {
@@ -1845,13 +1846,13 @@ body {
   grid-template-areas: "overlap";
   place-content: center;
   text-transform: uppercase;
-  margin: 0% 0% 2%;
+  margin: 0% 0% 1%;
 }
 .wrapper > div {
   background-clip: text;
   -webkit-background-clip: text;
   color: #7a2a2a;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-weight: 900;
   font-size: clamp(1.2em, 2vw, 2rem); /* 👈 REDUCED size */
   grid-area: overlap;
@@ -1861,6 +1862,7 @@ body {
   white-space: nowrap; /* 👈 prevent breaking into two lines */
 }
 div.bg {
+  padding: 7px;
   background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png"),
     /* sparkle layer */
       repeating-linear-gradient(
@@ -1879,7 +1881,7 @@ div.bg {
   transform: scaleY(1.05);
   transform-origin: top;
 
-  animation: shimmerMove 8s linear infinite, sparkleMove 20s linear infinite;
+  /* animation: shimmerMove 8s linear infinite, sparkleMove 20s linear infinite; */
   transition: filter 0.6s ease, background-size 0.6s ease;
 }
 @keyframes sparkleMove {
@@ -1911,6 +1913,7 @@ div.bg:hover {
 }
 
 div.fg {
+  padding: 5px;
   background-image: repeating-linear-gradient(
     5deg,
     var(--gold) 0%,
@@ -1922,7 +1925,7 @@ div.fg {
   text-shadow: 1px 1px 1px #d4af37, 0 0 5px rgba(255, 215, 0, 0.4),
     0 0 8px rgba(255, 215, 0, 0.2);
 
-  animation: goldenBreath 4s ease-in-out infinite;
+  /* animation: goldenBreath 4s ease-in-out infinite; */
 
   /* ✨ To hold reflection */
   position: relative;
@@ -2059,5 +2062,62 @@ div.fg::after {
 }
 .wrapper .bg,
 .wrapper .fg {
-  font-size: 2.75rem; /* Increase as needed */
+  font-size: 2.25rem; /* Increase as needed */
+}
+@font-face {
+  font-family: "JF Banumathi";
+  src: url("./fonts/JF Banumathi.ttf") format("truetype");
+  font-display: swap;
+}
+
+#golden-particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Behind everything */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Don’t block clicks */
+}
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8; /* Optional: adjust to make it more subtle */
+  pointer-events: none; /* Allow interactions through the video */
+}
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 239, 200, 0.2); /* Soft warm tint */
+  z-index: 0;
+}
+.text-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tamil-text {
+  position: relative;
+  font-size: 2.5rem;
+  font-family: "JF Banumathi", serif;
+  color: maroon;
+  z-index: 1;
+  text-shadow: 1px 0px maroon, -1px 0px maroon;
+}
+
+.overlap-image {
+  position: absolute;
+  right: -80px;
+  top: -25px;
+  height: 120px;
+  z-index: 0;
+  pointer-events: none;
 }

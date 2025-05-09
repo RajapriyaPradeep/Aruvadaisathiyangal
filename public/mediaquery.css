@@ -69,7 +69,7 @@
 
   /* Bible verse full width */
   .verse-text {
-    width: 90%;
+    /* width: 90%; */
     margin-top: 5px;
     padding: 8px 12px;
     text-align: center;
@@ -551,9 +551,21 @@
     color: #7a2a2a !important;
     font-weight: bold;
   }
-  /* .wrapper {
-    margin: 0% 2% 5% !important;
-  } */
+  .wrapper {
+    display: grid !important;
+    margin: 0% 1% 2% !important;
+  }
+  .overlap-image {
+    position: absolute;
+    right: 22px !important;
+    top: -41px !important;
+    height: 80px !important;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .tamil-text {
+    text-shadow: 0.2px 0px maroon, -0.2px 0px maroon;
+  }
   .dropdown-menu {
     position: static !important; /* remove absolute positioning */
     float: none !important;

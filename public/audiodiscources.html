@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Aruvadaisathiyangal</title>
     <link rel="icon" type="image/png" href="./Assets/Alogo.jpg" />
-
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <!-- Bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -135,6 +135,11 @@
             <li onclick="navplaylist('aboutus')">ABOUT US</li>
           </ul>
         </li>
+        <li class="has-submenu">
+          <div class="submenu-toggle">
+            <img src="./Assets/Alogo.jpg" alt="Right Logo" onclick="navplaylist('aboutus')" class="navbar-logo logo-animate" />
+          </div>
+        </li>
     </div>
 
     <nav class="custom-navbar">
@@ -149,14 +154,19 @@
           />
         </div>
         <!-- Center: Menu + Verse -->
+
         <div class="center-nav">
-          <div class="wrapper d">
-            <div class="bg">அறுவடை சத்தியங்கள்</div>
-            <div class="fg">அறுவடை சத்தியங்கள்</div>
+          <!-- <div class="wrapper d">
+            <div class="bg tamil-text">அறுவடை சத்தியங்கள்</div>
+            <div class="fg tamil-text">அறுவடை சத்தியங்கள்</div>
+          </div> -->
+          <div class="text-image-wrapper d">
+            <div class="tamil-text">அறுவடை சத்தியங்கள்</div>
+            <img src="./Assets/quill.png" alt="Logo" class="overlap-image">
           </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-              <div
+              <!-- <div
                 class="item web-latestdiscourses"
                 onclick="navplaylist('recent')"
               >
@@ -170,7 +180,21 @@
                 >
                   New
                 </p>
-              </div>
+              </div> -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="navbarDropdown"
+                  data-lang="audiodiscourse"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  onclick="navplaylist('recent')"
+                >
+                  NEW
+                </a>
+                </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -487,17 +511,20 @@
         </div>
         <!-- Logo Right -->
         <div class="right-logo">
-          <img src="./Assets/Alogo.jpg" alt="Right Logo" class="navbar-logo logo-animate" />
+          <img src="./Assets/Alogo.jpg" alt="Right Logo" onclick="navplaylist('aboutus')" class="navbar-logo logo-animate" />
         </div>
 
         <!-- ☰ Menu Button -->
         <div class="mobile-toggle-wrapper mobile-only">
           <div class="new-old-container">
-            <button
+            <!-- <button
               class="navbar-toggler-new"
               onclick="navplaylist('recent')"
               type="button"
             >
+              <i class="fas fa-star"></i>New
+            </button> -->
+            <button class="navbar-toggler" style="right: 70px;" onclick="navplaylist('recent')" type="button">
               <i class="fas fa-star"></i>New
             </button>
             <button class="navbar-toggler" onclick="openNav()" type="button">
@@ -507,6 +534,11 @@
         </div>
       </div>
     </nav>
+
+    <div class="text-image-wrapper wrapper m">
+      <div class="tamil-text">அறுவடை சத்தியங்கள்</div>
+      <img src="./Assets/quill.png" alt="Logo" class="overlap-image">
+    </div>
     <!--Navbar Ends Here -->
     <!-- Main Content Area -->
     <div
