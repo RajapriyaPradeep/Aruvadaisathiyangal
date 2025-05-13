@@ -46,7 +46,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("./Assets/harvestwheats.png");
+  /* background: url("./Assets/harvestwheats.png"); */
   /* opacity: 0.7; */
   background-repeat: no-repeat;
   background-position: center center;
@@ -230,7 +230,10 @@ body::before {
 .medievalsharp-regular {
   font-style: normal;
   font-size: medium !important;
-  background: linear-gradient(360deg, rgb(123 43 43), #721c24);
+  /* background: linear-gradient(360deg, rgb(123 43 43), #721c24); */
+  background: linear-gradient(to right, #925501cc, #7a3e00cc);
+  backdrop-filter: blur(6px);
+  background-color: rgba(146, 85, 1, 0.7);
   margin-bottom: 0px;
   /* background-color: #7a2a2a; */
   /* background: linear-gradient(
@@ -397,6 +400,13 @@ body::before {
   border-radius: 20px;
   backdrop-filter: blur(12px);
   box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.1);
+
+  max-width: 700px;
+  margin: auto;
+  background: rgba(255, 244, 215, 0.85);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .quote-text {
@@ -1529,6 +1539,14 @@ left: 0; */
   background-repeat: no-repeat;
   background-position: 12px center;
   background-blend-mode: overlay;
+
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: 1px solid rgba(146, 85, 1, 0.5);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  background: linear-gradient(to right, #f7ecd1, #f2deb7);
 }
 .glass-search-box:focus {
   outline: none;
@@ -1565,6 +1583,14 @@ left: 0; */
     rgba(255, 235, 180, 0.2)
   );
   border: 1px solid rgba(255, 215, 160, 0.4);
+
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: 1px solid rgba(146, 85, 1, 0.5);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  background: linear-gradient(to right, #f7ecd1, #f2deb7);
 }
 
 .glass-icon {
@@ -1759,12 +1785,13 @@ left: 0; */
 }
 .navbar-container {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   width: 100%;
   /* max-width: 1200px; */
   flex-wrap: wrap;
   position: relative;
+  align-items: flex-end;
 }
 .left-logo,
 .right-logo {
@@ -2096,7 +2123,7 @@ div.fg::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 239, 200, 0.2); /* Soft warm tint */
+  /* background: rgba(255, 239, 200, 0.2); */
   z-index: 0;
 }
 .text-image-wrapper {
@@ -2115,9 +2142,9 @@ div.fg::after {
 
 .overlap-image {
   position: absolute;
-  right: -80px;
-  top: -25px;
-  height: 120px;
+  right: -68px;
+  top: -32px;
+  height: 100px;
   z-index: 0;
   pointer-events: none;
 }
