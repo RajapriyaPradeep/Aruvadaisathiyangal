@@ -151,7 +151,8 @@ button.gridjs-sort {
   position: relative;
   /* background-color: #fff8f0; */
   /* padding-top: 70px; */
-  padding-top: 50px;
+  padding: 50px 7px 0px;
+  /* padding-top: 50px; */
   /* border: 2px solid #7a2a2a; */
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -176,6 +177,12 @@ button.gridjs-sort {
   flex-direction: column;
   /* justify-content: space-between; */
   justify-content: flex-start;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 224, 178, 0.3);
+  border-radius: 16px;
 }
 .card-divider {
   width: 40px;
@@ -264,7 +271,8 @@ button.gridjs-sort {
   overflow-wrap: break-word;
   white-space: normal;
 
-  color: #7a2a2a;
+  /* color: #7a2a2a; */
+  color: #520c0c;
   /* font-size: 1rem; */
   width: 90%;
   margin: 0 auto;
@@ -339,7 +347,8 @@ button.gridjs-sort {
 .glass-icon-dark {
   font-size: 22px;
   color: #ffffff;
-  background: linear-gradient(135deg, #7a2a2a, #c85000);
+  /* background: linear-gradient(135deg, #7a2a2a, #c85000); */
+  background: linear-gradient(135deg, #520c0c, #520c0c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
@@ -347,7 +356,8 @@ button.gridjs-sort {
 .glass-icon {
   font-size: 22px;
   color: #ffffff;
-  background: linear-gradient(135deg, #ffcc70, #c85000);
+  /* background: linear-gradient(135deg, #ffcc70, #c85000); */
+  background: linear-gradient(135deg, #520c0c, #520c0c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
@@ -500,7 +510,8 @@ body {
 }
 
 .badge.year {
-  background-color: #721c24;
+  background-color: #520c0c;
+  /* background-color: #721c24; */
   color: hsl(41.32deg 88.33% 76.47%) !important;
 }
 

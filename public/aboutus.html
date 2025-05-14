@@ -48,8 +48,6 @@
       href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body>
     <!-- Font Awesome CSS -->
     <link
       rel="stylesheet"
@@ -59,6 +57,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+  </head>
+  <body>
+    <div id="golden-particles"></div>
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="wheat-field.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+    
 
     <!--Navbar Starts Here-->
     <div id="mobileSideNav" class="mobile-sidenav">
@@ -75,6 +82,7 @@
             <li onclick="navplaylist('prophetic')">PROPHETIC</li>
             <li onclick="navplaylist('spiritual')">SPIRITUAL</li>
             <li onclick="navplaylist('typeantitype')">TYPE & ANTITYPE</li>
+            <li onclick="navplaylist('qanda')">Q & A</li>
             <li onclick="navplaylist('paneldiscussions')">PANEL DISCUSSIONS</li>
             <li onclick="navplaylist('testimonial')">TESTIMONIAL</li>
             <li onclick="navplaylist('vesperservice')">VESPER SERVICE</li>
@@ -258,6 +266,13 @@
                   >
 
                   <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="paneldiscussions"
+                    onclick="navplaylist('qanda')"
+                    >Q & A</a
+                  >
                   <a
                     class="dropdown-item"
                     href="#"

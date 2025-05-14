@@ -59,6 +59,12 @@
     />
   </head>
   <body class="audioscreenbody">
+    <div id="golden-particles"></div>
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="wheat-field.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
     <div id="viewToggleBtn" class="view-toggle-btn" onclick="toggleLayout()">
       <i class="fas fa-th-large" style="color: #f5d598"></i>
       <!-- default icon for card view -->
@@ -79,6 +85,7 @@
             <li onclick="navplaylist('prophetic')">PROPHETIC</li>
             <li onclick="navplaylist('spiritual')">SPIRITUAL</li>
             <li onclick="navplaylist('typeantitype')">TYPE & ANTITYPE</li>
+            <li onclick="navplaylist('qanda')">Q & A</li>
             <li onclick="navplaylist('paneldiscussions')">PANEL DISCUSSIONS</li>
             <li onclick="navplaylist('testimonial')">TESTIMONIAL</li>
             <li onclick="navplaylist('vesperservice')">VESPER SERVICE</li>
@@ -262,6 +269,13 @@
                   >
 
                   <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="paneldiscussions"
+                    onclick="navplaylist('qanda')"
+                    >Q & A</a
+                  >
                   <a
                     class="dropdown-item"
                     href="#"

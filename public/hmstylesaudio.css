@@ -46,7 +46,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("./Assets/harvestwheats.png");
+  /* background: url("./Assets/harvestwheats.png"); */
   /* opacity: 0.7; */
   background-repeat: no-repeat;
   background-position: center center;
@@ -364,7 +364,7 @@ body::before {
   /* font-style: italic; */
   font-family: none;
   font-size: 16px;
-  color: #530909 !important;
+  color: #5a1e1e !important;
 }
 
 /* author note ends here */
@@ -396,14 +396,14 @@ body::before {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(255 255 255 / 0%);
 
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
   border-radius: 20px;
   backdrop-filter: blur(12px);
   box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.1);
 
   max-width: 700px;
   margin: auto;
-  background: rgba(255, 244, 215, 0.85);
+  background: #f6f1e6 !important;
   padding: 20px 30px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -820,7 +820,10 @@ height: 60%; */
 
 /* Footer styling */
 .site-footer {
-  background-color: #7a2a2a;
+  /* background-color: #7a2a2a; */
+  /* background: linear-gradient(to right, #925501cc, #7a3e00cc); */
+  /* backdrop-filter: blur(6px); */
+  background-color: rgb(146 85 1 / 45%);
   /* Footer background color */
   color: #e5d8c4;
   /* Text color */
@@ -1511,11 +1514,11 @@ left: 0; */
   max-width: 500px;
 
   /* Background and border */
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.55),
     rgba(255, 240, 200, 0.6)
-  );
+  ); */
   border: 1.5px solid rgba(120, 60, 20, 0.4);
 
   /* Frosted glass effect */
@@ -1546,7 +1549,7 @@ left: 0; */
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
   font-family: "EB Garamond", serif;
   font-size: 16px;
-  background: linear-gradient(to right, #f7ecd1, #f2deb7);
+  background: linear-gradient(to right, #f6f1e6, #f2deb7);
 }
 .glass-search-box:focus {
   outline: none;
@@ -1813,7 +1816,7 @@ left: 0; */
 
 .navbar-logo {
   /* height: 65px; */
-  height: 180px;
+  height: 100px;
   width: auto;
   margin: 0px 5px;
   border-radius: 15px;
@@ -2013,6 +2016,7 @@ div.fg::after {
   color: #7a2a2a;
 }
 .verse-text {
+  font-family: "Playfair Display", serif;
   animation: fadeSlideDown 0.6s ease forwards;
   width: auto;
 }
@@ -2050,7 +2054,8 @@ div.fg::after {
 }
 /* Style the top navbar menu links */
 .navbar-nav > li > a {
-  font-family: "Cardo", serif;
+  /* font-family: "Cardo", serif; */
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   color: #6b1e1e;
   padding: 10px 16px;
@@ -2092,8 +2097,11 @@ div.fg::after {
   font-size: 2.25rem; /* Increase as needed */
 }
 @font-face {
-  font-family: "JF Banumathi";
-  src: url("./fonts/JF Banumathi.ttf") format("truetype");
+  font-family: "JFBanumathi";
+  src: url("./fonts/JF-Banumathi.woff2") format("woff2"),
+    url("./fonts/JF-Banumathi.woff") format("woff"),
+    url("./fonts/JF-Banumathi.ttf") format("truetype");
+  /* src: url("./fonts/JF-Banumathi.ttf") format("truetype"); */
   font-display: swap;
 }
 
@@ -2134,7 +2142,8 @@ div.fg::after {
 .tamil-text {
   position: relative;
   font-size: 2.5rem;
-  font-family: "JF Banumathi", serif;
+  /* font-family: "JFBanumathi", serif; */
+  font-family: "Noto Sans Tamil", serif;
   color: maroon;
   z-index: 1;
   text-shadow: 1px 0px maroon, -1px 0px maroon;

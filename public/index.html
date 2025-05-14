@@ -12,6 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
       rel="stylesheet"
@@ -23,6 +26,8 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="hmstyles.css" />
+    <link rel="stylesheet" type="text/css" href="tamiltitle.css" />
+    
     <link rel="stylesheet" type="text/css" href="mediaquery.css" />
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -82,6 +87,7 @@
             <li onclick="navplaylist('prophetic')">PROPHETIC</li>
             <li onclick="navplaylist('spiritual')">SPIRITUAL</li>
             <li onclick="navplaylist('typeantitype')">TYPE & ANTITYPE</li>
+            <li onclick="navplaylist('qanda')">Q & A</li>
             <li onclick="navplaylist('paneldiscussions')">PANEL DISCUSSIONS</li>
             <li onclick="navplaylist('testimonial')">TESTIMONIAL</li>
             <li onclick="navplaylist('vesperservice')">VESPER SERVICE</li>
@@ -265,6 +271,13 @@
                   >
 
                   <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-lang="paneldiscussions"
+                    onclick="navplaylist('qanda')"
+                    >Q & A</a
+                  >
                   <a
                     class="dropdown-item"
                     href="#"
@@ -955,5 +968,14 @@
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>&copy; 2025 அறுவடை சத்தியங்கள். All Rights Reserved.</div>
+        <!-- <div class="footer-links">
+          <a href="mailto:contact@aruvadaisathiyangal.in">Contact</a> |
+          <a href="#" onclick="navplaylist('aboutus')">About Us</a>
+        </div> -->
+      </div>
+    </footer>    
   </body>
 </html>
