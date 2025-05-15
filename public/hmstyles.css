@@ -231,9 +231,9 @@ body::before {
   font-style: normal;
   font-size: medium !important;
   /* background: linear-gradient(360deg, rgb(123 43 43), #721c24); */
-  background: linear-gradient(to right, #925501cc, #7a3e00cc);
+  /* background: linear-gradient(to right, #925501cc, #7a3e00cc); */
   backdrop-filter: blur(6px);
-  background-color: rgba(146, 85, 1, 0.7);
+  background-color: maroon;
   margin-bottom: 0px;
   /* background-color: #7a2a2a; */
   /* background: linear-gradient(
