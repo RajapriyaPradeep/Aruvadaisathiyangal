@@ -2097,15 +2097,18 @@ div.fg::after {
   font-size: 2.25rem; /* Increase as needed */
 }
 @font-face {
-  font-family: "JFBanumathi";
-  src: url("./fonts/JF-Banumathi.woff2") format("woff2"),
+  font-family: "JF Banumathi";
+  /* src: url("./fonts/JF-Banumathi.woff2") format("woff2"),
     url("./fonts/JF-Banumathi.woff") format("woff"),
-    url("./fonts/JF-Banumathi.ttf") format("truetype");
+    url("./fonts/JF-Banumathi.ttf") format("truetype"); */
+  src: url("./Assets/JF-Banumathi.woff2") format("woff2"),
+    url("./Assets/JF-Banumathi.woff") format("woff"),
+    url("./Assets/JF-Banumathi.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
   /* Optional: limit to Tamil Unicode range */
-  unicode-range: U+0B80-0BFF;
+  /* unicode-range: U+0B80-0BFF; */
 }
 
 #golden-particles {
@@ -2145,11 +2148,13 @@ div.fg::after {
 .tamil-text {
   position: relative;
   font-size: 2.5rem;
-  /* font-family: "JFBanumathi", serif; */
-  font-family: "JFBanumathi", "Noto Sans Tamil", serif;
+  /* font-family: "JF Banumathi", serif; */
+  font-family: "JF Banumathi" !important;
+  font-feature-settings: "kern";
+  /* font-family: "JFBanumathi", "Noto Sans Tamil", serif; */
   color: maroon;
   z-index: 1;
-  text-shadow: 1px 0px maroon, -1px 0px maroon;
+  /* text-shadow: 1px 0px maroon, -1px 0px maroon; */
 }
 
 .overlap-image {
