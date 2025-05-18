@@ -2097,11 +2097,12 @@ div.fg::after {
   font-size: 2.25rem; /* Increase as needed */
 }
 @font-face {
-  font-family: "JFBanumathi";
-  src: url("./fonts/JF-Banumathi.woff2") format("woff2"),
-    url("./fonts/JF-Banumathi.woff") format("woff"),
-    url("./fonts/JF-Banumathi.ttf") format("truetype");
-  /* src: url("./fonts/JF-Banumathi.ttf") format("truetype"); */
+  font-family: "JF Banumathi";
+  src: url("./Assets/JF-Banumathi.woff2") format("woff2"),
+    url("./Assets/JF-Banumathi.woff") format("woff"),
+    url("./Assets/JF-Banumathi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -2142,11 +2143,13 @@ div.fg::after {
 .tamil-text {
   position: relative;
   font-size: 2.5rem;
-  /* font-family: "JFBanumathi", serif; */
-  font-family: "Noto Sans Tamil", serif;
+  /* font-family: "JF Banumathi", serif; */
+  font-family: "JF Banumathi" !important;
+  font-feature-settings: "kern";
+  /* font-family: "JFBanumathi", "Noto Sans Tamil", serif; */
   color: maroon;
   z-index: 1;
-  text-shadow: 1px 0px maroon, -1px 0px maroon;
+  /* text-shadow: 1px 0px maroon, -1px 0px maroon; */
 }
 
 .overlap-image {
@@ -2156,4 +2159,15 @@ div.fg::after {
   height: 100px;
   z-index: 0;
   pointer-events: none;
+}
+.aboutus_container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0);
+  border-image: initial;
+  margin: auto;
+  padding: 20px 30px;
+  border-radius: 16px;
+  background: rgb(246, 241, 230) !important;
 }
