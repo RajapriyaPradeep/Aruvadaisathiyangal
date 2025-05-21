@@ -2154,9 +2154,9 @@ div.fg::after {
 
 .overlap-image {
   position: absolute;
-  right: -68px;
-  top: -32px;
-  height: 100px;
+  right: -57px;
+  top: -19px;
+  height: 80px;
   z-index: 0;
   pointer-events: none;
 }

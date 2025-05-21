@@ -557,13 +557,15 @@
   }
   .overlap-image {
     position: absolute;
-    right: 22px !important;
-    top: -41px !important;
+    right: 2px !important;
+    top: -36px !important;
+    /* right: 22px !important;
+    top: -41px !important; */
     height: 80px !important;
     z-index: 0;
     pointer-events: none;
   }
-  @font-face {
+  /* @font-face {
     font-family: "JF Banumathi";
     src: url("./Assets/JF-Banumathi.woff2") format("woff2"),
       url("./Assets/JF-Banumathi.woff") format("woff"),
@@ -578,7 +580,7 @@
     font-feature-settings: "kern";
     color: maroon;
     z-index: 1;
-  }
+  } */
   .dropdown-menu {
     position: static !important; /* remove absolute positioning */
     float: none !important;
