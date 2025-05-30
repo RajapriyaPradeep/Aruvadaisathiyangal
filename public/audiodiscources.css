@@ -665,3 +665,6 @@ body {
 .navbar-logo {
   /* height: 100px !important; */
 }
+.discoursedesktop {
+  height: 70vh;
+}
