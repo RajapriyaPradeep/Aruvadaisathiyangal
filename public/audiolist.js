@@ -99,6 +99,12 @@ function renderAudioItems(filteredData) {
     }
     // Year badge on top-right corner
     if (currentView === "card" && item.year) {
+
+      const sourcebadge = document.createElement("div");
+      sourcebadge.className = "year-badge";
+      sourcebadge.innerHTML = `<span class="badge year">V</span>`;
+      card.appendChild(sourcebadge);
+
       const yearBadge = document.createElement("div");
       yearBadge.className = "year-badge";
       yearBadge.innerHTML = `<span class="badge year">${item.year}</span>`;

@@ -704,9 +704,10 @@
   .navbar-toggler {
     display: block;
     position: absolute;
-    right: 5px;
+    /* right: 5px; */
+    right: -20px;
     top: 17px;
-    width: 100px;
+    width: 80px;
     font-family: "Playfair Display", serif;
   }
   .navbar-toggler-new {
@@ -873,8 +874,8 @@
 }
 
 .submenu li {
-  font-size: 15px;
-  padding: 8px 0;
+  font-size: xx-small;
+  padding: 4px 0;
   border-bottom: none;
   color: #963535;
 }
