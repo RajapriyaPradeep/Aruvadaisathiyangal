@@ -276,6 +276,10 @@ function updatesectiontitle(sectionname) {
     // document.getElementById("discourcesectionname").textContent = "Discources - Prophetic";
     return "Prophetic";
   }
+  else if (sectionname == "ot") {
+    // document.getElementById("discourcesectionname").textContent = "Discources - Prophetic";
+    return "ot";
+  }
   else if (sectionname == "spiritual") {
     // document.getElementById("discourcesectionname").textContent = "Discources - Spiritual";
     return "Spiritual";
