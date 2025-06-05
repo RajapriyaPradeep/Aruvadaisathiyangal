@@ -308,6 +308,10 @@ function updatesectiontitle(sectionname) {
     // document.getElementById("discourcesectionname").textContent = "Volume Study 6 - The New Creation";
     return "V6 The New Creation";
   }
+  else if (sectionname == "bookofromans") {
+    // document.getElementById("discourcesectionname").textContent = "Book Study - Life of Jesus Christ";
+    return "Book of Romans";
+  }
   else if (sectionname == "lifeofjesuschrist") {
     // document.getElementById("discourcesectionname").textContent = "Book Study - Life of Jesus Christ";
     return "Life of Jesus Christ";
