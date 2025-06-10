@@ -556,8 +556,8 @@ body {
 }
 .view-togg-btn {
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
   /* display: flex;
   justify-content: center;
   align-items: center;
