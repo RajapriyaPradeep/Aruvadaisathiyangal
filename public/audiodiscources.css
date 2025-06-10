@@ -554,6 +554,19 @@ body {
   z-index: 999;
   transition: background 0.3s ease;
 }
+.view-togg-btn {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+  cursor: pointer;
+  z-index: 999;
+  /* transition: background 0.3s ease; */
+}
 
 .view-toggle-btn:hover {
   background: #963535;
