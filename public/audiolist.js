@@ -134,11 +134,17 @@ function renderAudioItems(filteredData) {
     const audioPlayer = document.createElement("div");
     audioPlayer.className = "audio-player";
     audioPlayer.innerHTML = `
-      <audio controls>
-        <source src="${item.audioUrl}" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-    `;
+  <audio controls preload="none" src="data:audio/mp3;base64,//uQxAALAAAADQAAAANAAACAAACAgACAAAAAQACAgICAwMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgoLCwsMD...
+" data-src="${item.audioUrl}">
+  Your browser does not support the audio element.
+  </audio>
+`;
+    // audioPlayer.innerHTML = `
+    //   <audio controls>
+    //     <source src="${item.audioUrl}" type="audio/mp3">
+    //     Your browser does not support the audio element.
+    //   </audio>
+    // `;
 
     // Action icons
     const iconList = document.createElement("ul");
@@ -623,3 +629,20 @@ function toggleSubmenu(el) {
   submenu.style.display = isVisible ? "none" : "block";
   el.parentElement.classList.toggle("active", !isVisible);
 }
+document.addEventListener('play', function (e) {
+  const audios = document.querySelectorAll('audio');
+  audios.forEach(audio => {
+    if (audio !== e.target) {
+      audio.pause();
+    }
+  });
+
+  const targetAudio = e.target;
+  const dataSrc = targetAudio.getAttribute('data-src');
+
+  if (dataSrc && targetAudio.src !== dataSrc) {
+    targetAudio.src = dataSrc;
+    targetAudio.load();
+    targetAudio.play();
+  }
+}, true);
