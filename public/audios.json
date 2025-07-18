@@ -7711,7 +7711,7 @@
     "tamil": ""
   },
   {
-    "topic": "Book_of_Romans_Part1",
+    "topic": "Book of Romans Introduction",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Book_of_Romans_Part1.mp3",
     "sizeMb": 6.42,
     "year": 2025,
@@ -7719,7 +7719,7 @@
     "section": "bookofromans",
     "pdflink": "",
     "pptlink": "",
-    "tamil": ""
+    "tamil": "ரோமர் முன்னுரை"
   },
   {
     "topic": "Romans Chap 1.1-7",
@@ -7730,7 +7730,7 @@
     "section": "bookofromans",
     "pdflink": "",
     "pptlink": "",
-    "tamil": ""
+    "tamil": "ரோமர் அதிகாரம் 1.1-7"
   },
   {
     "topic": "Romans Chap 1.8-15",
@@ -7741,6 +7741,17 @@
     "section": "bookofromans",
     "pdflink": "",
     "pptlink": "",
-    "tamil": ""
+    "tamil": "ரோமர் அதிகாரம் 1.8-15"
+  },
+  {
+    "topic": "Romans Chap 1.16-17",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romans_Chap_1_16_17.mp3",
+    "sizeMb": 6.42,
+    "year": 2025,
+    "duration": "4",
+    "section": "bookofromans",
+    "pdflink": "",
+    "pptlink": "",
+    "tamil": "ரோமர் அதிகாரம் 1.16-17"
   }
 ]
