@@ -704,10 +704,11 @@
   .navbar-toggler {
     display: block;
     position: absolute;
-    /* right: 5px; */
-    right: -20px;
+    /* right: -20px; */
+    right: -25px;
     top: 17px;
-    width: 80px;
+    width: 100px;
+    /* width: 80px; */
     font-family: "Playfair Display", serif;
   }
   .navbar-toggler-new {
