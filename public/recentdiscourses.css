@@ -205,7 +205,8 @@
   #timeline-container {
     flex-direction: row !important;
     height: auto;
-    padding: 20px;
+    /* padding: 20px; */
+    padding: 20px 2px 20px 10px;
     margin: 0px;
   }
 
