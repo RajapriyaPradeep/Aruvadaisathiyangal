@@ -532,6 +532,11 @@ body {
   top: 10px;
   right: 10px;
 }
+.source-badge {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+}
 .glass-search-wrapper-discourse {
   display: flex;
   justify-content: center;
