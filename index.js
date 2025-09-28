@@ -78,13 +78,26 @@ app.get('/api/videos', (req, res) => {
     res.json(filteredVideos);
 });
 // Endpoint to search videos by recent discources
+// app.get('/api/recent', (req, res) => {
+//     const videos = readData();
+//     const filteredVideos = videos.filter(video =>
+//         video.year == (new Date().getFullYear())
+//     );
+//     res.json(filteredVideos);
+// });
 app.get('/api/recent', (req, res) => {
+    const nowYear = new Date().getFullYear();
     const videos = readData();
-    const filteredVideos = videos.filter(video =>
-        video.year == (new Date().getFullYear())
-    );
-    res.json(filteredVideos);
+
+    const filtered = videos.filter(v => {
+        const yr = parseInt(v.year, 10);
+        const cs = (v.continualstudy || '').toString().toLowerCase().trim();
+        return yr === nowYear && cs === 'no';
+    });
+
+    res.json(filtered);
 });
+
 
 // Endpoint to search videos by keyword
 app.get('/api/searchkeywordaudios', (req, res) => {
