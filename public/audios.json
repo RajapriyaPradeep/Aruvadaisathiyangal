@@ -469,9 +469,21 @@
   },
   {
     "continualstudy": "yes",
-    "topic": "Revelation 2:12-17 - Pergamon Spiritual Lessons",
+    "topic": "Revelation 2:12-17 - Pergamon Details",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Revelation/main/Revelation09.mp3",
     "month": "Sep",
+    "year": 2025,
+    "duration": "4",
+    "section": "revelation",
+    "pdflink": "",
+    "tamil": "வெளிப்படுத்தல் - அத்தியாயம் 2:12-17 -பெர்கமு சபை - தகவல்கள்",
+    "pptlink": ""
+  },
+  {
+    "continualstudy": "yes",
+    "topic": "Revelation 2:12-17 - Pergamon Spiritual Lessons",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Revelation/main/Revelation09lesson.mp3",
+    "month": "Oct",
     "year": 2025,
     "duration": "4",
     "section": "revelation",
@@ -8554,5 +8566,17 @@
     "pdflink": "",
     "pptlink": "",
     "tamil": "ரோமர் 3 - ஆம் அதிகாரம்"
+  },
+  {
+    "continualstudy": "yes",
+    "topic": "Romans Chapter - 4",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/romanschap4.mp3",
+    "month": "Sep",
+    "year": 2025,
+    "duration": "4",
+    "section": "bookofromans",
+    "pdflink": "",
+    "pptlink": "",
+    "tamil": "ரோமர் 4 - ஆம் அதிகாரம்"
   }
 ]
