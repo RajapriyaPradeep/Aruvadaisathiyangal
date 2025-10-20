@@ -8571,12 +8571,24 @@
     "continualstudy": "yes",
     "topic": "Romans Chapter - 4",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/romanschap4.mp3",
-    "month": "Sep",
+    "month": "Oct",
     "year": 2025,
     "duration": "4",
     "section": "bookofromans",
     "pdflink": "",
     "pptlink": "",
     "tamil": "ரோமர் 4 - ஆம் அதிகாரம்"
+  },
+  {
+    "continualstudy": "yes",
+    "topic": "Romans Chapter - 5",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/RomansChapter5.mp3",
+    "month": "Oct",
+    "year": 2025,
+    "duration": "5",
+    "section": "bookofromans",
+    "pdflink": "",
+    "pptlink": "",
+    "tamil": "ரோமர் 5 - ஆம் அதிகாரம்"
   }
 ]
