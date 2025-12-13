@@ -1,3 +1,6 @@
 git add .
 git commit -m "added video discourses"
 git push
+
+
+check deployment
