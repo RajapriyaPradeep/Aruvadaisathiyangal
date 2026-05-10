@@ -8823,12 +8823,24 @@
     "continualstudy": "yes",
     "topic": "Romans 9-11 - Part 3",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romans_Part12.mp3",
-    "month": "Mar",
+    "month": "Apr",
     "year": 2026,
     "duration": "4",
     "section": "bookofromans",
     "pdflink": "",
     "pptlink": "",
     "tamil": "ரோமர் 9-11 -- பாகம் 3"
+  },
+  {
+    "continualstudy": "yes",
+    "topic": "Romans 12:1-8",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romanspart13.mp3",
+    "month": "May",
+    "year": 2026,
+    "duration": "4",
+    "section": "bookofromans",
+    "pdflink": "",
+    "pptlink": "",
+    "tamil": "ரோமர் 12:1-8"
   }
 ]
