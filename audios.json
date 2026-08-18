@@ -624,6 +624,18 @@
     "pptlink": ""
   },
   {
+    "continualstudy": "yes",
+    "topic": "Revelation 6:1-5 - Seven Seals - Part 1",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Revelation/main/Revelation51114.mp3",
+    "month": "Aug",
+    "year": 2026,
+    "duration": "4",
+    "section": "revelation",
+    "pdflink": "",
+    "tamil": "வெளிப்படுத்தல் - அத்தியாயம் 6:1-5 - ஏழு முத்திரைகளுக்கான - பகுதி 1",
+    "pptlink": ""
+  },
+  {
     "continualstudy": "no",
     "topic": "01 - The Retributive Character of the Divine Law",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Sin/main/1Sin_Introduction.mp3",
@@ -8941,6 +8953,18 @@
   },
   {
     "continualstudy": "yes",
+    "topic": "Romans 13:1-7",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romans1317.mp3",
+    "month": "June",
+    "year": 2026,
+    "duration": "4",
+    "section": "bookofromans",
+    "pdflink": "",
+    "pptlink": "",
+    "tamil": "ரோமர் 13:1-7"
+  },
+  {
+    "continualstudy": "yes",
     "topic": "Romans 13:8-14",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romans13814.mp3",
     "month": "July",
@@ -8965,14 +8989,14 @@
   },
   {
     "continualstudy": "yes",
-    "topic": "Romans 13:1-7",
-    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romans1317.mp3",
-    "month": "June",
+    "topic": "Romans 14:10-23",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romans141023.mp3",
+    "month": "Aug",
     "year": 2026,
     "duration": "4",
     "section": "bookofromans",
     "pdflink": "",
     "pptlink": "",
-    "tamil": "ரோமர் 13:1-7"
+    "tamil": "ரோமர் 14:10-23"
   }
 ]
