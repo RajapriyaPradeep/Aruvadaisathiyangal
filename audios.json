@@ -636,6 +636,18 @@
     "pptlink": ""
   },
   {
+    "continualstudy": "yes",
+    "topic": "Revelation 6:7-11 - Seven Seals - Part 2",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Revelation/main/Revelation6711.mp3",
+    "month": "Aug",
+    "year": 2026,
+    "duration": "4",
+    "section": "revelation",
+    "pdflink": "",
+    "tamil": "வெளிப்படுத்தல் - அத்தியாயம் 6:7-11 - ஏழு முத்திரைகளுக்கான - பகுதி 2",
+    "pptlink": ""
+  },
+  {
     "continualstudy": "no",
     "topic": "01 - The Retributive Character of the Divine Law",
     "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/Sin/main/1Sin_Introduction.mp3",
@@ -9010,5 +9022,17 @@
     "pdflink": "",
     "pptlink": "",
     "tamil": "ரோமர் 15"
+  },
+  {
+    "continualstudy": "yes",
+    "topic": "Romans 21",
+    "audioUrl": "https://raw.githubusercontent.com/Aruvadaisathiyangal/BookofRomans/main/Romans21.mp3",
+    "month": "Sep",
+    "year": 2026,
+    "duration": "4",
+    "section": "bookofromans",
+    "pdflink": "",
+    "pptlink": "",
+    "tamil": "ரோமர் 21"
   }
 ]
